@@ -1,160 +1,196 @@
+<!-- Banner -->
+<header style="display: flex; align-items: center; justify-content: space-between; background-color: #20232a; padding: 1rem 2rem;">
+  <img src="./assets/rustexam-banner.png" alt="Rust Exam Banner" style="height: 60px; object-fit: contain;">
+  <select id="language-select" style="padding: 0.5rem 1rem; border-radius: 6px; border: none; font-size: 1rem;">
+    <option value="tr">Türkçe</option>
+    <option value="en">English</option>
+  </select>
+</header>
+
+<div id="content" style="padding: 2rem;"></div>
+
+<!-- Modal structure -->
+<dialog id="popup" style="width: 90%; max-width: 800px; padding: 2rem; border: none; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  <h2 id="popup-title" style="margin-bottom: 1rem;"></h2>
+  <div id="popup-question" style="margin-bottom: 1.5rem; white-space: pre-wrap;"></div>
+  <button id="show-answer" style="margin-bottom: 1rem; padding: 0.5rem 1rem; background: #007bff; color: white; border: none; border-radius: 5px;">Show Answer</button>
+  <div id="popup-answer" style="background: #f8f9fa; padding: 1rem; display: none; white-space: pre-wrap;"></div>
+  <form method="dialog">
+    <button style="margin-top: 1rem; padding: 0.5rem 1rem; background: #ccc; border: none; border-radius: 5px;">Close</button>
+  </form>
+</dialog>
+
+<!-- Question styles -->
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  .section-header {
+    background: #343a40;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 1rem 0 0.25rem 0;
+  }
+  .section-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+  .questions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+  .question-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.2s;
+  }
+  .question-card:hover {
+    transform: translateY(-4px);
+  }
+  .question-card button {
+    margin-top: 0.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #f1f1f1;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+</style>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  const TOTAL_SECTIONS = 13;
-  const QUESTIONS_PER_SECTION = 10;
-  const content = document.getElementById("content");
-  const popup = document.getElementById("popup");
-  const popupQuestion = document.getElementById("popup-question");
-  const popupAnswer = document.getElementById("popup-answer");
-  const popupTitle = document.getElementById("popup-title");
-  const showAnswerBtn = document.getElementById("show-answer");
-  const langSelect = document.getElementById("language-select");
+const content = document.getElementById("content");
+const languageSelect = document.getElementById("language-select");
+const popup = document.getElementById("popup");
+const popupTitle = document.getElementById("popup-title");
+const popupQuestion = document.getElementById("popup-question");
+const popupAnswer = document.getElementById("popup-answer");
+const showAnswerBtn = document.getElementById("show-answer");
 
-  let currentAnswerPath = "";
-  let currentLang = langSelect.value;
+let currentLang = languageSelect.value;
 
-  // Create search and stats UI
-  const toolbar = document.createElement("div");
-  toolbar.style.display = "flex";
-  toolbar.style.justifyContent = "space-between";
-  toolbar.style.alignItems = "center";
-  toolbar.style.marginBottom = "1rem";
-
-  const searchInput = document.createElement("input");
-  searchInput.type = "text";
-  searchInput.placeholder = "Search questions...";
-  searchInput.style.padding = "0.5rem";
-  searchInput.style.flex = "1";
-  searchInput.style.marginRight = "1rem";
-
-  const statsDisplay = document.createElement("div");
-  statsDisplay.style.fontWeight = "bold";
-
-  toolbar.appendChild(searchInput);
-  toolbar.appendChild(statsDisplay);
-  content.before(toolbar);
-
-  function updateStats() {
-    let viewed = 0, answered = 0, total = TOTAL_SECTIONS * QUESTIONS_PER_SECTION;
-    for (let section = 1; section <= TOTAL_SECTIONS; section++) {
-      for (let index = 1; index <= QUESTIONS_PER_SECTION; index++) {
-        const status = getStatus(section, ((section - 1) * QUESTIONS_PER_SECTION + index));
-        if (status === "viewed") viewed++;
-        if (status === "answered") answered++;
-      }
-    }
-    statsDisplay.textContent = `Viewed: ${viewed}, Answered: ${answered}, Total: ${total}`;
-  }
-
-  function getStatus(section, index) {
-    return localStorage.getItem(`status-${currentLang}-${section}-${index}`) || "not-viewed";
-  }
-
-  function setStatus(section, index, status) {
-    localStorage.setItem(`status-${currentLang}-${section}-${index}`, status);
-  }
-
-  langSelect.addEventListener("change", () => {
-    currentLang = langSelect.value;
-    renderSections();
-  });
-
-  function renderSections() {
-    content.innerHTML = "";
-    for (let section = 1; section <= TOTAL_SECTIONS; section++) {
-      const sec = document.createElement("div");
-      sec.className = "section";
-      sec.innerHTML = `
-        <div class="section-header" data-section="${section}">Section ${section}</div>
-        <div class="questions" id="questions-${section}"></div>
-      `;
-      content.appendChild(sec);
-    }
-    updateStats();
-  }
-
-  function statusToEmoji(status) {
-    if (status === "answered") return "✅ Answered";
-    if (status === "viewed") return "🟢 Viewed";
-    return "🟡 Not viewed";
-  }
-
-  document.addEventListener("click", async (e) => {
-    if (e.target.classList.contains("section-header")) {
-      const section = e.target.dataset.section;
-      const container = document.getElementById(`questions-${section}`);
-
-      if (container.innerHTML.trim() === "") {
-        const startIndex = (section - 1) * QUESTIONS_PER_SECTION + 1;
-        const endIndex = startIndex + QUESTIONS_PER_SECTION;
-        for (let i = startIndex; i < endIndex; i++) {
-          const qPath = `./${currentLang}/questions/section-${String(section).padStart(2, '0')}/question-${String(i).padStart(2, '0')}.md`;
-          const aPath = `./${currentLang}/answers/section-${String(section).padStart(2, '0')}/answer-${String(i).padStart(2, '0')}.md`;
-
-          try {
-            const res = await fetch(qPath);
-            if (!res.ok) continue;
-            const status = getStatus(section, i);
-            const div = document.createElement("div");
-            div.className = "question-card";
-            div.setAttribute("data-question", `section ${section} question ${i}`);
-            div.innerHTML = `
-              <div class="badge" id="badge-${section}-${i}">${statusToEmoji(status)}</div>
-              <button data-q="${qPath}" data-a="${aPath}" data-section="${section}" data-index="${i}">Open Question ${i}</button>
-            `;
-            container.appendChild(div);
-          } catch {}
-        }
-      }
-      container.style.display = container.style.display === "grid" ? "none" : "grid";
-    }
-
-    if (e.target.tagName === "BUTTON" && e.target.dataset.q && e.target.dataset.a) {
-      const section = e.target.dataset.section;
-      const index = e.target.dataset.index;
-      const qRes = await fetch(e.target.dataset.q);
-      const qText = await qRes.text();
-      popupTitle.textContent = `Section ${section} — Question ${index}`;
-      popupQuestion.innerHTML = marked.parse(qText);
-      popupAnswer.innerHTML = "";
-      popupAnswer.style.display = "none";
-      currentAnswerPath = e.target.dataset.a;
-      popup.showModal();
-
-      const badge = document.getElementById(`badge-${section}-${index}`);
-      if (badge) badge.textContent = "🟢 Viewed";
-      setStatus(section, index, "viewed");
-      updateStats();
-    }
-
-    if (e.target.id === "show-answer") {
-      fetch(currentAnswerPath)
-        .then(res => res.text())
-        .then(md => {
-          popupAnswer.innerHTML = marked.parse(md);
-          popupAnswer.style.display = "block";
-
-          const match = currentAnswerPath.match(/section-(\d+).*answer-(\d+)\.md$/);
-          if (match) {
-            const section = match[1];
-            const index = match[2];
-            const badge = document.getElementById(`badge-${section}-${index}`);
-            if (badge) badge.textContent = "✅ Answered";
-            setStatus(section, index, "answered");
-            updateStats();
-          }
-        });
-    }
-  });
-
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    const cards = document.querySelectorAll(".question-card");
-    cards.forEach(card => {
-      const match = card.getAttribute("data-question").toLowerCase().includes(query);
-      card.style.display = match ? "block" : "none";
-    });
-  });
-
+languageSelect.addEventListener("change", () => {
+  currentLang = languageSelect.value;
   renderSections();
+});
+
+async function renderSections() {
+  content.innerHTML = "";
+
+  const readmeRes = await fetch(`./README.md`);
+  const readmeText = await readmeRes.text();
+
+  const sectionTable = readmeText
+    .split("\n")
+    .filter(line => line.startsWith("|") && !line.startsWith("| ---"))
+    .map(line => line.split("|").map(cell => cell.trim()).slice(1, -1));
+
+  const sectionInfo = sectionTable.map(parts => ({
+    number: parts[0],
+    title: parts[1],
+    description: parts[2]
+  }));
+
+  const questionsRes = await fetch(`./${currentLang}/QUESTIONS.md`);
+  const questionsText = await questionsRes.text();
+  const sectionBlocks = questionsText.split(/## \d+\. /).slice(1);
+
+  sectionInfo.forEach((sec, i) => {
+    const section = document.createElement("div");
+    section.className = "section";
+
+    const header = document.createElement("div");
+    header.className = "section-header";
+    header.textContent = `${sec.number}. ${sec.title}`;
+
+    const desc = document.createElement("div");
+    desc.className = "section-description";
+    desc.textContent = sec.description;
+
+    const questionContainer = document.createElement("div");
+    questionContainer.className = "questions";
+    questionContainer.style.display = "none";
+    questionContainer.id = `section-${sec.number}`;
+
+    let blockLines = sectionBlocks[i]?.split("\n") || [];
+    let questions = blockLines.filter(line => line.trim().match(/^\d+\. /));
+
+    questions.forEach((line, index) => {
+      const qTitle = line.replace(/^\d+\. /, "").trim();
+      const qId = (i * 10) + index + 1;
+
+      const card = document.createElement("div");
+      card.className = "question-card";
+      card.innerHTML = `
+        <div class="badge" id="badge-${sec.number}-${qId}">🟡 Not viewed</div>
+        <h4>Question ${qId}</h4>
+        <p>${qTitle}</p>
+        <button onclick="openQuestion(${sec.number}, ${qId})">Open</button>
+      `;
+      questionContainer.appendChild(card);
+    });
+
+    header.addEventListener("click", () => {
+      questionContainer.style.display = questionContainer.style.display === "none" ? "grid" : "none";
+    });
+
+    section.appendChild(header);
+    section.appendChild(desc);
+    section.appendChild(questionContainer);
+    content.appendChild(section);
+  });
+}
+
+async function openQuestion(sectionId, questionId) {
+  const sectionStr = String(sectionId).padStart(2, '0');
+  const questionStr = String(questionId).padStart(2, '0');
+
+  const qPath = `${currentLang}/questions/section-${sectionStr}/question-${questionStr}.md`;
+  const aPath = `${currentLang}/answers/section-${sectionStr}/answer-${questionStr}.md`;
+
+  const qRes = await fetch(qPath);
+  const qText = await qRes.text();
+  popupQuestion.innerHTML = marked.parse(qText);
+
+  popupTitle.textContent = `Section ${sectionId} — Question ${questionId}`;
+  popupAnswer.innerHTML = "";
+  popupAnswer.style.display = "none";
+  popup.showModal();
+
+  showAnswerBtn.onclick = async () => {
+    const aRes = await fetch(aPath);
+    const aText = await aRes.text();
+    popupAnswer.innerHTML = marked.parse(aText);
+    popupAnswer.style.display = "block";
+    document.getElementById(`badge-${sectionId}-${questionId}`).textContent = "✅ Answered";
+  };
+}
+
+renderSections();
 </script>
