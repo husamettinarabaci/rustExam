@@ -1,3 +1,53 @@
+# Rust Exam
+
+🚀 **Access all Rust questions and answers live at [www.rustexam.com](https://www.rustexam.com)!**
+
+- The platform supports both **Turkish** and **English**.
+- You can browse, search, and practice all questions and answers online.
+- Visit now: [www.rustexam.com](https://www.rustexam.com)
+
+---
+
+## About This Repository
+
+This repository contains a comprehensive set of 250 Rust programming questions and answers, organized into 25 sections. Each section covers a specific topic and contains 10 questions, with both Turkish and English support.
+
+## Sections and Coverage
+
+The questions are grouped into the following sections, each focusing on a key Rust programming topic:
+
+1. **Getting Started** – Basic syntax, printing, comments, and running your first program
+2. **Variables, Constants, and Types** – Tuples, arrays, mutability, type inference, and numeric types
+3. **Control Flow** – if/else, match, loops, and pattern matching
+4. **I/O Basics** – Reading input, parsing, error handling, and file I/O
+5. **Functions I** – Function definitions, parameters, return values, and tuples
+6. **Functions II** – Closures, recursion, generics, and advanced function features
+7. **Ownership and Borrowing I** – Ownership, borrowing, references, and lifetimes
+8. **Lifetimes I** – Lifetime annotations, elision, and lifetime errors
+9. **Structs I** – Struct definitions, fields, methods, and associated functions
+10. **Structs II** – Method implementations, chaining, trait bounds, and static variables
+11. **Enums I** – Enum basics, variants, pattern matching, and Option
+12. **Enums II** – Advanced matching, nested enums, and guards
+13. **Modules I** – Module organization, visibility, imports, and documentation
+14. **Modules II** – Public/private items, nested modules, and macros
+15. **Crates and External Packages** – Cargo, dependencies, publishing, and features
+16. **Collections: Vectors** – Vector operations, iteration, and manipulation
+17. **Advanced Patterns** – Destructuring, pattern guards, ranges, ignoring values, and more
+18. **Collections: HashMap** – HashMap creation, access, ownership, and lifetimes
+19. **Option and Result Types** – Nullable values, error handling, and combinators
+20. **Error Handling** – Custom errors, propagation, and error management
+21. **Traits I** – Trait definitions, implementations, trait objects, and bounds
+22. **Generics I** – Generic functions, structs, enums, and constraints
+23. **Generics II** – Multiple generics, lifetimes, trait objects, and type aliases
+24. **Closures and Iterator Basics** – Closures, iterator methods, and functional patterns
+25. **Closures and Ownership** – Closure captures, async, trait bounds, and recursion
+
+Each section contains 10 questions, for a total of 250, and all are available in both Turkish and English.
+
+---
+
+For details on file formats and contribution guidelines, see the `en/FORMAT.md` and `tr/FORMAT.md` files.
+
 # rustExam
 
 Learn Rust by solving  progressively harder questions, from beginner syntax to advanced concurrency.

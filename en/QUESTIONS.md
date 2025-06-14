@@ -196,17 +196,17 @@ Below is the complete list of 250 questions, grouped by section. Each section co
 159. Inserting elements into a vector
 160. Vector of structs
 
-## 17. Collections: Strings
-161. Creating a `String` and `&str`
-162. String concatenation and formatting
-163. Iterating over string characters
-164. String slicing and indexing
-165. Ownership and borrowing with strings
-166. String length and capacity
-167. String parsing
-168. String to number conversion
-169. String from number conversion
-170. String formatting
+## 17. Advanced Patterns
+161. Destructuring nested structs and enums
+162. Using pattern guards in match arms
+163. Matching on ranges and bindings
+164. Ignoring values with `_` in patterns
+165. Using `ref` and `ref mut` in patterns
+166. Using `@` bindings in patterns
+167. Matching on slices and arrays
+168. Destructuring tuples in function parameters
+169. Using multiple patterns with `|`
+170. Matching on references and dereferencing in patterns
 
 ## 18. Collections: HashMap
 171. Creating a `HashMap` and inserting values

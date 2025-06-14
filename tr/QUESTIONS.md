@@ -196,17 +196,17 @@ Aşağıda, bölümlere göre gruplanmış toplam 250 sorunun tam listesi bulunm
 159. Vektöre eleman ekleme
 160. Yapı vektörü
 
-## 17. Koleksiyonlar: Stringler
-161. `String` ve `&str` oluşturma
-162. String birleştirme ve biçimlendirme
-163. String karakterleri üzerinde yineleme
-164. String dilimleme ve indeksleme
-165. Stringlerde sahiplik ve ödünç alma
-166. String uzunluğu ve kapasitesi
-167. String ayrıştırma
-168. String'den sayıya çevirme
-169. Sayıdan string'e çevirme
-170. String biçimlendirme
+## 17. İleri Düzey Desenler
+161. İç içe struct ve enum'ları parçalara ayırma (destructuring)
+162. Match kollarında desen koruyucular (pattern guard) kullanma
+163. Aralıklar ve bağlamalar üzerinde eşleme
+164. Desenlerde `_` ile değerleri yoksayma
+165. Desenlerde `ref` ve `ref mut` kullanımı
+166. Desenlerde `@` bağlamalarını kullanma
+167. Slice ve dizilerde desen eşleme
+168. Fonksiyon parametrelerinde tuple parçalara ayırma
+169. `|` ile birden fazla desen kullanma
+170. Referanslar ve dereference işlemleriyle desen eşleme
 
 ## 18. Koleksiyonlar: HashMap
 171. `HashMap` oluşturma ve değer ekleme
