@@ -1,11 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Ignoring Values  
+### 🔹 Category: Ignoring values with `_` in patterns  
 #### ❓ Question 164: Ignoring values with `_` in patterns
 
-Write a Rust function that takes a tuple of three integers and uses a `match` statement to:
+Write a Rust program that demonstrates how to use the underscore (`_`) to ignore values in pattern matching:
 
-- Print the first and third values, ignoring the second value using `_`.
-- If the first value is 0, print "First is zero".
-- Otherwise, print the first and third values.
+- Use a `match` statement to match a tuple of three integers.
+- Ignore one or more values in the tuple using `_`.
+- Print only the values you do not ignore.
 
-🔧 **Task:** Show how to use `_` to ignore values in pattern matching with tuples in Rust.
+🔧 **Task:** Use `_` in pattern matching to ignore specific values in a tuple and print the remaining values.

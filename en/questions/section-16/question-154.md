@@ -1,11 +1,10 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Default Trait  
-#### ❓ Question 154: Using the Default trait for initialization
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ❓ Question 154: Iterating over a vector
 
-Write a function that creates a new instance of a generic type using the `Default` trait.
+Write a Rust program that does the following:
 
-- The function should accept no parameters and return a value of type `T`.
-- Constrain `T` to types that implement `Default`.
-- Demonstrate usage with a standard type.
+- Create a vector of strings with at least three elements.
+- Iterate over the vector and print each element to the terminal.
 
-🔧 **Task:** Use the `Default` trait to generically initialize values.
+🔧 **Task:** Show how to iterate over a vector and print its elements in Rust.

@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: impl Trait Kullanımı  
-#### ❓ Soru 108: impl Trait ifadesi nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Yapı Varyantlı Enum  
+#### ❓ Soru 108: Yapı varyantlı enum
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Rust'ta `impl Trait` ifadesi hangi amaçla kullanılır?
-- Hangi durumlarda tercih edilir?
+- `Message` adında, iki yapı varyantı olan bir enum tanımlayın: `Move { x: i32, y: i32 }` ve `Write { text: String }`.
+- Bir `Message` alan ve varyanta göre mesaj yazdıran bir fonksiyon yazın.
+- `main` fonksiyonunda her iki varyantı da oluşturun ve fonksiyonu çağırın.
 
-🔧 **Görev:** Fonksiyon dönüş tipinde impl Trait kullanımına örnek verin.
+🔧 **Görev:** Enum'da yapı varyantlarını kullanın ve her varyantı farklı şekilde işlemek için desen eşleme uygulayın.

@@ -1,13 +1,31 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: main Fonksiyonunda Hata Yönetimi  
-#### ✅ Cevap 180: main fonksiyonunda hata yönetimi
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve Option/Result  
+#### ✅ Cevap 180: HashMap ve Option/Result
 
-`main` fonksiyonunun dönüş tipi olarak `Result` kullanarak hata yayılımı yapabilirsiniz. Böylece `main` içinde `?` operatörünü kullanmak mümkün olur.
+Bir `HashMap`'te değere erişirken `get` metodu bir `Option` döndürür. Eksik anahtarları yönetmek için desen eşleme veya `unwrap_or` gibi metodlar kullanılabilir. Ayrıca, anahtar yoksa hata döndüren bir fonksiyon da yazabilirsiniz.
 
 ```rust
-fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let icerik = std::fs::read_to_string("dosya.txt")?;
-    println!("{}", icerik);
-    Ok(())
+use std::collections::HashMap;
+
+fn deger_getir<'a>(map: &'a HashMap<&str, i32>, anahtar: &str) -> Result<&'a i32, String> {
+    map.get(anahtar).ok_or_else(|| format!("Anahtar '{}' bulunamadı", anahtar))
+}
+
+fn main() {
+    let mut map = HashMap::new();
+    map.insert("a", 1);
+    map.insert("b", 2);
+
+    // Option ile kullanım
+    match map.get("a") {
+        Some(deger) => println!("Bulundu: {}", deger),
+        None => println!("Anahtar bulunamadı"),
+    }
+
+    // Result ile kullanım
+    match deger_getir(&map, "c") {
+        Ok(deger) => println!("Bulundu: {}", deger),
+        Err(e) => println!("{}", e),
+    }
 }
 ```

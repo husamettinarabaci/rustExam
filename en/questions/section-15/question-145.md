@@ -1,10 +1,11 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime Bounds  
-#### ❓ Question 145: Lifetime bounds
+## 📘 Section: Crates and External Packages  
+### 🔹 Category: Using `use crate::` for Imports  
+#### ❓ Question 145: Using `use crate::` for imports
 
-What is a lifetime bound and when is it used?
+Demonstrate how to use the `use crate::` syntax for importing items in Rust:
 
-- Explain the syntax for lifetime bounds.
-- Give an example.
+- Create a module with a public function.
+- Import the function into `main` using `use crate::mod_name::function_name;`.
+- Call the function from `main`.
 
-🔧 **Task:** Explain and show lifetime bounds in Rust.
+🔧 **Task:** Show how to organize code with modules and import functions using `use crate::` syntax.

@@ -1,10 +1,11 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Error Handling in Main  
-#### ❓ Question 180: Handling errors in the main function
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and Option/Result  
+#### ❓ Question 180: HashMap and Option/Result
 
-Show how to handle errors in the `main` function using `Result`. Provide an example where `main` returns a `Result<(), Box<dyn std::error::Error>>`.
+Write a Rust program that demonstrates how to use `Option` and `Result` when accessing values in a `HashMap`.
 
-- Write a `main` function that returns a `Result`.
-- Demonstrate error propagation from within `main`.
+- Create a `HashMap` and insert several key-value pairs.
+- Try to access a value for a key that may or may not exist, using the `get` method and handling the `Option` result.
+- Write a function that returns a `Result` if the key exists, or an error if it does not.
 
-🔧 **Task:** Use `Result` as the return type of `main` for error handling.
+🔧 **Task:** Show how to handle missing keys in a `HashMap` using `Option` and `Result`.

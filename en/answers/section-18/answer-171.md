@@ -1,11 +1,21 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Basic Error Handling  
-#### ✅ Answer 171: Using the Result type for error handling
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Creating a HashMap and Inserting Values  
+#### ✅ Answer 171: Creating a `HashMap` and inserting values
 
-This function demonstrates how to use the `Result` type for error handling when parsing a string to an integer. It returns a custom error message if parsing fails.
+To create a `HashMap` in Rust, you need to import it from the standard library. You can then insert key-value pairs using the `insert` method. Here is an example:
 
 ```rust
-fn parse_to_int(s: &str) -> Result<i32, String> {
-    s.parse::<i32>().map_err(|_| format!("Could not parse '{}' as i32", s))
+use std::collections::HashMap;
+
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+
+    println!("{:?}", scores);
 }
 ```
+
+- `HashMap::new()` creates an empty map.
+- `insert` adds key-value pairs.
+- The map is printed using the debug format.

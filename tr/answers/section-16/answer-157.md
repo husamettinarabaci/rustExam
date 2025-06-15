@@ -1,16 +1,13 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Higher-Ranked Trait Bounds  
-#### ✅ Cevap 157: Higher-ranked trait bound (HRTB) kullanımı
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Sıralama ve Karşılaştırma  
+#### ✅ Cevap 157: Vektörü sıralama
 
-Higher-ranked trait bound, bir fonksiyon veya closure'ın herhangi bir ömre sahip referansları kabul edebilmesini sağlar. Bu, esnek API'ler yazmak için kullanışlıdır.
+Rust'ta bir vektörü sıralamak için `sort` metodunu kullanabilirsiniz. Bu metod, vektörü yerinde artan düzende sıralar. İşte bir örnek:
 
 ```rust
-fn call_with_str<F>(f: F)
-where
-    F: for<'a> Fn(&'a str),
-{
-    f("merhaba");
+fn main() {
+    let mut sayilar = vec![42, 7, 19, 73, 2];
+    sayilar.sort();
+    println!("Sıralanmış vektör: {:?}", sayilar);
 }
-
-call_with_str(|s| println!("{}", s));
 ```

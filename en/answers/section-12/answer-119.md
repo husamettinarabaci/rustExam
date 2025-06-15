@@ -1,15 +1,24 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Converting Errors  
-#### ✅ Answer 119: Converting between error types
+## 📘 Section: Enums II  
+### 🔹 Category: Reference and Mutable Matching  
+#### ✅ Answer 119: Matching with ref and mut
 
-**Explanation:**
-The `From` trait allows you to convert between error types for easier error handling.
+This example demonstrates how to use `ref` and `ref mut` in pattern matching to access and modify values inside enums. `ref` allows you to borrow a reference, while `ref mut` gives you a mutable reference for modification.
 
 ```rust
-use std::num::ParseIntError;
-fn parse_and_add(a: &str, b: &str) -> Result<i32, ParseIntError> {
-    let x: i32 = a.parse()?;
-    let y: i32 = b.parse()?;
-    Ok(x + y)
+fn main() {
+    let mut maybe = Some(5);
+    // Borrow as immutable reference
+    match maybe {
+        Some(ref x) => println!("Before: {}", x),
+        None => println!("No value"),
+    }
+    // Borrow as mutable reference and modify
+    match maybe {
+        Some(ref mut x) => {
+            *x += 10;
+            println!("After: {}", x);
+        },
+        None => println!("No value"),
+    }
 }
 ```

@@ -1,11 +1,11 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `From` Trait for Error Conversion  
-#### ❓ Question 178: Using the `From` trait for error conversion
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and references  
+#### ❓ Question 178: HashMap and references
 
-Write a function that uses the `From` trait to convert one error type into another. Provide an example with custom error types.
+Write a Rust program that demonstrates how to store and access references as values in a `HashMap`.
 
-- Define two custom error types.
-- Implement `From` to convert one error into the other.
-- Use this conversion in a function that returns the broader error type.
+- Create a `HashMap` where the values are references to integers.
+- Insert several key-value pairs, where the values are references to existing integers.
+- Access and print the referenced values from the `HashMap`.
 
-🔧 **Task:** Use the `From` trait to enable error type conversion in your code.
+🔧 **Task:** Use a `HashMap` with references as values and show how to work with lifetimes.

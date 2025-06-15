@@ -1,11 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Option ve Result Farkı  
-#### ❓ Soru 115: Option ve Result farkı
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Option ve Enum Eşleme  
+#### ❓ Soru 115: Option üzerinde eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- `Option` ve `Result` tiplerinin farkı nedir?
-- Hangi durumlarda hangisi tercih edilir?
-- Her biri için örnek verin.
+- `Option<i32>` türünde bir değişken oluşturun ve bir değer atayın.
+- `match` ifadesiyle hem `Some` hem de `None` durumlarını ele alın.
+- Değer varsa ekrana yazdırın, yoksa uygun bir mesaj gösterin.
 
-🔧 **Görev:** Option ve Result farkını örneklerle açıklayın.
+🔧 **Görev:** Option enumu ile desen eşleme kullanarak isteğe bağlı değerlerin nasıl ele alınacağını gösterin.

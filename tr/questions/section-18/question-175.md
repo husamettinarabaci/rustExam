@@ -1,11 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Result ile Eşleme  
-#### ❓ Soru 175: Result varyantlarını match ile yönetme
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap'te string olmayan anahtarlar  
+#### ❓ Soru 175: HashMap'te string olmayan anahtarlar
 
-`Result<i32, String>` alan ve `Ok` veya `Err` durumuna göre farklı mesaj yazdıran bir fonksiyon yazın.
+String olmayan türleri (örneğin tamsayılar) anahtar olarak kullanan bir `HashMap` örneği gösteren bir Rust programı yazın.
 
-- `handle_result` adında bir fonksiyon tanımlayın.
-- Her iki varyantı da `match` ile yönetin.
-- Değeri veya hata mesajını yazdırın.
+- Standart kütüphaneden `HashMap` tipini içe aktarın.
+- Tamsayıdan string'e eşleyen bir `HashMap` oluşturun.
+- En az iki anahtar-değer çifti ekleyin.
+- `HashMap`'in içeriğini yazdırın.
 
-🔧 **Görev:** `Result`'ın hem `Ok` hem de `Err` durumlarını pattern matching ile yönetin.
+🔧 **Görev:** Rust'ta farklı anahtar türleriyle `HashMap` kullanmayı uygulayın.

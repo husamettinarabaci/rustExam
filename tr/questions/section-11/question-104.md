@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Object Kullanımı  
-#### ❓ Soru 104: Box<dyn Trait> ve &dyn Trait farkı
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Enumlarda Desen Eşleme ve Yazdırma  
+#### ❓ Soru 104: Enum ve `match` ile yazdırma
 
-Aşağıdakileri açıklayın:
+Bir Rust programında, bir enum üzerinde `match` ifadesiyle farklı mesajlar yazdırın.
 
-- `Box<dyn Trait>` ile `&dyn Trait` arasındaki fark nedir?
-- Hangi durumlarda hangisi tercih edilir?
+- En az iki varyantı (biri veri tutabilir) olan bir enum tanımlayın.
+- Bu enum türünde bir değişken oluşturup bir değer atayın.
+- Her varyant için `match` ile farklı bir mesaj yazdırın.
 
-🔧 **Görev:** Sahiplik ve ömür yönetimi açısından iki yapının farklarını açıklayın.
+🔧 **Görev:** Bir enum tanımlayın, bir örnek oluşturun ve `match` ile her varyant için mesaj yazdırın.

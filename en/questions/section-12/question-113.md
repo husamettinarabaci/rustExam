@@ -1,9 +1,11 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Error Propagation  
-#### ❓ Question 113: The `?` operator
+## 📘 Section: Enums II  
+### 🔹 Category: Nested Enums and Advanced Matching  
+#### ❓ Question 113: Nested enums and matches
 
-What does the `?` operator do in Rust error handling?
+Write a Rust program that demonstrates the use of nested enums and pattern matching:
 
-- Show how to use the `?` operator in a function that returns `Result`.
+- Define two enums, where one enum contains a variant that holds the other enum.
+- Create an instance of the outer enum containing the inner enum.
+- Use pattern matching to access and print the value inside the nested enums.
 
-🔧 **Task:** Explain and demonstrate the `?` operator for error propagation.
+🔧 **Task:** Show how to define and use nested enums, and how to match on them to extract values.

@@ -1,10 +1,11 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime in Methods  
-#### ❓ Question 148: Lifetimes in methods
+## 📘 Section: Crates and External Packages  
+### 🔹 Category: Using Features in Cargo.toml  
+#### ❓ Question 148: Using features in Cargo.toml
 
-How do you use lifetimes in method definitions?
+Explain how to define and use features in a Rust crate's `Cargo.toml`:
 
-- Show how to define a method with a lifetime parameter.
-- Give an example.
+- Add a `[features]` section to `Cargo.toml` and define at least one feature (e.g., `extras`).
+- Show how to enable a feature when building or running your crate.
+- Explain how features can be used to conditionally compile code.
 
-🔧 **Task:** Demonstrate lifetimes in method definitions.
+🔧 **Task:** Show how to define, enable, and use features in `Cargo.toml` for conditional compilation.

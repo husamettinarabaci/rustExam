@@ -1,18 +1,22 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Koleksiyonlardan Eleman Silme  
-#### ✅ Cevap 129: Koleksiyonlardan eleman silme
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Testleri  
+#### ✅ Cevap 129: Modül testleri
 
-**Açıklama:**
-`HashSet`/`HashMap` için `.remove()`, vektör için `.remove()` veya `.pop()` kullanılır.
+Rust'ta modüller kendi testlerini `#[cfg(test)]` özniteliği ile içerebilir. Test modülleri genellikle aynı dosyada yer alır ve test fonksiyonları için `#[test]` kullanılır. Bu, kod ve testlerin birlikte düzenli tutulmasını sağlar.
 
 ```rust
-let mut v = vec![1, 2, 3];
-v.pop();
-use std::collections::{HashMap, HashSet};
-let mut map = HashMap::new();
-map.insert("a", 1);
-map.remove("a");
-let mut set = HashSet::new();
-set.insert(1);
-set.remove(&1);
+mod matematik {
+    pub fn topla(a: i32, b: i32) -> i32 {
+        a + b
+    }
+
+    #[cfg(test)]
+    mod testler {
+        use super::*;
+        #[test]
+        fn test_topla() {
+            assert_eq!(topla(2, 3), 5);
+        }
+    }
+}
 ```

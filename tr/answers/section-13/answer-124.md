@@ -1,12 +1,19 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: String ve &str  
-#### ✅ Cevap 124: String ve &str farkı
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Başka Bir Modülden Öğeye Erişim  
+#### ✅ Cevap 124: Başka bir modülden öğeye erişim
 
-**Açıklama:**
-`String` sahipli, büyüyebilen bir string'dir. `&str` ise ödünç alınan bir string dilimidir. `.as_str()` veya `to_string()` ile dönüşüm yapılır.
+Başka bir modülden fonksiyona erişmek için modül yolunu kullanırsınız. Aşağıda, `math` modülünde tanımlı herkese açık `square` fonksiyonu, `main` fonksiyonunda `math::square` ile çağrılmaktadır.
 
 ```rust
-let s: String = String::from("merhaba");
-let dilim: &str = &s;
-let s2 = dilim.to_string();
+mod math {
+    pub fn square(x: i32) -> i32 {
+        x * x
+    }
+}
+
+fn main() {
+    let value = 5;
+    let result = math::square(value);
+    println!("Karesi: {}", result);
+}
 ```

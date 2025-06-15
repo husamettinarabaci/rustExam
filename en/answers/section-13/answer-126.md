@@ -1,13 +1,19 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashMap  
-#### ✅ Answer 126: What is a HashMap?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Imports  
+#### ✅ Answer 126: Module imports
 
-**Explanation:**
-A `HashMap` stores key-value pairs. You can insert and access values by key.
+You can import functions from a module using the `use` keyword. Here, the `hello` function from the `greetings` module is imported and called directly in `main`.
 
 ```rust
-use std::collections::HashMap;
-let mut map = HashMap::new();
-map.insert("a", 1);
-let v = map.get("a");
+mod greetings {
+    pub fn hello() {
+        println!("Hello from the greetings module!");
+    }
+}
+
+use greetings::hello;
+
+fn main() {
+    hello();
+}
 ```

@@ -1,12 +1,11 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Aralıklar ve Bağlamalar  
+### 🔹 Kategori: Aralıklar ve Bağlamalar Üzerinde Eşleme  
 #### ❓ Soru 163: Aralıklar ve bağlamalar üzerinde eşleme
 
-Bir tamsayıyı parametre olarak alan ve aşağıdaki işlemleri `match` ifadesiyle yapan bir Rust fonksiyonu yazınız:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Sayı 1 ile 10 (dahil) arasındaysa "Düşük" yazdırın.
-- Sayı 11 ile 100 (dahil) arasındaysa "Orta" yazdırın.
-- Sayı 100'den büyükse "Yüksek" yazdırın.
-- Sayı sıfır veya negatifse "Sıfır veya negatif" yazdırın.
+- Bir tamsayıyı birkaç aralığa (`1..=5`, `6..=10` vb.) göre `match` ile eşleyin.
+- Eşleşen değeri desen içinde bir değişkene bağlayın ve yazdırın.
+- Belirtilen aralıklar dışında kalan değerler için bir varsayılan kol ekleyin.
 
-🔧 **Görev:** Rust'ta aralık desenleri ve değişken bağlamalarını `match` kollarında nasıl kullanacağınızı gösterin.
+🔧 **Görev:** `match` ile aralık desenleri ve değişken bağlamalarını kullanarak değerin hangi aralığa düştüğünü ve eşleşen değeri yazdırın.

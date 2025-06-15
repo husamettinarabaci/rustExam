@@ -1,10 +1,11 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashMap  
-#### ❓ Soru 126: HashMap nedir?
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül İçe Aktarma  
+#### ❓ Soru 126: Modül içe aktarma
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- Rust'ta `HashMap` nedir?
-- Nasıl kullanılır, değer ekleme ve erişim örneği verin.
+- `greetings` adında bir modül oluşturun ve içinde herkese açık bir `hello` fonksiyonu tanımlayın. Bu fonksiyon bir selamlama mesajı yazdırsın.
+- Ana fonksiyonda, `use` anahtar kelimesiyle `greetings::hello` fonksiyonunu içe aktarın.
+- `main` fonksiyonunda `hello()` fonksiyonunu doğrudan çağırarak selamlamayı yazdırın.
 
-🔧 **Görev:** HashMap kullanımını örnekle açıklayın.
+🔧 **Görev:** Bir modülden fonksiyonu `use` anahtar kelimesiyle içe aktarmayı ve doğrudan çağırmayı gösterin.

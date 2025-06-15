@@ -1,10 +1,10 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Result Type Basics  
-#### ❓ Question 112: Unwrapping Result
+## 📘 Section: Enums II  
+### 🔹 Category: Matching Multiple Patterns  
+#### ❓ Question 112: Matching multiple patterns
 
-How do you extract the value from a `Result`? What happens if it is an error?
+Write a Rust program that demonstrates matching multiple patterns in a match arm:
 
-- Show how to use `.unwrap()` and `.expect()`.
-- Explain the risks of unwrapping.
+- Define an enum `Direction` with variants: `Up`, `Down`, `Left`, `Right`.
+- In `main`, create a `Direction` and use `match` to print "Vertical" for `Up` or `Down`, and "Horizontal" for `Left` or `Right`.
 
-🔧 **Task:** Demonstrate unwrapping a `Result` and discuss its risks.
+🔧 **Task:** Use the `|` operator in match arms to match multiple enum variants with a single pattern.

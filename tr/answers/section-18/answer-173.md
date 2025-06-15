@@ -1,31 +1,22 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Özel Hata Tipleri  
-#### ✅ Cevap 173: Özel hata tipi tanımlama ve kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: Anahtar-değer çiftleri üzerinde yineleme  
+#### ✅ Cevap 173: Anahtar-değer çiftleri üzerinde yineleme
 
-Bu örnek, özel bir hata tipinin nasıl tanımlanacağını ve `Result` döndüren bir fonksiyonda nasıl kullanılacağını gösterir.
+Bir `HashMap`'teki tüm anahtar-değer çiftleri üzerinde `for` döngüsü ve `.iter()` ile yineleme yapılabilir. Örnek:
 
 ```rust
-use std::fmt;
+use std::collections::HashMap;
 
-enum MyError {
-    Bulunamadi,
-    GecersizGirdi,
-}
+fn main() {
+    let mut skorlar = HashMap::new();
+    skorlar.insert(String::from("Ali"), 10);
+    skorlar.insert(String::from("Ayşe"), 20);
 
-impl fmt::Display for MyError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            MyError::Bulunamadi => write!(f, "Bulunamadı"),
-            MyError::GecersizGirdi => write!(f, "Geçersiz girdi"),
-        }
-    }
-}
-
-fn bir_sey_yap(input: i32) -> Result<i32, MyError> {
-    if input < 0 {
-        Err(MyError::GecersizGirdi)
-    } else {
-        Ok(input)
+    for (anahtar, deger) in &skorlar {
+        println!("{}: {}", anahtar, deger);
     }
 }
 ```
+
+- `.iter()` veya `&skorlar` ile anahtar-değer referansları üzerinde yineleme yapılır.
+- Her yinelemede `(anahtar, deger)` çifti referans olarak elde edilir.

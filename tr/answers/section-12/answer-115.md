@@ -1,15 +1,15 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Option ve Result Farkı  
-#### ✅ Cevap 115: Option ve Result farkı
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Option ve Enum Eşleme  
+#### ✅ Cevap 115: Option üzerinde eşleme
 
-**Açıklama:**
-`Option`, bir değerin olup olmamasını, `Result` ise işlemin başarılı mı hatalı mı olduğunu belirtir. Örnek:
+Bu örnekte, Rust'ta Option enumu ile desen eşleme kullanılarak isteğe bağlı değerlerin nasıl güvenli şekilde ele alınacağı gösterilmektedir. `Some` ve `None` durumları ayrı ayrı kontrol edilerek hata riski ortadan kaldırılır.
 
 ```rust
-fn cift_bul(nums: &[i32]) -> Option<i32> {
-    nums.iter().find(|&&x| x % 2 == 0).copied()
-}
-fn bol(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 { Err("Sıfır!".to_string()) } else { Ok(a / b) }
+fn main() {
+    let belki_sayi: Option<i32> = Some(10);
+    match belki_sayi {
+        Some(deger) => println!("Değer: {}", deger),
+        None => println!("Değer bulunamadı"),
+    }
 }
 ```

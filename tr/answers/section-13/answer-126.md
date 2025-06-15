@@ -1,13 +1,19 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashMap  
-#### ✅ Cevap 126: HashMap nedir?
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül İçe Aktarma  
+#### ✅ Cevap 126: Modül içe aktarma
 
-**Açıklama:**
-`HashMap` anahtar-değer çiftlerini saklar. Değer ekleme ve erişim anahtar ile yapılır.
+Bir modülden fonksiyonu `use` anahtar kelimesiyle içe aktarabilirsiniz. Aşağıda, `greetings` modülündeki `hello` fonksiyonu içe aktarılmış ve `main` fonksiyonunda doğrudan çağrılmıştır.
 
 ```rust
-use std::collections::HashMap;
-let mut map = HashMap::new();
-map.insert("a", 1);
-let v = map.get("a");
+mod greetings {
+    pub fn hello() {
+        println!("Selamlar, greetings modülünden!");
+    }
+}
+
+use greetings::hello;
+
+fn main() {
+    hello();
+}
 ```

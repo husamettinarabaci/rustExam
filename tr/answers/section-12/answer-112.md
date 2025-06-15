@@ -1,13 +1,22 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi Temelleri  
-#### ✅ Cevap 112: Result'ı açmak (unwrap)
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Birden Fazla Desenle Eşleme  
+#### ✅ Cevap 112: Birden fazla desenle eşleme
 
-**Açıklama:**
-Bir `Result` değerinden sonucu `.unwrap()` veya `.expect()` ile elde edebilirsiniz. Eğer değer `Err` ise program panic ile sonlanır.
+Match kollarında `|` operatörü ile birden fazla desen eşlenebilir. Burada hem `Up` hem de `Down` birlikte, `Left` ve `Right` ise birlikte eşlenmiştir.
 
 ```rust
-let sonuc: Result<i32, &str> = Ok(5);
-let deger = sonuc.unwrap(); // 5 döner
-let hata: Result<i32, &str> = Err("hata");
-// hata.unwrap(); // panic!
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+fn main() {
+    let yon = Direction::Left;
+    match yon {
+        Direction::Up | Direction::Down => println!("Dikey"),
+        Direction::Left | Direction::Right => println!("Yatay"),
+    }
+}
 ```

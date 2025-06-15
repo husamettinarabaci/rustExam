@@ -1,10 +1,11 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Custom Error Types  
-#### ❓ Question 114: Defining custom error types
+## 📘 Section: Enums II  
+### 🔹 Category: Advanced Matching and Enum Usage  
+#### ❓ Question 114: Using `if let` with enums
 
-How do you define a custom error type in Rust?
+Write a Rust program that demonstrates how to use `if let` with enums:
 
-- Show how to create an enum for custom errors.
-- Demonstrate implementing the `Error` trait.
+- Define an enum with at least two variants.
+- Create an instance of the enum.
+- Use `if let` to check for a specific variant and print its value if it matches.
 
-🔧 **Task:** Show how to define and use a custom error type.
+🔧 **Task:** Show how to use `if let` for concise pattern matching with enums.

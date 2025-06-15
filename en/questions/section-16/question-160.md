@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Traits  
-#### ❓ Question 160: Implementing generic traits for multiple types
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Vectors of Structs  
+#### ❓ Question 160: Vector of structs
 
-Define a generic trait and implement it for two different types. Show how the trait can be used with both types.
+Write a Rust program that demonstrates how to create and use a vector of structs.
 
-- Create a trait named `Summable` with a method `sum`.
-- Implement `Summable` for `Vec<i32>` and `[i32; 3]`.
+- Define a simple struct (e.g., `Person` with `name` and `age`).
+- Create a vector containing several instances of the struct.
+- Iterate over the vector and print each struct's fields.
 
-🔧 **Task:** Use generic traits to provide shared functionality for different types.
+🔧 **Task:** Use a vector to store multiple struct instances and display their contents.

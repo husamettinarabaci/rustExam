@@ -1,11 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: `?` Operatörü  
-#### ❓ Soru 172: `?` operatörü ile hata yayılımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap'te değerleri erişme ve güncelleme  
+#### ❓ Soru 172: HashMap'te değerleri erişme ve güncelleme
 
-Bir dosyayı okuyup içeriğini `String` olarak döndüren bir fonksiyon yazın. Hata yayılımı için `?` operatörünü kullanın.
+Bir `HashMap`'teki değerlere erişmeyi ve güncellemeyi gösteren bir Rust programı yazın.
 
-- `read_file_contents` adında, dosya yolu parametresi alan bir fonksiyon tanımlayın.
-- `std::fs::read_to_string` ve `?` operatörünü kullanın.
-- `Result<String, std::io::Error>` döndürün.
+- En az iki anahtar-değer çifti içeren bir `HashMap` oluşturun.
+- Bir anahtar ile değere erişip yazdırın.
+- Var olan bir anahtarın değerini güncelleyin.
+- Güncellenmiş `HashMap`'i yazdırın.
 
-🔧 **Görev:** Dosya okuma işlemlerinde hata yayılımını basitleştirmek için `?` operatörünü kullanın.
+🔧 **Görev:** Rust'ta bir `HashMap`'teki değerlere erişmeyi ve güncellemeyi uygulayın.

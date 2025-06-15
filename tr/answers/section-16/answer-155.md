@@ -1,13 +1,15 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: PhantomData  
-#### ✅ Cevap 155: Jenerik structlarda PhantomData kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ✅ Cevap 155: Vektör elemanlarını değiştirme
 
-`PhantomData`, bir struct'ın aslında bir değeri tutmasa bile, tip sistemine o tipe sahip olduğunu belirtmek için kullanılır. Bu, varyans ve drop kontrolleri için önemlidir.
+Vektör elemanlarını değiştirmek için `iter_mut` metodu ve değiştirilebilir referanslar kullanılır. Her elemanı yerinde değiştirebilirsiniz.
 
 ```rust
-use std::marker::PhantomData;
-
-struct MyType<T> {
-    marker: PhantomData<T>,
+fn main() {
+    let mut sayilar = vec![1, 2, 3];
+    for n in sayilar.iter_mut() {
+        *n *= 2;
+    }
+    println!("{:?}", sayilar);
 }
 ```

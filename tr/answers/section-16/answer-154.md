@@ -1,14 +1,14 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Default Trait'i  
-#### ✅ Cevap 154: Varsayılan başlatma için Default trait'inin kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ✅ Cevap 154: Vektör üzerinde yineleme
 
-Bu fonksiyon, `Default` trait'ini kullanarak jenerik bir tipin yeni bir örneğinin nasıl oluşturulacağını gösterir. Trait, tipin varsayılan değerle başlatılabilmesini sağlar.
+Rust'ta vektör üzerinde yinelemek için `for` döngüsü kullanılır. Elemanların referansları üzerinden yineleyip her birini yazdırabilirsiniz.
 
 ```rust
-fn new_default<T: Default>() -> T {
-    T::default()
+fn main() {
+    let meyveler = vec!["elma", "muz", "kiraz"];
+    for meyve in &meyveler {
+        println!("{}", meyve);
+    }
 }
-
-let x: i32 = new_default();
-let s: String = new_default();
 ```

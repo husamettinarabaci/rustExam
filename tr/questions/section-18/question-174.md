@@ -1,11 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Option ve Result Dönüşümü  
-#### ❓ Soru 174: Option'dan Result'a dönüşüm
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: Anahtar kontrolü ve giriş silme  
+#### ❓ Soru 174: Anahtar kontrolü ve giriş silme
 
-Bir `Option<T>` değerini, `None` durumunda özel hata mesajı ile `Result<T, String>`'e dönüştüren bir fonksiyon yazın.
+Bir `HashMap`'te anahtarın varlığını kontrol etmeyi ve bir girişi silmeyi gösteren bir Rust programı yazın.
 
-- `option_to_result` adında bir fonksiyon tanımlayın.
-- Bir `Option<T>` ve özel hata mesajı parametre alın.
-- `Some` ise `Ok(T)`, `None` ise `Err(String)` döndürün.
+- En az iki anahtar-değer çifti içeren bir `HashMap` oluşturun.
+- `contains_key` ile belirli bir anahtarın varlığını kontrol edin.
+- `remove` ile bir anahtara ait girişi silin.
+- Silme öncesi ve sonrası `HashMap`'i yazdırın.
 
-🔧 **Görev:** `Option`'ı özel hata mesajı ile `Result`'a dönüştürün.
+🔧 **Görev:** Rust'ta bir `HashMap`'te anahtar kontrolü ve giriş silmeyi uygulayın.

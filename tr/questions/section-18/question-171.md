@@ -1,11 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Temel Hata Yönetimi  
-#### ❓ Soru 171: Hata yönetimi için Result tipinin kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap oluşturma ve değer ekleme  
+#### ❓ Soru 171: `HashMap` oluşturma ve değer ekleme
 
-Bir string'i tam sayıya çevirmeye çalışan ve `Result<i32, String>` döndüren bir fonksiyon yazın. Çevirme başarısız olursa uygun bir hata mesajı döndürün.
+Bir `HashMap` oluşturup anahtar-değer çiftleri eklemeyi gösteren bir Rust programı yazın.
 
-- `parse_to_int` adında bir fonksiyon tanımlayın.
-- Rust'ın `parse` metodunu kullanın ve hataları yönetin.
-- Başarıda `Ok(i32)`, hatada `Err(String)` döndürün.
+- Standart kütüphaneden `HashMap` tipini içe aktarın.
+- String'den tamsayıya eşleyen boş bir `HashMap` oluşturun.
+- En az iki anahtar-değer çifti ekleyin.
+- `HashMap`'in içeriğini yazdırın.
 
-🔧 **Görev:** Bir fonksiyonda olası çevirme hatalarını yönetmek için `Result` tipini kullanın.
+🔧 **Görev:** Rust'ta bir `HashMap` oluşturmayı ve doldurmayı uygulayın.

@@ -1,10 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hata Yönetimi En İyi Uygulamaları  
-#### ❓ Soru 120: Hata yönetimi en iyi uygulamaları
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Joker Desenle Eşleme  
+#### ❓ Soru 120: Joker desenle eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Rust'ta hata yönetimi için en iyi uygulamalardan en az üç tanesini listeleyin.
-- Her biri için kısa açıklama verin.
+- En az üç varyantı olan bir enum tanımlayın.
+- Varyantlardan biriyle bir değişken oluşturun.
+- `match` ifadesiyle bir varyantı özel olarak, diğer tüm durumları ise `_` joker deseniyle eşleyin.
+- Özel varyant ve joker durum için farklı mesajlar yazdırın.
 
-🔧 **Görev:** Rust'ta hata yönetimi için en iyi uygulamaları özetleyin.
+🔧 **Görev:** Match ifadesinde joker desen (`_`) kullanarak diğer tüm durumları kısa şekilde nasıl ele alacağınızı gösterin.

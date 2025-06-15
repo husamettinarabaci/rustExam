@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Structlar  
-#### ❓ Soru 153: Jenerik structlar için metot implementasyonu
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ❓ Soru 153: Vektör elemanlarına güvenli erişim
 
-Jenerik bir struct tanımlayın ve içindeki değere referans döndüren bir metot yazın.
+Aşağıdakileri yapan bir Rust programı yazın:
 
-- `Wrapper` adında, herhangi bir türü tutabilen bir struct oluşturun.
-- İç değere referans döndüren `get_ref` adında bir metot implement edin.
+- En az üç elemanlı bir tamsayı vektörü oluşturun.
+- İkinci elemana güvenli şekilde erişin (yoksa panik olmadan).
+- Sonucu terminale yazdırın.
 
-🔧 **Görev:** Herhangi bir türü tutabilen bir struct için jenerik metotlar implement edin.
+🔧 **Görev:** Rust'ta vektör elemanlarına güvenli erişimi gösterin.

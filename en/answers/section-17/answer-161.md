@@ -2,33 +2,32 @@
 ### 🔹 Category: Destructuring  
 #### ✅ Answer 161: Destructuring nested structs and enums
 
-To destructure nested structs and enums in Rust, you can use a `match` statement with patterns that mirror the structure of your data types. Here’s an example:
+To destructure nested structs and enums in Rust, use pattern matching to access inner fields and values. Here is an example:
 
 ```rust
 enum Status {
-    Active(u32),
+    Active,
     Inactive,
 }
 
-struct Inner {
-    value: i32,
-}
-
-struct Outer {
-    inner: Inner,
+struct User {
+    name: String,
     status: Status,
 }
 
-fn print_details(outer: Outer) {
-    match outer {
-        Outer { inner: Inner { value }, status: Status::Active(id) } => {
-            println!("Active with value: {}, id: {}", value, id);
+fn main() {
+    let user = User {
+        name: String::from("Alice"),
+        status: Status::Active,
+    };
+
+    match user {
+        User { name, status: Status::Active } => {
+            println!("{} is active", name);
         }
-        Outer { inner: Inner { value }, status: Status::Inactive } => {
-            println!("Inactive with value: {}", value);
+        User { name, status: Status::Inactive } => {
+            println!("{} is inactive", name);
         }
     }
 }
 ```
-
-This function demonstrates destructuring both the nested struct (`Inner`) and the enum (`Status`) within a single `match` arm.

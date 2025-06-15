@@ -1,14 +1,16 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Matching on Result  
-#### ✅ Answer 118: Matching on Result
+## 📘 Section: Enums II  
+### 🔹 Category: Enum Matching with Loops  
+#### ✅ Answer 118: Matching with while let
 
-**Explanation:**
-You can use pattern matching to handle `Result` values.
+This example demonstrates how to use `while let` for repeated pattern matching with enums in Rust. The `while let` loop continues as long as the pattern matches, making it useful for extracting values from options or iterators.
 
 ```rust
-let res: Result<i32, &str> = Ok(10);
-match res {
-    Ok(val) => println!("Value: {}", val),
-    Err(e) => println!("Error: {}", e),
+fn main() {
+    let mut maybe = Some(3);
+    while let Some(x) = maybe {
+        println!("Value: {}", x);
+        maybe = None;
+    }
+    println!("Loop ended");
 }
 ```

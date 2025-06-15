@@ -1,14 +1,12 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Trait Bounds and Where Clauses  
-#### ✅ Answer 151: Using trait bounds in function signatures
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ✅ Answer 151: Creating and initializing a vector
 
-This function demonstrates how to use multiple trait bounds in a generic function. By specifying both `Display` and `Debug`, the function can print the value in both standard and debug formats.
+To create and initialize a vector in Rust, use the `vec!` macro. This macro allows you to easily create a vector with initial values. You can print the vector using the `println!` macro, which supports the `Debug` format for vectors.
 
 ```rust
-use std::fmt::{Display, Debug};
-
-fn print_info<T: Display + Debug>(value: T) {
-    println!("Display: {}", value);
-    println!("Debug: {:?}", value);
+fn main() {
+    let numbers = vec![1, 2, 3];
+    println!("{:?}", numbers);
 }
 ```

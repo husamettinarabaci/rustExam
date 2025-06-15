@@ -1,10 +1,11 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime Advanced  
-#### ❓ Question 150: Advanced lifetime usage
+## 📚 Section: Crates and External Packages  
+### 🔹 Category: Cargo and Dependencies  
+#### ❓ Question 150: Using build scripts
 
-Give an example of an advanced lifetime usage in Rust.
+Explain how to use build scripts (`build.rs`) in a Rust project:
 
-- Show a function or struct with multiple lifetime parameters.
-- Explain the use case.
+- Describe the purpose of a `build.rs` file in a Cargo project.
+- Show a minimal example of a build script that prints a message at build time.
+- Explain how to trigger custom build logic and how Cargo interacts with `build.rs`.
 
-🔧 **Task:** Demonstrate advanced lifetime usage in Rust.
+🔧 **Task:** Demonstrate the use and purpose of build scripts in Cargo projects.

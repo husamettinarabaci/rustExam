@@ -1,31 +1,22 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Custom Error Types  
-#### ✅ Answer 173: Defining and using custom error types
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Iterating over Key-Value Pairs  
+#### ✅ Answer 173: Iterating over key-value pairs
 
-This example demonstrates how to define a custom error type and use it in a function that returns a `Result`.
+You can iterate over all key-value pairs in a `HashMap` using a `for` loop and the `.iter()` method. Example:
 
 ```rust
-use std::fmt;
+use std::collections::HashMap;
 
-enum MyError {
-    NotFound,
-    InvalidInput,
-}
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
 
-impl fmt::Display for MyError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            MyError::NotFound => write!(f, "Not found"),
-            MyError::InvalidInput => write!(f, "Invalid input"),
-        }
-    }
-}
-
-fn do_something(input: i32) -> Result<i32, MyError> {
-    if input < 0 {
-        Err(MyError::InvalidInput)
-    } else {
-        Ok(input)
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
     }
 }
 ```
+
+- `.iter()` or `&scores` allows you to iterate over references to key-value pairs.
+- Each iteration gives you a tuple `(key, value)` as references.

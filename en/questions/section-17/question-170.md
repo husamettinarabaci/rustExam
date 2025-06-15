@@ -1,11 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Matching on References and Dereferencing  
+### 🔹 Category: Matching on References and Dereferencing in Patterns  
 #### ❓ Question 170: Matching on references and dereferencing in patterns
 
-Write a Rust function that takes a reference to an integer as input and uses a `match` statement to:
+Write a Rust program that demonstrates how to match on references and how to dereference values in pattern matching.
 
-- Print "Zero" if the value is 0.
-- Print "Positive" if the value is greater than 0.
-- Print "Negative" if the value is less than 0.
+- Create a variable that holds a reference to an integer.
+- Use a `match` statement to match on the reference and print the value.
+- Show both matching directly on the reference and using dereferencing in the pattern.
 
-🔧 **Task:** Show how to match on references and use dereferencing in Rust pattern matching.
+🔧 **Task:** Practice matching on references and using dereferencing in Rust pattern matching.

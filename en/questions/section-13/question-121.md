@@ -1,10 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: Vectors  
-#### ❓ Question 121: What is a vector in Rust?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Declaration  
+#### ❓ Question 121: Declaring a module in the same file
 
-Explain what a vector is in Rust and how it differs from an array.
+Write a Rust program that demonstrates how to declare a module within the same file.
 
-- Describe how to create and use a vector.
-- Give an example of adding elements to a vector.
+- Define a module named `greetings` inside your main Rust file.
+- Inside the module, create a function `hello` that prints `Hello from the module!`.
+- From the `main` function, call `greetings::hello()` to display the message.
 
-🔧 **Task:** Explain and demonstrate the use of vectors in Rust.
+🔧 **Task:** Show how to declare and use a module in the same Rust source file.

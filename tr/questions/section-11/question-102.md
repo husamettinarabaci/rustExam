@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Object Kavramı  
-#### ❓ Soru 102: dyn anahtar kelimesi nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Verili Enum Varyantları  
+#### ❓ Soru 102: Varyantlara veri eklenen enum
 
-Aşağıdakileri açıklayın:
+En az bir varyantı veri tutan bir Rust enum'u yazın.
 
-- Rust'ta `dyn` anahtar kelimesinin amacı nedir?
-- Hangi durumlarda kullanılır?
+- En az bir varyantı veri (ör. tamsayı veya string) tutan bir enum tanımlayın.
+- Veri tutan varyantı kullanarak bir değişken oluşturun.
+- `match` ifadesiyle veriyi çıkarıp yazdırın.
 
-🔧 **Görev:** `dyn` anahtar kelimesinin trait object ile ilişkisini açıklayın.
+🔧 **Görev:** Verili bir enum tanımlayın, bir örnek oluşturun ve içindeki veriyi desen eşleme ile yazdırın.

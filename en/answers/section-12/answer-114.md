@@ -1,25 +1,19 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Custom Error Types  
-#### ✅ Answer 114: Defining custom error types
+## 📘 Section: Enums II  
+### 🔹 Category: Advanced Matching and Enum Usage  
+#### ✅ Answer 114: Using `if let` with enums
 
-**Explanation:**
-You can define custom error types using enums and implement the `Error` trait for them.
+This example shows how to use `if let` for concise pattern matching with enums in Rust. `if let` is useful when you only care about one specific variant and want to ignore the others.
 
 ```rust
-use std::fmt;
-use std::error::Error;
-
-#[derive(Debug)]
-enum MyError {
-    NotFound,
-    InvalidInput,
+enum Status {
+    Success(i32),
+    Error(String),
 }
 
-impl fmt::Display for MyError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{:?}", self)
+fn main() {
+    let result = Status::Success(200);
+    if let Status::Success(code) = result {
+        println!("Success with code: {}", code);
     }
 }
-
-impl Error for MyError {}
 ```

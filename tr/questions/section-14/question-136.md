@@ -1,11 +1,12 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Paket Kavramı  
-#### ❓ Soru 136: Paket nedir?
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: İç içe Modüller ve Görünürlük  
+#### ❓ Soru 136: `pub(crate)` ve `pub(super)` kullanımı
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek `pub(crate)` ve `pub(super)` ile görünürlük kontrolünü gösteren bir Rust örneği yazın:
 
-- Rust'ta paket nedir?
-- Crate ile ilişkisi nedir?
-- Çoklu crate içeren paket örneği verin.
+- Bir modül ve içinde bir alt modül oluşturun.
+- `pub`, `pub(crate)` ve `pub(super)` ile fonksiyonlar tanımlayın.
+- Her fonksiyonun hangi kapsamdan erişilebildiğini gösterin (main, üst, alt, vb.).
+- Farklı kapsamlardan fonksiyonları çağırmayı deneyin ve sonuçları yorum satırıyla belirtin.
 
-🔧 **Görev:** Rust'ta paket kavramını açıklayın.
+🔧 **Görev:** `pub(crate)` ve `pub(super)` anahtar kelimelerinin iç içe modüllerde erişimi nasıl etkilediğini örnekle açıklayın.

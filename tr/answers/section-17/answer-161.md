@@ -1,34 +1,35 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
 ### 🔹 Kategori: Parçalara Ayırma (Destructuring)  
-#### ✅ Cevap 161: İç içe struct ve enum'ları parçalara ayırma
+#### ✅ Cevap 161: İç içe struct ve enum'ları parçalara ayırma (destructuring)
 
-Rust'ta iç içe struct ve enum'ları parçalara ayırmak için, veri tiplerinin yapısını yansıtan desenlerle `match` ifadesi kullanılabilir. Örnek:
+Rust'ta iç içe struct ve enum'ları parçalara ayırmak için desen eşleme kullanılır. İşte bir örnek:
 
 ```rust
 enum Durum {
-    Aktif(u32),
+    Aktif,
     Pasif,
 }
 
-struct Ic {
-    deger: i32,
-}
-
-struct Dis {
-    ic: Ic,
+struct Kullanici {
+    isim: String,
     durum: Durum,
 }
 
-fn detaylari_yazdir(dis: Dis) {
-    match dis {
-        Dis { ic: Ic { deger }, durum: Durum::Aktif(id) } => {
-            println!("Aktif, değer: {}, id: {}", deger, id);
+fn main() {
+    let kullanici = Kullanici {
+        isim: String::from("Ali"),
+        durum: Durum::Aktif,
+    };
+
+    match kullanici {
+        Kullanici { isim, durum: Durum::Aktif } => {
+            println!("{} aktif", isim);
         }
-        Dis { ic: Ic { deger }, durum: Durum::Pasif } => {
-            println!("Pasif, değer: {}", deger);
+        Kullanici { isim, durum: Durum::Pasif } => {
+            println!("{} pasif", isim);
         }
     }
 }
 ```
 
-Bu fonksiyon, hem içteki struct'ı (`Ic`) hem de enum'u (`Durum`) tek bir `match` kolunda parçalara ayırmayı göstermektedir.
+Bu örnekte, `Kullanici` adında bir struct ve `Durum` adında bir enum tanımlanmıştır. `Kullanici` struct'ı içinde bir `isim` alanı ve bir `durum` alanı bulunmaktadır. `Durum` enum'u ise kullanıcının aktif ya da pasif olduğunu belirtmektedir. `match` ifadesi kullanılarak, `Kullanici` örneği içindeki `durum` alanına göre farklı işlemler yapılmaktadır.

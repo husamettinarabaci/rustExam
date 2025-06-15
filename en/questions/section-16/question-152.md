@@ -1,11 +1,12 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Associated Types  
-#### ❓ Question 152: Defining and using associated types in traits
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ❓ Question 152: Adding and removing elements from a vector
 
-Create a trait with an associated type and implement it for a struct. Demonstrate how to use the associated type in a method.
+Write a Rust program that does the following:
 
-- Define a trait named `Container` with an associated type `Item`.
-- Implement `Container` for a struct of your choice.
-- Write a method that returns a value of the associated type.
+- Create a mutable vector of integers.
+- Add the values 4 and 5 to the vector.
+- Remove the last element from the vector.
+- Print the resulting vector to the terminal.
 
-🔧 **Task:** Use associated types in trait definitions and implementations.
+🔧 **Task:** Show how to add and remove elements from a vector in Rust.

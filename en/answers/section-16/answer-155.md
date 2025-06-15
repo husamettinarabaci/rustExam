@@ -1,13 +1,15 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: PhantomData  
-#### ✅ Answer 155: Using PhantomData in generic structs
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ✅ Answer 155: Modifying elements in a vector
 
-`PhantomData` is used in generic structs to indicate that the struct logically owns data of type `T`, even if it does not store a value of that type. This is important for correct variance and drop checking.
+To modify elements in a vector, iterate over mutable references using a `for` loop and the `iter_mut` method. You can then change each element in place.
 
 ```rust
-use std::marker::PhantomData;
-
-struct MyType<T> {
-    marker: PhantomData<T>,
+fn main() {
+    let mut numbers = vec![1, 2, 3];
+    for n in numbers.iter_mut() {
+        *n *= 2;
+    }
+    println!("{:?}", numbers);
 }
 ```

@@ -1,21 +1,15 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: İlişkili Tipler  
-#### ✅ Cevap 152: Traitlerde ilişkili tiplerin tanımlanması ve kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ✅ Cevap 152: Vektöre eleman ekleme ve çıkarma
 
-Bu örnek, ilişkili tip içeren bir traitin nasıl tanımlanacağını ve bir struct için nasıl uygulanacağını gösterir. İlişkili tip, traitin daha esnek ve tekrar kullanılabilir olmasını sağlar.
+Rust'ta vektöre eleman eklemek için `push` metodu, son elemanı çıkarmak için ise `pop` metodu kullanılır. Vektörün içeriğini değiştirmek için değiştirilebilir (mutable) olması gerekir.
 
 ```rust
-trait Container {
-    type Item;
-    fn get(&self) -> Self::Item;
-}
-
-struct IntBox(i32);
-
-impl Container for IntBox {
-    type Item = i32;
-    fn get(&self) -> i32 {
-        self.0
-    }
+fn main() {
+    let mut sayilar = vec![1, 2, 3];
+    sayilar.push(4);
+    sayilar.push(5);
+    sayilar.pop();
+    println!("{:?}", sayilar);
 }
 ```

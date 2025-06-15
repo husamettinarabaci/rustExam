@@ -1,9 +1,12 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashSet  
-#### ❓ Question 128: What is a HashSet?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Documentation  
+#### ❓ Question 128: Module documentation
 
-Explain what a `HashSet` is in Rust and how it differs from a `HashMap`.
+Write a Rust program that demonstrates how to add documentation to a module and its items.
 
-- Show how to add and check for elements.
+- Create a module named `math`.
+- Add a documentation comment to the module and to a public function `add` inside it.
+- In the main function, call `math::add` and print the result.
+- Mention how to view the generated documentation using `cargo doc`.
 
-🔧 **Task:** Explain and demonstrate the use of `HashSet` in Rust.
+🔧 **Task:** Show how to document a module and its functions using Rust doc comments and explain how to generate and view the documentation.

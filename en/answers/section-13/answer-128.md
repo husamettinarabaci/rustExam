@@ -1,13 +1,26 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashSet  
-#### ✅ Answer 128: What is a HashSet?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Documentation  
+#### ✅ Answer 128: Module documentation
 
-**Explanation:**
-A `HashSet` is a collection of unique values. Unlike `HashMap`, it only stores keys.
+You can document modules and their items using triple slash `///` comments. These comments are used by Rust's documentation generator. Use `cargo doc --open` to build and view the docs.
 
 ```rust
-use std::collections::HashSet;
-let mut set = HashSet::new();
-set.insert(1);
-let exists = set.contains(&1);
+/// Math utilities module
+mod math {
+    /// Adds two numbers and returns the result.
+    pub fn add(a: i32, b: i32) -> i32 {
+        a + b
+    }
+}
+
+fn main() {
+    let result = math::add(2, 3);
+    println!("Sum: {}", result);
+}
+```
+
+To generate and view the documentation, run:
+
+```
+cargo doc --open
 ```

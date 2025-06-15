@@ -1,18 +1,20 @@
-## 📚 Section: Macros  
-### 🔹 Category: Repetition in Macros  
-#### ✅ Answer 104: Macro repetition
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Pattern Matching and Printing  
+#### ✅ Answer 104: Using `match` with enums and printing
 
-**Explanation:**
-Macros can use repetition to accept and process multiple arguments.
+This example shows how to use a `match` statement with an enum to print different messages for each variant.
 
 ```rust
-macro_rules! print_all {
-    ($($x:expr),*) => {
-        $(println!("{}", $x);)*
-    };
+enum Command {
+    Start,
+    Stop(String),
 }
 
 fn main() {
-    print_all!(1, 2, 3, "hi");
+    let cmd = Command::Stop(String::from("Emergency"));
+    match cmd {
+        Command::Start => println!("Starting..."),
+        Command::Stop(reason) => println!("Stopped: {}", reason),
+    }
 }
 ```

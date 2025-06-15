@@ -1,22 +1,20 @@
-## 📚 Section: Macros  
-### 🔹 Category: Macro Pattern Matching  
-#### ✅ Answer 103: Macro pattern matching
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Pattern Matching  
+#### ✅ Answer 103: Pattern matching on enums
 
-**Explanation:**
-Macros can match different patterns and expand accordingly.
+This example demonstrates how to use pattern matching on an enum in Rust. The `match` statement allows you to handle each variant differently, including extracting data from variants that carry values.
 
 ```rust
-macro_rules! my_macro {
-    ($x:expr) => {
-        println!("Number: {}", $x);
-    };
-    ($x:literal) => {
-        println!("String: {}", $x);
-    };
+enum Status {
+    Success,
+    Error(String),
 }
 
 fn main() {
-    my_macro!(42);
-    my_macro!("hello");
+    let result = Status::Error(String::from("File not found"));
+    match result {
+        Status::Success => println!("Operation succeeded!"),
+        Status::Error(msg) => println!("Error: {}", msg),
+    }
 }
 ```

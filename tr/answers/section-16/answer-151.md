@@ -1,14 +1,12 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Trait Sınırları ve Where Kullanımı  
-#### ✅ Cevap 151: Fonksiyon imzalarında trait sınırlarının kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ✅ Cevap 151: Vektör oluşturma ve başlatma
 
-Bu fonksiyon, jenerik bir fonksiyonda birden fazla trait sınırının nasıl kullanılacağını gösterir. Hem `Display` hem de `Debug` belirtilerek değer iki farklı formatta yazdırılabilir.
+Rust'ta vektör oluşturmak ve başlatmak için `vec!` makrosu kullanılır. Bu makro, başlangıç değerleriyle kolayca bir vektör oluşturmanızı sağlar. Vektörü yazdırmak için `println!` makrosu ve `Debug` formatı kullanılabilir.
 
 ```rust
-use std::fmt::{Display, Debug};
-
-fn print_info<T: Display + Debug>(value: T) {
-    println!("Display: {}", value);
-    println!("Debug: {:?}", value);
+fn main() {
+    let sayilar = vec![1, 2, 3];
+    println!("{:?}", sayilar);
 }
 ```

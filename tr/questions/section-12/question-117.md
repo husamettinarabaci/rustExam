@@ -1,10 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Error Trait'i  
-#### ❓ Soru 117: Error trait'i nedir?
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: İç içe Enumlarda Eşleme  
+#### ❓ Soru 117: İç içe enumlarda eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Rust'ta `Error` trait'inin amacı nedir?
-- Özel hata tipine nasıl uygulanır?
+- Biri diğerini içeren iki enum tanımlayın (bir enumun varyantı diğer enumu tutsun).
+- Dış enumun, iç enumu içeren bir örneğini oluşturun.
+- Hem dış hem de iç enumdaki değerlere erişmek için `match` ifadesi kullanın.
 
-🔧 **Görev:** Error trait'ini özel hata tipiyle uygulayın ve açıklayın.
+🔧 **Görev:** İç içe enumlarda desen eşleme ile değerlerin nasıl ayrıştırılacağını ve yönetileceğini gösterin.

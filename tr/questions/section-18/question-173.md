@@ -1,11 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Özel Hata Tipleri  
-#### ❓ Soru 173: Özel hata tipi tanımlama ve kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: Anahtar-değer çiftleri üzerinde yineleme  
+#### ❓ Soru 173: Anahtar-değer çiftleri üzerinde yineleme
 
-Bir enum ile özel bir hata tipi oluşturun ve bunun için `std::fmt::Display` trait'ini implement edin. Bu hata tipini döndüren bir fonksiyon yazın.
+Bir `HashMap`'teki tüm anahtar-değer çiftleri üzerinde nasıl yineleme yapılacağını gösteren bir Rust programı yazın.
 
-- `MyError` adında en az iki varyantlı bir enum tanımlayın.
-- `MyError` için `Display` implement edin.
-- `Result<T, MyError>` döndüren bir fonksiyon yazın.
+- En az iki anahtar-değer çifti içeren bir `HashMap` oluşturun.
+- Bir `for` döngüsü ile tüm girişler üzerinde yineleyin.
+- Her anahtar ve değeri yazdırın.
 
-🔧 **Görev:** Hata verebilen bir fonksiyonda özel hata tipi tanımlayın ve kullanın.
+🔧 **Görev:** Bir `HashMap` üzerinde yineleme yapmayı ve içeriğini yazdırmayı uygulayın.

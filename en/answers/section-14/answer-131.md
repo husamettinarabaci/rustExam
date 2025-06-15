@@ -1,18 +1,19 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Module Basics  
-#### ✅ Answer 131: What is a module in Rust?
+## 📘 Section: Modules II  
+### 🔹 Category: Public Items  
+#### ✅ Answer 131: Using `pub` for public items
 
-**Explanation:**
-A module is a way to organize code into namespaces. Modules are defined with the `mod` keyword.
+The `pub` keyword in Rust makes items accessible from outside their module. You can use `pub` with functions, constants, structs, and more. Here is an example:
 
 ```rust
 mod my_module {
-    pub fn hello() {
-        println!("Hello from module!");
+    pub const VALUE: i32 = 10;
+    pub fn greet() {
+        println!("Hello from the module!");
     }
 }
 
 fn main() {
-    my_module::hello();
+    println!("VALUE = {}", my_module::VALUE);
+    my_module::greet();
 }
 ```

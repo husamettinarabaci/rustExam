@@ -1,10 +1,10 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Koleksiyonlardan Eleman Silme  
-#### ❓ Soru 129: Koleksiyonlardan eleman silme
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Testleri  
+#### ❓ Soru 129: Modül testleri
 
-Aşağıdakileri açıklayın:
+Aşağıdakileri yapın:
 
-- Vektör, HashMap ve HashSet'ten eleman nasıl silinir?
-- Her koleksiyon için örnek verin.
+- Bir fonksiyon (ör. `add(a, b)`) içeren bir modül tanımlayın ve iki sayının toplamını döndürsün.
+- `#[cfg(test)]` ve `#[test]` kullanarak bu fonksiyon için bir test modülü ekleyin.
 
-🔧 **Görev:** Farklı koleksiyonlardan eleman silmeyi gösterin.
+🔧 **Görev:** Bir Rust modülünde fonksiyon ve test yazımını gösterin.

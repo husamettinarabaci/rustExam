@@ -1,6 +1,23 @@
-## 📘 Section: Macros  
-### 🔹 Category: Recursive Macros  
-#### ✅ Answer 106: Recursive macros
+## 📘 Section: Enums I  
+### 🔹 Category: Option Enum Usage  
+#### ✅ Answer 106: Option enum usage
 
-**Explanation:**
-Trait bounds in Rust specify that a generic type parameter must implement a particular trait. For example, `fn foo<T: Display>(x: T)` requires that `T` implements the `Display` trait. This ensures type safety and allows the function to use trait methods on the generic type.
+The `Option` enum is used in Rust to represent a value that can be either present (`Some`) or absent (`None`). This is useful for cases where a value might not exist, instead of using nulls. In this example, we use `Option<i32>` to indicate whether a number is even (present) or odd (absent).
+
+```rust
+fn check_even(number: i32) -> Option<i32> {
+    if number % 2 == 0 {
+        Some(number)
+    } else {
+        None
+    }
+}
+
+fn main() {
+    let num = 7;
+    match check_even(num) {
+        Some(n) => println!("{} is even!", n),
+        None => println!("{} is odd!", num),
+    }
+}
+```

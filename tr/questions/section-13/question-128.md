@@ -1,11 +1,12 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashSet  
-#### ❓ Soru 128: HashSet nedir?
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Dokümantasyonu  
+#### ❓ Soru 128: Modül dokümantasyonu
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- Rust'ta `HashSet` nedir?
-- HashMap'ten farkı nedir?
-- Eleman ekleme ve kontrol etme örneği verin.
+- `math` adında bir modül oluşturun.
+- Modüle ve içindeki herkese açık `add` fonksiyonuna dokümantasyon yorumu ekleyin.
+- Ana fonksiyonda `math::add` fonksiyonunu çağırıp sonucu yazdırın.
+- `cargo doc` komutu ile dokümantasyonun nasıl görüntüleneceğini belirtin.
 
-🔧 **Görev:** HashSet kullanımını örnekle açıklayın.
+🔧 **Görev:** Bir modül ve fonksiyonlarını Rust dokümantasyon yorumları ile nasıl belgeleyebileceğinizi ve dokümantasyonu nasıl oluşturup görüntüleyebileceğinizi gösterin.

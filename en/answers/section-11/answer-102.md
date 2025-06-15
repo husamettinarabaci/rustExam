@@ -1,19 +1,20 @@
-## 📚 Section: Macros  
-### 🔹 Category: Macro Arguments  
-#### ✅ Answer 102: Macro with arguments
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Variants with Data  
+#### ✅ Answer 102: Enum with data attached to variants
 
-**Explanation:**
-Macros can take arguments and use them in their expansion.
+This example shows how to define an enum with a data-carrying variant, create an instance, and print the data using a `match` statement.
 
 ```rust
-macro_rules! print_twice {
-    ($x:expr) => {
-        println!("{}", $x);
-        println!("{}", $x);
-    };
+enum Message {
+    Quit,
+    Write(String),
 }
 
 fn main() {
-    print_twice!("Hello");
+    let msg = Message::Write(String::from("Hello, Rust!"));
+    match msg {
+        Message::Quit => println!("Quit message"),
+        Message::Write(text) => println!("Message: {}", text),
+    }
 }
 ```

@@ -1,20 +1,18 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Using `ref` and `ref mut` in Patterns  
+### 🔹 Category: Using `ref` and `ref mut` in patterns  
 #### ✅ Answer 165: Using `ref` and `ref mut` in patterns
 
-You can use `ref` and `ref mut` in Rust patterns to create references and mutable references. Example:
+This example demonstrates how to use `ref` and `ref mut` in pattern matching to borrow fields immutably and mutably. `ref` creates an immutable reference, while `ref mut` creates a mutable reference, allowing you to modify the value.
 
 ```rust
-fn handle_tuple(mut t: (i32, i32)) {
-    match t {
-        (ref first, _) if *first > 0 => println!("First (by ref): {}", first),
-        (_, ref mut second) if *second < 0 => {
-            *second += 1;
-            println!("Second (by ref mut, incremented): {}", second);
+fn main() {
+    let mut tuple = (1, 2);
+    match tuple {
+        (ref x, ref mut y) => {
+            println!("x: {}", x);
+            *y += 10;
+            println!("y after mutation: {}", y);
         }
-        (first, second) => println!("First: {}, Second: {}", first, second),
     }
 }
 ```
-
-This function demonstrates how to use `ref` and `ref mut` in pattern matching with tuples.

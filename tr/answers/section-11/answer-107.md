@@ -1,14 +1,28 @@
 # Cevap 107
 
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Bağımlılıkları  
-#### ✅ Cevap 107: Trait'in başka trait'i gerektirmesi
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Demet Varyantlı Enum  
+#### ✅ Cevap 107: Demet varyantlı enum
 
-**Açıklama:**
-Bir trait'in başka bir trait'i gerektirmesi için, trait tanımında `: DiğerTrait` ifadesi kullanılır. Örneğin:
+Enum'larda demet varyantları, her varyant ile veri ilişkilendirmeye olanak tanır. Burada `Shape` enum'u iki demet varyantına sahiptir: `Circle(f64)` ve `Rectangle(f64, f64)`. Desen eşleme ile değerler alınır ve alan hesaplanır.
 
 ```rust
-trait A {}
-trait B: A {}
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+
+fn alan(sekil: Shape) -> f64 {
+    match sekil {
+        Shape::Circle(yaricap) => std::f64::consts::PI * yaricap * yaricap,
+        Shape::Rectangle(genislik, yukseklik) => genislik * yukseklik,
+    }
+}
+
+fn main() {
+    let c = Shape::Circle(2.0);
+    let r = Shape::Rectangle(3.0, 4.0);
+    println!("Daire alanı: {:.2}", alan(c));
+    println!("Dikdörtgen alanı: {:.2}", alan(r));
+}
 ```
-Bu durumda, `B` trait'ini uygulayan her tip aynı zamanda `A` trait'ini de uygulamalıdır.

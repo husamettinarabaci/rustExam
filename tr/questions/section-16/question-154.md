@@ -1,11 +1,10 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Default Trait'i  
-#### ❓ Soru 154: Varsayılan başlatma için Default trait'inin kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ❓ Soru 154: Vektör üzerinde yineleme
 
-`Default` trait'ini kullanarak jenerik bir tipin yeni bir örneğini oluşturan bir fonksiyon yazın.
+Aşağıdakileri yapan bir Rust programı yazın:
 
-- Fonksiyon parametre almayacak ve `T` tipinde bir değer döndürecek.
-- `T`, `Default` trait'ini uygulayan tiplerle sınırlandırılmalı.
-- Standart bir tip ile kullanımını gösterin.
+- En az üç elemanlı bir string vektörü oluşturun.
+- Vektör üzerinde yineleyin ve her elemanı terminale yazdırın.
 
-🔧 **Görev:** Değerleri jenerik olarak başlatmak için `Default` trait'ini kullanın.
+🔧 **Görev:** Rust'ta vektör üzerinde yinelemeyi ve elemanları yazdırmayı gösterin.

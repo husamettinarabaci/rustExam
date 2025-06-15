@@ -1,18 +1,16 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Desenlerde `@` Bağlamaları  
+### 🔹 Kategori: Desenlerde `@` bağlamalarını kullanma  
 #### ✅ Cevap 166: Desenlerde `@` bağlamalarını kullanma
 
-Rust'ta desenlerde hem bir değeri test etmek hem de onu bir değişkene atamak için `@` bağlamaları kullanılabilir. Örnek:
+Bu örnekte, desen eşlemede `@` bağlamasının nasıl kullanılacağı gösterilmektedir. `@` sözdizimi, bir değeri hem bir aralığa göre eşleştirip hem de bir değişkene bağlamanızı sağlar.
 
 ```rust
-fn yas_tanimla(yas: i32) {
-    match yas {
-        ergen @ 13..=19 => println!("Ergen: {}", ergen),
-        cocuk @ 0..=12 => println!("Çocuk: {}", cocuk),
-        yetiskin @ 20..=i32::MAX => println!("Yetişkin: {}", yetiskin),
-        negatif => println!("Negatif yaş: {}", negatif),
+fn main() {
+    let value = 8;
+    match value {
+        n @ 1..=5 => println!("{} 1 ile 5 arasında", n),
+        n @ 6..=10 => println!("{} 6 ile 10 arasında", n),
+        n => println!("{} belirtilen aralıkların dışında", n),
     }
 }
 ```
-
-Bu fonksiyon, her kolda eşleşen değeri değişkene atamak için `@` bağlamalarını kullanır.

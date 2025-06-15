@@ -1,10 +1,11 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Nested Modules  
-#### ❓ Question 133: Nested modules
+## 📘 Section: Modules II  
+### 🔹 Category: Paths and the `super` keyword  
+#### ❓ Question 133: Paths and the `super` keyword
 
-How do you define and use nested modules in Rust?
+Write a Rust program that demonstrates how to use the `super` keyword to access items from a parent module.
 
-- Show how to declare a module inside another module.
-- Give an example of accessing items from a nested module.
+- Create a parent module with a function or constant.
+- Create a child (nested) module that uses `super` to access the parent module's item.
+- Show how to call the child module's function from `main` and how it accesses the parent item.
 
-🔧 **Task:** Demonstrate nested module usage in Rust.
+🔧 **Task:** Demonstrate the use of `super` for module paths in Rust.

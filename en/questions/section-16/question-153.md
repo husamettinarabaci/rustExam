@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Structs  
-#### ❓ Question 153: Implementing methods for generic structs
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ❓ Question 153: Accessing vector elements safely
 
-Define a generic struct and implement a method for it that returns a reference to its inner value.
+Write a Rust program that does the following:
 
-- Create a struct named `Wrapper` that holds a value of any type.
-- Implement a method `get_ref` that returns a reference to the inner value.
+- Create a vector of integers with at least three elements.
+- Access the second element safely (without panicking if it doesn't exist).
+- Print the result to the terminal.
 
-🔧 **Task:** Use generics to implement methods for a struct that can hold any type.
+🔧 **Task:** Show how to safely access elements in a vector using Rust.

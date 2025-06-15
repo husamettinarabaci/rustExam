@@ -1,9 +1,12 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Crates  
-#### ❓ Question 135: What is a crate?
+## 📘 Section: Modules II  
+### 🔹 Category: Nested Modules and Visibility  
+#### ❓ Question 135: Nested modules and visibility
 
-Explain what a crate is in Rust and how it relates to modules and packages.
+Write Rust code that demonstrates how nested modules affect item visibility.
 
-- Describe the difference between a crate and a module.
+- Create a module with a nested submodule.
+- Define a function in the innermost module.
+- Show how to make the function accessible from the root module using visibility modifiers.
+- Explain the use of `pub`, `pub(crate)`, and private (default) visibility in nested modules.
 
-🔧 **Task:** Explain the concept of crates in Rust.
+🔧 **Task:** Illustrate how to expose or restrict access to functions in nested modules using different visibility keywords.

@@ -1,9 +1,12 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Converting Errors  
-#### ❓ Question 119: Converting between error types
+## 📘 Section: Enums II  
+### 🔹 Category: Reference and Mutable Matching  
+#### ❓ Question 119: Matching with ref and mut
 
-How can you convert one error type to another in Rust?
+Write a Rust program that demonstrates how to use `ref` and `mut` in pattern matching:
 
-- Show how to use the `From` trait for error conversion.
+- Create a mutable variable of type `Option<i32>`.
+- Use a `match` statement to match on the variable and obtain a reference to the value using `ref`.
+- Use another `match` to obtain a mutable reference using `ref mut` and modify the value.
+- Print the results before and after modification.
 
-🔧 **Task:** Explain and demonstrate error type conversion using the `From` trait.
+🔧 **Task:** Show how to use `ref` and `ref mut` in pattern matching to access and modify values inside enums.

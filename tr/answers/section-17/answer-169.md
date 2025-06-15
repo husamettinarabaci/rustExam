@@ -1,17 +1,16 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: `|` ile Birden Fazla Desen  
+### 🔹 Kategori: `|` ile birden fazla desen kullanma  
 #### ✅ Cevap 169: `|` ile birden fazla desen kullanma
 
-Rust'ta `|` operatörü ile birden fazla değeri eşleştirebilirsiniz. Örnek:
+Bu örnekte, desen eşlemede `|` operatörünün birden fazla değeri tek bir kolda eşlemek için nasıl kullanılacağı gösterilmektedir. Bu, birden fazla durumu kısa ve öz şekilde ele almanızı sağlar.
 
 ```rust
-fn karakter_tanimla(c: char) {
-    match c {
-        'a' | 'e' | 'i' | 'o' | 'u' => println!("Sesli harf"),
-        '0'..='9' => println!("Rakam"),
-        _ => println!("Diğer"),
+fn main() {
+    let value = 3;
+    match value {
+        1 | 3 | 5 => println!("Tek sayı: {}", value),
+        2 | 4 | 6 => println!("Çift sayı: {}", value),
+        _ => println!("Diğer değer: {}", value),
     }
 }
 ```
-
-Bu fonksiyon, `|` ve aralıklar ile birden fazla deseni eşleştirmeyi gösterir.

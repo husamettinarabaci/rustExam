@@ -1,10 +1,10 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Destructuring Tuples in Function Parameters  
+### 🔹 Category: Destructuring tuples in function parameters  
 #### ❓ Question 168: Destructuring tuples in function parameters
 
-Write a Rust function that takes a tuple `(i32, i32, i32)` as its parameter and destructures it directly in the function signature. The function should:
+Write a Rust function that demonstrates destructuring tuples directly in function parameters:
 
-- Print the sum of the three values.
-- Print each value on a separate line.
+- Define a function that takes a tuple as its parameter and destructures it in the parameter list.
+- Call the function with a tuple and print the destructured values inside the function.
 
-🔧 **Task:** Show how to destructure tuples directly in function parameters in Rust.
+🔧 **Task:** Use tuple destructuring in the function parameter list and print the values inside the function.

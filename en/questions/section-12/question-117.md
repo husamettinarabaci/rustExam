@@ -1,9 +1,11 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: The `Error` Trait  
-#### ❓ Question 117: The `Error` trait
+## 📘 Section: Enums II  
+### 🔹 Category: Nested Enum Matching  
+#### ❓ Question 117: Matching on nested enums
 
-What is the purpose of the `Error` trait in Rust?
+Write a Rust program that demonstrates how to match on nested enums:
 
-- Explain how to implement it for custom error types.
+- Define two enums, where one enum contains the other as a variant.
+- Create an instance of the outer enum containing the inner enum.
+- Use a `match` statement to access values from both levels of enums.
 
-🔧 **Task:** Describe and implement the `Error` trait for a custom error.
+🔧 **Task:** Show how to use pattern matching to destructure and handle nested enums.

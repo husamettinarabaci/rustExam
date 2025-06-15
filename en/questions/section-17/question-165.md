@@ -1,11 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Using `ref` and `ref mut` in Patterns  
+### 🔹 Category: Using `ref` and `ref mut` in patterns  
 #### ❓ Question 165: Using `ref` and `ref mut` in patterns
 
-Write a Rust function that takes a tuple of two integers and uses a `match` statement to:
+Write a Rust program that demonstrates how to use `ref` and `ref mut` in pattern matching:
 
-- Use `ref` to create a reference to the first value if it is positive and print it.
-- Use `ref mut` to create a mutable reference to the second value if it is negative and increment it by 1, then print it.
-- Otherwise, print both values as they are.
+- Create a mutable variable holding a tuple or struct.
+- Use a `match` statement to destructure and obtain references to fields using `ref` and `ref mut`.
+- Mutate a value through a `ref mut` binding and print the result.
 
-🔧 **Task:** Demonstrate how to use `ref` and `ref mut` in pattern matching with tuples in Rust.
+🔧 **Task:** Use `ref` and `ref mut` in pattern matching to borrow fields immutably and mutably, and show the effect of mutation.

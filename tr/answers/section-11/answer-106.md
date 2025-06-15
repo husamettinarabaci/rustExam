@@ -1,6 +1,23 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Bound Kullanımı  
-#### ✅ Cevap 106: Trait bounds nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Option Enum Kullanımı  
+#### ✅ Cevap 106: Option enum kullanımı
 
-**Açıklama:**
-"Trait bounds", bir generic tipin belirli bir trait'i uygulamasını zorunlu kılar. Örneğin, `fn foo<T: Display>(x: T)` fonksiyonu, `T` tipinin `Display` trait'ini uygulamasını gerektirir. Bu, generic fonksiyonlarda tip güvenliğini sağlar.
+Rust'ta `Option` enum'u, bir değerin var olup olmadığını göstermek için kullanılır. `Some` değerin varlığını, `None` ise yokluğunu belirtir. Bu örnekte, bir sayının çift olup olmadığını göstermek için `Option<i32>` kullanıyoruz.
+
+```rust
+fn cift_kontrol(sayi: i32) -> Option<i32> {
+    if sayi % 2 == 0 {
+        Some(sayi)
+    } else {
+        None
+    }
+}
+
+fn main() {
+    let num = 7;
+    match cift_kontrol(num) {
+        Some(n) => println!("{} çift!", n),
+        None => println!("{} tek!", num),
+    }
+}
+```

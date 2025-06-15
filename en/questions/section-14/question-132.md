@@ -1,10 +1,11 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Module Visibility  
-#### ❓ Question 132: Module visibility
+## 📘 Section: Modules II  
+### 🔹 Category: Privacy Rules  
+#### ❓ Question 132: Privacy rules in modules
 
-How do you control visibility of items in a module?
+Write a Rust module that demonstrates privacy rules for items inside a module.
 
-- Explain the use of `pub` and private items.
-- Give an example.
+- Define both public and private functions and constants in a module.
+- Show which items can be accessed from outside the module and which cannot.
+- Attempt to access a private item from outside and explain the error.
 
-🔧 **Task:** Show how to control visibility in Rust modules.
+🔧 **Task:** Demonstrate how privacy works for module items in Rust.

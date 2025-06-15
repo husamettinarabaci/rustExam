@@ -1,10 +1,11 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime Best Practices  
-#### ❓ Question 149: Lifetime best practices
+## 📚 Section: Crates and External Packages  
+### 🔹 Category: Cargo and Dependencies  
+#### ❓ Question 149: Using dev-dependencies
 
-What are some best practices for working with lifetimes in Rust?
+Explain how to use `dev-dependencies` in a Rust project:
 
-- List at least three best practices.
-- Give a brief explanation for each.
+- Describe the purpose of `dev-dependencies` in `Cargo.toml`.
+- Show how to add a `dev-dependency` with an example.
+- Explain when and why you would use a `dev-dependency` instead of a regular dependency.
 
-🔧 **Task:** Summarize best practices for using lifetimes.
+🔧 **Task:** Demonstrate the use and purpose of `dev-dependencies` in Cargo projects.

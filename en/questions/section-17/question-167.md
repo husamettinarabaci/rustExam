@@ -1,12 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Matching on Slices and Arrays  
+### 🔹 Category: Matching on slices and arrays  
 #### ❓ Question 167: Matching on slices and arrays
 
-Write a Rust function that takes a slice of integers and uses a `match` statement to:
+Write a Rust program that demonstrates how to use pattern matching on slices and arrays:
 
-- Print "Empty" if the slice is empty.
-- Print "Single element: <value>" if the slice has one element.
-- Print "Starts with 1 and ends with 9" if the first element is 1 and the last is 9.
-- Print "Other" for all other cases.
+- Create an array or slice of integers.
+- Use a `match` statement to destructure the array or slice, matching on specific patterns (e.g., first element, last element, or length).
+- Print different messages based on the matched pattern.
 
-🔧 **Task:** Demonstrate how to use pattern matching on slices and arrays in Rust.
+🔧 **Task:** Use pattern matching to destructure arrays or slices and print information based on their structure or contents.

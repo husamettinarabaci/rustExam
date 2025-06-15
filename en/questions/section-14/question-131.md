@@ -1,10 +1,11 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Module Basics  
-#### ❓ Question 131: What is a module in Rust?
+## 📘 Section: Modules II  
+### 🔹 Category: Public Items  
+#### ❓ Question 131: Using `pub` for public items
 
-Explain what a module is in Rust and how it is defined.
+Write a Rust module that demonstrates how to make functions and constants public using the `pub` keyword.
 
-- Show how to declare a module.
-- Give an example of using a module in a project.
+- Define a module with a function and a constant.
+- Make both the function and the constant public.
+- Show how to access them from outside the module.
 
-🔧 **Task:** Explain and demonstrate module usage in Rust.
+🔧 **Task:** Demonstrate the use of `pub` to expose items from a module.

@@ -1,18 +1,14 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Enums  
-#### ✅ Answer 159: Defining and using generic enums
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Inserting Elements  
+#### ✅ Answer 159: Inserting elements into a vector
 
-This example shows how to define a generic enum and implement a method for it. The method checks if the enum is the `Ok` variant.
+To insert an element into a vector at a specific position in Rust, use the `insert` method. This method inserts the element at the given index and shifts subsequent elements to the right. Here is an example:
 
 ```rust
-enum ResultBox<T, E> {
-    Ok(T),
-    Err(E),
-}
-
-impl<T, E> ResultBox<T, E> {
-    fn is_ok(&self) -> bool {
-        matches!(self, ResultBox::Ok(_))
-    }
+fn main() {
+    let mut numbers = vec![1, 2, 4, 5];
+    println!("Before insertion: {:?}", numbers);
+    numbers.insert(2, 3); // Inserts 3 at index 2
+    println!("After insertion: {:?}", numbers);
 }
 ```

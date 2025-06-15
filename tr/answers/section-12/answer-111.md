@@ -1,16 +1,21 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi Temelleri  
-#### ✅ Cevap 111: Rust'ta Result tipi nedir?
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Match Kollarında Desen Koruyucular  
+#### ✅ Cevap 111: Match kollarında desen koruyucular
 
-**Açıklama:**
-`Result` tipi, bir işlemin başarılı veya hatalı olabileceği durumlarda kullanılır. İki varyantı vardır: `Ok(T)` başarıyı, `Err(E)` hatayı temsil eder.
+Desen koruyucular (pattern guard), match kollarında ek koşullar eklemenizi sağlar. Burada, `Number::Value` içindeki değerin pozitif, negatif veya sıfır olup olmadığı bir koruyucu ile kontrol edilir.
 
 ```rust
-fn bol(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 {
-        Err("Sıfıra bölünemez".to_string())
-    } else {
-        Ok(a / b)
+enum Number {
+    Value(i32),
+}
+
+fn main() {
+    let num = Number::Value(-5);
+    match num {
+        Number::Value(n) if n > 0 => println!("Pozitif: {}", n),
+        Number::Value(n) if n < 0 => println!("Negatif: {}", n),
+        Number::Value(0) => println!("Sıfır"),
+        _ => (),
     }
 }
 ```

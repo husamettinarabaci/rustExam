@@ -1,11 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: `thiserror` Crate'i  
-#### ❓ Soru 179: Özel hatalar için `thiserror` crate'inin kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve ömürler  
+#### ❓ Soru 179: HashMap ve ömürler
 
-Özel hata tipleri tanımlamak için `thiserror` crate'inin nasıl kullanılacağını açıklayın. Bir özel hata ve fonksiyon örneği verin.
+Değer olarak referans içeren bir `HashMap` ile ömürlerin nasıl kullanılacağını gösteren bir Rust fonksiyonu yazın.
 
-- `thiserror` crate'ini bağımlılıklara ekleyin.
-- `thiserror::Error` ile özel hata tipi tanımlayın.
-- Bu hata tipini döndüren bir fonksiyon yazın.
+- Parametre olarak `HashMap<&str, &i32>` alan bir fonksiyon tanımlayın.
+- Fonksiyon, tüm anahtar-değer çiftlerini yazdırmalı.
+- Referansların geçerli kalmasını sağlamak için ömürlerin neden gerekli olduğunu açıklayın.
 
-🔧 **Görev:** Özel hata tanımlarını kolaylaştırmak için `thiserror` crate'ini kullanın.
+🔧 **Görev:** Değer olarak referans içeren bir `HashMap` ile ömürlerin nasıl kullanılacağını gösterin.

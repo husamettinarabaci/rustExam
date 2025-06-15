@@ -1,10 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: `unwrap` ve `expect` Metotları  
-#### ❓ Soru 176: `unwrap` ve `expect`'in güvenli kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: Özel türlerle HashMap  
+#### ❓ Soru 176: Özel türlerle HashMap
 
-`Result` ve `Option` tiplerinde `unwrap` ile `expect` arasındaki farkı açıklayın. `expect` kullanımının `unwrap`'e göre tercih edildiği bir örnek verin.
+Bir `HashMap`'te anahtar veya değer olarak özel bir struct kullanmayı gösteren bir Rust programı yazın.
 
-- `unwrap` kullanımının risklerini açıklayın.
-- `expect` ile özel hata mesajı nasıl verilir gösterin.
+- Basit bir struct tanımlayın (ör. `Point { x: i32, y: i32 }`).
+- Struct'ı anahtar veya değer olarak kullanan bir `HashMap` oluşturun.
+- Anahtar olarak kullanılıyorsa gerekli trait'leri (`Eq`, `PartialEq`, `Hash`) uygulayın.
+- En az iki giriş ekleyin ve `HashMap`'i yazdırın.
 
-🔧 **Görev:** `unwrap` ve `expect`'i karşılaştırın ve güvenli kullanımını gösterin.
+🔧 **Görev:** Rust'ta özel türlerle `HashMap` kullanmayı uygulayın.

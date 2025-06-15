@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Newtype Pattern  
-#### ❓ Question 158: Implementing traits for external types using the newtype pattern
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Removing Elements  
+#### ❓ Question 158: Removing elements from a vector
 
-Explain how to use the newtype pattern to implement a trait for an external type. Provide an example.
+Write a Rust program that demonstrates how to remove elements from a vector.
 
-- Define a wrapper struct around an external type (e.g., `u32`).
-- Implement a custom trait for the wrapper.
+- Create a vector with several integer values.
+- Remove an element at a specific index using the `remove` method.
+- Print the vector before and after removal.
 
-🔧 **Task:** Use the newtype pattern to extend trait implementations to types you do not own.
+🔧 **Task:** Use the `remove` method to delete an element from a vector and display the result.

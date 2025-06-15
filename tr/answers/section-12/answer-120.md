@@ -1,9 +1,21 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hata Yönetimi En İyi Uygulamaları  
-#### ✅ Cevap 120: Hata yönetimi en iyi uygulamaları
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Joker Desenle Eşleme  
+#### ✅ Cevap 120: Joker desenle eşleme
 
-**Açıklama:**
-En iyi uygulamalar şunlardır:
-- Kurtarılabilir hatalar için panic yerine `Result` kullanın.
-- Anlaşılır hata yönetimi için özel hata tipleri tanımlayın.
-- Daha temiz kod için `?` ile hata yayılımı yapın.
+Bu örnekte, Rust'ta match ifadesinde joker desen (`_`) kullanılarak enumların nasıl eşleneceği gösterilmektedir. Joker desen, açıkça belirtilmeyen tüm durumları yakalamak için kullanılır.
+
+```rust
+enum Durum {
+    Basarili,
+    Hata,
+    Beklemede,
+}
+
+fn main() {
+    let durum = Durum::Beklemede;
+    match durum {
+        Durum::Basarili => println!("İşlem başarılı!"),
+        _ => println!("Başarılı değil."),
+    }
+}
+```

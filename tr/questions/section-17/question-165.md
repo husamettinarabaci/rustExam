@@ -2,10 +2,10 @@
 ### 🔹 Kategori: Desenlerde `ref` ve `ref mut` kullanımı  
 #### ❓ Soru 165: Desenlerde `ref` ve `ref mut` kullanımı
 
-İki tamsayıdan oluşan bir tuple alan ve aşağıdakileri yapan bir Rust fonksiyonu yazınız:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- İlk değer pozitifse, `ref` ile referans oluşturup yazdırın.
-- İkinci değer negatifse, `ref mut` ile değiştirilebilir referans oluşturup değeri 1 artırarak yazdırın.
-- Diğer durumlarda, her iki değeri olduğu gibi yazdırın.
+- Mutable bir tuple veya struct oluşturun.
+- `match` ile parçalayarak alanlara `ref` ve `ref mut` ile referans alın.
+- `ref mut` ile alınan değeri değiştirin ve sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta tuple desenlerinde `ref` ve `ref mut` kullanımını gösterin.
+🔧 **Görev:** Desen eşlemede `ref` ve `ref mut` kullanarak alanları hem değiştirilemez hem de değiştirilebilir olarak ödünç alın ve değişikliğin etkisini gösterin.

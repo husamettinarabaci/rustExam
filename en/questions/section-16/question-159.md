@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Enums  
-#### ❓ Question 159: Defining and using generic enums
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Inserting Elements  
+#### ❓ Question 159: Inserting elements into a vector
 
-Create a generic enum with two variants and implement a method for it. Demonstrate usage with different types.
+Write a Rust program that demonstrates how to insert elements into a vector at a specific position.
 
-- Define an enum named `ResultBox` with variants `Ok(T)` and `Err(E)`.
-- Implement a method that returns true if the value is `Ok`.
+- Create a vector with several integer values.
+- Insert a new element at a specific index using the `insert` method.
+- Print the vector before and after insertion.
 
-🔧 **Task:** Use generics to define enums and implement methods for them.
+🔧 **Task:** Use the `insert` method to add an element to a vector at a given index and display the result.

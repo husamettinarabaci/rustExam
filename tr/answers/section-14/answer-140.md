@@ -1,8 +1,27 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Crate En İyi Uygulamaları  
-#### ✅ Cevap 140: Crate en iyi uygulamaları
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Makro İçe Aktarma  
+#### ✅ Cevap 140: Makro içe aktarma
 
-**Açıklama:**
-- Crate'iniz için dokümantasyon yazın.
-- Semantik versiyonlama kullanın.
-- Gereksiz bağımlılıklardan kaçının ve güncel tutun.
+Başka bir modülden makro kullanmak için makroyu `#[macro_export]` ile tanımlamanız ve içe aktarmanız gerekir. Örnek:
+
+```rust
+mod makrolar {
+    #[macro_export]
+    macro_rules! selamla {
+        () => {
+            println!("Makrodan merhaba!");
+        };
+    }
+}
+
+use crate::selamla;
+
+fn main() {
+    selamla!();
+}
+```
+
+- Makro `makrolar` modülünde `#[macro_export]` ile tanımlanmıştır.
+- `#[macro_export]` makroyu crate kökünde erişilebilir yapar.
+- Makrolar fonksiyonlardan farklı olarak `use crate::makro_adi;` ile içe aktarılır.
+- Daha sonra makro `main` fonksiyonunda kullanılabilir.

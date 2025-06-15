@@ -1,25 +1,19 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Özel Hata Tipleri  
-#### ✅ Cevap 114: Özel hata tipi tanımlama
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: İleri Düzey Eşleme ve Enum Kullanımı  
+#### ✅ Cevap 114: Enumlarla `if let` kullanımı
 
-**Açıklama:**
-Enum ile özel hata tipi tanımlanabilir ve `Error` trait'i uygulanabilir.
+Bu örnekte, Rust'ta enumlar ile `if let` kullanılarak belirli bir varyantın nasıl kontrol edileceği ve değerin nasıl alınacağı gösterilmektedir. `if let`, yalnızca bir varyantla ilgilenildiğinde ve diğerleri göz ardı edilmek istendiğinde kullanışlıdır.
 
 ```rust
-use std::fmt;
-use std::error::Error;
-
-#[derive(Debug)]
-enum BenimHatam {
-    Bulunamadi,
-    GecersizGirdi,
+enum Durum {
+    Basarili(i32),
+    Hata(String),
 }
 
-impl fmt::Display for BenimHatam {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{:?}", self)
+fn main() {
+    let sonuc = Durum::Basarili(200);
+    if let Durum::Basarili(kod) = sonuc {
+        println!("Başarılı kod: {}", kod);
     }
 }
-
-impl Error for BenimHatam {}
 ```

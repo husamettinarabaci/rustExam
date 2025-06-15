@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Blanket Implementations  
-#### ❓ Soru 156: Traitler için blanket implementasyonlar oluşturma
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Dilimleme ve İndeksleme  
+#### ❓ Soru 156: Vektörü dilimleme
 
-Bir trait'i, başka bir trait'i uygulayan tüm tipler için blanket implementasyon ile yazın.
+Bir vektörden nasıl dilim (slice) oluşturulacağını gösteren bir Rust programı yazın.
 
-- `Printable` adında bir trait tanımlayın ve `print` metodunu ekleyin.
-- `Display` trait'ini uygulayan tüm tipler için blanket implementasyon yazın.
+- Bir tamsayı vektörü oluşturun.
+- Vektörün bir bölümünden bir dilim alın (örneğin, 1'den 3'e kadar olan elemanlar).
+- Hem orijinal vektörü hem de dilimi yazdırın.
 
-🔧 **Görev:** Blanket implementasyonlar ile birden fazla tipe işlevsellik kazandırın.
+🔧 **Görev:** Rust'ın dilim sözdizimini kullanarak bir vektörün bir bölümüne nasıl erişileceğini ve sonucu nasıl yazdıracağınızı gösterin.

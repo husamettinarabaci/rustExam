@@ -1,6 +1,28 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Static ve Dynamic Dispatch  
-#### ✅ Cevap 109: Static ve dynamic dispatch farkı
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Varsayılan Değerli Enum  
+#### ✅ Cevap 109: Varsayılan değerli enum
 
-**Açıklama:**
-"Static dispatch", derleme zamanında fonksiyonun hangi implementasyonunun çağrılacağının belirlenmesidir ve genellikle generics ile kullanılır. "Dynamic dispatch" ise çalışma zamanında belirlenir ve trait object'ler (`dyn Trait`) ile sağlanır. Static dispatch daha hızlıdır, dynamic dispatch ise esneklik sağlar.
+Bir enum için `Default` trait'i implemente edilerek hangi varyantın varsayılan olacağı belirlenebilir. Burada `Status` enum'u üç varyanta sahiptir ve varsayılan olarak `Unknown` seçilmiştir. `default()` metodu ile bu değer oluşturulabilir.
+
+```rust
+enum Status {
+    Active,
+    Inactive,
+    Unknown,
+}
+
+impl Default for Status {
+    fn default() -> Self {
+        Status::Unknown
+    }
+}
+
+fn main() {
+    let durum = Status::default();
+    match durum {
+        Status::Active => println!("Durum: Aktif"),
+        Status::Inactive => println!("Durum: Pasif"),
+        Status::Unknown => println!("Durum: Bilinmiyor"),
+    }
+}
+```

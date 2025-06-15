@@ -1,12 +1,12 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Lifetime Temelleri  
-#### ✅ Cevap 142: Lifetime anotasyonları
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo ve Bağımlılıklar  
+#### ✅ Cevap 142: `Cargo.toml` dosyasına bağımlılık ekleme
 
-**Açıklama:**
-Lifetime anotasyonları, referansların ne kadar süreyle geçerli olacağını belirtir. `'a` sözdizimiyle fonksiyon imzasında kullanılır.
+Rust'ta bir bağımlılık eklemek için `Cargo.toml` dosyasındaki `[dependencies]` bölümüne paket adı ve sürümünü yazarsınız. Örneğin, `rand` paketini `0.8` sürümüyle eklemek için:
 
-```rust
-fn ilk<'a>(s: &'a str) -> &'a str {
-    &s[0..1]
-}
+```toml
+[dependencies]
+rand = "0.8"
 ```
+
+`cargo build` komutunu çalıştırdığınızda, Cargo belirtilen paketi ve bağımlılıklarını [crates.io](https://crates.io) üzerinden indirir, derler ve projenize ekler. Böylece harici kütüphaneleri kolayca kullanabilirsiniz.

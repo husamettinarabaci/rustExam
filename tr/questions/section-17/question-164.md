@@ -1,11 +1,11 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Değerleri Yoksayma  
+### 🔹 Kategori: Desenlerde `_` ile değerleri yoksayma  
 #### ❓ Soru 164: Desenlerde `_` ile değerleri yoksayma
 
-Üç tamsayıdan oluşan bir tuple alan ve aşağıdakileri yapan bir Rust fonksiyonu yazınız:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- İkinci değeri `_` ile yoksayarak bir `match` ifadesinde ilk ve üçüncü değeri yazdırın.
-- Eğer ilk değer 0 ise "İlki sıfır" yazdırın.
-- Aksi halde ilk ve üçüncü değeri yazdırın.
+- Üç tamsayıdan oluşan bir tuple'ı `match` ile eşleyin.
+- Tuple içindeki bir veya daha fazla değeri `_` ile yoksayın.
+- Sadece yoksaymadığınız değerleri yazdırın.
 
-🔧 **Görev:** Rust'ta tuple desenlerinde `_` ile değerleri nasıl yoksayacağınızı gösterin.
+🔧 **Görev:** Tuple içindeki belirli değerleri yoksaymak için desen eşlemede `_` kullanın ve kalan değerleri yazdırın.

@@ -1,17 +1,16 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Multiple Patterns with `|`  
+### 🔹 Category: Using multiple patterns with `|`  
 #### ✅ Answer 169: Using multiple patterns with `|`
 
-You can use the `|` operator in Rust patterns to match multiple values. Example:
+This example demonstrates how to use the `|` operator in pattern matching to match multiple values with a single arm. This is useful for handling several cases in a concise way.
 
 ```rust
-fn describe_char(c: char) {
-    match c {
-        'a' | 'e' | 'i' | 'o' | 'u' => println!("Vowel"),
-        '0'..='9' => println!("Digit"),
-        _ => println!("Other"),
+fn main() {
+    let value = 3;
+    match value {
+        1 | 3 | 5 => println!("Odd number: {}", value),
+        2 | 4 | 6 => println!("Even number: {}", value),
+        _ => println!("Other value: {}", value),
     }
 }
 ```
-
-This function demonstrates how to match multiple patterns using `|` and ranges.

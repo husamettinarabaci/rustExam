@@ -1,11 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Hata Dönüşümü için `From` Trait'i  
-#### ❓ Soru 178: Hata dönüşümü için `From` trait'inin kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve referanslar  
+#### ❓ Soru 178: HashMap ve referanslar
 
-Bir hata tipini başka bir hata tipine dönüştürmek için `From` trait'ini kullanın. Özel hata tipleriyle örnek verin.
+Bir `HashMap` içinde değer olarak referansların nasıl saklanıp erişilebileceğini gösteren bir Rust programı yazın.
 
-- İki özel hata tipi tanımlayın.
-- Birinden diğerine dönüşüm için `From` implement edin.
-- Daha geniş hata tipini döndüren bir fonksiyonda bu dönüşümü kullanın.
+- Değerleri tamsayı referansı olan bir `HashMap` oluşturun.
+- Mevcut tamsayılara referans olan birkaç anahtar-değer çifti ekleyin.
+- HashMap'ten referanslanan değerleri erişip yazdırın.
 
-🔧 **Görev:** Kodunuzda hata tipi dönüşümü için `From` trait'ini kullanın.
+🔧 **Görev:** Değer olarak referans içeren bir `HashMap` kullanın ve ömürlerle (lifetime) nasıl çalışıldığını gösterin.

@@ -1,10 +1,12 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Re-exporting  
-#### ❓ Question 138: Re-exporting items
+## 📘 Section: Modules II  
+### 🔹 Category: Importing multiple items  
+#### ❓ Question 138: Importing multiple items
 
-What does it mean to re-export an item in Rust?
+Write a Rust example that demonstrates how to import multiple items from a module:
 
-- Show how to re-export with `pub use`.
-- Give an example.
+- Create a module with at least two public functions.
+- Import both functions into `main` using a single `use` statement.
+- Call both functions from `main`.
+- Optionally, show how to rename one of the imports.
 
-🔧 **Task:** Explain and demonstrate re-exporting in Rust.
+🔧 **Task:** Show how to import multiple items from a module efficiently and how to optionally rename them.

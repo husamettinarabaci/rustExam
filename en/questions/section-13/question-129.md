@@ -1,9 +1,10 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashSet  
-#### ❓ Question 129: Removing elements from collections
+## 📘 Section: Modules I  
+### 🔹 Category: Module Tests  
+#### ❓ Question 129: Module tests
 
-How do you remove elements from a vector, `HashMap`, or `HashSet`?
+Write a Rust module that includes a simple function and a test for it.
 
-- Show examples for each collection type.
+- Define a module with a function (e.g., `add(a, b)`) that returns the sum of two numbers.
+- Add a test module using `#[cfg(test)]` and `#[test]` to verify the function works correctly.
 
-🔧 **Task:** Demonstrate removing elements from different collections.
+🔧 **Task:** Demonstrate how to write and test a function inside a Rust module.

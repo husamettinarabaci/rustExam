@@ -1,12 +1,17 @@
-## 📘 Section: Collections  
-### 🔹 Category: Vectors  
-#### ✅ Answer 121: What is a vector in Rust?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Declaration  
+#### ✅ Answer 121: Declaring a module in the same file
 
-**Explanation:**
-A vector is a growable, heap-allocated list. Unlike arrays, vectors can change size at runtime.
+In Rust, you can declare a module within the same file using the `mod` keyword. Functions inside the module can be accessed using the module path. Here, the `greetings` module contains a `hello` function, which is called from `main`.
 
 ```rust
-let mut v = Vec::new();
-v.push(1);
-v.push(2);
+mod greetings {
+    pub fn hello() {
+        println!("Hello from the module!");
+    }
+}
+
+fn main() {
+    greetings::hello();
+}
 ```

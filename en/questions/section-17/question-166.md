@@ -1,12 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Using `@` Bindings  
+### 🔹 Category: Using `@` bindings in patterns  
 #### ❓ Question 166: Using `@` bindings in patterns
 
-Write a Rust function that takes an integer as input and uses a `match` statement with `@` bindings to:
+Write a Rust program that demonstrates how to use the `@` binding in pattern matching:
 
-- Print "Teenager: <value>" if the value is between 13 and 19 (inclusive).
-- Print "Child: <value>" if the value is between 0 and 12 (inclusive).
-- Print "Adult: <value>" if the value is 20 or greater.
-- Print "Negative age: <value>" if the value is negative.
+- Use a `match` statement to match an integer value against a range.
+- Use the `@` syntax to bind the matched value to a variable within the pattern.
+- Print the bound value and indicate which range it matched.
 
-🔧 **Task:** Demonstrate how to use `@` bindings in Rust pattern matching to capture matched values.
+🔧 **Task:** Use the `@` binding in a `match` pattern to capture and print the matched value along with its range.

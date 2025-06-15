@@ -2,18 +2,22 @@
 ### 🔹 Kategori: Desen Koruyucular (Pattern Guard)  
 #### ✅ Cevap 162: Match kollarında desen koruyucular (pattern guard) kullanma
 
-Rust'ta desen koruyucular (`if` koşulları), `match` kollarına ek koşullar eklemenizi sağlar. Örnek:
+Rust'ta match kollarında desen koruyucu (pattern guard) ile ek koşullar ekleyebilirsiniz. İşte bir örnek:
 
 ```rust
-fn sayi_tanimla(n: i32) {
-    match n {
-        x if x == 0 => println!("Sıfır"),
-        x if x > 0 && x % 2 == 0 => println!("Çift ve pozitif"),
-        x if x > 0 && x % 2 != 0 => println!("Tek ve pozitif"),
-        x if x < 0 => println!("Negatif"),
-        _ => (),
+enum Sayi {
+    Deger(i32),
+    Yok,
+}
+
+fn main() {
+    let sayi = Sayi::Deger(7);
+
+    match sayi {
+        Sayi::Deger(n) if n > 0 => println!("Pozitif: {}", n),
+        Sayi::Deger(n) if n < 0 => println!("Negatif: {}", n),
+        Sayi::Deger(0) => println!("Sıfır"),
+        Sayi::Yok => println!("Değer yok"),
     }
 }
 ```
-
-Bu fonksiyon, desen koruyucular (`if` koşulları) ile sayının çift, tek, pozitif, negatif veya sıfır olmasını ayırt eder.

@@ -1,10 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: Vectors  
-#### ❓ Question 123: Iterating over a vector
+## 📘 Section: Modules I  
+### 🔹 Category: Splitting Code into Multiple Files  
+#### ❓ Question 123: Splitting code into multiple files
 
-How do you iterate over the elements of a vector in Rust?
+Write a Rust program that demonstrates how to split code into multiple files using modules.
 
-- Show an example using a `for` loop.
-- Demonstrate both immutable and mutable iteration.
+- Create a module named `utils` and move its implementation to a separate file named `utils.rs`.
+- In `utils.rs`, define a public function `greet` that prints `Hello from utils!`.
+- In your main file, use `mod utils;` to include the module and call `utils::greet()` from `main`.
 
-🔧 **Task:** Show how to iterate over a vector in Rust.
+🔧 **Task:** Show how to organize Rust code by splitting modules into separate files and using them in your main program.

@@ -1,10 +1,10 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime Basics  
-#### ❓ Question 142: Lifetime annotations
+## 📘 Section: Crates and External Packages  
+### 🔹 Category: Cargo and Dependencies  
+#### ❓ Question 142: Adding dependencies in `Cargo.toml`
 
-How do you specify a lifetime annotation in a function?
+Update a Rust project's dependencies by editing the `Cargo.toml` file:
 
-- Show the syntax for lifetime parameters.
-- Give an example function with a lifetime annotation.
+- Add the `rand` crate as a dependency with version `0.8`.
+- Save the file and explain how Cargo fetches and builds dependencies.
 
-🔧 **Task:** Demonstrate lifetime annotation syntax in Rust.
+🔧 **Task:** Show how to add a dependency to `Cargo.toml` and describe what happens when you run `cargo build`.

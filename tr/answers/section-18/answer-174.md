@@ -1,11 +1,28 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Option ve Result Dönüşümü  
-#### ✅ Cevap 174: Option'dan Result'a dönüşüm
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: Anahtar kontrolü ve giriş silme  
+#### ✅ Cevap 174: Anahtar kontrolü ve giriş silme
 
-Bu fonksiyon, bir `Option<T>` değerini özel hata mesajı ile `Result<T, String>`'e dönüştürmeyi gösterir.
+Bir `HashMap`'te anahtarın varlığı `contains_key` ile kontrol edilir, `remove` ile giriş silinir. Örnek:
 
 ```rust
-fn option_to_result<T>(opt: Option<T>, err_msg: String) -> Result<T, String> {
-    opt.ok_or(err_msg)
+use std::collections::HashMap;
+
+fn main() {
+    let mut skorlar = HashMap::new();
+    skorlar.insert(String::from("Ali"), 10);
+    skorlar.insert(String::from("Ayşe"), 20);
+
+    println!("Silme öncesi: {:?}", skorlar);
+
+    if skorlar.contains_key("Ali") {
+        println!("Ali haritada var.");
+    }
+
+    skorlar.remove("Ali");
+
+    println!("Silme sonrası: {:?}", skorlar);
 }
 ```
+
+- `contains_key` anahtarın varlığını kontrol eder.
+- `remove` ile anahtara ait giriş silinir.

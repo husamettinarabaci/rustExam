@@ -1,15 +1,24 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: External Crates  
-#### ✅ Answer 137: Using external crates
+## 📘 Section: Modules II  
+### 🔹 Category: Importing with `as`  
+#### ✅ Answer 137: Importing with `as`
 
-**Explanation:**
-Add the crate to `Cargo.toml` under `[dependencies]` and use it in your code.
+In Rust, the `as` keyword allows you to rename imports. This is useful for clarity or to avoid name conflicts. Here's an example:
 
-```toml
-[dependencies]
-rand = "0.8"
-```
 ```rust
-use rand::Rng;
-let n = rand::thread_rng().gen_range(1..10);
+mod greetings {
+    pub fn hello() {
+        println!("Hello from greetings::hello!");
+    }
+}
+
+use greetings::hello as greet;
+
+fn main() {
+    greet(); // Calls the function using the new name
+    // hello(); // Error: not found in this scope
+}
 ```
+
+- The function `hello` is imported as `greet`.
+- You must use the new name (`greet`) in `main`.
+- Trying to use the original name (`hello`) will result in a compile error because only the renamed import is in scope

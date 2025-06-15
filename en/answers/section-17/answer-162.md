@@ -2,18 +2,22 @@
 ### 🔹 Category: Pattern Guards  
 #### ✅ Answer 162: Using pattern guards in match arms
 
-Pattern guards in Rust allow you to add extra conditions to `match` arms. Here’s an example:
+Pattern guards in Rust allow you to add extra conditions to match arms using `if`. Here is an example:
 
 ```rust
-fn describe_number(n: i32) {
-    match n {
-        x if x == 0 => println!("Zero"),
-        x if x > 0 && x % 2 == 0 => println!("Even and positive"),
-        x if x > 0 && x % 2 != 0 => println!("Odd and positive"),
-        x if x < 0 => println!("Negative"),
-        _ => (),
+enum Number {
+    Value(i32),
+    None,
+}
+
+fn main() {
+    let num = Number::Value(7);
+
+    match num {
+        Number::Value(n) if n > 0 => println!("Positive: {}", n),
+        Number::Value(n) if n < 0 => println!("Negative: {}", n),
+        Number::Value(0) => println!("Zero"),
+        Number::None => println!("No value"),
     }
 }
 ```
-
-This function uses pattern guards (`if` conditions) to distinguish between even, odd, positive, negative, and zero values.

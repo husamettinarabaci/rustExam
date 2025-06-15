@@ -1,12 +1,17 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Vektörler  
-#### ✅ Cevap 121: Rust'ta vektör nedir?
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Tanımlama  
+#### ✅ Cevap 121: Aynı dosyada modül tanımlama
 
-**Açıklama:**
-Vektör, büyüyebilen ve heap'te tutulan bir listedir. Dizilerden farkı, boyutunun çalışma zamanında değişebilmesidir.
+Rust'ta bir modül, aynı dosya içinde `mod` anahtar kelimesiyle tanımlanabilir. Modül içindeki fonksiyonlara modül yolu ile erişilir. Aşağıda, `greetings` modülü ve içindeki `hello` fonksiyonu örneği verilmiştir. `main` fonksiyonundan bu fonksiyon çağrılır.
 
 ```rust
-let mut v = Vec::new();
-v.push(1);
-v.push(2);
+mod greetings {
+    pub fn hello() {
+        println!("Hello from the module!");
+    }
+}
+
+fn main() {
+    greetings::hello();
+}
 ```

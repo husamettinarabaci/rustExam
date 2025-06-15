@@ -1,10 +1,12 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Crate Kavramı  
-#### ❓ Soru 135: Crate nedir?
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: İç içe Modüller ve Görünürlük  
+#### ❓ Soru 135: İç içe modüller ve görünürlük
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek iç içe modüllerde görünürlüğün nasıl çalıştığını gösteren bir Rust kodu yazın:
 
-- Rust'ta crate nedir?
-- Modül ve paketle farkı nedir?
+- Bir modül ve içinde bir alt modül oluşturun.
+- En içteki modülde bir fonksiyon tanımlayın.
+- Bu fonksiyonu kök modülden erişilebilir yapmak için görünürlük belirleyicilerini kullanın.
+- `pub`, `pub(crate)` ve varsayılan (özel) görünürlüğün iç içe modüllerde nasıl çalıştığını açıklayın.
 
-🔧 **Görev:** Rust'ta crate kavramını açıklayın.
+🔧 **Görev:** Farklı görünürlük anahtar kelimeleriyle iç içe modüllerde fonksiyonlara erişimi nasıl açıp kısıtlayabileceğinizi gösterin.

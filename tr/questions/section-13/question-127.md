@@ -1,10 +1,11 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashMap  
-#### ❓ Soru 127: HashMap üzerinde yineleme
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Yeniden Dışa Aktarma  
+#### ❓ Soru 127: Modül yeniden dışa aktarma
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- HashMap içindeki anahtar-değer çiftleri üzerinde nasıl yineleme yapılır?
-- For döngüsü ile örnek gösterin.
+- `math` adında bir modül oluşturun ve içinde herkese açık bir `add` fonksiyonu tanımlayın.
+- Programın kökünde `pub use math::add;` ifadesiyle `add` fonksiyonunu yeniden dışa aktarın.
+- Ana fonksiyonda, modül yolu kullanmadan doğrudan `add` fonksiyonunu çağırın.
 
-🔧 **Görev:** HashMap üzerinde yinelemeyi gösterin.
+🔧 **Görev:** Bir modülden fonksiyonu yeniden dışa aktararak doğrudan erişilebilir hale getirmeyi gösterin.

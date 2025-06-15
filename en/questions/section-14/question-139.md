@@ -1,10 +1,12 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Module Best Practices  
-#### ❓ Question 139: Module best practices
+## 📘 Section: Modules II  
+### 🔹 Category: Importing glob (`*`)  
+#### ❓ Question 139: Importing glob (`*`)
 
-What are some best practices for organizing modules in Rust?
+Write a Rust example that demonstrates how to use glob imports (`*`) to bring multiple items from a module into scope:
 
-- List at least three best practices.
-- Give a brief explanation for each.
+- Create a module with at least two public functions.
+- Use a glob import (`use module::*;`) in `main` to import all public items.
+- Call the imported functions from `main`.
+- Briefly discuss the pros and cons of using glob imports.
 
-🔧 **Task:** Summarize best practices for module organization.
+🔧 **Task:** Show how to use glob imports and explain when they might be useful or problematic.

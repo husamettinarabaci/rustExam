@@ -1,11 +1,11 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Referanslar ve Dereference ile Eşleme  
+### 🔹 Kategori: Referanslar ve dereference işlemleriyle desen eşleme  
 #### ❓ Soru 170: Referanslar ve dereference işlemleriyle desen eşleme
 
-Bir tamsayı referansı parametre olarak alan ve aşağıdaki işlemleri `match` ifadesiyle yapan bir Rust fonksiyonu yazınız:
+Referanslar üzerinde desen eşleme ve dereference işlemlerini gösteren bir Rust programı yazın.
 
-- Değer 0 ise "Sıfır" yazdırın.
-- Değer 0'dan büyükse "Pozitif" yazdırın.
-- Değer 0'dan küçükse "Negatif" yazdırın.
+- Bir tamsayıya referans tutan bir değişken oluşturun.
+- Referans üzerinde `match` kullanarak değeri yazdırın.
+- Hem doğrudan referans üzerinde hem de desen içinde dereference kullanarak eşleme yapın.
 
-🔧 **Görev:** Rust'ta referanslar ve dereference işlemleriyle desen eşlemeyi gösterin.
+🔧 **Görev:** Rust'ta referanslar üzerinde desen eşleme ve dereference uygulamasını gösterin.

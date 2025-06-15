@@ -1,18 +1,16 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Using `@` Bindings  
+### 🔹 Category: Using `@` bindings in patterns  
 #### ✅ Answer 166: Using `@` bindings in patterns
 
-You can use `@` bindings in Rust patterns to both test a value and bind it to a variable. Example:
+This example demonstrates how to use the `@` binding in pattern matching. The `@` syntax allows you to bind a matched value to a variable while also specifying a pattern, such as a range.
 
 ```rust
-fn describe_age(age: i32) {
-    match age {
-        teen @ 13..=19 => println!("Teenager: {}", teen),
-        child @ 0..=12 => println!("Child: {}", child),
-        adult @ 20..=i32::MAX => println!("Adult: {}", adult),
-        negative => println!("Negative age: {}", negative),
+fn main() {
+    let value = 8;
+    match value {
+        n @ 1..=5 => println!("{} is in the range 1 to 5", n),
+        n @ 6..=10 => println!("{} is in the range 6 to 10", n),
+        n => println!("{} is outside the specified ranges", n),
     }
 }
 ```
-
-This function uses `@` bindings to capture and print the matched value in each arm.

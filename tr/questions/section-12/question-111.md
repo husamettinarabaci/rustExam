@@ -1,11 +1,10 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi Temelleri  
-#### ❓ Soru 111: Rust'ta Result tipi nedir?
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Match Kollarında Desen Koruyucular  
+#### ❓ Soru 111: Match kollarında desen koruyucular
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Rust'ta `Result` tipinin amacı nedir?
-- Hangi durumlarda kullanılır?
-- `Result` tipinin iki varyantını örnekle gösterin.
+- `Number` adında, `Value(i32)` varyantı olan bir enum tanımlayın.
+- `main` fonksiyonunda bir `Number` oluşturun ve match kollarında desen koruyucu (pattern guard) kullanarak değerin pozitif, negatif veya sıfır olduğunu yazdırın.
 
-🔧 **Görev:** Result tipini ve temel kullanımını açıklayın.
+🔧 **Görev:** Enum varyantlarını eşlerken match kollarında `if` ile ek koşullar (desen koruyucu) kullanın.

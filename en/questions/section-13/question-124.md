@@ -1,10 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: Strings  
-#### ❓ Question 124: String vs &str
+## 📘 Section: Modules I  
+### 🔹 Category: Accessing Items from Another Module  
+#### ❓ Question 124: Accessing items from another module
 
-What is the difference between `String` and `&str` in Rust?
+Write a Rust program that demonstrates how to access functions from another module.
 
-- Compare their use cases and memory management.
-- Give an example of converting between them.
+- Create a module named `math` with a public function `square` that takes an `i32` and returns its square.
+- In the main function, call `math::square` to calculate and print the square of a number.
+- Show how to use the module path to access the function.
 
-🔧 **Task:** Explain the difference between `String` and `&str` with examples.
+🔧 **Task:** Demonstrate accessing a public function from another module using the module path in Rust.

@@ -1,11 +1,12 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Option and Result Interconversion  
-#### ❓ Question 174: Converting between Option and Result
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Checking for Keys and Removing Entries  
+#### ❓ Question 174: Checking for keys and removing entries
 
-Write a function that converts an `Option<T>` to a `Result<T, String>`, providing a custom error message if the option is `None`.
+Write a Rust program that demonstrates how to check if a key exists in a `HashMap` and how to remove an entry.
 
-- Define a function named `option_to_result`.
-- Accept an `Option<T>` and a custom error message.
-- Return `Ok(T)` if `Some`, or `Err(String)` if `None`.
+- Create a `HashMap` with at least two key-value pairs.
+- Check if a specific key exists using the `contains_key` method.
+- Remove an entry by key using the `remove` method.
+- Print the `HashMap` before and after removal.
 
-🔧 **Task:** Convert an `Option` to a `Result` with a custom error message.
+🔧 **Task:** Practice checking for keys and removing entries from a Rust `HashMap`.

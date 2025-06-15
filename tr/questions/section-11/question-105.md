@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Varsayılan Trait Uygulamaları  
-#### ❓ Soru 105: Trait'lerde default implementation
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: `impl` ile Enum Metotları  
+#### ❓ Soru 105: `impl` ile enum metotları
 
-Aşağıdakileri açıklayın:
+Bir enum için `impl` bloğu kullanarak metot tanımlayan bir Rust programı yazın.
 
-- Rust'ta trait'ler ile "default implementation" nasıl sağlanır?
-- Örnek bir trait ve varsayılan fonksiyon gösterin.
+- En az iki varyantı (biri veri tutabilir) olan bir enum tanımlayın.
+- Enum için bir metot implement edin.
+- Enum örneği üzerinde bu metodu çağırmayı gösterin.
 
-🔧 **Görev:** Trait içinde varsayılan fonksiyon implementasyonu örneği verin.
+🔧 **Görev:** Bir enum tanımlayın, ona bir metot implement edin ve enum değeri üzerinde bu metodu çağırın.

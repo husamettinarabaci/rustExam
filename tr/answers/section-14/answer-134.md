@@ -1,16 +1,19 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: use Anahtar Kelimesi  
-#### ✅ Cevap 134: use anahtar kelimesi
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: `pub use` ile yeniden dışa aktarma  
+#### ✅ Cevap 134: `pub use` ile yeniden dışa aktarma
 
-**Açıklama:**
-`use` anahtar kelimesi, ögeleri scope'a kolayca getirir.
+Bir modüldeki öğeleri `pub use` ile yeniden dışa aktararak, onları üst modül üzerinden erişilebilir kılabilirsiniz. Bu, API tasarımı ve kod organizasyonu için kullanışlıdır.
 
 ```rust
-mod foo {
-    pub fn bar() {}
+mod ic {
+    pub fn selamla() {
+        println!("İç modülden selamlar!");
+    }
 }
-use foo::bar;
+
+pub use ic::selamla;
+
 fn main() {
-    bar();
+    selamla(); // Yeniden dışa aktarma sayesinde doğrudan erişim
 }
 ```

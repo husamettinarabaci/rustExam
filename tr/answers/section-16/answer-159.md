@@ -1,18 +1,14 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Enumlar  
-#### ✅ Cevap 159: Jenerik enum tanımlama ve kullanımı
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Eleman Ekleme  
+#### ✅ Cevap 159: Vektöre eleman ekleme
 
-Bu örnek, jenerik bir enumun nasıl tanımlanacağını ve bunun için bir metot implement edileceğini gösterir. Metot, enumun `Ok` varyantı olup olmadığını kontrol eder.
+Rust'ta bir vektöre belirli bir konumda eleman eklemek için `insert` metodunu kullanabilirsiniz. Bu metod, verilen indekse elemanı ekler ve sonraki elemanları sağa kaydırır. İşte bir örnek:
 
 ```rust
-enum ResultBox<T, E> {
-    Ok(T),
-    Err(E),
-}
-
-impl<T, E> ResultBox<T, E> {
-    fn is_ok(&self) -> bool {
-        matches!(self, ResultBox::Ok(_))
-    }
+fn main() {
+    let mut sayilar = vec![1, 2, 4, 5];
+    println!("Ekleme öncesi: {:?}", sayilar);
+    sayilar.insert(2, 3); // 2. indekse 3 eklenir
+    println!("Ekleme sonrası: {:?}", sayilar);
 }
 ```

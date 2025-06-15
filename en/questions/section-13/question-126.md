@@ -1,9 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashMap  
-#### ❓ Question 126: What is a HashMap?
+## 📘 Section: Modules I  
+### 🔹 Category: Module Imports  
+#### ❓ Question 126: Module imports
 
-Explain what a `HashMap` is in Rust and how to use it.
+Write a Rust program that demonstrates how to import modules and their items.
 
-- Show how to insert and access values.
+- Create a module named `greetings` with a public function `hello` that prints a greeting message.
+- In the main function, use the `use` keyword to import `greetings::hello`.
+- Call `hello()` directly in `main` to print the greeting.
 
-🔧 **Task:** Explain and demonstrate the use of `HashMap` in Rust.
+🔧 **Task:** Show how to import a function from a module using the `use` keyword and call it directly.

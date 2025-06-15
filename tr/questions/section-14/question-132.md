@@ -1,10 +1,11 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Modül Görünürlüğü  
-#### ❓ Soru 132: Modül görünürlüğü
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Gizlilik Kuralları  
+#### ❓ Soru 132: Modüllerde gizlilik kuralları
 
-Aşağıdakileri açıklayın:
+Bir Rust modülünde öğelerin gizlilik kurallarını gösterin.
 
-- Modül içindeki ögelerin görünürlüğü nasıl kontrol edilir?
-- `pub` ve özel ögeler örneği verin.
+- Bir modülde hem herkese açık hem de özel fonksiyon ve sabitler tanımlayın.
+- Hangi öğelere modül dışından erişilebileceğini, hangilerine erişilemeyeceğini gösterin.
+- Özel bir öğeye dışarıdan erişmeye çalışın ve hatayı açıklayın.
 
-🔧 **Görev:** Rust modüllerinde görünürlük kontrolünü gösterin.
+🔧 **Görev:** Rust'ta modül öğeleri için gizlilik kurallarını gösterin.

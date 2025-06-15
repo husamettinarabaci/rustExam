@@ -1,14 +1,16 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result ile Eşleşme  
-#### ✅ Cevap 118: Result ile pattern matching
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Döngülerle Enum Eşleme  
+#### ✅ Cevap 118: `while let` ile eşleme
 
-**Açıklama:**
-Result değerleriyle pattern matching yapılabilir.
+Bu örnekte, Rust'ta `while let` ile tekrarlı desen eşleme kullanılarak enum değerlerinin nasıl çıkarılacağı gösterilmektedir. `while let` döngüsü, desen eşleştiği sürece devam eder ve özellikle option veya iterator gibi yapılarla kullanışlıdır.
 
 ```rust
-let sonuc: Result<i32, &str> = Ok(10);
-match sonuc {
-    Ok(deger) => println!("Değer: {}", deger),
-    Err(e) => println!("Hata: {}", e),
+fn main() {
+    let mut belki = Some(3);
+    while let Some(x) = belki {
+        println!("Değer: {}", x);
+        belki = None;
+    }
+    println!("Döngü sona erdi");
 }
 ```

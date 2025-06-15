@@ -1,19 +1,24 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `thiserror` Crate  
-#### ✅ Answer 179: Using the `thiserror` crate for custom errors
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and lifetimes  
+#### ✅ Answer 179: HashMap and lifetimes
 
-The `thiserror` crate makes it easy to define custom error types with helpful error messages.
+When storing references in a `HashMap`, you must specify lifetimes to ensure the references are valid for the duration of the map. Here, the function takes a `HashMap<&str, &i32>` with an explicit lifetime parameter and prints its contents.
 
 ```rust
-use thiserror::Error;
+use std::collections::HashMap;
 
-#[derive(Error, Debug)]
-enum MyError {
-    #[error("An error occurred: {0}")]
-    Custom(String),
+fn print_map<'a>(map: &HashMap<&'a str, &'a i32>) {
+    for (key, value) in map {
+        println!("{}: {}", key, value);
+    }
 }
 
-fn do_something() -> Result<(), MyError> {
-    Err(MyError::Custom("Something went wrong".into()))
+fn main() {
+    let a = 1;
+    let b = 2;
+    let mut map: HashMap<&str, &i32> = HashMap::new();
+    map.insert("one", &a);
+    map.insert("two", &b);
+    print_map(&map);
 }
 ```

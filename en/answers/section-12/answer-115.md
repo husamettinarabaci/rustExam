@@ -1,15 +1,15 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Option vs Result  
-#### ✅ Answer 115: Option vs Result
+## 📘 Section: Enums II  
+### 🔹 Category: Option and Enum Matching  
+#### ✅ Answer 115: Matching on Option
 
-**Explanation:**
-`Option` is used when a value may or may not be present, while `Result` is for success or error. Example:
+This example demonstrates how to use pattern matching with the `Option` enum in Rust. By matching on `Some` and `None`, you can safely handle optional values and avoid errors from unwrapping.
 
 ```rust
-fn find_even(nums: &[i32]) -> Option<i32> {
-    nums.iter().find(|&&x| x % 2 == 0).copied()
-}
-fn divide(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 { Err("Zero!".to_string()) } else { Ok(a / b) }
+fn main() {
+    let maybe_number: Option<i32> = Some(10);
+    match maybe_number {
+        Some(value) => println!("The value is {}", value),
+        None => println!("No value found"),
+    }
 }
 ```

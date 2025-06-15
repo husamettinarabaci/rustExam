@@ -1,15 +1,20 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashMap  
-#### ✅ Answer 127: Iterating over a HashMap
+## 📘 Section: Modules I  
+### 🔹 Category: Module Re-exports  
+#### ✅ Answer 127: Module re-exports
 
-**Explanation:**
-Use a `for` loop to iterate over key-value pairs.
+You can re-export items from a module using `pub use`. This allows external code to access the item directly, without specifying the module path. Here, `add` is re-exported from the `math` module and called directly in `main`.
 
 ```rust
-use std::collections::HashMap;
-let mut map = HashMap::new();
-map.insert("a", 1);
-for (k, v) in &map {
-    println!("{}: {}", k, v);
+mod math {
+    pub fn add(a: i32, b: i32) -> i32 {
+        a + b
+    }
+}
+
+pub use math::add;
+
+fn main() {
+    let result = add(2, 3);
+    println!("Sum: {}", result);
 }
 ```

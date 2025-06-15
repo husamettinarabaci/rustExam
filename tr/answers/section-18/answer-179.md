@@ -1,19 +1,24 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: `thiserror` Crate'i  
-#### ✅ Cevap 179: Özel hatalar için `thiserror` crate'inin kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve ömürler  
+#### ✅ Cevap 179: HashMap ve ömürler
 
-`thiserror` crate'i, özel hata tiplerini kolayca tanımlamanızı ve anlamlı hata mesajları oluşturmanızı sağlar.
+Bir `HashMap` içinde referansları değer olarak saklarken, bu referansların ömrünü belirtmek gerekir. Aşağıda, ömür parametresiyle `HashMap<&str, &i32>` alan ve içeriğini yazdıran bir fonksiyon örneği verilmiştir.
 
 ```rust
-use thiserror::Error;
+use std::collections::HashMap;
 
-#[derive(Error, Debug)]
-enum BenimHatam {
-    #[error("Bir hata oluştu: {0}")]
-    Ozel(String),
+fn yazdir<'a>(map: &HashMap<&'a str, &'a i32>) {
+    for (anahtar, deger) in map {
+        println!("{}: {}", anahtar, deger);
+    }
 }
 
-fn bir_sey_yap() -> Result<(), BenimHatam> {
-    Err(BenimHatam::Ozel("Bir şeyler ters gitti".into()))
+fn main() {
+    let a = 1;
+    let b = 2;
+    let mut map: HashMap<&str, &i32> = HashMap::new();
+    map.insert("bir", &a);
+    map.insert("iki", &b);
+    yazdir(&map);
 }
 ```

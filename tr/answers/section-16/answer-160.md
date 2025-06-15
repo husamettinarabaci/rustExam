@@ -1,23 +1,24 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Traitler  
-#### ✅ Cevap 160: Birden fazla tip için jenerik trait implementasyonu
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Yapı Vektörü  
+#### ✅ Cevap 160: Yapı vektörü
 
-Bu örnek, jenerik bir trait tanımlamayı ve hem vektör hem de dizi için implement etmeyi gösterir.
+Rust'ta bir yapı vektörü kullanmak için önce bir yapı tanımlayın ve bu yapıdan oluşan bir vektör oluşturun. Daha sonra vektör üzerinde yineleyerek her yapının alanlarına erişebilirsiniz. İşte bir örnek:
 
 ```rust
-trait Summable {
-    fn sum(&self) -> i32;
+struct Kisi {
+    isim: String,
+    yas: u8,
 }
 
-impl Summable for Vec<i32> {
-    fn sum(&self) -> i32 {
-        self.iter().sum()
-    }
-}
+fn main() {
+    let kisiler = vec![
+        Kisi { isim: String::from("Ali"), yas: 30 },
+        Kisi { isim: String::from("Ayşe"), yas: 25 },
+        Kisi { isim: String::from("Mehmet"), yas: 40 },
+    ];
 
-impl Summable for [i32; 3] {
-    fn sum(&self) -> i32 {
-        self.iter().sum()
+    for kisi in &kisiler {
+        println!("İsim: {}, Yaş: {}", kisi.isim, kisi.yas);
     }
 }
 ```

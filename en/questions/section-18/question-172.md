@@ -1,11 +1,12 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `?` Operator  
-#### ❓ Question 172: Propagating errors with the `?` operator
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Accessing and Updating Values in a HashMap  
+#### ❓ Question 172: Accessing and updating values in a `HashMap`
 
-Write a function that reads a file and returns its contents as a `String`. Use the `?` operator to propagate errors.
+Write a Rust program that demonstrates how to access and update values in a `HashMap`.
 
-- Define a function named `read_file_contents` that takes a file path as a parameter.
-- Use `std::fs::read_to_string` and the `?` operator.
-- Return a `Result<String, std::io::Error>`.
+- Create a `HashMap` with at least two key-value pairs.
+- Access a value using a key and print it.
+- Update the value for an existing key.
+- Print the updated `HashMap`.
 
-🔧 **Task:** Use the `?` operator to simplify error propagation in file reading.
+🔧 **Task:** Practice accessing and modifying values in a Rust `HashMap`.

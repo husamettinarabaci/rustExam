@@ -1,17 +1,21 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Matching on References and Dereferencing  
+### 🔹 Category: Matching on References and Dereferencing in Patterns  
 #### ✅ Answer 170: Matching on references and dereferencing in patterns
 
-You can match on references and use dereferencing in Rust patterns. Example:
+In Rust, you can match on references by using patterns like `&val` to destructure a reference and access its value. You can also match directly on a reference variable. This is useful when working with borrowed data.
 
 ```rust
-fn describe_ref(n: &i32) {
-    match n {
-        &0 => println!("Zero"),
-        &x if x > 0 => println!("Positive"),
-        &x if x < 0 => println!("Negative"),
-    }
+let x = 42;
+let r = &x;
+
+match r {
+    &val => println!("Matched by dereferencing: {}", val),
+}
+
+match r {
+    val_ref => println!("Matched as reference: {}", val_ref),
 }
 ```
 
-This function demonstrates matching on a reference and using dereferencing in the pattern.
+- In the first match, `&val` pattern dereferences the reference and binds the value to `val`.
+- In the second match, `val_ref` is a reference to the value, so you can use `*val_ref` to access the value if needed.

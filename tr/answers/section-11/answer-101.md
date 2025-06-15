@@ -1,6 +1,20 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Object Kavramı  
-#### ✅ Cevap 101: Trait object nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Enum Temelleri  
+#### ✅ Cevap 101: Temel bir enum tanımlama
 
-**Açıklama:**
-Rust'ta "trait object", çalışma zamanında farklı tiplerin aynı arayüzü (trait) paylaştığı durumlarda kullanılır. Trait object'ler, dinamik dispatch ile fonksiyon çağrılarını yönlendirir ve genellikle `dyn Trait` ile tanımlanır. Örneğin: `Box<dyn Trait>`. Bu sayede farklı tipler tek bir koleksiyonda saklanabilir ve ortak arayüzden erişilebilir.
+Bu örnekte, Rust'ta temel bir enum nasıl tanımlanır, bir örneği nasıl oluşturulur ve değeri `match` ile nasıl yazdırılır gösterilmektedir.
+
+```rust
+enum Yön {
+    Yukari,
+    Asagi,
+}
+
+fn main() {
+    let yon = Yön::Yukari;
+    match yon {
+        Yön::Yukari => println!("Yukarı gidiliyor!"),
+        Yön::Asagi => println!("Aşağı gidiliyor!"),
+    }
+}
+```

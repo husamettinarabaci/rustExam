@@ -1,17 +1,15 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Structlar  
-#### ✅ Cevap 153: Jenerik structlar için metot implementasyonu
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ✅ Cevap 153: Vektör elemanlarına güvenli erişim
 
-Bu örnek, jenerik bir struct tanımlamayı ve içindeki değere referans döndüren bir metot implement etmeyi gösterir.
+Vektör elemanlarına güvenli erişmek için `get` metodu kullanılır. Bu metod, sınır dışı bir indeks verilirse panik yerine `Option` döndürür.
 
 ```rust
-struct Wrapper<T> {
-    value: T,
-}
-
-impl<T> Wrapper<T> {
-    fn get_ref(&self) -> &T {
-        &self.value
+fn main() {
+    let sayilar = vec![10, 20, 30];
+    match sayilar.get(1) {
+        Some(deger) => println!("İkinci eleman: {}", deger),
+        None => println!("İkinci eleman yok!"),
     }
 }
 ```

@@ -1,17 +1,15 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Structs  
-#### ✅ Answer 153: Implementing methods for generic structs
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ✅ Answer 153: Accessing vector elements safely
 
-This example demonstrates how to define a generic struct and implement a method that returns a reference to its inner value.
+To safely access elements in a vector, use the `get` method, which returns an `Option`. This prevents panics if the index is out of bounds.
 
 ```rust
-struct Wrapper<T> {
-    value: T,
-}
-
-impl<T> Wrapper<T> {
-    fn get_ref(&self) -> &T {
-        &self.value
+fn main() {
+    let numbers = vec![10, 20, 30];
+    match numbers.get(1) {
+        Some(value) => println!("Second element: {}", value),
+        None => println!("No second element!"),
     }
 }
 ```

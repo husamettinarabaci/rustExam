@@ -1,10 +1,11 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Vektörler  
-#### ❓ Soru 123: Vektör üzerinde yineleme
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Kodu Birden Fazla Dosyaya Bölme  
+#### ❓ Soru 123: Kodu birden fazla dosyaya bölme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- Vektör elemanları üzerinde nasıl yineleme yapılır?
-- Hem değiştirilemez hem değiştirilebilir yineleme örneği verin.
+- `utils` adında bir modül oluşturun ve uygulamasını `utils.rs` adlı ayrı bir dosyaya taşıyın.
+- `utils.rs` dosyasında, `Hello from utils!` yazdıran herkese açık bir `greet` fonksiyonu tanımlayın.
+- Ana dosyanızda `mod utils;` ile modülü dahil edin ve `main` fonksiyonunda `utils::greet()` fonksiyonunu çağırın.
 
-🔧 **Görev:** Rust'ta vektör üzerinde yinelemeyi gösterin.
+🔧 **Görev:** Rust kodunu modülleri ayrı dosyalara bölerek düzenlemeyi ve ana programda kullanmayı gösterin.

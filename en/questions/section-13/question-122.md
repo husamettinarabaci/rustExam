@@ -1,10 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: Vectors  
-#### ❓ Question 122: Accessing vector elements
+## 📘 Section: Modules I  
+### 🔹 Category: Module Organization  
+#### ❓ Question 122: Using `mod` and `use` for organization
 
-How do you access elements in a vector? What happens if you access an out-of-bounds index?
+Write a Rust program that demonstrates how to organize code using `mod` and `use` in the same file.
 
-- Show how to use indexing and the `.get()` method.
-- Explain what happens on out-of-bounds access.
+- Define a module named `math` with a function `add` that takes two `i32` parameters and returns their sum.
+- In the main function, use the `use` keyword to bring `math::add` into scope.
+- Call `add` in `main` to add two numbers and print the result.
 
-🔧 **Task:** Demonstrate safe and unsafe access to vector elements.
+🔧 **Task:** Show how to declare a module and use `mod` and `use` for better code organization in a single Rust file.

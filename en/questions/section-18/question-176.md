@@ -1,10 +1,12 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `unwrap` and `expect` Methods  
-#### ❓ Question 176: Using `unwrap` and `expect` safely
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap with Custom Types  
+#### ❓ Question 176: HashMap with custom types
 
-Explain the difference between `unwrap` and `expect` on `Result` and `Option` types. Provide an example where using `expect` is preferable to `unwrap`.
+Write a Rust program that demonstrates how to use a custom struct as a key or value in a `HashMap`.
 
-- Describe the risks of using `unwrap`.
-- Show how `expect` can provide a custom error message.
+- Define a simple struct (e.g., `Point { x: i32, y: i32 }`).
+- Create a `HashMap` that uses the struct as a key or value.
+- Implement the necessary traits (`Eq`, `PartialEq`, `Hash`) if using the struct as a key.
+- Insert at least two entries and print the `HashMap`.
 
-🔧 **Task:** Compare `unwrap` and `expect` and demonstrate safe usage.
+🔧 **Task:** Practice using custom types with `HashMap` in Rust.

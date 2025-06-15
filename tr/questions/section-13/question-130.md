@@ -1,10 +1,11 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Koleksiyonlarda En İyi Uygulamalar  
-#### ❓ Soru 130: Koleksiyonlarda en iyi uygulamalar
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Sabitleri  
+#### ❓ Soru 130: Modül sabitleri
 
-Aşağıdakileri açıklayın:
+Bir Rust modülünde sabit bir değer tanımlayın ve kullanın.
 
-- Koleksiyonlarla çalışırken en az üç en iyi uygulamayı listeleyin.
-- Her biri için kısa açıklama verin.
+- `const` anahtar kelimesiyle bir sabit (ör. `PI`) tanımlayın.
+- Modül içinde bu sabiti kullanan bir fonksiyon yazın.
+- Sabite ve fonksiyona modül dışından nasıl erişileceğini gösterin.
 
-🔧 **Görev:** Rust'ta koleksiyonlarla ilgili en iyi uygulamaları özetleyin.
+🔧 **Görev:** Bir Rust modülünde sabit tanımlamayı ve kullanmayı gösterin.

@@ -1,11 +1,12 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: İlişkili Tipler  
-#### ❓ Soru 152: Traitlerde ilişkili tiplerin tanımlanması ve kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ❓ Soru 152: Vektöre eleman ekleme ve çıkarma
 
-Bir trait içinde ilişkili tip tanımlayın ve bunu bir struct için uygulayın. İlişkili tipin bir metotta nasıl kullanılacağını gösterin.
+Aşağıdakileri yapan bir Rust programı yazın:
 
-- `Container` adında bir trait tanımlayın ve ilişkili tip olarak `Item` ekleyin.
-- `Container` traitini bir struct için uygulayın.
-- İlişkili tipten bir değer döndüren bir metot yazın.
+- Değiştirilebilir bir tamsayı vektörü oluşturun.
+- Vektöre 4 ve 5 değerlerini ekleyin.
+- Vektörden son elemanı çıkarın.
+- Sonuçtaki vektörü terminale yazdırın.
 
-🔧 **Görev:** Trait tanımlarında ve implementasyonlarında ilişkili tipleri kullanın.
+🔧 **Görev:** Rust'ta vektöre eleman eklemeyi ve çıkarmayı gösterin.

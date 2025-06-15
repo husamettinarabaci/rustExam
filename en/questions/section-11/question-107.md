@@ -1,9 +1,11 @@
-## 📚 Section: Macros  
-### 🔹 Category: Macro Export  
-#### ❓ Question 107: Exporting macros
+## 📘 Section: Enums I  
+### 🔹 Category: Enum with Tuple Variants  
+#### ❓ Question 107: Enum with tuple variants
 
-Write a Rust macro in a separate module and export it for use in `main`.
+Write a Rust program that demonstrates an enum with tuple variants:
 
-- Use `#[macro_export]` to make the macro available.
+- Define an enum `Shape` with two tuple variants: `Circle(f64)` and `Rectangle(f64, f64)`.
+- Create a function that takes a `Shape` and returns its area as `f64`.
+- In `main`, create a `Circle` and a `Rectangle`, and print their areas.
 
-🔧 **Task:** Show how to export macros from a module in Rust.
+🔧 **Task:** Use tuple variants in an enum and pattern match to calculate and print the area for each shape.

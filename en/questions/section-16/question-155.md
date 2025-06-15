@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: PhantomData  
-#### ❓ Question 155: Using PhantomData in generic structs
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ❓ Question 155: Modifying elements in a vector
 
-Explain how to use `PhantomData` in a generic struct and why it is necessary. Provide a simple example.
+Write a Rust program that does the following:
 
-- Define a struct that uses `PhantomData` to indicate ownership of a generic type parameter.
-- Explain the purpose of `PhantomData` in the context of Rust's type system.
+- Create a mutable vector of integers with at least three elements.
+- Double each element in the vector (modify the elements in place).
+- Print the modified vector to the terminal.
 
-🔧 **Task:** Demonstrate the use of `PhantomData` in generic structs and explain its role.
+🔧 **Task:** Show how to modify elements in a vector in Rust.

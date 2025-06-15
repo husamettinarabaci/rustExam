@@ -1,28 +1,23 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `From` Trait for Error Conversion  
-#### ✅ Answer 178: Using the `From` trait for error conversion
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and references  
+#### ✅ Answer 178: HashMap and references
 
-This example shows how to use the `From` trait to convert between custom error types.
+To store references as values in a `HashMap`, you must specify lifetimes so the references remain valid. Here, we use a `HashMap<&str, &i32>` and insert references to existing integers. The lifetime of the references must outlive the `HashMap`.
 
 ```rust
-#[derive(Debug)]
-enum SmallError {
-    Minor,
-}
+use std::collections::HashMap;
 
-#[derive(Debug)]
-enum BigError {
-    Small(SmallError),
-}
+fn main() {
+    let a = 10;
+    let b = 20;
+    let c = 30;
+    let mut map: HashMap<&str, &i32> = HashMap::new();
+    map.insert("x", &a);
+    map.insert("y", &b);
+    map.insert("z", &c);
 
-impl From<SmallError> for BigError {
-    fn from(e: SmallError) -> Self {
-        BigError::Small(e)
+    for (key, value) in &map {
+        println!("{}: {}", key, value);
     }
-}
-
-fn do_work() -> Result<(), BigError> {
-    let res: Result<(), SmallError> = Err(SmallError::Minor);
-    res.map_err(BigError::from)
 }
 ```

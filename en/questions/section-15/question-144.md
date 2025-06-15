@@ -1,10 +1,11 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Structs and Lifetimes  
-#### ❓ Question 144: Lifetimes in structs
+## 📘 Section: Crates and External Packages  
+### 🔹 Category: Versioning and Updating Dependencies  
+#### ❓ Question 144: Versioning and updating dependencies
 
-How do you use lifetimes in structs?
+Explain how to manage dependency versions in `Cargo.toml`:
 
-- Show how to define a struct with a lifetime parameter.
-- Give an example of using such a struct.
+- Specify a dependency with a version requirement (e.g., `rand = "0.8"`).
+- Update a dependency to the latest compatible version using Cargo commands.
+- Describe the difference between `cargo update` and manually changing the version in `Cargo.toml`.
 
-🔧 **Task:** Demonstrate lifetimes in struct definitions.
+🔧 **Task:** Show how to specify, update, and manage dependency versions in a Rust project.

@@ -1,12 +1,11 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Ranges and Bindings  
+### 🔹 Category: Matching on Ranges and Bindings  
 #### ❓ Question 163: Matching on ranges and bindings
 
-Write a Rust function that takes an integer as input and uses a `match` statement to:
+Write a Rust program that demonstrates how to use pattern matching with ranges and variable bindings:
 
-- Print "Low" if the number is between 1 and 10 (inclusive).
-- Print "Medium" if the number is between 11 and 100 (inclusive).
-- Print "High" if the number is greater than 100.
-- Print "Zero or negative" if the number is zero or negative.
+- Use a `match` statement to match an integer value against several ranges (e.g., 1..=5, 6..=10, etc.).
+- Bind the matched value to a variable within the pattern and print it.
+- Include a catch-all arm for values outside the specified ranges.
 
-🔧 **Task:** Demonstrate how to use range patterns and variable bindings in Rust `match` arms.
+🔧 **Task:** Use `match` with range patterns and variable bindings to print which range the value falls into, including the matched value.

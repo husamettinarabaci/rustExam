@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Eşzamanlılık Trait'leri  
-#### ❓ Soru 103: Send ve Sync trait'leri nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Enumlarda Desen Eşleme  
+#### ❓ Soru 103: Enumlarda desen eşleme
 
-Aşağıdakileri açıklayın:
+Bir enum üzerinde desen eşlemeyi gösteren bir Rust programı yazın.
 
-- Rust'ta `Send` ve `Sync` trait'leri neyi ifade eder?
-- Hangi durumlarda kullanılır?
+- En az iki varyantı (biri veri tutabilir) olan bir enum tanımlayın.
+- Bu enum türünde bir değişken oluşturup bir değer atayın.
+- Her varyantı `match` ifadesiyle ele alıp farklı mesajlar yazdırın.
 
-🔧 **Görev:** Çoklu iş parçacığı güvenliği açısından Send ve Sync trait'lerini açıklayın.
+🔧 **Görev:** Bir enum tanımlayın, bir örnek oluşturun ve desen eşleme ile her varyant için farklı mesaj yazdırın.

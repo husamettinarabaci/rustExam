@@ -1,9 +1,11 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Handling Multiple Errors  
-#### ❓ Question 116: Handling multiple error types
+## 📘 Section: Enums II  
+### 🔹 Category: Result and Enum Matching  
+#### ❓ Question 116: Matching on Result
 
-How can you handle multiple error types in a single function?
+Write a Rust program that demonstrates how to match on the `Result` enum:
 
-- Show how to use `Box<dyn Error>` or custom enums.
+- Create a variable of type `Result<i32, String>` with a value.
+- Use a `match` statement to handle both `Ok` and `Err` cases.
+- Print the value if it is `Ok`, or print the error message if it is `Err`.
 
-🔧 **Task:** Demonstrate handling multiple error types in one function.
+🔧 **Task:** Show how to use pattern matching with the `Result` enum to handle success and error cases.

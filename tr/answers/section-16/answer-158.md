@@ -1,19 +1,14 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Newtype Pattern  
-#### ✅ Cevap 158: Newtype pattern ile dış tipler için trait implementasyonu
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Eleman Çıkarma  
+#### ✅ Cevap 158: Vektörden eleman çıkarma
 
-Newtype pattern, dış bir tipi kendi struct'ınızda sarmalayarak o tip için trait implement etmenizi sağlar. Bu, doğrudan sahip olmadığınız bir tipe trait eklemenin yoludur.
+Rust'ta bir vektörden eleman çıkarmak için `remove` metodunu kullanabilirsiniz. Bu metod, belirtilen indeksteki elemanı siler ve döndürür. İşte bir örnek:
 
 ```rust
-struct MyU32(u32);
-
-trait Double {
-    fn double(&self) -> u32;
-}
-
-impl Double for MyU32 {
-    fn double(&self) -> u32 {
-        self.0 * 2
-    }
+fn main() {
+    let mut sayilar = vec![5, 10, 15, 20, 25];
+    println!("Çıkarma öncesi: {:?}", sayilar);
+    sayilar.remove(2); // 2. indeksteki eleman (15) silinir
+    println!("Çıkarma sonrası: {:?}", sayilar);
 }
 ```

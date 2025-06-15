@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Higher-Ranked Trait Bounds  
-#### ❓ Soru 157: Higher-ranked trait bound (HRTB) kullanımı
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Sıralama ve Karşılaştırma  
+#### ❓ Soru 157: Vektörü sıralama
 
-Herhangi bir ömre sahip referans kabul edebilen bir fonksiyon veya closure'ı parametre olarak alan bir fonksiyon yazın. Bu bağlamda higher-ranked trait bound kullanımını açıklayın.
+Bir tamsayı vektörünü artan düzende nasıl sıralayacağınızı gösteren bir Rust programı yazın.
 
-- `for<'a>` sınırı ile parametre alan bir fonksiyon tanımlayın.
-- Bir closure veya fonksiyon ile kullanımını gösterin.
+- Sıralanmamış tamsayı değerleri içeren bir vektör oluşturun.
+- Vektörü yerinde (in place) sıralayın.
+- Sıralanmış vektörü yazdırın.
 
-🔧 **Görev:** Her ömre sahip fonksiyon veya closure'ları kabul etmek için higher-ranked trait bound kullanın.
+🔧 **Görev:** Bir tamsayı vektörünü sıralamak ve sonucu göstermek için `sort` metodunu kullanın.

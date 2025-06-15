@@ -1,10 +1,11 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: use Anahtar Kelimesi  
-#### ❓ Soru 134: use anahtar kelimesi
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: `pub use` ile yeniden dışa aktarma  
+#### ❓ Soru 134: `pub use` ile yeniden dışa aktarma
 
-Aşağıdakileri açıklayın:
+Bir modüldeki öğeleri `pub use` ile yeniden dışa aktarmayı gösteren bir Rust programı yazın.
 
-- Rust'ta `use` anahtar kelimesinin amacı nedir?
-- Bir ögeyi scope'a getirme örneği verin.
+- Bir modül içinde bir fonksiyon veya sabit tanımlayın.
+- Üstteki veya başka bir modülde, bu öğeyi `pub use` ile yeniden dışa aktarın.
+- Yeniden dışa aktarılan öğeye modül dışından nasıl erişileceğini gösterin.
 
-🔧 **Görev:** Rust'ta use anahtar kelimesini açıklayın ve örnekleyin.
+🔧 **Görev:** Rust modüllerinde `pub use` ile yeniden dışa aktarmayı gösterin.

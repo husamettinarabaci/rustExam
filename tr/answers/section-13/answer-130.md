@@ -1,8 +1,21 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Koleksiyonlarda En İyi Uygulamalar  
-#### ✅ Cevap 130: Koleksiyonlarda en iyi uygulamalar
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Sabitleri  
+#### ✅ Cevap 130: Modül sabitleri
 
 **Açıklama:**
-- Sıralı listeler için vektörleri tercih edin.
-- Anahtar-değer saklamak için HashMap kullanın.
-- Performans için gereksiz kopyalardan kaçının.
+
+Rust modüllerinde `const` anahtar kelimesiyle sabitler tanımlanabilir. Sabitler daima değiştirilemezdir ve tür belirtimi zorunludur. Modül yolu ile sabite erişebilirsiniz.
+
+```rust
+mod matematik {
+    pub const PI: f64 = 3.14159;
+    pub fn daire_alan(yaricap: f64) -> f64 {
+        PI * yaricap * yaricap
+    }
+}
+
+fn main() {
+    println!("PI = {}", matematik::PI);
+    println!("Alan = {}", matematik::daire_alan(2.0));
+}
+```

@@ -1,21 +1,15 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Associated Types  
-#### ✅ Answer 152: Defining and using associated types in traits
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ✅ Answer 152: Adding and removing elements from a vector
 
-This example shows how to define a trait with an associated type and implement it for a struct. The associated type allows the trait to be more flexible and reusable.
+To add elements to a vector in Rust, use the `push` method. To remove the last element, use the `pop` method. The vector must be mutable to modify its contents.
 
 ```rust
-trait Container {
-    type Item;
-    fn get(&self) -> Self::Item;
-}
-
-struct IntBox(i32);
-
-impl Container for IntBox {
-    type Item = i32;
-    fn get(&self) -> i32 {
-        self.0
-    }
+fn main() {
+    let mut numbers = vec![1, 2, 3];
+    numbers.push(4);
+    numbers.push(5);
+    numbers.pop();
+    println!("{:?}", numbers);
 }
 ```

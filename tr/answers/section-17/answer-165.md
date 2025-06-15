@@ -2,19 +2,17 @@
 ### 🔹 Kategori: Desenlerde `ref` ve `ref mut` kullanımı  
 #### ✅ Cevap 165: Desenlerde `ref` ve `ref mut` kullanımı
 
-Rust'ta desenlerde referans ve değiştirilebilir referans oluşturmak için `ref` ve `ref mut` kullanılabilir. Örnek:
+Bu örnekte, desen eşlemede `ref` ve `ref mut` kullanılarak alanların değiştirilemez ve değiştirilebilir olarak nasıl ödünç alınacağı gösterilmektedir. `ref` değiştirilemez referans, `ref mut` ise değiştirilebilir referans oluşturur ve değeri değiştirmenizi sağlar.
 
 ```rust
-fn tuple_isle(mut t: (i32, i32)) {
-    match t {
-        (ref ilk, _) if *ilk > 0 => println!("İlk (ref ile): {}", ilk),
-        (_, ref mut ikinci) if *ikinci < 0 => {
-            *ikinci += 1;
-            println!("İkinci (ref mut ile, artırıldı): {}", ikinci);
+fn main() {
+    let mut tuple = (1, 2);
+    match tuple {
+        (ref x, ref mut y) => {
+            println!("x: {}", x);
+            *y += 10;
+            println!("y değiştikten sonra: {}", y);
         }
-        (ilk, ikinci) => println!("İlk: {}, İkinci: {}", ilk, ikinci),
     }
 }
 ```
-
-Bu fonksiyon, tuple desenlerinde `ref` ve `ref mut` kullanımını göstermektedir.

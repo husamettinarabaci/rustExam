@@ -1,9 +1,11 @@
-## 📚 Section: Macros  
-### 🔹 Category: Repetition in Macros  
-#### ❓ Question 104: Macro repetition
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Pattern Matching and Printing  
+#### ❓ Question 104: Using `match` with enums and printing
 
-Write a Rust macro that accepts multiple arguments and prints each one.
+Write a Rust program that uses a `match` statement to print messages based on enum variants.
 
-- Use the macro in `main` with several arguments.
+- Define an enum with at least two variants (one may carry data).
+- Create a variable of this enum type and assign it a value.
+- Use a `match` statement to print a different message for each variant.
 
-🔧 **Task:** Show how to use repetition in Rust macros.
+🔧 **Task:** Define an enum, create an instance, and use `match` to print messages for each variant.

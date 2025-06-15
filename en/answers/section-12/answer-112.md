@@ -1,13 +1,23 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Result Type Basics  
-#### ✅ Answer 112: Unwrapping Result
+## 📘 Section: Enums II  
+### 🔹 Category: Matching Multiple Patterns  
+#### ✅ Answer 112: Matching multiple patterns
 
 **Explanation:**
-You can extract the value from a `Result` using `.unwrap()` or `.expect()`. If the result is `Err`, the program will panic.
+You can use the `|` operator in match arms to match multiple patterns. Here, both `Up` and `Down` are matched together, as are `Left` and `Right`.
 
 ```rust
-let res: Result<i32, &str> = Ok(5);
-let value = res.unwrap(); // returns 5
-let err: Result<i32, &str> = Err("fail");
-// err.unwrap(); // panics
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+fn main() {
+    let dir = Direction::Left;
+    match dir {
+        Direction::Up | Direction::Down => println!("Vertical"),
+        Direction::Left | Direction::Right => println!("Horizontal"),
+    }
+}
 ```

@@ -1,19 +1,14 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Newtype Pattern  
-#### ✅ Answer 158: Implementing traits for external types using the newtype pattern
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Removing Elements  
+#### ✅ Answer 158: Removing elements from a vector
 
-The newtype pattern allows you to wrap an external type in your own struct, enabling you to implement traits for it. This is useful when you cannot implement a trait directly for a type you do not own.
+To remove an element from a vector in Rust, use the `remove` method, which removes and returns the element at the specified index. Here is an example:
 
 ```rust
-struct MyU32(u32);
-
-trait Double {
-    fn double(&self) -> u32;
-}
-
-impl Double for MyU32 {
-    fn double(&self) -> u32 {
-        self.0 * 2
-    }
+fn main() {
+    let mut numbers = vec![5, 10, 15, 20, 25];
+    println!("Before removal: {:?}", numbers);
+    numbers.remove(2); // Removes the element at index 2 (15)
+    println!("After removal: {:?}", numbers);
 }
 ```

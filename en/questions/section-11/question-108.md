@@ -1,9 +1,11 @@
-## 📚 Section: Macros  
-### 🔹 Category: Declarative vs Procedural  
-#### ❓ Question 108: Declarative vs procedural macros
+## 📘 Section: Enums I  
+### 🔹 Category: Enum with Struct Variants  
+#### ❓ Question 108: Enum with struct variants
 
-Explain the difference between declarative and procedural macros in Rust.
+Write a Rust program that demonstrates an enum with struct variants:
 
-- Give an example of each.
+- Define an enum `Message` with two struct variants: `Move { x: i32, y: i32 }` and `Write { text: String }`.
+- Create a function that takes a `Message` and prints a message based on its variant.
+- In `main`, create both variants and call the function for each.
 
-🔧 **Task:** Compare declarative and procedural macros in Rust.
+🔧 **Task:** Use struct variants in an enum and pattern match to handle each variant differently.

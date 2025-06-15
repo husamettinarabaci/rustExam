@@ -1,10 +1,11 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Metotlarda Lifetime  
-#### ❓ Soru 148: Metotlarda lifetime kullanımı
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo.toml'da Özellik Kullanımı  
+#### ❓ Soru 148: Cargo.toml'da özellik kullanımı
 
-Aşağıdakileri açıklayın:
+Bir Rust crate'inde `Cargo.toml` dosyasında özellik (feature) tanımlamayı ve kullanmayı açıklayın:
 
-- Metot tanımında lifetime parametresi nasıl kullanılır?
-- Örnek verin.
+- `Cargo.toml` dosyasına `[features]` bölümü ekleyin ve en az bir özellik tanımlayın (ör. `extras`).
+- Crate'i derlerken veya çalıştırırken bir özelliğin nasıl etkinleştirileceğini gösterin.
+- Özelliklerin kodu koşullu derlemek için nasıl kullanılabileceğini açıklayın.
 
-🔧 **Görev:** Metotlarda lifetime kullanımını gösterin.
+🔧 **Görev:** `Cargo.toml` ile özellik tanımlamayı, etkinleştirmeyi ve koşullu derlemeyi gösterin.

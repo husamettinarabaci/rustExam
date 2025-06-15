@@ -1,16 +1,14 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Ignoring Values  
+### 🔹 Category: Ignoring values with `_` in patterns  
 #### ✅ Answer 164: Ignoring values with `_` in patterns
 
-You can use `_` in Rust patterns to ignore values you don't care about. Example:
+This example shows how to use the underscore (`_`) in pattern matching to ignore values you do not need. In Rust, `_` can be used in `match` arms or destructuring to skip over values you don't care about.
 
 ```rust
-fn print_tuple(t: (i32, i32, i32)) {
-    match t {
-        (0, _, _) => println!("First is zero"),
-        (first, _, third) => println!("First: {}, Third: {}", first, third),
+fn main() {
+    let tuple = (1, 2, 3);
+    match tuple {
+        (x, _, z) => println!("First: {}, Third: {}", x, z),
     }
 }
 ```
-
-This function ignores the second value in the tuple and demonstrates how to use `_` in patterns.

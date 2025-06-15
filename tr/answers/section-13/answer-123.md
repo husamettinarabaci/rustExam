@@ -1,16 +1,21 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Vektörler  
-#### ✅ Cevap 123: Vektör üzerinde yineleme
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Kodu Birden Fazla Dosyaya Bölme  
+#### ✅ Cevap 123: Kodu birden fazla dosyaya bölme
 
-**Açıklama:**
-`for` döngüsü ile yineleme yapılır. `&v` ile değiştirilemez, `&mut v` ile değiştirilebilir yineleme yapılır.
+Rust'ta kodu birden fazla dosyaya bölmek için ana dosyada modülü tanımlar ve uygulamasını ayrı bir dosyaya yerleştirirsiniz. Burada, `utils` modülü `utils.rs` dosyasında tanımlanmış ve `main.rs` dosyasında `mod utils;` ile dahil edilmiştir.
 
+**main.rs:**
 ```rust
-let mut v = vec![1, 2, 3];
-for x in &v {
-    println!("{}", x);
+mod utils;
+
+fn main() {
+    utils::greet();
 }
-for x in &mut v {
-    *x += 1;
+```
+
+**utils.rs:**
+```rust
+pub fn greet() {
+    println!("Hello from utils!");
 }
 ```

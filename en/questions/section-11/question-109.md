@@ -1,9 +1,11 @@
-## 📚 Section: Macros  
-### 🔹 Category: Procedural Macro Example  
-#### ❓ Question 109: Writing a procedural macro
+## 📘 Section: Enums I  
+### 🔹 Category: Enum with Default Value  
+#### ❓ Question 109: Enum with default value
 
-Describe how to write a simple procedural macro in Rust.
+Write a Rust program that demonstrates an enum with a default value:
 
-- Outline the steps and provide a minimal code example.
+- Define an enum `Status` with variants: `Active`, `Inactive`, and `Unknown`.
+- Implement the `Default` trait for `Status` so that the default is `Unknown`.
+- In `main`, create a variable with the default value and print it using `match`.
 
-🔧 **Task:** Show how to create a procedural macro in Rust.
+🔧 **Task:** Implement the `Default` trait for an enum and use it to create a default value.

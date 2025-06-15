@@ -1,17 +1,20 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: İç İçe Modüller  
-#### ✅ Cevap 133: İç içe modüller
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Yollar ve `super` anahtar kelimesi  
+#### ✅ Cevap 133: Yollar ve `super` anahtar kelimesi
 
-**Açıklama:**
-Modüller birbirinin içinde tanımlanabilir. `::` ile erişilir.
+Rust'ta `super` anahtar kelimesi, bir modülün üst modüldeki öğelere erişmesini sağlar. Bu, iç içe modüllerde kodun düzenlenmesinde kullanışlıdır.
 
 ```rust
-mod dis {
-    pub mod ic {
-        pub fn merhaba() {}
+mod ust {
+    pub const MESAJ: &str = "Üst modülden merhaba!";
+    pub mod alt {
+        pub fn mesaj_goster() {
+            println!("{}", super::MESAJ);
+        }
     }
 }
+
 fn main() {
-    dis::ic::merhaba();
+    ust::alt::mesaj_goster();
 }
 ```

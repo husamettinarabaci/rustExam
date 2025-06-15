@@ -1,16 +1,14 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Değerleri Yoksayma  
+### 🔹 Kategori: Desenlerde `_` ile değerleri yoksayma  
 #### ✅ Cevap 164: Desenlerde `_` ile değerleri yoksayma
 
-Rust'ta desenlerde ilgilenilmeyen değerleri yoksaymak için `_` kullanılabilir. Örnek:
+Bu örnekte, Rust'ta desen eşlemede kullanmadığınız değerleri yoksaymak için `_` karakterinin nasıl kullanılacağı gösterilmektedir. `_`, `match` kollarında veya parçalama sırasında ilgilenilmeyen değerleri atlamak için kullanılabilir.
 
 ```rust
-fn tuple_yazdir(t: (i32, i32, i32)) {
-    match t {
-        (0, _, _) => println!("İlki sıfır"),
-        (ilk, _, ucuncu) => println!("İlk: {}, Üçüncü: {}", ilk, ucuncu),
+fn main() {
+    let tuple = (1, 2, 3);
+    match tuple {
+        (x, _, z) => println!("Birinci: {}, Üçüncü: {}", x, z),
     }
 }
 ```
-
-Bu fonksiyon, tuple'ın ikinci değerini yoksayar ve desenlerde `_` kullanımını gösterir.

@@ -1,10 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Özel Hata Tipleri  
-#### ❓ Soru 114: Özel hata tipi tanımlama
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: İleri Düzey Eşleme ve Enum Kullanımı  
+#### ❓ Soru 114: Enumlarla `if let` kullanımı
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Rust'ta özel hata tipi nasıl tanımlanır?
-- Enum ile hata tipi oluşturma ve `Error` trait'ini uygulama örneği verin.
+- En az iki varyantı olan bir enum tanımlayın.
+- Enumdan bir örnek oluşturun.
+- Belirli bir varyantı kontrol etmek ve eşleşirse değerini yazdırmak için `if let` kullanın.
 
-🔧 **Görev:** Özel hata tipi tanımlama ve kullanımı örneği verin.
+🔧 **Görev:** Enumlarda `if let` ile kısa ve öz desen eşleme kullanımını gösterin.

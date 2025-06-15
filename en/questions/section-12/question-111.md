@@ -1,10 +1,10 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Result Type Basics  
-#### ❓ Question 111: What is the Result type in Rust?
+## 📘 Section: Enums II  
+### 🔹 Category: Pattern Guards in Match Arms  
+#### ❓ Question 111: Pattern guards in match arms
 
-Explain the purpose of the `Result` type in Rust and when it should be used.
+Write a Rust program that demonstrates the use of pattern guards in match arms:
 
-- Describe the two variants of `Result`.
-- Give a simple example of using `Result` in a function.
+- Define an enum `Number` with a variant `Value(i32)`.
+- In `main`, create a `Number` and use `match` with pattern guards to print whether the value is positive, negative, or zero.
 
-🔧 **Task:** Explain the `Result` type and show a basic usage example.
+🔧 **Task:** Use pattern guards (`if` conditions) in match arms to add extra checks when matching enum variants.

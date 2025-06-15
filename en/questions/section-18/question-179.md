@@ -1,11 +1,11 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `thiserror` Crate  
-#### ❓ Question 179: Using the `thiserror` crate for custom errors
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and lifetimes  
+#### ❓ Question 179: HashMap and lifetimes
 
-Explain how to use the `thiserror` crate to define custom error types. Provide an example with a custom error and usage in a function.
+Write a Rust function that demonstrates how to use lifetimes with a `HashMap` containing references as values.
 
-- Add the `thiserror` crate to your dependencies.
-- Define a custom error type using `thiserror::Error`.
-- Use the error type in a function that returns a `Result`.
+- Define a function that takes a `HashMap<&str, &i32>` as a parameter.
+- The function should print all key-value pairs.
+- Explain how lifetimes are required to ensure the references remain valid.
 
-🔧 **Task:** Use the `thiserror` crate to simplify custom error definitions.
+🔧 **Task:** Show how to use lifetimes with a `HashMap` that stores references as values.

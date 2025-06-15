@@ -1,22 +1,26 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: The `Error` Trait  
-#### ✅ Answer 117: The `Error` trait
+## 📘 Section: Enums II  
+### 🔹 Category: Nested Enum Matching  
+#### ✅ Answer 117: Matching on nested enums
 
-**Explanation:**
-The `Error` trait allows custom error types to be used with standard error handling. Implement it for your error types.
+This example demonstrates how to use pattern matching to destructure and handle nested enums in Rust. By matching on both the outer and inner enums, you can access deeply nested values.
 
 ```rust
-use std::fmt;
-use std::error::Error;
-
-#[derive(Debug)]
-struct MyError;
-
-impl fmt::Display for MyError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "My error")
-    }
+enum Inner {
+    Value(i32),
+    None,
 }
 
-impl Error for MyError {}
+enum Outer {
+    InnerEnum(Inner),
+    Other,
+}
+
+fn main() {
+    let nested = Outer::InnerEnum(Inner::Value(7));
+    match nested {
+        Outer::InnerEnum(Inner::Value(x)) => println!("Inner value: {}", x),
+        Outer::InnerEnum(Inner::None) => println!("Inner is none"),
+        Outer::Other => println!("Other variant"),
+    }
+}
 ```

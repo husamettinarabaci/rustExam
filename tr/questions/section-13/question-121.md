@@ -1,11 +1,11 @@
-## 📘 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Vektörler  
-#### ❓ Soru 121: Rust'ta vektör nedir?
+## 📘 Bölüm: Modüller I  
+### 🔹 Kategori: Modül Tanımlama  
+#### ❓ Soru 121: Aynı dosyada modül tanımlama
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- Rust'ta vektör (vector) nedir?
-- Diziyle farkı nedir?
-- Vektör nasıl oluşturulur ve eleman eklenir?
+- Ana Rust dosyanızda `greetings` adında bir modül tanımlayın.
+- Modül içinde `hello` adında, `Hello from the module!` yazdıran bir fonksiyon oluşturun.
+- `main` fonksiyonundan `greetings::hello()` fonksiyonunu çağırarak mesajı ekrana yazdırın.
 
-🔧 **Görev:** Rust'ta vektör kullanımını örnekle açıklayın.
+🔧 **Görev:** Aynı Rust kaynak dosyasında modül tanımlamayı ve kullanmayı gösterin.

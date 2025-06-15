@@ -1,15 +1,24 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hata Tipi Dönüştürme  
-#### ✅ Cevap 119: Hata tipleri arasında dönüşüm
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Referans ve Mutable Eşleme  
+#### ✅ Cevap 119: `ref` ve `mut` ile eşleme
 
-**Açıklama:**
-`From` trait'i ile hata tipleri arasında dönüşüm yapılabilir.
+Bu örnekte, Rust'ta desen eşlemede `ref` ve `ref mut` kullanılarak enum içindeki değerlere nasıl erişileceği ve bunların nasıl değiştirileceği gösterilmektedir. `ref` ile referans alınırken, `ref mut` ile mutable referans alıp değeri değiştirebilirsiniz.
 
 ```rust
-use std::num::ParseIntError;
-fn parse_ve_topla(a: &str, b: &str) -> Result<i32, ParseIntError> {
-    let x: i32 = a.parse()?;
-    let y: i32 = b.parse()?;
-    Ok(x + y)
+fn main() {
+    let mut belki = Some(5);
+    // Değiştirilemez referans ile erişim
+    match belki {
+        Some(ref x) => println!("Önce: {}", x),
+        None => println!("Değer yok"),
+    }
+    // Değiştirilebilir referans ile erişim ve değiştirme
+    match belki {
+        Some(ref mut x) => {
+            *x += 10;
+            println!("Sonra: {}", x);
+        },
+        None => println!("Değer yok"),
+    }
 }
 ```

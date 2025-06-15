@@ -1,18 +1,20 @@
-## 📚 Section: Macros  
-### 🔹 Category: Macro Basics  
-#### ✅ Answer 101: Defining a simple macro
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Basics  
+#### ✅ Answer 101: Defining a basic enum
 
-**Explanation:**
-Macros allow you to write code that writes other code. A simple macro can print a message.
+This example shows how to define a basic enum in Rust, create an instance, and print its value using a `match` statement.
 
 ```rust
-macro_rules! say_hello {
-    () => {
-        println!("Hello, macro!");
-    };
+enum Direction {
+    Up,
+    Down,
 }
 
 fn main() {
-    say_hello!();
+    let dir = Direction::Up;
+    match dir {
+        Direction::Up => println!("Going up!"),
+        Direction::Down => println!("Going down!"),
+    }
 }
 ```

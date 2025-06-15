@@ -1,23 +1,24 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Generic Traits  
-#### ✅ Answer 160: Implementing generic traits for multiple types
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Vectors of Structs  
+#### ✅ Answer 160: Vector of structs
 
-This example demonstrates how to define a generic trait and implement it for both a vector and an array.
+To use a vector of structs in Rust, define a struct and create a vector containing instances of that struct. You can then iterate over the vector and access each struct's fields. Here is an example:
 
 ```rust
-trait Summable {
-    fn sum(&self) -> i32;
+struct Person {
+    name: String,
+    age: u8,
 }
 
-impl Summable for Vec<i32> {
-    fn sum(&self) -> i32 {
-        self.iter().sum()
-    }
-}
+fn main() {
+    let people = vec![
+        Person { name: String::from("Alice"), age: 30 },
+        Person { name: String::from("Bob"), age: 25 },
+        Person { name: String::from("Charlie"), age: 40 },
+    ];
 
-impl Summable for [i32; 3] {
-    fn sum(&self) -> i32 {
-        self.iter().sum()
+    for person in &people {
+        println!("Name: {}, Age: {}", person.name, person.age);
     }
 }
 ```

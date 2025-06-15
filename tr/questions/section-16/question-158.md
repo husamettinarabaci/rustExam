@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Newtype Pattern  
-#### ❓ Soru 158: Newtype pattern ile dış tipler için trait implementasyonu
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Eleman Çıkarma  
+#### ❓ Soru 158: Vektörden eleman çıkarma
 
-Bir dış tip için trait implementasyonu yapmak amacıyla newtype pattern kullanımını açıklayın ve örnek verin.
+Bir vektörden nasıl eleman çıkarılacağını gösteren bir Rust programı yazın.
 
-- Bir dış tipin etrafında sarmalayıcı bir struct tanımlayın (ör. `u32`).
-- Sarmalayıcı için özel bir trait implement edin.
+- Birkaç tamsayı içeren bir vektör oluşturun.
+- `remove` metodunu kullanarak belirli bir indeksteki elemanı çıkarın.
+- Çıkarma öncesi ve sonrası vektörü yazdırın.
 
-🔧 **Görev:** Sahibi olmadığınız tipler için trait implementasyonu yapmak için newtype pattern kullanın.
+🔧 **Görev:** Bir vektörden eleman silmek ve sonucu göstermek için `remove` metodunu kullanın.

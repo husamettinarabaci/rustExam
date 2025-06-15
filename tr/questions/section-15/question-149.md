@@ -1,10 +1,11 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Lifetime En İyi Uygulamalar  
-#### ❓ Soru 149: Lifetime en iyi uygulamaları
+## 📚 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo ve Bağımlılıklar  
+#### ❓ Soru 149: Geliştirme bağımlılıkları kullanımı
 
-Aşağıdakileri açıklayın:
+Bir Rust projesinde `dev-dependencies` nasıl kullanılır, açıklayın:
 
-- Lifetime ile çalışırken en az üç en iyi uygulamayı listeleyin.
-- Her biri için kısa açıklama verin.
+- `Cargo.toml` dosyasındaki `dev-dependencies` bölümünün amacını açıklayın.
+- Bir `dev-dependency` eklemeyi örnekle gösterin.
+- Ne zaman ve neden normal bir bağımlılık yerine `dev-dependency` kullanmanız gerektiğini açıklayın.
 
-🔧 **Görev:** Lifetime ile ilgili en iyi uygulamaları özetleyin.
+🔧 **Görev:** Cargo projelerinde `dev-dependencies` kullanımını ve amacını gösterin.

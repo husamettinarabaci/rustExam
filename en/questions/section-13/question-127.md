@@ -1,9 +1,11 @@
-## 📘 Section: Collections  
-### 🔹 Category: HashMap  
-#### ❓ Question 127: Iterating over a HashMap
+## 📘 Section: Modules I  
+### 🔹 Category: Module Re-exports  
+#### ❓ Question 127: Module re-exports
 
-How do you iterate over the key-value pairs in a `HashMap`?
+Write a Rust program that demonstrates how to re-export items from a module.
 
-- Show an example using a `for` loop.
+- Create a module named `math` with a public function `add`.
+- In the root of your program, use `pub use math::add;` to re-export the `add` function.
+- In the main function, call `add` directly without the module path.
 
-🔧 **Task:** Demonstrate iterating over a `HashMap` in Rust.
+🔧 **Task:** Show how to re-export a function from a module so it can be accessed directly from outside the module.

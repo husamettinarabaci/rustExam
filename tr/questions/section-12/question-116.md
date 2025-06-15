@@ -1,10 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Çoklu Hata Tipleri  
-#### ❓ Soru 116: Birden fazla hata tipiyle başa çıkmak
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Result ve Enum Eşleme  
+#### ❓ Soru 116: Result üzerinde eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Bir fonksiyonda birden fazla hata tipi nasıl yönetilir?
-- `Box<dyn Error>` veya özel enum kullanımı örneği verin.
+- `Result<i32, String>` türünde bir değişken oluşturun ve bir değer atayın.
+- `match` ifadesiyle hem `Ok` hem de `Err` durumlarını ele alın.
+- Başarılıysa değeri, hata ise hata mesajını ekrana yazdırın.
 
-🔧 **Görev:** Birden fazla hata tipini tek fonksiyonda yönetmeyi gösterin.
+🔧 **Görev:** Result enumu ile desen eşleme kullanarak başarı ve hata durumlarının nasıl ele alınacağını gösterin.

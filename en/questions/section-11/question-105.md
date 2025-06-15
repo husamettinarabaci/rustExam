@@ -1,9 +1,11 @@
-## 📚 Section: Macros  
-### 🔹 Category: Macro Hygiene  
-#### ❓ Question 105: Macro hygiene
+## 📘 Section: Enums I  
+### 🔹 Category: Enum Methods with `impl`  
+#### ❓ Question 105: Enum methods with `impl`
 
-Write a Rust macro that defines a variable and explain macro hygiene.
+Write a Rust program that defines methods for an enum using `impl`.
 
-- Show that the variable does not conflict with variables outside the macro.
+- Define an enum with at least two variants (one may carry data).
+- Implement a method for the enum using an `impl` block.
+- Demonstrate calling the method on an instance of the enum.
 
-🔧 **Task:** Demonstrate macro hygiene in Rust.
+🔧 **Task:** Define an enum, implement a method for it, and show how to call the method on an enum value.

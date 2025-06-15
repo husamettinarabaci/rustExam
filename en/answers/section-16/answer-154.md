@@ -1,14 +1,14 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Default Trait  
-#### ✅ Answer 154: Using the Default trait for initialization
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ✅ Answer 154: Iterating over a vector
 
-This function shows how to use the `Default` trait to create a new instance of a generic type. The trait ensures that the type can be initialized with default values.
+To iterate over a vector in Rust, use a `for` loop. You can iterate over references to the elements and print each one.
 
 ```rust
-fn new_default<T: Default>() -> T {
-    T::default()
+fn main() {
+    let fruits = vec!["apple", "banana", "cherry"];
+    for fruit in &fruits {
+        println!("{}", fruit);
+    }
 }
-
-let x: i32 = new_default();
-let s: String = new_default();
 ```

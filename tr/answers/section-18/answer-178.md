@@ -1,28 +1,23 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Hata Dönüşümü için `From` Trait'i  
-#### ✅ Cevap 178: Hata dönüşümü için `From` trait'inin kullanımı
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve referanslar  
+#### ✅ Cevap 178: HashMap ve referanslar
 
-Bu örnek, özel hata tipleri arasında dönüşüm yapmak için `From` trait'inin nasıl kullanılacağını gösterir.
+Bir `HashMap` içinde referansları değer olarak saklamak için ömür belirtmek gerekir. Burada, `HashMap<&str, &i32>` kullanarak mevcut tamsayılara referans ekliyoruz. Referansların ömrü, `HashMap`'in ömründen uzun olmalıdır.
 
 ```rust
-#[derive(Debug)]
-enum KucukHata {
-    Onemsiz,
-}
+use std::collections::HashMap;
 
-#[derive(Debug)]
-enum BuyukHata {
-    Kucuk(KucukHata),
-}
+fn main() {
+    let a = 10;
+    let b = 20;
+    let c = 30;
+    let mut map: HashMap<&str, &i32> = HashMap::new();
+    map.insert("x", &a);
+    map.insert("y", &b);
+    map.insert("z", &c);
 
-impl From<KucukHata> for BuyukHata {
-    fn from(e: KucukHata) -> Self {
-        BuyukHata::Kucuk(e)
+    for (key, value) in &map {
+        println!("{}: {}", key, value);
     }
-}
-
-fn is_yap() -> Result<(), BuyukHata> {
-    let res: Result<(), KucukHata> = Err(KucukHata::Onemsiz);
-    res.map_err(BuyukHata::from)
 }
 ```

@@ -1,10 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: main Fonksiyonunda Hata Yönetimi  
-#### ❓ Soru 180: main fonksiyonunda hata yönetimi
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve Option/Result  
+#### ❓ Soru 180: HashMap ve Option/Result
 
-`main` fonksiyonunda `Result` kullanarak hata yönetimini gösterin. `main`'in dönüş tipi olarak `Result<(), Box<dyn std::error::Error>>` kullandığınız bir örnek verin.
+Bir `HashMap` içinde değer erişiminde `Option` ve `Result` kullanımını gösteren bir Rust programı yazın.
 
-- `main` fonksiyonunu `Result` dönecek şekilde yazın.
-- `main` içinde hata yayılımını gösterin.
+- Bir `HashMap` oluşturup birkaç anahtar-değer çifti ekleyin.
+- Var olup olmadığı belli olmayan bir anahtar için `get` metodunu kullanarak değere erişin ve `Option` sonucunu yönetin.
+- Anahtar varsa `Result`, yoksa hata döndüren bir fonksiyon yazın.
 
-🔧 **Görev:** Hata yönetimi için `main` fonksiyonunun dönüş tipini `Result` olarak kullanın.
+🔧 **Görev:** `HashMap`'te eksik anahtarları `Option` ve `Result` ile nasıl yöneteceğinizi gösterin.

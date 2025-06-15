@@ -1,18 +1,16 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Ranges and Bindings  
+### 🔹 Category: Matching on Ranges and Bindings  
 #### ✅ Answer 163: Matching on ranges and bindings
 
-You can use range patterns and variable bindings in Rust `match` arms to handle different value intervals. Example:
+This example shows how to use pattern matching with ranges and variable bindings in Rust. The `match` statement can match integer values against ranges, and you can bind the matched value to a variable using the `@` syntax. This is useful for handling different cases based on value intervals.
 
 ```rust
-fn describe_range(n: i32) {
-    match n {
-        1..=10 => println!("Low"),
-        11..=100 => println!("Medium"),
-        x if x > 100 => println!("High"),
-        _ => println!("Zero or negative"),
+fn main() {
+    let value = 7;
+    match value {
+        n @ 1..=5 => println!("{} is in the range 1 to 5", n),
+        n @ 6..=10 => println!("{} is in the range 6 to 10", n),
+        n => println!("{} is outside the specified ranges", n),
     }
 }
 ```
-
-This function matches on ranges and uses a binding for values greater than 100.

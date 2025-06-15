@@ -1,11 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Trait Bounds and Where Clauses  
-#### ❓ Question 151: Using trait bounds in function signatures
+## 📚 Section: Collections: Vectors  
+### 🔹 Category: Vector Basics  
+#### ❓ Question 151: Creating and initializing a vector
 
-Write a Rust function that accepts any type implementing both the `Display` and `Debug` traits and prints the value using both formatting styles.
+Write a Rust program that does the following:
 
-- Define a function named `print_info`.
-- The function should accept a generic parameter constrained by both `Display` and `Debug`.
-- Print the value using `{}` and `{:?}` formats.
+- Create a new vector of integers.
+- Initialize it with the values 1, 2, and 3.
+- Print the vector to the terminal.
 
-🔧 **Task:** Use trait bounds in the function signature to require both `Display` and `Debug` for the generic type.
+🔧 **Task:** Demonstrate how to create and initialize a vector in Rust.

@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: PhantomData  
-#### ❓ Soru 155: Jenerik structlarda PhantomData kullanımı
+## 📚 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Vektör Temelleri  
+#### ❓ Soru 155: Vektör elemanlarını değiştirme
 
-Bir jenerik struct içinde `PhantomData` kullanımını ve neden gerekli olduğunu açıklayın. Basit bir örnek verin.
+Aşağıdakileri yapan bir Rust programı yazın:
 
-- Sahiplik belirtmek için `PhantomData` kullanan bir struct tanımlayın.
-- Rust'ın tip sistemi bağlamında `PhantomData`'nın amacını açıklayın.
+- En az üç elemanlı değiştirilebilir bir tamsayı vektörü oluşturun.
+- Vektördeki her elemanı iki katına çıkarın (elemanları yerinde değiştirin).
+- Değiştirilen vektörü terminale yazdırın.
 
-🔧 **Görev:** Jenerik structlarda `PhantomData` kullanımını gösterin ve rolünü açıklayın.
+🔧 **Görev:** Rust'ta vektör elemanlarını değiştirmeyi gösterin.

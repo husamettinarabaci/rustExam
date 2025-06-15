@@ -1,10 +1,11 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: use Keyword  
-#### ❓ Question 134: The `use` keyword
+## 📘 Section: Modules II  
+### 🔹 Category: Re-exporting with `pub use`  
+#### ❓ Question 134: Re-exporting with `pub use`
 
-What is the purpose of the `use` keyword in Rust?
+Write a Rust program that demonstrates how to re-export items from a module using `pub use`.
 
-- Show how to bring items into scope with `use`.
-- Give an example.
+- Create a module with a function or constant.
+- In the parent or another module, use `pub use` to re-export the item.
+- Show how to access the re-exported item from outside the module.
 
-🔧 **Task:** Explain and demonstrate the `use` keyword in Rust.
+🔧 **Task:** Demonstrate re-exporting items with `pub use` in Rust modules.

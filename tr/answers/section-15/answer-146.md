@@ -1,10 +1,12 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Static Lifetime  
-#### ✅ Cevap 146: 'static lifetime nedir?
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Crate Yayınlama  
+#### ✅ Cevap 146: Crate yayınlama
 
-**Açıklama:**
-`'static` lifetime, referansın programın tüm ömrü boyunca geçerli olduğu anlamına gelir. String literal ve global verilerde kullanılır.
+Bir crate'i [crates.io](https://crates.io)'ya yayınlamak için şu adımları izleyin:
 
-```rust
-let s: &'static str = "merhaba";
-```
+1. `Cargo.toml` dosyanızda `name`, `version`, `authors`, `description` ve `license` alanları olmalı.
+2. Crate adınızın crates.io'da benzersiz olduğundan emin olun.
+3. `cargo login` ile (crates.io'dan aldığınız API anahtarıyla) kimlik doğrulaması yapın.
+4. `cargo publish` komutunu çalıştırarak crate'i yükleyin.
+
+Güncelleme için, `Cargo.toml`'da sürümü artırıp tekrar `cargo publish` komutunu çalıştırın. Her sürüm benzersiz ve bir öncekinden büyük olmalıdır.

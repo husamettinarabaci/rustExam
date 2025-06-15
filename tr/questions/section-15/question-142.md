@@ -1,10 +1,10 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Lifetime Temelleri  
-#### ❓ Soru 142: Lifetime anotasyonları
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo ve Bağımlılıklar  
+#### ❓ Soru 142: `Cargo.toml` dosyasına bağımlılık ekleme
 
-Aşağıdakileri açıklayın:
+Bir Rust projesinin bağımlılıklarını güncellemek için `Cargo.toml` dosyasını düzenleyin:
 
-- Bir fonksiyonda lifetime anotasyonu nasıl belirtilir?
-- Lifetime parametresiyle örnek fonksiyon yazın.
+- `rand` paketini `0.8` sürümüyle bağımlılık olarak ekleyin.
+- Dosyayı kaydedin ve Cargo'nun bağımlılıkları nasıl indirdiğini ve derlediğini açıklayın.
 
-🔧 **Görev:** Lifetime anotasyonu sözdizimini gösterin.
+🔧 **Görev:** `Cargo.toml` dosyasına bağımlılık eklemeyi ve `cargo build` çalıştırıldığında neler olduğunu gösterin.

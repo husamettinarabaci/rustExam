@@ -1,11 +1,13 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Lifetime Temelleri  
-#### ❓ Soru 141: Rust'ta lifetime nedir?
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo ile Yeni Crate Oluşturma  
+#### ❓ Soru 141: Cargo ile yeni crate oluşturma
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek Cargo ile yeni bir Rust crate'i nasıl oluşturacağınızı açıklayın ve gösterin:
 
-- Rust'ta lifetime (yaşam süresi) nedir?
-- Neden gereklidir?
-- Basit bir örnek verin.
+- Rust'ta crate kavramını açıklayın.
+- Yeni bir binary crate oluşturma komutunu gösterin.
+- Yeni bir kütüphane (library) crate oluşturma komutunu gösterin.
+- Cargo'nun oluşturduğu dosya ve klasörleri listeleyin.
+- İsteğe bağlı olarak, binary ve library crate arasındaki farkı açıklayın.
 
-🔧 **Görev:** Rust'ta lifetime kavramını açıklayın.
+🔧 **Görev:** Cargo ile yeni bir Rust projesi (crate) başlatmayı ve oluşan yapıyı açıklayın.

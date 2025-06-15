@@ -1,12 +1,36 @@
-## 📘 Section: Lifetimes  
-### 🔹 Category: Lifetime Basics  
-#### ✅ Answer 141: What is a lifetime in Rust?
+## 📘 Section: Crates and External Packages  
+### 🔹 Category: Creating a new crate with Cargo  
+#### ✅ Answer 141: Creating a new crate with Cargo
 
-**Explanation:**
-A lifetime is a way for Rust to track how long references are valid. Lifetimes prevent dangling references and ensure memory safety.
+A crate is a compilation unit in Rust. You can create a new crate using Cargo, Rust's package manager and build tool.
 
-```rust
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() { x } else { y }
-}
+- To create a new binary crate (an executable):
+
+```bash
+cargo new my_project
 ```
+
+- To create a new library crate:
+
+```bash
+cargo new my_library --lib
+```
+
+Cargo creates the following structure:
+
+```
+my_project/
+├── Cargo.toml
+└── src/
+    └── main.rs
+
+my_library/
+├── Cargo.toml
+└── src/
+    └── lib.rs
+```
+
+- **Binary crate**: Has a `main.rs` file and produces an executable.
+- **Library crate**: Has a `lib.rs` file and produces a reusable library.
+
+Cargo.toml is the manifest file for dependencies and metadata.

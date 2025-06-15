@@ -1,18 +1,16 @@
 ## 📘 Section: Advanced Patterns  
-### 🔹 Category: Matching on Slices and Arrays  
+### 🔹 Category: Matching on slices and arrays  
 #### ✅ Answer 167: Matching on slices and arrays
 
-You can use pattern matching on slices and arrays in Rust to handle different cases. Example:
+This example demonstrates how to use pattern matching on slices and arrays in Rust. You can match on the length, specific elements, or use patterns like `[first, .., last]` to destructure arrays and slices.
 
 ```rust
-fn describe_slice(slice: &[i32]) {
-    match slice {
-        [] => println!("Empty"),
-        [x] => println!("Single element: {}", x),
-        [1, .., 9] => println!("Starts with 1 and ends with 9"),
-        _ => println!("Other"),
+fn main() {
+    let arr = [1, 2, 3, 4];
+    match arr {
+        [first, .., last] => println!("First: {}, Last: {}", first, last),
+        [single] => println!("Single element: {}", single),
+        _ => println!("Other pattern"),
     }
 }
 ```
-
-This function demonstrates how to match on slice patterns, including empty, single, and specific start/end values.

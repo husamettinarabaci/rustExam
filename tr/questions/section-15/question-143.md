@@ -1,11 +1,11 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Lifetime Elision  
-#### ❓ Soru 143: Lifetime elision kuralları
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Harici Crate Kullanımı  
+#### ❓ Soru 143: Koda harici crate ekleme
 
-Aşağıdakileri açıklayın:
+Bir Rust projesinde harici bir crate kullanmayı gösterin:
 
-- Lifetime elision nedir?
-- Hangi durumlarda açıkça anotasyon gerekmez?
-- Örnek verin.
+- `Cargo.toml` dosyasına `rand` paketini (sürüm `0.8`) ekleyin.
+- Crate'i Rust kodunda içe aktarın.
+- 1 ile 10 arasında rastgele bir sayı üretip yazdırın.
 
-🔧 **Görev:** Lifetime elision kavramını açıklayın ve örnekleyin.
+🔧 **Görev:** Bir Rust programında harici crate eklemeyi, içe aktarmayı ve kullanmayı gösterin.

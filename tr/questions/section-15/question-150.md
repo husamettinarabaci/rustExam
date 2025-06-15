@@ -1,11 +1,11 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: İleri Lifetime Kullanımı  
-#### ❓ Soru 150: İleri lifetime kullanımı
+## 📚 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Cargo ve Bağımlılıklar  
+#### ❓ Soru 150: Derleme betikleri kullanımı
 
-Aşağıdakileri açıklayın:
+Bir Rust projesinde derleme betiği (`build.rs`) nasıl kullanılır, açıklayın:
 
-- Rust'ta ileri seviye lifetime kullanımına örnek verin.
-- Birden fazla lifetime parametresiyle fonksiyon veya struct gösterin.
-- Kullanım amacını açıklayın.
+- Cargo projesinde `build.rs` dosyasının amacını açıklayın.
+- Derleme zamanında mesaj yazdıran minimal bir build script örneği gösterin.
+- Özel derleme mantığının nasıl tetikleneceğini ve Cargo'nun `build.rs` ile nasıl etkileşime girdiğini açıklayın.
 
-🔧 **Görev:** Rust'ta ileri lifetime kullanımını örnekleyin.
+🔧 **Görev:** Cargo projelerinde build script kullanımını ve amacını gösterin.

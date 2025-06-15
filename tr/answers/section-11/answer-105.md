@@ -1,14 +1,26 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Varsayılan Trait Uygulamaları  
-#### ✅ Cevap 105: Trait'lerde default implementation
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: `impl` ile Enum Metotları  
+#### ✅ Cevap 105: `impl` ile enum metotları
 
-**Açıklama:**
-Rust'ta bir trait'e varsayılan (default) implementasyon sağlamak için trait içinde fonksiyonun gövdesi yazılır. Örneğin:
+Bu örnekte, bir enum için `impl` bloğu ile nasıl metot tanımlanır ve bu metot enum örneği üzerinde nasıl çağrılır gösterilmektedir.
 
 ```rust
-trait MyTrait {
-    fn foo(&self) {
-        println!("Varsayılan uygulama");
+enum Lamba {
+    Acik,
+    Kapali,
+}
+
+impl Lamba {
+    fn durum(&self) -> &str {
+        match self {
+            Lamba::Acik => "Lamba açık.",
+            Lamba::Kapali => "Lamba kapalı.",
+        }
     }
+}
+
+fn main() {
+    let masa_lambasi = Lamba::Acik;
+    println!("{}", masa_lambasi.durum());
 }
 ```

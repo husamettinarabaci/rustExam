@@ -1,14 +1,31 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: The `?` Operator  
-#### ✅ Answer 172: Propagating errors with the `?` operator
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Accessing and Updating Values in a HashMap  
+#### ✅ Answer 172: Accessing and updating values in a `HashMap`
 
-This function shows how to use the `?` operator to propagate errors when reading a file. The operator automatically returns the error if one occurs.
+You can access values in a `HashMap` using the `get` method, which returns an `Option`. To update a value, use the `insert` method or mutate the value via `get_mut`. Example:
 
 ```rust
-use std::fs;
-use std::io;
+use std::collections::HashMap;
 
-fn read_file_contents(path: &str) -> Result<String, io::Error> {
-    fs::read_to_string(path)
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+
+    // Access a value
+    if let Some(score) = scores.get("Alice") {
+        println!("Alice's score: {}", score);
+    }
+
+    // Update a value
+    if let Some(score) = scores.get_mut("Bob") {
+        *score += 5;
+    }
+
+    println!("{:?}", scores);
 }
 ```
+
+- `get` returns an `Option<&V>`.
+- `get_mut` returns an `Option<&mut V>` for mutation.
+- `insert` can also be used to overwrite values.

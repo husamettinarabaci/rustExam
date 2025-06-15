@@ -1,11 +1,11 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Custom Error Types  
-#### ❓ Question 173: Defining and using custom error types
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: Iterating over Key-Value Pairs  
+#### ❓ Question 173: Iterating over key-value pairs
 
-Create a custom error type using an enum and implement the `std::fmt::Display` trait for it. Use this error type in a function that returns a `Result`.
+Write a Rust program that demonstrates how to iterate over all key-value pairs in a `HashMap`.
 
-- Define an enum named `MyError` with at least two variants.
-- Implement `Display` for `MyError`.
-- Write a function that returns `Result<T, MyError>`.
+- Create a `HashMap` with at least two key-value pairs.
+- Use a `for` loop to iterate over the entries.
+- Print each key and value during iteration.
 
-🔧 **Task:** Define and use a custom error type in a function that can fail.
+🔧 **Task:** Practice iterating over a `HashMap` and printing its contents.

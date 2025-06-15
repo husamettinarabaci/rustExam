@@ -1,10 +1,11 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Blanket Implementations  
-#### ❓ Question 156: Creating blanket implementations for traits
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Slicing and Indexing  
+#### ❓ Question 156: Slicing a vector
 
-Write a blanket implementation for a trait that applies to all types implementing another trait.
+Write a Rust program that demonstrates how to create a slice from a vector.
 
-- Define a trait named `Printable` with a method `print`.
-- Provide a blanket implementation for all types that implement `Display`.
+- Create a vector of integers.
+- Obtain a slice of a portion of the vector (for example, elements 1 to 3).
+- Print both the original vector and the slice.
 
-🔧 **Task:** Use blanket implementations to extend functionality to multiple types.
+🔧 **Task:** Show how to use Rust's slice syntax to access a part of a vector and print the result.

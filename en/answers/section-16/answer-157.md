@@ -1,16 +1,13 @@
-## 📘 Section: Advanced Traits and Generics  
-### 🔹 Category: Higher-Ranked Trait Bounds  
-#### ✅ Answer 157: Using higher-ranked trait bounds (HRTBs)
+## 📘 Section: Collections: Vectors  
+### 🔹 Category: Sorting and Ordering  
+#### ✅ Answer 157: Sorting a vector
 
-Higher-ranked trait bounds allow you to specify that a function or closure can accept references with any lifetime. This is useful for writing flexible APIs.
+To sort a vector in Rust, you can use the `sort` method, which sorts the vector in place in ascending order. Here is an example:
 
 ```rust
-fn call_with_str<F>(f: F)
-where
-    F: for<'a> Fn(&'a str),
-{
-    f("hello");
+fn main() {
+    let mut numbers = vec![42, 7, 19, 73, 2];
+    numbers.sort();
+    println!("Sorted vector: {:?}", numbers);
 }
-
-call_with_str(|s| println!("{}", s));
 ```

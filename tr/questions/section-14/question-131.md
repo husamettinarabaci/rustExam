@@ -1,11 +1,11 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Modül Temelleri  
-#### ❓ Soru 131: Rust'ta modül nedir?
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Herkese Açık Öğeler  
+#### ❓ Soru 131: `pub` ile herkese açık öğeler
 
-Aşağıdakileri açıklayın:
+Bir Rust modülünde fonksiyon ve sabiti `pub` anahtar kelimesiyle herkese açık yapmayı gösterin.
 
-- Rust'ta modül nedir?
-- Nasıl tanımlanır?
-- Bir projede modül kullanımı örneği verin.
+- Bir modül içinde bir fonksiyon ve bir sabit tanımlayın.
+- Her ikisini de herkese açık (`pub`) yapın.
+- Modül dışından bu öğelere nasıl erişileceğini gösterin.
 
-🔧 **Görev:** Rust'ta modül kullanımını açıklayın ve örnekleyin.
+🔧 **Görev:** Bir modülden öğeleri dışa açmak için `pub` kullanımını gösterin.

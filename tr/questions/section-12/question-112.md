@@ -1,11 +1,10 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi Temelleri  
-#### ❓ Soru 112: Result'ı açmak (unwrap)
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Birden Fazla Desenle Eşleme  
+#### ❓ Soru 112: Birden fazla desenle eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Bir `Result` değerinden sonucu nasıl elde edersiniz?
-- Hata durumunda ne olur?
-- `.unwrap()` ve `.expect()` kullanımını gösterin.
+- `Direction` adında, `Up`, `Down`, `Left`, `Right` varyantları olan bir enum tanımlayın.
+- `main` fonksiyonunda bir `Direction` oluşturun ve match ile `Up` veya `Down` için "Dikey", `Left` veya `Right` için "Yatay" yazdırın.
 
-🔧 **Görev:** Result açma yöntemlerini ve risklerini açıklayın.
+🔧 **Görev:** Match kollarında birden fazla enum varyantını tek bir desende eşlemek için `|` operatörünü kullanın.

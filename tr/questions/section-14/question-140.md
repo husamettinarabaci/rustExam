@@ -1,10 +1,12 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Crate En İyi Uygulamaları  
-#### ❓ Soru 140: Crate en iyi uygulamaları
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Makro İçe Aktarma  
+#### ❓ Soru 140: Makro içe aktarma
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek başka bir modülden makro tanımlama ve kullanmayı gösteren bir Rust örneği yazın:
 
-- Crate oluştururken ve kullanırken en az üç en iyi uygulamayı listeleyin.
-- Her biri için kısa açıklama verin.
+- `#[macro_export]` ile herkese açık bir makro tanımlayan bir modül oluşturun.
+- Makroyu `main` fonksiyonuna `use` ile aktarın.
+- Makroyu `main` fonksiyonunda kullanın.
+- `#[macro_export]`'un neden gerekli olduğunu ve makro içe aktarmanın fonksiyonlardan nasıl farklı olduğunu kısaca açıklayın.
 
-🔧 **Görev:** Crate kullanımı için en iyi uygulamaları özetleyin.
+🔧 **Görev:** Başka bir modülden makro tanımlama, dışa aktarma, içe aktarma ve kullanmayı gösterin.

@@ -1,13 +1,27 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Yeniden Dışa Aktarma  
-#### ✅ Cevap 138: Yeniden dışa aktarma (re-export)
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: Birden Fazla Öğeyi İçe Aktarma  
+#### ✅ Cevap 138: Birden fazla öğe içe aktarma
 
-**Açıklama:**
-Başka bir modüldeki ögeyi kendi modülünüzden erişilebilir yapmak için `pub use` kullanılır.
+Rust'ta bir modülden birden fazla öğeyi tek bir `use` ifadesiyle içe aktarabilirsiniz. Ayrıca, içe aktarılan öğelerden birine yeni bir isim de verebilirsiniz. Örnek:
 
 ```rust
-mod a {
-    pub fn foo() {}
+mod matematik {
+    pub fn topla(a: i32, b: i32) -> i32 {
+        a + b
+    }
+    pub fn cikar(a: i32, b: i32) -> i32 {
+        a - b
+    }
 }
-pub use a::foo;
+
+use matematik::{topla, cikar as fark};
+
+fn main() {
+    println!("3 + 2 = {}", topla(3, 2));
+    println!("3 - 2 = {}", fark(3, 2));
+}
 ```
+
+- `topla` ve `cikar` fonksiyonları `matematik` modülünden içe aktarılmıştır.
+- `cikar` fonksiyonu `fark` olarak yeniden adlandırılmıştır.
+- Her iki fonksiyon da `main` fonksiyonunda doğrudan çağrılabilir.

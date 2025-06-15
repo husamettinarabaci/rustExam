@@ -1,10 +1,10 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Fonksiyon Parametrelerinde Tuple Parçalama  
+### 🔹 Kategori: Fonksiyon parametrelerinde tuple parçalara ayırma  
 #### ❓ Soru 168: Fonksiyon parametrelerinde tuple parçalara ayırma
 
-Parametre olarak `(i32, i32, i32)` tuple'ı alan ve bunu doğrudan fonksiyon imzasında parçalayan bir Rust fonksiyonu yazınız. Fonksiyon:
+Aşağıdaki adımları uygulayan bir Rust fonksiyonu yazın:
 
-- Üç değerin toplamını yazdırsın.
-- Her değeri ayrı satırda yazdırsın.
+- Parametre olarak bir tuple alan ve parametre listesinde tuple'ı parçalayan bir fonksiyon tanımlayın.
+- Fonksiyonu bir tuple ile çağırın ve fonksiyon içinde parçalanan değerleri yazdırın.
 
-🔧 **Görev:** Rust'ta fonksiyon parametrelerinde tuple'ı doğrudan parçalara ayırmayı gösterin.
+🔧 **Görev:** Fonksiyon parametre listesinde tuple parçalama kullanın ve değerleri fonksiyon içinde yazdırın.

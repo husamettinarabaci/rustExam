@@ -1,6 +1,20 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Object Kullanımı  
-#### ✅ Cevap 104: Box<dyn Trait> ve &dyn Trait farkı
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Enumlarda Desen Eşleme ve Yazdırma  
+#### ✅ Cevap 104: Enum ve `match` ile yazdırma
 
-**Açıklama:**
-`Box<dyn Trait>`, trait object'ü heap'te saklar ve sahipliğini alır. `&dyn Trait` ise trait object'e referans ile erişim sağlar. `Box<dyn Trait>` ile sahiplik ve ömür yönetimi sağlanırken, `&dyn Trait` ile sadece geçici erişim mümkündür.
+Bu örnekte, bir enum üzerinde `match` ifadesiyle her varyant için farklı mesaj nasıl yazdırılır gösterilmektedir.
+
+```rust
+enum Komut {
+    Baslat,
+    Durdur(String),
+}
+
+fn main() {
+    let komut = Komut::Durdur(String::from("Acil durum"));
+    match komut {
+        Komut::Baslat => println!("Başlatılıyor..."),
+        Komut::Durdur(neden) => println!("Durduruldu: {}", neden),
+    }
+}
+```

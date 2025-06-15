@@ -1,10 +1,11 @@
-## 📘 Bölüm: Yaşam Süreleri (Lifetimes)  
-### 🔹 Kategori: Struct ve Lifetime  
-#### ❓ Soru 144: Struct'ta lifetime kullanımı
+## 📘 Bölüm: Crate'ler ve Harici Paketler  
+### 🔹 Kategori: Sürümleme ve Bağımlılık Güncelleme  
+#### ❓ Soru 144: Bağımlılık sürümleme ve güncelleme
 
-Aşağıdakileri açıklayın:
+`Cargo.toml` dosyasında bağımlılık sürümlerini nasıl yöneteceğinizi açıklayın:
 
-- Lifetime parametresiyle struct nasıl tanımlanır?
-- Kullanımına örnek verin.
+- Bir bağımlılığı sürüm belirterek ekleyin (ör. `rand = "0.8"`).
+- Cargo komutlarıyla bir bağımlılığı en güncel uyumlu sürüme güncelleyin.
+- `cargo update` ile `Cargo.toml`'da sürümü elle değiştirmek arasındaki farkı açıklayın.
 
-🔧 **Görev:** Struct tanımında lifetime kullanımını gösterin.
+🔧 **Görev:** Bir Rust projesinde bağımlılık sürümlerini belirtmeyi, güncellemeyi ve yönetmeyi gösterin.

@@ -1,9 +1,22 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Error Handling Best Practices  
-#### ✅ Answer 120: Error handling best practices
+## 📘 Section: Enums II  
+### 🔹 Category: Wildcard Pattern Matching  
+#### ✅ Answer 120: Matching with wildcard
 
 **Explanation:**
-Best practices include:
-- Prefer using `Result` over panics for recoverable errors.
-- Use custom error types for clarity.
-- Propagate errors with `?` for cleaner code.
+This example demonstrates how to use the wildcard pattern (`_`) in a match statement with enums in Rust. The wildcard pattern is useful for handling all cases not explicitly matched.
+
+```rust
+enum Status {
+    Success,
+    Error,
+    Pending,
+}
+
+fn main() {
+    let state = Status::Pending;
+    match state {
+        Status::Success => println!("Operation succeeded!"),
+        _ => println!("Not a success."),
+    }
+}
+```

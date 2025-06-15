@@ -1,18 +1,16 @@
 ## 📘 Bölüm: İleri Düzey Desenler  
-### 🔹 Kategori: Slice ve Dizilerde Eşleme  
+### 🔹 Kategori: Slice ve dizilerde desen eşleme  
 #### ✅ Cevap 167: Slice ve dizilerde desen eşleme
 
-Rust'ta slice ve dizilerde desen eşleme ile farklı durumları yönetebilirsiniz. Örnek:
+Bu örnekte, Rust'ta slice ve dizilerde desen eşlemenin nasıl yapılacağı gösterilmektedir. Uzunluğa, belirli elemanlara veya `[ilk, .., son]` gibi desenlere göre eşleme yapılabilir.
 
 ```rust
-fn slice_tanimla(slice: &[i32]) {
-    match slice {
-        [] => println!("Boş"),
-        [x] => println!("Tek eleman: {}", x),
-        [1, .., 9] => println!("1 ile başlıyor ve 9 ile bitiyor"),
-        _ => println!("Diğer"),
+fn main() {
+    let arr = [1, 2, 3, 4];
+    match arr {
+        [first, .., last] => println!("İlk: {}, Son: {}", first, last),
+        [single] => println!("Tek eleman: {}", single),
+        _ => println!("Diğer desen"),
     }
 }
 ```
-
-Bu fonksiyon, slice desenlerinde boş, tek elemanlı ve belirli başlangıç/bitiş değerlerini eşlemeyi gösterir.

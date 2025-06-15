@@ -1,10 +1,12 @@
-## 📘 Bölüm: Modüller ve Paketler  
-### 🔹 Kategori: Harici Crate Kullanımı  
-#### ❓ Soru 137: Harici crate kullanımı
+## 📘 Bölüm: Modüller II  
+### 🔹 Kategori: `as` ile İçe Aktarma  
+#### ❓ Soru 137: `as` ile içe aktarma
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyerek `as` anahtar kelimesiyle içe aktarmanın nasıl yapıldığını gösteren bir Rust örneği yazın:
 
-- Bir projede harici crate nasıl eklenir?
-- `Cargo.toml` ve kodda kullanım örneği verin.
+- Bir modül ve içinde bir fonksiyon oluşturun.
+- Fonksiyonu `main` fonksiyonuna `use ... as ...` ile yeni bir ad vererek aktarın.
+- Fonksiyonu yeni adıyla çağırın.
+- Yeniden adlandırmadan sonra orijinal adı kullanmaya çalışırsanız ne olacağını gösterin.
 
-🔧 **Görev:** Harici crate eklemeyi ve kullanmayı gösterin.
+🔧 **Görev:** `as` ile içe aktarmayı, isim çakışmalarını önlemek veya kodu daha okunur yapmak için nasıl kullanacağınızı örnekle açıklayın.

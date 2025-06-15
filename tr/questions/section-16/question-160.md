@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Traitler  
-#### ❓ Soru 160: Birden fazla tip için jenerik trait implementasyonu
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Yapı Vektörü  
+#### ❓ Soru 160: Yapı vektörü
 
-Jenerik bir trait tanımlayın ve bunu iki farklı tip için implement edin. Trait'in her iki tipte de nasıl kullanılabileceğini gösterin.
+Birden fazla yapı örneğini içeren bir vektörün nasıl oluşturulup kullanılacağını gösteren bir Rust programı yazın.
 
-- `Summable` adında bir trait oluşturun ve `sum` metodunu ekleyin.
-- `Summable` trait'ini `Vec<i32>` ve `[i32; 3]` için implement edin.
+- Basit bir yapı tanımlayın (ör. `Kisi` ile `isim` ve `yas` alanları).
+- Bu yapıdan birkaç örnek içeren bir vektör oluşturun.
+- Vektör üzerinde yineleyip her yapının alanlarını yazdırın.
 
-🔧 **Görev:** Farklı tipler için ortak işlevsellik sağlamak amacıyla jenerik traitler kullanın.
+🔧 **Görev:** Birden fazla yapı örneğini bir vektörde saklayıp içeriklerini ekrana yazdırın.

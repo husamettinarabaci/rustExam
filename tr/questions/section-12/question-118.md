@@ -1,10 +1,11 @@
-## 📘 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result ile Eşleşme  
-#### ❓ Soru 118: Result ile pattern matching
+## 📘 Bölüm: Enumlar II  
+### 🔹 Kategori: Döngülerle Enum Eşleme  
+#### ❓ Soru 118: `while let` ile eşleme
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Result değerleriyle pattern matching nasıl yapılır?
-- Match ile örnek gösterin.
+- Başlangıç değeri olan değiştirilebilir bir `Option<i32>` değişkeni oluşturun.
+- `while let` döngüsü ile değeri tekrar tekrar çıkarıp yazdırın, her adımda değişkeni `None` yapın.
+- Değer `None` olduğunda döngünün nasıl sona erdiğini gösterin.
 
-🔧 **Görev:** Result ile pattern matching kullanımını gösterin.
+🔧 **Görev:** Enumlarda kısa ve tekrarlı desen eşleme için `while let` kullanımını gösterin.

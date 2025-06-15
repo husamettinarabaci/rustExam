@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Trait Object Kavramı  
-#### ❓ Soru 101: Trait object nedir?
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Enum Temelleri  
+#### ❓ Soru 101: Temel bir enum tanımlama
 
-Aşağıdakileri açıklayın:
+Temel bir enum tanımlayan bir Rust programı yazın.
 
-- Rust'ta "trait object" kavramı nedir?
-- Hangi durumlarda kullanılır?
+- En az iki varyantı olan bir enum tanımlayın.
+- Bu enum türünde bir değişken oluşturup bir değer atayın.
+- Enum varyantını bir `match` ifadesiyle yazdırın.
 
-🔧 **Görev:** Trait object kavramını ve kullanım alanlarını örnekle açıklayın.
+🔧 **Görev:** Basit bir enum tanımlayın, bir örnek oluşturun ve değerini desen eşleme ile yazdırın.

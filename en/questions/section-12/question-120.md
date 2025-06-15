@@ -1,10 +1,12 @@
-## 📘 Section: Error Handling  
-### 🔹 Category: Error Handling Best Practices  
-#### ❓ Question 120: Error handling best practices
+## 📘 Section: Enums II  
+### 🔹 Category: Wildcard Pattern Matching  
+#### ❓ Question 120: Matching with wildcard
 
-What are some best practices for error handling in Rust?
+Write a Rust program that demonstrates how to use the wildcard pattern (`_`) in enum matching:
 
-- List at least three best practices.
-- Give a brief explanation for each.
+- Define an enum with at least three variants.
+- Create a variable with one of the variants.
+- Use a `match` statement to handle one specific variant and use `_` to match all other cases.
+- Print different messages for the specific variant and the wildcard case.
 
-🔧 **Task:** Summarize best practices for error handling in Rust.
+🔧 **Task:** Show how to use the wildcard pattern in a match statement to handle all other cases concisely.

@@ -1,16 +1,21 @@
-## 📘 Section: Collections  
-### 🔹 Category: Vectors  
-#### ✅ Answer 123: Iterating over a vector
+## 📘 Section: Modules I  
+### 🔹 Category: Splitting Code into Multiple Files  
+#### ✅ Answer 123: Splitting code into multiple files
 
-**Explanation:**
-Use a `for` loop to iterate. Use `&v` for immutable, `&mut v` for mutable iteration.
+To split code into multiple files in Rust, declare the module in your main file and place its implementation in a separate file. Here, `utils` is defined in `utils.rs` and included in `main.rs` with `mod utils;`.
 
+**main.rs:**
 ```rust
-let mut v = vec![1, 2, 3];
-for x in &v {
-    println!("{}", x);
+mod utils;
+
+fn main() {
+    utils::greet();
 }
-for x in &mut v {
-    *x += 1;
+```
+
+**utils.rs:**
+```rust
+pub fn greet() {
+    println!("Hello from utils!");
 }
 ```

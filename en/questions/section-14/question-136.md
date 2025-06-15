@@ -1,10 +1,12 @@
-## 📘 Section: Modules and Packages  
-### 🔹 Category: Packages  
-#### ❓ Question 136: What is a package?
+## 📘 Section: Modules II  
+### 🔹 Category: Nested Modules and Visibility  
+#### ❓ Question 136: Using `pub(crate)` and `pub(super)`
 
-What is a package in Rust and how does it relate to crates?
+Write a Rust example that demonstrates the use of `pub(crate)` and `pub(super)` for controlling visibility:
 
-- Explain the structure of a package.
-- Give an example of a package with multiple crates.
+- Create a module with a nested child module.
+- Define functions with `pub`, `pub(crate)`, and `pub(super)` visibility.
+- Show where each function can be accessed from (main, parent, child, etc.).
+- Attempt to call each function from different scopes and comment on the results.
 
-🔧 **Task:** Explain the concept of packages in Rust.
+🔧 **Task:** Illustrate how `pub(crate)` and `pub(super)` affect item visibility in nested modules.

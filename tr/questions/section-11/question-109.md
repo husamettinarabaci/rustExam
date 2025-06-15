@@ -1,10 +1,11 @@
-## 📘 Bölüm: Traitler ve Nesne Güvenliği  
-### 🔹 Kategori: Static ve Dynamic Dispatch  
-#### ❓ Soru 109: Static ve dynamic dispatch farkı
+## 📘 Bölüm: Enumlar I  
+### 🔹 Kategori: Varsayılan Değerli Enum  
+#### ❓ Soru 109: Varsayılan değerli enum
 
-Aşağıdakileri açıklayın:
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Trait'ler ile static dispatch ve dynamic dispatch arasındaki fark nedir?
-- Hangi durumlarda hangisi tercih edilir?
+- `Status` adında, `Active`, `Inactive` ve `Unknown` varyantları olan bir enum tanımlayın.
+- `Status` için `Default` trait'ini implemente edin ve varsayılanı `Unknown` yapın.
+- `main` fonksiyonunda varsayılan değeriyle bir değişken oluşturun ve `match` ile yazdırın.
 
-🔧 **Görev:** Static ve dynamic dispatch farkını örnekle açıklayın.
+🔧 **Görev:** Bir enum için `Default` trait'ini implemente edin ve varsayılan değeri kullanarak bir değişken oluşturun.

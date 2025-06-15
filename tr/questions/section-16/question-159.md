@@ -1,10 +1,11 @@
-## 📘 Bölüm: İleri Düzey Traitler ve Jenerikler  
-### 🔹 Kategori: Jenerik Enumlar  
-#### ❓ Soru 159: Jenerik enum tanımlama ve kullanımı
+## 📘 Bölüm: Koleksiyonlar: Vektörler  
+### 🔹 Kategori: Eleman Ekleme  
+#### ❓ Soru 159: Vektöre eleman ekleme
 
-İki varyantlı jenerik bir enum oluşturun ve bunun için bir metot implement edin. Farklı tiplerle kullanımını gösterin.
+Bir vektöre belirli bir konumda nasıl eleman ekleneceğini gösteren bir Rust programı yazın.
 
-- `ResultBox` adında, `Ok(T)` ve `Err(E)` varyantlarına sahip bir enum tanımlayın.
-- Enumun `Ok` olup olmadığını döndüren bir metot implement edin.
+- Birkaç tamsayı içeren bir vektör oluşturun.
+- `insert` metodunu kullanarak belirli bir indekse yeni bir eleman ekleyin.
+- Ekleme öncesi ve sonrası vektörü yazdırın.
 
-🔧 **Görev:** Jenerik enumlar tanımlayın ve bunlar için metotlar implement edin.
+🔧 **Görev:** Bir vektöre belirli bir indekste eleman eklemek ve sonucu göstermek için `insert` metodunu kullanın.
