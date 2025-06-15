@@ -1,14 +1,19 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: String'ler  
-#### ✅ Cevap 63: String üzerinde işlem yapmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Fonksiyon Parametrelerinde Sahiplik  
+#### ✅ Cevap 63: Fonksiyon parametrelerinde sahiplik
 
-**Açıklama:**
-String'ler büyüyebilen UTF-8 metinlerdir. `push_str` ile ekleme yapılır.
+Bir fonksiyon parametreyi değer olarak (referanssız) alırsa, sahiplik aktarılır. Fonksiyon çağrısından sonra orijinal değişken kullanılamaz.
 
 ```rust
+fn sahipligi_al(s: String) {
+    println!("Alındı: {}", s);
+}
+
 fn main() {
-    let mut s = String::from("Merhaba");
-    s.push_str(", dünya!");
-    println!("{}", s);
+    let mesaj = String::from("merhaba");
+    sahipligi_al(mesaj); // sahiplik burada aktarılır
+    // println!("{}", mesaj); // hata: move sonrası mesaj artık geçersiz
 }
 ```
+
+`println!("{}", mesaj);` satırının yorumunu kaldırırsanız, derleyici mesaj'ın artık geçersiz olduğunu belirten bir hata verecektir.

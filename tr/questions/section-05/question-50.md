@@ -1,10 +1,11 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Güvensiz Kod  
-#### ❓ Soru 50: `unsafe` anahtar kelimesinin amacı
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Parametreleri  
+#### ❓ Soru 50: Demeti parametre olarak alan fonksiyon
 
-Rust'ta `unsafe` anahtar kelimesinin amacını açıklayın.
+Bir demeti (tuple) parametre olarak alan bir Rust fonksiyonu yazın.
 
-- Hangi durumlarda `unsafe` gereklidir?
-- Güvensiz bir işlemin kısa bir örneğini verin.
+- `print_point` adında, parametre olarak `(i32, i32)` alan bir fonksiyon tanımlayın.
+- Fonksiyon, demetteki değerleri `Nokta: (x, y)` şeklinde yazdırsın.
+- `main` fonksiyonunda `print_point` fonksiyonunu `(5, 8)` ile çağırın.
 
-🔧 **Görev:** Rust programlarında `unsafe` kullanımının ne zaman ve neden gerekli olduğunu açıklayın.
+🔧 **Görev:** Rust'ta bir fonksiyona demet parametresi geçmeyi gösterin.

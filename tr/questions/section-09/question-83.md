@@ -1,10 +1,11 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: İç İçe Modüller  
-#### ❓ Soru 83: İç içe modüller
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapı Alanları  
+#### ❓ Soru 83: Çok alanlı yapı
 
-İç içe modül kullanan bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Bir modül içinde alt modül tanımlayın.
-- Alt modüldeki bir fonksiyonu `main` fonksiyonunda çağırın.
+- `name` (String), `age` (u8) ve `is_student` (bool) alanlarına sahip bir `Person` yapısı tanımlayın.
+- `Person` yapısından bir örnek oluşturun ve alanlarına değer atayın.
+- Alanların değerlerini terminale yazdırın.
 
-🔧 **Görev:** Rust'ta iç içe modül kullanımını gösterin.
+🔧 **Görev:** Farklı türde alanlara sahip bir yapının nasıl tanımlanıp kullanılacağını gösterin.

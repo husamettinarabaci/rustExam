@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Blanket Implementations  
-#### ❓ Soru 99: Blanket implementation kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Metotlar ve Ömürler  
+#### ❓ Soru 99: Ömürlü metot
 
-Blanket implementation örneği gösteren bir Rust programı yazın.
+Açık ömür (lifetime) belirtimi kullanan bir Rust metodu yazın.
 
-- Bir trait'i, belirli bir trait'i sağlayan tüm türler için implemente edin.
-- `main` fonksiyonunda kullanımı gösterin.
+- Referans tutan bir yapı tanımlayın.
+- Bu yapı için, açık ömür belirtimiyle referans döndüren bir metot implement edin.
+- Bu metodu basit bir örnekle kullanmayı gösterin.
 
-🔧 **Görev:** Rust'ta blanket implementation kullanımını gösterin.
+🔧 **Görev:** Bir metot implementasyonunda açık ömür belirtimi kullanın ve neden gerekli olduğunu açıklayın.

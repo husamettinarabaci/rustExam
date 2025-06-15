@@ -1,17 +1,17 @@
 # Answer 50
 
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Güvensiz Kod  
-#### ✅ Cevap 50: `unsafe` anahtar kelimesinin amacı
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Parametreleri  
+#### ✅ Cevap 50: Demeti parametre olarak alan fonksiyon
 
-**Açıklama:**
-`unsafe` anahtar kelimesi, Rust'ın güvenlik garantilerinin devre dışı bırakıldığı ve sorumluluğun geliştiriciye geçtiği kod bloklarını belirtmek için kullanılır.
+Rust'ta bir fonksiyon, imza kısmında demet (tuple) tipi belirterek parametre olarak demet alabilir.
 
-**Örnek:**
 ```rust
-let ptr = 42 as *const i32;
-unsafe {
-    println!("Değer: {}", *ptr);
+fn print_point(point: (i32, i32)) {
+    println!("Nokta: ({}, {})", point.0, point.1);
+}
+
+fn main() {
+    print_point((5, 8));
 }
 ```
-Burada ham pointer ile işlem yapmak için `unsafe` gereklidir.

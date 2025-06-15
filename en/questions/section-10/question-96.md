@@ -1,10 +1,11 @@
-## 📚 Section: Traits  
-### 🔹 Category: Deriving Traits  
-#### ❓ Question 96: Deriving standard traits
+## 📘 Section: Structs II  
+### 🔹 Category: Method returning self  
+#### ❓ Question 96: Method returning self
 
-Write a Rust struct and derive standard traits for it.
+Write a Rust program that demonstrates how to define a method for a struct that returns `Self` (the struct itself).
 
-- Define a struct and derive `Debug`, `Clone`, and `PartialEq`.
-- Demonstrate usage in `main`.
+- Define a struct (e.g., `Multiplier`).
+- Implement a method (e.g., `double`) that returns a new instance of the struct with modified data.
+- In `main`, create an instance, call the method, and print the result.
 
-🔧 **Task:** Show how to derive standard traits in Rust.
+🔧 **Task:** Show how to define and use a method that returns `Self` for a struct in Rust.

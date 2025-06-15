@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: İlişkili Tipler  
-#### ❓ Soru 77: Trait'lerde ilişkili tipler kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Metot Alıcılarında Ömür  
+#### ❓ Soru 77: Metot alıcılarında ömür
 
-İlişkili tip içeren bir Rust trait'i yazın.
+Aşağıdaki adımları izleyerek alıcıda ömür parametreleri kullanan bir Rust yapısı ve metodu yazın:
 
-- `Summable` adında ilişkili tipi `Item` olan ve `sum` metodu içeren bir trait tanımlayın.
-- Bir yapı için bu trait'i implemente edin.
+- Alanı olarak bir string dilimi referansı (`&str`) tutan ve ömür parametresi içeren bir yapı tanımlayın.
+- Bu yapı için, referansın uzunluğunu döndüren bir metot yazın.
+- Metot alıcısında doğru ömür parametrelerini belirtin.
+- `main` fonksiyonunda bir örnek oluşturup metodu çağırın.
 
-🔧 **Görev:** Rust'ta trait'lerde ilişkili tip kullanımını gösterin.
+🔧 **Görev:** Referans alanı olan yapılarda metot alıcılarında ömür parametreleri kullanımını gösterin.

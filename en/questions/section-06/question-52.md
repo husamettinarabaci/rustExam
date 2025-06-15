@@ -1,10 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Option Type  
-#### ❓ Question 52: Using the Option type for optional values
+## 📘 Section: Functions II  
+### 🔹 Category: Nested Calls  
+#### ❓ Question 52: Nested function calls
 
-Write a Rust function that returns an `Option` type.
+Write a Rust program that demonstrates nested function calls.
 
-- Define a function `find_even` that takes an `i32` and returns `Some(number)` if it is even, or `None` if it is odd.
-- Call this function from `main` and print the result.
+- Define two functions: `add_one` (takes an i32 and returns i32) and `double` (takes an i32 and returns i32).
+- In the `main` function, call `double(add_one(5))` and print the result.
 
-🔧 **Task:** Show how to use the `Option` type for optional values in Rust.
+🔧 **Task:** Show how to nest function calls in Rust.

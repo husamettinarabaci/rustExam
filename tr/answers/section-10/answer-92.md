@@ -1,29 +1,26 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Varsayılan Metotlar  
-#### ✅ Cevap 92: Trait'te varsayılan metotlar
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: İlişkili fonksiyonlar (yapıcılar)  
+#### ✅ Cevap 92: İlişkili fonksiyonlar (yapıcılar)
 
-**Açıklama:**
-Trait'lerde varsayılan metot gövdesi tanımlanabilir ve istenirse override edilebilir.
+Rust'ta ilişkili fonksiyonlar, bir yapı için `impl` bloğu içinde tanımlanır ve genellikle yapıcı olarak kullanılır. Burada, `Person` adında bir yapı ve ona ait bir `new` ilişkili fonksiyonu tanımlanmıştır.
 
 ```rust
-trait Greet {
-    fn hello(&self) {
-        println!("Merhaba!");
-    }
+struct Person {
+    name: String,
+    age: u8,
 }
 
-struct Person;
-impl Greet for Person {
-    fn hello(&self) {
-        println!("Selam!");
+impl Person {
+    fn new(name: &str, age: u8) -> Self {
+        Self {
+            name: name.to_string(),
+            age,
+        }
     }
 }
-
-struct Robot;
-impl Greet for Robot {}
 
 fn main() {
-    Person.hello();
-    Robot.hello();
+    let p = Person::new("Alice", 30);
+    println!("İsim: {}, Yaş: {}", p.name, p.age);
 }
 ```

@@ -1,25 +1,22 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Çoklu Trait'ler  
-#### ✅ Cevap 94: Çoklu trait uygulamak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Değer döndüren metot  
+#### ✅ Cevap 94: Değer döndüren metot
 
-**Açıklama:**
-Bir yapı birden fazla trait'i implemente edebilir, her biri farklı davranış sağlar.
+Rust'ta metotlar bir değer döndürebilir. Burada, `Square` adında bir yapı ve ona ait bir `area` metodu tanımlanmıştır. Bu metot, karenin alanını döndürür.
 
 ```rust
-trait A { fn a(&self); }
-trait B { fn b(&self); }
-
-struct MyStruct;
-impl A for MyStruct {
-    fn a(&self) { println!("A"); }
+struct Square {
+    side: u32,
 }
-impl B for MyStruct {
-    fn b(&self) { println!("B"); }
+
+impl Square {
+    fn area(&self) -> u32 {
+        self.side * self.side
+    }
 }
 
 fn main() {
-    let s = MyStruct;
-    s.a();
-    s.b();
+    let s = Square { side: 4 };
+    println!("Alan: {}", s.area());
 }
 ```

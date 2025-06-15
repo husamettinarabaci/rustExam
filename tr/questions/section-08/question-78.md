@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: PhantomData  
-#### ❓ Soru 78: PhantomData kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Closure'larda Ömür  
+#### ❓ Soru 78: Closure'larda ömür
 
-`PhantomData` kullanan bir Rust yapısı yazın.
+Aşağıdaki adımları izleyerek referans yakalayan bir closure ve ömür ilişkisini gösteren bir Rust örneği yazın:
 
-- `PhantomData<T>` alan bir yapı tanımlayın.
-- Neden ve ne zaman `PhantomData` kullanılır açıklayın.
+- `main` fonksiyonunda bir string değişkeni tanımlayın.
+- Bu stringi ödünç alan ve uzunluğunu döndüren bir closure oluşturun.
+- Closure'ın ömrünün, yakaladığı referansa bağlı olduğunu gösterin.
+- String değişkeni scope dışına çıkarsa closure'ın kullanılamayacağını açıklayın.
 
-🔧 **Görev:** Rust'ta `PhantomData` kullanımını gösterin.
+🔧 **Görev:** Referans yakalayan closure'larda ömürlerin nasıl çalıştığını gösterin.

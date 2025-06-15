@@ -1,28 +1,28 @@
-## 📚 Section: Traits  
-### 🔹 Category: Trait Bounds  
-#### ✅ Answer 93: Using trait bounds in functions
+## 📘 Section: Structs II  
+### 🔹 Category: Method taking `&self` and `&mut self`  
+#### ✅ Answer 93: Method taking `&self` and `&mut self`
 
-**Explanation:**
-Trait bounds restrict generic parameters to types that implement a trait.
+In Rust, methods can take `&self` for immutable access or `&mut self` for mutable access. Here, we define a `Counter` struct with a `value` method (immutable) and an `increment` method (mutable).
 
 ```rust
-trait Printable {
-    fn print(&self);
+struct Counter {
+    count: i32,
 }
 
-fn print_any<T: Printable>(item: T) {
-    item.print();
-}
+impl Counter {
+    fn value(&self) -> i32 {
+        self.count
+    }
 
-struct Data;
-impl Printable for Data {
-    fn print(&self) {
-        println!("Data");
+    fn increment(&mut self) {
+        self.count += 1;
     }
 }
 
 fn main() {
-    let d = Data;
-    print_any(d);
+    let mut c = Counter { count: 0 };
+    println!("Value: {}", c.value());
+    c.increment();
+    println!("Value after increment: {}", c.value());
 }
 ```

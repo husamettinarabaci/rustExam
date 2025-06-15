@@ -1,10 +1,12 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Crate Keyword  
-#### ❓ Question 86: Using the `crate` keyword
+## 📘 Section: Structs I  
+### 🔹 Category: Debug Printing a Struct  
+#### ❓ Question 86: Debug printing a struct
 
-Write a Rust program that demonstrates the `crate` keyword.
+Write a Rust program that demonstrates how to print a struct using the `Debug` trait.
 
-- Define a function in the root module.
-- Access it from a submodule using `crate::`.
+- Define a struct named `Point` with fields `x` (i32) and `y` (i32).
+- Derive the `Debug` trait for the struct.
+- Create an instance of `Point` and assign values.
+- Print the struct using the `{:?}` format specifier.
 
-🔧 **Task:** Show how to use the `crate` keyword in Rust modules.
+🔧 **Task:** Show how to enable and use debug printing for a struct in Rust.

@@ -1,19 +1,18 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Handling Multiple Errors  
-#### ✅ Answer 57: Handling multiple error types
+## 📘 Section: Functions II  
+### 🔹 Category: Trait Bounds in Functions  
+#### ✅ Answer 57: Function with trait bound parameter
 
-**Explanation:**
-You can use `Box<dyn std::error::Error>` to return different error types from a function.
+Trait bounds allow functions to accept only types that implement a specific trait. Here, the function prints any value that implements the `Display` trait.
 
 ```rust
-use std::fs::File;
-use std::io::{self, Read};
+use std::fmt::Display;
 
-fn read_and_parse(path: &str) -> Result<i32, Box<dyn std::error::Error>> {
-    let mut file = File::open(path)?;
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-    let num: i32 = contents.trim().parse()?;
-    Ok(num)
+fn print_display<T: Display>(item: T) {
+    println!("Value: {}", item);
+}
+
+fn main() {
+    print_display(123);         // integer
+    print_display("Rustacean"); // string slice
 }
 ```

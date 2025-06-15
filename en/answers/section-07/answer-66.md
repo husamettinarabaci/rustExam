@@ -1,17 +1,19 @@
-## 📚 Section: Collections  
-### 🔹 Category: HashSet  
-#### ✅ Answer 66: Using a HashSet
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Borrowing with References  
+#### ✅ Answer 66: Borrowing with references
 
-**Explanation:**
-A `HashSet` stores unique values. You can add elements and check for membership.
+In Rust, you can borrow a value by passing a reference to a function. Ownership is not transferred, so the original variable can still be used after the call.
 
 ```rust
-use std::collections::HashSet;
+fn print_length(s: &String) {
+    println!("Length: {}", s.len());
+}
 
 fn main() {
-    let mut set = HashSet::new();
-    set.insert(1);
-    set.insert(2);
-    println!("Contains 1? {}", set.contains(&1));
+    let text = String::from("hello");
+    print_length(&text); // borrow with reference
+    println!("Original: {}", text); // still valid
 }
 ```
+
+Here, `print_length` borrows the `String` via a reference, so `text` remains valid after the function call.

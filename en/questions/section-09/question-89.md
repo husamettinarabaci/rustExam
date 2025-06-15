@@ -1,10 +1,12 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Private Items  
-#### ❓ Question 89: Private items in modules
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with Methods  
+#### ❓ Question 89: Structs with methods
 
-Write a Rust program that demonstrates private items in modules.
+Write a Rust program that demonstrates how to define and use methods for a struct.
 
-- Define a private function in a module.
-- Show that it cannot be accessed from outside the module.
+- Define a struct named `Rectangle` with fields `width` (u32) and `height` (u32).
+- Implement a method `area` for `Rectangle` that returns the area as `u32`.
+- Create an instance of `Rectangle` and call the `area` method.
+- Print the area to the terminal.
 
-🔧 **Task:** Show how private items work in Rust modules.
+🔧 **Task:** Show how to define and use methods for a struct in Rust.

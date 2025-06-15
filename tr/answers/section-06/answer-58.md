@@ -1,17 +1,16 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: İteratörlerde Hata Yönetimi  
-#### ✅ Cevap 58: İteratörlerde hata yönetimi
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Özyinelemeli (Recursive) Fonksiyonlar  
+#### ✅ Cevap 58: Özyinelemeli (recursive) fonksiyon
 
-**Açıklama:**
-İteratörlerde `map` ve `collect` ile hata yönetimi yapılabilir.
+Özyinelemeli fonksiyonlar, problemi çözmek için kendini tekrar çağırır. Burada bir sayının faktöriyelini hesaplayan özyinelemeli bir fonksiyon örneği verilmiştir.
 
 ```rust
+fn faktoriyel(n: u32) -> u32 {
+    if n == 0 { 1 } else { n * faktoriyel(n - 1) }
+}
+
 fn main() {
-    let diziler = vec!["1", "2", "a"];
-    let sonuc: Result<Vec<i32>, _> = diziler.iter().map(|s| s.parse()).collect();
-    match sonuc {
-        Ok(sayilar) => println!("Sayilar: {:?}", sayilar),
-        Err(e) => println!("Hata: {}", e),
-    }
+    let sonuc = faktoriyel(5);
+    println!("Faktöriyel: {}", sonuc); // Çıktı: Faktöriyel: 120
 }
 ```

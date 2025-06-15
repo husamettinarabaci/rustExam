@@ -1,20 +1,22 @@
-## 📚 Section: Collections  
-### 🔹 Category: BTreeSet  
-#### ✅ Answer 70: Using BTreeSet
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Dangling References and Prevention  
+#### ✅ Answer 70: Dangling references and prevention
 
 **Explanation:**
-A `BTreeSet` stores unique values in order. You can iterate in sorted order.
+Rust's borrow checker prevents dangling references by ensuring that references never outlive the data they point to. If you try to create a reference to a variable that goes out of scope, the compiler will produce an error. This guarantees memory safety.
 
 ```rust
-use std::collections::BTreeSet;
-
 fn main() {
-    let mut set = BTreeSet::new();
-    set.insert(3);
-    set.insert(1);
-    set.insert(2);
-    for x in &set {
-        println!("{}", x);
-    }
+    let r;
+    {
+        let x = 5;
+        // r = &x; // Uncommenting this line will cause a compile error
+    } // x is dropped here
+    // println!("Dangling reference: {}", r); // Error: `x` does not live long enough
+
+    // Correct usage:
+    let y = 10;
+    let r2 = &y;
+    println!("Valid reference: {}", r2);
 }
 ```

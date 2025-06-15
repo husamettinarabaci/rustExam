@@ -1,22 +1,23 @@
-## 📚 Section: Generics  
-### 🔹 Category: Associated Types  
-#### ✅ Answer 77: Using associated types in traits
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Method Receivers  
+#### ✅ Answer 77: Lifetime in method receivers
 
-**Explanation:**
-Associated types allow traits to define placeholder types to be specified by implementors.
+When a struct contains a reference, its methods that use the reference must also specify the lifetime. Here, the method `len` borrows `self` with the correct lifetime annotation.
 
 ```rust
-trait Summable {
-    type Item;
-    fn sum(&self) -> Self::Item;
+struct TextHolder<'a> {
+    text: &'a str,
 }
 
-struct MyVec(Vec<i32>);
-
-impl Summable for MyVec {
-    type Item = i32;
-    fn sum(&self) -> i32 {
-        self.0.iter().sum()
+impl<'a> TextHolder<'a> {
+    fn len(&self) -> usize {
+        self.text.len()
     }
+}
+
+fn main() {
+    let s = String::from("lifetime method");
+    let holder = TextHolder { text: &s };
+    println!("Length: {}", holder.len());
 }
 ```

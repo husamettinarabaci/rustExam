@@ -1,23 +1,23 @@
-## 📚 Section: Traits  
-### 🔹 Category: Blanket Implementations  
-#### ✅ Answer 99: Blanket implementations
+## 📘 Section: Structs II  
+### 🔹 Category: Methods and Lifetimes  
+#### ✅ Answer 99: Method with lifetimes
 
-**Explanation:**
-Blanket implementations allow you to implement a trait for all types that satisfy a trait bound.
+This example shows how to use explicit lifetime annotations in a method. The struct `TextHolder` holds a string slice reference, and the method `get_text` returns a reference with the same lifetime. Lifetime annotations ensure the returned reference is valid as long as the struct exists.
 
 ```rust
-trait MyTrait {
-    fn hello(&self);
+struct TextHolder<'a> {
+    text: &'a str,
 }
 
-impl<T: ToString> MyTrait for T {
-    fn hello(&self) {
-        println!("{}", self.to_string());
+impl<'a> TextHolder<'a> {
+    fn get_text(&self) -> &'a str {
+        self.text
     }
 }
 
 fn main() {
-    42.hello();
-    "hi".hello();
+    let s = String::from("hello");
+    let holder = TextHolder { text: &s };
+    println!("{}", holder.get_text());
 }
 ```

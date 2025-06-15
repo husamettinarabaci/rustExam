@@ -1,10 +1,11 @@
-## 📚 Section: Collections  
-### 🔹 Category: Strings  
-#### ❓ Question 63: String manipulation
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Ownership with Function Parameters  
+#### ❓ Question 63: Ownership with function parameters
 
-Write a Rust program that does the following:
+Write a Rust function that takes ownership of its parameter.
 
-- Create a `String` and append text to it.
-- Print the final string.
+- Define a function that accepts a `String` as a parameter (not a reference).
+- Call the function with a `String` variable, transferring ownership.
+- Attempt to use the original variable after the function call and observe the compiler error.
 
-🔧 **Task:** Demonstrate string manipulation in Rust.
+🔧 **Task:** Show how passing a value to a function transfers ownership in Rust.

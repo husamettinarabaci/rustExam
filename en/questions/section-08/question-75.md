@@ -1,10 +1,11 @@
-## 📚 Section: Generics  
-### 🔹 Category: Multiple Type Parameters  
-#### ❓ Question 75: Using multiple type parameters
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime Errors and Fixes  
+#### ❓ Question 75: Lifetime errors and fixes
 
-Write a Rust struct that uses multiple type parameters.
+Write a Rust function that returns a reference to the larger of two string slices, and demonstrate a lifetime error:
 
-- Define a struct `Pair<T, U>` that holds two values of possibly different types.
-- Create an instance of `Pair` in `main`.
+- Implement a function that takes two string slice references and returns the longer one.
+- First, write the function without lifetime annotations and observe the compiler error.
+- Then, fix the error by adding the correct lifetime annotations.
 
-🔧 **Task:** Show how to use multiple type parameters in Rust.
+🔧 **Task:** Show a common lifetime error and how to resolve it using explicit lifetime parameters in function signatures.

@@ -1,10 +1,11 @@
-## 📚 Section: Collections  
-### 🔹 Category: Vectors  
-#### ❓ Question 61: Creating and using a vector
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Ownership Transfer  
+#### ❓ Question 61: Demonstrating ownership transfer
 
-Write a Rust program that does the following:
+Write a Rust program that demonstrates ownership transfer between variables.
 
-- Create a vector of integers.
-- Add elements to the vector and print all elements.
+- Define a variable with a value (e.g., a `String`).
+- Assign this variable to another variable, transferring ownership.
+- Attempt to use the original variable after the transfer and observe the compiler error.
 
-🔧 **Task:** Demonstrate how to create and use a vector in Rust.
+🔧 **Task:** Show how ownership is moved from one variable to another in Rust.

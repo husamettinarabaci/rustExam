@@ -1,10 +1,11 @@
-## 📚 Section: Collections  
-### 🔹 Category: HashSet  
-#### ❓ Question 66: Using a HashSet
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Borrowing with References  
+#### ❓ Question 66: Borrowing with references
 
-Write a Rust program that does the following:
+Write a Rust function that borrows a value using a reference.
 
-- Create a `HashSet` of integers.
-- Add elements and check for membership.
+- Define a function that takes a reference to a `String` as a parameter.
+- Call the function with a `String` variable without transferring ownership.
+- Show that the original variable can still be used after the function call.
 
-🔧 **Task:** Show how to use a `HashSet` in Rust.
+🔧 **Task:** Demonstrate how borrowing with references works in Rust.

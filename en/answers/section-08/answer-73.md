@@ -1,18 +1,21 @@
-## 📚 Section: Generics  
-### 🔹 Category: Generic Enums  
-#### ✅ Answer 73: Creating a generic enum
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime Elision Rules  
+#### ✅ Answer 73: Lifetime elision rules
 
 **Explanation:**
-Generic enums can represent values of any type. `Option<T>` is a common example.
+Rust's lifetime elision rules allow you to omit explicit lifetime annotations in function signatures when the compiler can infer them. For example, if a function takes a single reference parameter and returns a value not tied to a reference, no explicit lifetime is needed.
 
 ```rust
-enum MyOption<T> {
-    Some(T),
-    None,
+fn string_length(s: &str) -> usize {
+    s.len()
 }
 
 fn main() {
-    let x = MyOption::Some(10);
-    let y: MyOption<i32> = MyOption::None;
+    let text = "hello world";
+    let len = string_length(text);
+    println!("Length: {}", len);
 }
 ```
+
+- No explicit lifetime is needed because the reference does not escape the function.
+- Rust's lifetime elision rules handle this automatically.

@@ -1,18 +1,19 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Reference Counting  
-#### ✅ Answer 47: Difference between `Arc` and `Rc`
+### 🔹 Category: Function Calls  
+#### ✅ Answer 47: Function that calls another function
 
-**Explanation:**
-`Rc` (Reference Counted) is for multiple ownership in single-threaded contexts. `Arc` (Atomic Reference Counted) is for multiple ownership across threads.
+In Rust, you can call a function from within another function by simply using its name followed by parentheses. This is useful for code organization and reusability.
 
-**Example:**
 ```rust
-use std::rc::Rc;
-let a = Rc::new(5);
-let b = Rc::clone(&a);
+fn greet() {
+    println!("Hello from greet!");
+}
 
-use std::sync::Arc;
-let x = Arc::new(5);
-let y = Arc::clone(&x);
+fn call_greet() {
+    greet();
+}
+
+fn main() {
+    call_greet();
+}
 ```
-Use `Rc` for single-threaded, `Arc` for multi-threaded scenarios.

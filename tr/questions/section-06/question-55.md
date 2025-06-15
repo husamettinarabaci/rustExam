@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hataları Yönlendirme  
-#### ❓ Soru 55: `?` ile hataları yönlendirmek
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Closure Parametreli Fonksiyonlar  
+#### ❓ Soru 55: Closure parametreli fonksiyon
 
-`?` operatörüyle hataları yönlendiren bir Rust fonksiyonu yazın.
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Bir dosyayı okuyup içeriğini `Result<String, std::io::Error>` olarak döndüren bir fonksiyon tanımlayın.
-- Hataları yönlendirmek için `?` operatörünü kullanın.
+- Bir closure'ı parametre olarak alan ve bir tamsayıya uygulayan bir fonksiyon tanımlayın.
+- `main` fonksiyonunda bu fonksiyona bir closure gönderin ve sonucu ekrana yazdırın.
 
-🔧 **Görev:** Rust'ta `?` operatörüyle hata yönlendirmeyi gösterin.
+🔧 **Görev:** Rust'ta closure'ların fonksiyonlara parametre olarak nasıl geçirileceğini gösterin.

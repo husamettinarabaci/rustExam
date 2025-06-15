@@ -1,10 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Unwrap and Expect  
-#### ❓ Question 56: Using `unwrap` and `expect`
+## 📘 Section: Functions II  
+### 🔹 Category: Generics in Functions  
+#### ❓ Question 56: Function with generic parameter
 
-Write a Rust program that demonstrates the use of `unwrap` and `expect`.
+Write a Rust program that demonstrates a function with a generic parameter:
 
-- Create an `Option<i32>` and a `Result<i32, &str>`.
-- Show how to use `unwrap` and `expect` to extract values, and what happens if they fail.
+- Define a function that takes a parameter of any type and prints it using the `Debug` trait.
+- Call this function from `main` with at least two different types (e.g., integer and string).
 
-🔧 **Task:** Demonstrate the difference between `unwrap` and `expect` in Rust.
+🔧 **Task:** Show how to write a generic function in Rust that works with multiple types.

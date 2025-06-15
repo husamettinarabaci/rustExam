@@ -1,10 +1,11 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hata Zincirleme  
-#### ❓ Soru 60: `thiserror` veya `anyhow` ile hata zincirleme
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Yan Etkili Fonksiyon  
+#### ❓ Soru 60: Yan etkili fonksiyon
 
-`thiserror` veya `anyhow` crate'i ile hata zincirlemeyi gösteren bir Rust programı yazın.
+Bir yan etkiyi (örneğin, global/statik bir değişkeni değiştirmek veya konsola yazdırmak) gösteren bir Rust fonksiyonu yazın.
 
-- `thiserror` ile özel hata tipi tanımlayın veya hata yönetimi için `anyhow` kullanın.
-- Farklı kaynaklardan gelen hataları zincirleyin.
+- Gözle görülür bir yan etki oluşturan bir fonksiyon tanımlayın.
+- Örneğin, konsola mesaj yazdırın veya statik bir değişkeni güncelleyin.
+- Yan etkiyi göstermek için fonksiyonu `main` içinde çağırın.
 
-🔧 **Görev:** Rust'ta popüler bir crate ile hata zincirlemenin nasıl yapılacağını gösterin.
+🔧 **Görev:** Çağrıldığında yan etki oluşturan bir fonksiyon yazın.

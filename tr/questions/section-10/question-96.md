@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Türetme  
-#### ❓ Soru 96: Standart trait'leri türetmek
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Kendi kendini döndüren metot  
+#### ❓ Soru 96: Kendi kendini döndüren metot
 
-Bir yapı tanımlayın ve standart trait'leri türetin.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- Bir yapı tanımlayın ve `Debug`, `Clone`, `PartialEq` trait'lerini türetin.
-- `main` fonksiyonunda kullanımı gösterin.
+- Bir yapı tanımlayın (ör: `Multiplier`).
+- Bu yapı için bir metot (ör: `double`) tanımlayın ve yeni bir örnek (kendi türünden) döndürsün.
+- `main` fonksiyonunda bir örnek oluşturup metodu çağırın ve sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta standart trait'leri türetmeyi gösterin.
+🔧 **Görev:** Rust'ta bir yapı için kendi türünü döndüren bir metot nasıl tanımlanır ve kullanılır, gösterin.

@@ -1,21 +1,23 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Özel Öğeler  
-#### ✅ Cevap 89: Modüllerde özel öğeler
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Metotlu Yapılar  
+#### ✅ Cevap 89: Metotlu yapılar
 
-**Açıklama:**
-Öğeler varsayılan olarak özeldir. Özel öğelere modül dışından erişilemez.
+Rust'ta metotlar, bir yapı için `impl` bloğu içinde tanımlanır. Burada `Rectangle` için bir `area` metodu tanımlanıp bir örnek üzerinde çağrılır.
 
 ```rust
-mod mymod {
-    fn gizli() {}
-    pub fn acik() {
-        // gizli() burada erişilebilir
-        gizli();
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
     }
 }
 
 fn main() {
-    mymod::acik();
-    // mymod::gizli(); // Hata: özel fonksiyon
+    let dikdortgen = Rectangle { width: 5, height: 3 };
+    println!("Alan: {}", dikdortgen.area());
 }
 ```

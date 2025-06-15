@@ -1,28 +1,28 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Sınırları  
-#### ✅ Cevap 93: Fonksiyonlarda trait sınırı kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: `&self` ve `&mut self` alan metotlar  
+#### ✅ Cevap 93: `&self` ve `&mut self` alan metotlar
 
-**Açıklama:**
-Trait sınırları, jenerik parametrelerin belirli bir trait'i uygulamasını zorunlu kılar.
+Rust'ta metotlar, `&self` ile değiştirilemez, `&mut self` ile değiştirilebilir erişim sağlar. Burada, `Counter` adında bir yapı, `value` (değiştirilemez) ve `increment` (değiştirilebilir) metotları ile örneklenmiştir.
 
 ```rust
-trait Yazdir {
-    fn yazdir(&self);
+struct Counter {
+    count: i32,
 }
 
-fn yazdir_any<T: Yazdir>(item: T) {
-    item.yazdir();
-}
+impl Counter {
+    fn value(&self) -> i32 {
+        self.count
+    }
 
-struct Veri;
-impl Yazdir for Veri {
-    fn yazdir(&self) {
-        println!("Veri");
+    fn increment(&mut self) {
+        self.count += 1;
     }
 }
 
 fn main() {
-    let v = Veri;
-    yazdir_any(v);
+    let mut c = Counter { count: 0 };
+    println!("Değer: {}", c.value());
+    c.increment();
+    println!("Artırıldıktan sonra değer: {}", c.value());
 }
 ```

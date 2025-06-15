@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: İteratörlerde Hata Yönetimi  
-#### ❓ Soru 58: İteratörlerde hata yönetimi
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Özyinelemeli (Recursive) Fonksiyonlar  
+#### ❓ Soru 58: Özyinelemeli (recursive) fonksiyon
 
-İteratörlerde hata yönetimini gösteren bir Rust programı yazın.
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Bir dizi stringi `iter().map()` ile işleyip her birini tamsayıya çevirin.
-- Sonuçları `Result<Vec<i32>, _>` olarak toplayın.
+- Kendi kendini çağırarak bir sayının faktöriyelini hesaplayan bir fonksiyon tanımlayın.
+- Bu fonksiyonu `main` fonksiyonunda çağırıp örnek bir giriş (ör. 5) için sonucu ekrana yazdırın.
 
-🔧 **Görev:** Rust'ta bir iteratör üzerinde hata yönetimini gösterin.
+🔧 **Görev:** Rust'ta özyinelemeli fonksiyonun nasıl yazılacağını ve kullanılacağını gösterin.

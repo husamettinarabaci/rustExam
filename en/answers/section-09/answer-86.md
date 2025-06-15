@@ -1,22 +1,18 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Crate Keyword  
-#### ✅ Answer 86: Using the `crate` keyword
+## 📘 Section: Structs I  
+### 🔹 Category: Debug Printing a Struct  
+#### ✅ Answer 86: Debug printing a struct
 
-**Explanation:**
-The `crate` keyword refers to the root of the current crate. It is used to access items from the root module.
+To print a struct using the `Debug` trait in Rust, derive `Debug` and use the `{:?}` format specifier with `println!`. This is useful for quick inspection of struct values.
 
 ```rust
-fn root_fn() {
-    println!("Root function");
-}
-
-mod sub {
-    pub fn call_root() {
-        crate::root_fn();
-    }
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32,
 }
 
 fn main() {
-    sub::call_root();
+    let p = Point { x: 3, y: 7 };
+    println!("{:?}", p);
 }
 ```

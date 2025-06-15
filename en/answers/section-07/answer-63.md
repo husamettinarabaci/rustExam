@@ -1,14 +1,19 @@
-## 📚 Section: Collections  
-### 🔹 Category: Strings  
-#### ✅ Answer 63: String manipulation
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Ownership with Function Parameters  
+#### ✅ Answer 63: Ownership with function parameters
 
-**Explanation:**
-Strings are growable, UTF-8 encoded text. You can append with `push_str`.
+When a function takes a parameter by value (not by reference), ownership is transferred. The original variable cannot be used after the function call.
 
 ```rust
+fn take_ownership(s: String) {
+    println!("Received: {}", s);
+}
+
 fn main() {
-    let mut s = String::from("Hello");
-    s.push_str(", world!");
-    println!("{}", s);
+    let msg = String::from("hello");
+    take_ownership(msg); // ownership moves here
+    // println!("{}", msg); // error: value borrowed here after move
 }
 ```
+
+If you uncomment the line with `msg`, the compiler will report an error because `msg` is no longer valid after being moved.

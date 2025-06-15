@@ -1,11 +1,11 @@
-## 📚 Section: Generics  
-### 🔹 Category: Generic Methods  
-#### ❓ Question 76: Implementing generic methods
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Function Return Values  
+#### ❓ Question 76: Lifetime in function return values
 
-Write a Rust struct with a generic method.
+Write a Rust function that returns a reference and requires a lifetime annotation in its return type:
 
-- Define a struct `Wrapper<T>`.
-- Implement a method `get_value` that returns a reference to the value.
-- Demonstrate usage in `main`.
+- Implement a function that takes a string slice reference and returns a reference to its first word.
+- Annotate the function with the correct lifetime parameter for both the input and output references.
+- Demonstrate usage in `main` by printing the first word of a string.
 
-🔧 **Task:** Show how to implement and use generic methods in Rust.
+🔧 **Task:** Show how to use lifetime annotations in a function that returns a reference derived from its input.

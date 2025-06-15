@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Tanımlama  
-#### ❓ Soru 91: Trait tanımlamak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: `impl` ile metot tanımlama  
+#### ❓ Soru 91: `impl` ile metot tanımlama
 
-`Speak` adında bir trait ve içinde `speak` metodu yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- En az bir yapı için bu trait'i implemente edin.
-- `main` fonksiyonunda metodu çağırın.
+- Bir yapı tanımlayın (ör: `Circle`).
+- Bu yapı için bir veya daha fazla metot (`area` gibi) `impl` bloğunda tanımlayın.
+- `main` fonksiyonunda yapıdan bir örnek oluşturup metodu çağırın.
 
-🔧 **Görev:** Rust'ta trait tanımlamayı ve uygulamayı gösterin.
+🔧 **Görev:** Rust'ta bir yapı için `impl` bloğu ile metot nasıl tanımlanır ve kullanılır, gösterin.

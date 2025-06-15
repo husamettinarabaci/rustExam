@@ -1,18 +1,19 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Propagating Errors  
-#### ✅ Answer 55: Propagating errors with `?`
+## 📘 Section: Functions II  
+### 🔹 Category: Closures as Parameters  
+#### ✅ Answer 55: Function with closure as parameter
 
-**Explanation:**
-The `?` operator is used to propagate errors in functions that return a `Result`. It returns early if an error occurs.
+You can pass closures as parameters using generics and the `Fn` trait. Here, a function takes a closure and applies it to a value.
 
 ```rust
-use std::fs::File;
-use std::io::{self, Read};
+fn apply_to_ten<F>(f: F) -> i32
+where
+    F: Fn(i32) -> i32,
+{
+    f(10)
+}
 
-fn read_file(path: &str) -> Result<String, io::Error> {
-    let mut file = File::open(path)?;
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-    Ok(contents)
+fn main() {
+    let result = apply_to_ten(|x| x * 3);
+    println!("Result: {}", result); // Output: Result: 30
 }
 ```

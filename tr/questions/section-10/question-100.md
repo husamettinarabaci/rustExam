@@ -1,10 +1,10 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Operatör Aşırı Yükleme  
-#### ❓ Soru 100: Trait ile operatör aşırı yükleme
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Metotlar ve Statik Değişkenler  
+#### ❓ Soru 100: Statik değişkenli metot
 
-Bir yapı tanımlayın ve bir operatörü trait ile aşırı yükleyin.
+Statik değişken kullanan bir Rust metodu yazın.
 
-- `Add` trait'ini bir yapı için implemente edin.
-- `main` fonksiyonunda kullanımı gösterin.
+- Bir yapı tanımlayın ve bir statik değişkene erişen veya onu değiştiren bir metot implement edin.
+- Bu metodu nasıl kullanacağınızı gösterin ve güvenlik ile ilgili hususları açıklayın.
 
-🔧 **Görev:** Rust'ta trait ile operatör aşırı yüklemeyi gösterin.
+🔧 **Görev:** Bir metot implementasyonunda `static` değişken kullanın ve ona güvenli şekilde nasıl erişileceğini veya değiştirileceğini gösterin.

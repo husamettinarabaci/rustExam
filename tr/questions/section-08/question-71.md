@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Fonksiyonlar  
-#### ❓ Soru 71: Jenerik fonksiyon yazmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Fonksiyon İmzasında Temel Ömür Belirtimi  
+#### ❓ Soru 71: Fonksiyon imzasında temel ömür belirtimi
 
-Her tür ile çalışabilen bir Rust fonksiyonu yazın.
+Aşağıdaki adımları izleyerek ömür (lifetime) belirtimli bir fonksiyon yazın:
 
-- `Debug` trait'ini uygulayan herhangi bir türü alan ve yazdıran `print_item` fonksiyonu tanımlayın.
-- Bu fonksiyonu `main` fonksiyonunda farklı türlerle çağırın.
+- İki adet string slice (`&str`) parametresi alan bir fonksiyon tanımlayın.
+- Fonksiyon imzasında ömür belirtimi kullanarak giriş ve çıkış referanslarının ilişkisini belirtin.
+- Daha uzun olan string slice'ı döndürün.
+- `main` fonksiyonunda örnek kullanım gösterin.
 
-🔧 **Görev:** Rust'ta jenerik fonksiyon yazmayı ve kullanmayı gösterin.
+🔧 **Görev:** Bir fonksiyon imzasında temel ömür belirtimini kullanarak güvenli şekilde referans döndürmeyi gösterin.

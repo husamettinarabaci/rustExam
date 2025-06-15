@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Çoklu Trait'ler  
-#### ❓ Soru 94: Çoklu trait uygulamak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Değer döndüren metot  
+#### ❓ Soru 94: Değer döndüren metot
 
-Birden fazla trait uygulayan bir yapı yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- İki trait tanımlayın ve bir yapı için ikisini de implemente edin.
-- `main` fonksiyonunda kullanımı gösterin.
+- Bir yapı tanımlayın (ör: `Square`).
+- Bu yapı için bir metot (ör: `area`) tanımlayın ve bir değer döndürsün (ör: karenin alanı).
+- `main` fonksiyonunda bir örnek oluşturup metodu çağırın ve sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta bir yapı için birden fazla trait uygulamayı gösterin.
+🔧 **Görev:** Rust'ta bir yapıdan değer döndüren bir metot nasıl tanımlanır ve kullanılır, gösterin.

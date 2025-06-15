@@ -1,10 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Panic Macro  
-#### ❓ Question 53: Using the `panic!` macro
+## 📘 Section: Functions II  
+### 🔹 Category: Closures  
+#### ❓ Question 53: Introduction to closures
 
-Write a Rust program that demonstrates the use of the `panic!` macro.
+Write a Rust program that demonstrates the use of a closure:
 
-- Create a function that panics if a negative number is passed.
-- Call this function from `main` with both a positive and a negative number.
+- Define a closure that takes two integers and returns their sum.
+- Call the closure from the `main` function and print the result.
 
-🔧 **Task:** Show how to use the `panic!` macro to handle unrecoverable errors in Rust.
+🔧 **Task:** Show how to define and use a closure in Rust.

@@ -1,18 +1,19 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Referans Sayımı  
-#### ✅ Cevap 47: `Arc` ve `Rc` arasındaki fark
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Çağrıları  
+#### ✅ Cevap 47: Başka bir fonksiyon çağıran fonksiyon
 
-**Açıklama:**
-`Rc` (Reference Counted), tek bir thread içinde çoklu sahiplik için kullanılır. `Arc` (Atomic Reference Counted) ise çoklu thread'lerde güvenli paylaşım sağlar.
+Rust'ta bir fonksiyonun içinde başka bir fonksiyonu çağırmak için fonksiyon adını ve parantezleri kullanmak yeterlidir. Bu, kodun düzenli ve tekrar kullanılabilir olmasını sağlar.
 
-**Örnek:**
 ```rust
-use std::rc::Rc;
-let a = Rc::new(5);
-let b = Rc::clone(&a);
+fn greet() {
+    println!("Hello from greet!");
+}
 
-use std::sync::Arc;
-let x = Arc::new(5);
-let y = Arc::clone(&x);
+fn call_greet() {
+    greet();
+}
+
+fn main() {
+    call_greet();
+}
 ```
-Tek thread'de `Rc`, çoklu thread'de ise `Arc` tercih edilmelidir.

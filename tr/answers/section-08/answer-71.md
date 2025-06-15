@@ -1,19 +1,22 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Fonksiyonlar  
-#### ✅ Cevap 71: Jenerik fonksiyon yazmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Fonksiyon İmzasında Temel Ömür Belirtimi  
+#### ✅ Cevap 71: Fonksiyon imzasında temel ömür belirtimi
 
-**Açıklama:**
-Jenerik fonksiyonlar, her tür ile çalışabilen kod yazmanızı sağlar. Trait sınırları ile türler kısıtlanabilir.
+Bir fonksiyondan referans döndürmek için, giriş referansları ile çıkış referansı arasındaki ömür ilişkisini belirtmek gerekir. Bu, derleyiciye referansların ömürlerini nasıl ilişkilendireceğini söyler.
 
 ```rust
-use std::fmt::Debug;
-
-fn print_item<T: Debug>(item: T) {
-    println!("{:?}", item);
+fn en_uzun<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
 
 fn main() {
-    print_item(42);
-    print_item("merhaba");
+    let s1 = "merhaba";
+    let s2 = "dünya!";
+    let sonuc = en_uzun(s1, s2);
+    println!("En uzun string: {}", sonuc);
 }
 ```

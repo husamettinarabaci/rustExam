@@ -1,34 +1,17 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Özel Hata Tipleri  
-#### ✅ Cevap 54: Özel hata tipi tanımlamak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Fonksiyon Döndüren Fonksiyonlar  
+#### ✅ Cevap 54: Fonksiyon döndüren fonksiyon
 
-**Açıklama:**
-Kendi hata tipinizi enum ile tanımlayabilir ve özel hata mesajları için `Display` trait'ini implemente edebilirsiniz.
+Rust'ta fonksiyonlardan closure döndürmek için `impl Fn` kullanılabilir. Burada dıştaki fonksiyon, kendisine verilen sayının karesini alan bir closure döndürür.
 
 ```rust
-use std::fmt;
-
-enum MyError {
-    Bulunamadi,
-    GecersizGirdi,
+fn kare_yapici() -> impl Fn(i32) -> i32 {
+    |x| x * x
 }
 
-impl fmt::Display for MyError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            MyError::Bulunamadi => write!(f, "Bulunamadı"),
-            MyError::GecersizGirdi => write!(f, "Geçersiz girdi"),
-        }
-    }
-}
-
-fn bir_sey_yap(girdi: i32) -> Result<i32, MyError> {
-    if girdi < 0 {
-        Err(MyError::GecersizGirdi)
-    } else if girdi == 0 {
-        Err(MyError::Bulunamadi)
-    } else {
-        Ok(girdi)
-    }
+fn main() {
+    let kare = kare_yapici();
+    let sonuc = kare(6);
+    println!("Kare: {}", sonuc); // Çıktı: Kare: 36
 }
 ```

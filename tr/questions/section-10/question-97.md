@@ -1,10 +1,12 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait'te İlişkili Tipler  
-#### ❓ Soru 97: Trait'te ilişkili tipler kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Varsayılan implementasyonlu metot  
+#### ❓ Soru 97: Varsayılan implementasyonlu metot
 
-İlişkili tip içeren bir trait yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- İlişkili tip ve onu kullanan bir metot içeren bir trait tanımlayın.
-- Bir yapı için bu trait'i implemente edin.
+- Bir yapı tanımlayın (ör: `Config`).
+- Bu yapı için `Default` trait'ini implemente edin ve varsayılan değerler sağlayın.
+- Yapı için bir metot ekleyin (ör: `describe`) ve bu metot varsayılan değerleri kullansın.
+- `main` fonksiyonunda varsayılan bir örnek oluşturup metodu çağırın.
 
-🔧 **Görev:** Rust'ta trait'te ilişkili tip kullanımını gösterin.
+🔧 **Görev:** Rust'ta bir yapı için `Default` trait'i ve varsayılan değer kullanan bir metot nasıl tanımlanır ve kullanılır, gösterin.

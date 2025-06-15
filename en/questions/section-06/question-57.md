@@ -1,10 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Handling Multiple Errors  
-#### ❓ Question 57: Handling multiple error types
+## 📘 Section: Functions II  
+### 🔹 Category: Trait Bounds in Functions  
+#### ❓ Question 57: Function with trait bound parameter
 
-Write a Rust function that handles multiple error types.
+Write a Rust program that demonstrates a function with a trait bound parameter:
 
-- Define a function that can return either an I/O error or a parsing error.
-- Use the `Box<dyn std::error::Error>` type for the error.
+- Define a function that takes a parameter constrained by a trait (e.g., `Display`).
+- Call this function from `main` with at least two different types that implement the trait.
 
-🔧 **Task:** Show how to handle multiple error types in a single function in Rust.
+🔧 **Task:** Show how to use trait bounds in function parameters in Rust.

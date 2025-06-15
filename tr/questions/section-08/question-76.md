@@ -1,11 +1,11 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Metotlar  
-#### ❓ Soru 76: Jenerik metot uygulamak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Fonksiyon Dönüşlerinde Ömür  
+#### ❓ Soru 76: Fonksiyon dönüşlerinde ömür
 
-Jenerik metodu olan bir Rust yapısı yazın.
+Aşağıdaki adımları izleyerek dönüş değeri referans olan ve ömür parametresi gerektiren bir Rust fonksiyonu yazın:
 
-- `Wrapper<T>` adında bir yapı tanımlayın.
-- `get_value` adında değeri referans olarak döndüren bir metot implemente edin.
-- `main` fonksiyonunda kullanımını gösterin.
+- Bir string dilimi referansı alan ve ilk kelimesinin referansını döndüren bir fonksiyon yazın.
+- Hem giriş hem de çıkış referansları için doğru ömür parametresini ekleyin.
+- `main` fonksiyonunda bir örnekle ilk kelimeyi yazdırın.
 
-🔧 **Görev:** Rust'ta jenerik metot uygulamasını gösterin.
+🔧 **Görev:** Girişten türetilen bir referansı döndüren fonksiyonda ömür parametresi kullanımını gösterin.

@@ -1,21 +1,24 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Self Keyword  
-#### ✅ Answer 90: Using the `self` keyword in modules
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with associated functions  
+#### ✅ Answer 90: Structs with associated functions
 
-**Explanation:**
-The `self` keyword refers to the current module. Use `self::` to call items within the same module.
+Associated functions in Rust are functions defined within an `impl` block that are not tied to a specific instance. They are often used as constructors. Here, we define a `Rectangle` struct and implement a `new` associated function to create instances.
 
 ```rust
-mod mymod {
-    pub fn a() {
-        self::b();
-    }
-    pub fn b() {
-        println!("b called");
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // Associated function (constructor)
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
     }
 }
 
 fn main() {
-    mymod::a();
+    let rect = Rectangle::new(30, 50);
+    println!("Rectangle: {} x {}", rect.width, rect.height);
 }
 ```

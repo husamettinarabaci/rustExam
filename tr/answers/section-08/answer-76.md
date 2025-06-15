@@ -1,23 +1,20 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Metotlar  
-#### ✅ Cevap 76: Jenerik metot uygulamak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Fonksiyon Dönüşlerinde Ömür  
+#### ✅ Cevap 76: Fonksiyon dönüşlerinde ömür
 
-**Açıklama:**
-Jenerik yapılarda metotlar da jenerik olabilir.
+Bir fonksiyon, girişteki veriden türetilen bir referans döndürüyorsa, dönen referansın geçerliliğini sağlamak için ömür parametresi eklenmelidir. Burada fonksiyon, string diliminin ilk kelimesini döndürür.
 
 ```rust
-struct Wrapper<T> {
-    value: T,
-}
-
-impl<T> Wrapper<T> {
-    fn get_value(&self) -> &T {
-        &self.value
+fn ilk_kelime<'a>(s: &'a str) -> &'a str {
+    match s.find(' ') {
+        Some(idx) => &s[..idx],
+        None => s,
     }
 }
 
 fn main() {
-    let w = Wrapper { value: 42 };
-    println!("{}", w.get_value());
+    let metin = String::from("merhaba dünya");
+    let kelime = ilk_kelime(&metin);
+    println!("İlk kelime: {}", kelime);
 }
 ```

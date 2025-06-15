@@ -1,11 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Custom Error Types  
-#### ❓ Question 54: Defining a custom error type
+## 📘 Section: Functions II  
+### 🔹 Category: Returning Functions  
+#### ❓ Question 54: Function that returns another function
 
-Write a Rust program that defines and uses a custom error type.
+Write a Rust program that demonstrates a function returning another function:
 
-- Create an enum `MyError` with at least two variants.
-- Implement the `std::fmt::Display` trait for your error type.
-- Write a function that returns a `Result` using your custom error.
+- Define a function that returns a function (or closure) which takes an integer and returns its square.
+- Call the outer function from `main`, then use the returned function to compute and print the square of a number.
 
-🔧 **Task:** Demonstrate how to define and use a custom error type in Rust.
+🔧 **Task:** Show how to return a function or closure from another function in Rust.

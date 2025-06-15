@@ -1,22 +1,18 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: crate Anahtar Kelimesi  
-#### ✅ Cevap 86: `crate` anahtar kelimesini kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapıyı Debug ile Yazdırma  
+#### ✅ Cevap 86: Yapıyı debug ile yazdırma
 
-**Açıklama:**
-`crate` anahtar kelimesi, kök modüle erişmek için kullanılır.
+Rust'ta bir yapıyı debug ile yazdırmak için `Debug` trait'i türetilir ve `println!` makrosunda `{:?}` kullanılır. Bu, yapının değerlerini hızlıca görmek için kullanışlıdır.
 
 ```rust
-fn kok_fonksiyon() {
-    println!("Kök fonksiyon");
-}
-
-mod alt {
-    pub fn kok_cagir() {
-        crate::kok_fonksiyon();
-    }
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32,
 }
 
 fn main() {
-    alt::kok_cagir();
+    let p = Point { x: 3, y: 7 };
+    println!("{:?}", p);
 }
 ```

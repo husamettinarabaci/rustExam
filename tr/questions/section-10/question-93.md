@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Sınırları  
-#### ❓ Soru 93: Fonksiyonlarda trait sınırı kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: `&self` ve `&mut self` alan metotlar  
+#### ❓ Soru 93: `&self` ve `&mut self` alan metotlar
 
-Trait sınırı olan jenerik parametre alan bir fonksiyon yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- Bir trait ve bu trait'i uygulayan türleri kabul eden bir fonksiyon tanımlayın.
-- Fonksiyonu uygun bir türle çağırın.
+- Bir yapı tanımlayın (ör: `Counter`).
+- Bu yapı için `&self` alan bir metot (ör: `value`) ve `&mut self` alan bir metot (ör: `increment`) tanımlayın.
+- `main` fonksiyonunda bir örnek oluşturup her iki metodu da çağırın ve sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta fonksiyonlarda trait sınırı kullanımını gösterin.
+🔧 **Görev:** Rust'ta bir yapı için hem değiştirilemez hem de değiştirilebilir metotların nasıl tanımlanıp kullanıldığını gösterin.

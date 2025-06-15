@@ -1,24 +1,22 @@
-## 📚 Section: Traits  
-### 🔹 Category: Defining Traits  
-#### ✅ Answer 91: Defining a trait
+## 📘 Section: Structs II  
+### 🔹 Category: Implementing methods with `impl`  
+#### ✅ Answer 91: Implementing methods with `impl`
 
-**Explanation:**
-Traits define shared behavior. Implement the trait for a struct and call its method.
+In Rust, methods are defined within an `impl` block for a struct. Here, we define a `Circle` struct and implement an `area` method that calculates the area of the circle.
 
 ```rust
-trait Speak {
-    fn speak(&self);
+struct Circle {
+    radius: f64,
 }
 
-struct Dog;
-impl Speak for Dog {
-    fn speak(&self) {
-        println!("Woof!");
+impl Circle {
+    fn area(&self) -> f64 {
+        std::f64::consts::PI * self.radius * self.radius
     }
 }
 
 fn main() {
-    let d = Dog;
-    d.speak();
+    let c = Circle { radius: 3.0 };
+    println!("Area: {}", c.area());
 }
 ```

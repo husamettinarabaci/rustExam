@@ -1,10 +1,11 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Çoklu Tip Parametreleri  
-#### ❓ Soru 75: Çoklu tip parametreleri kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Ömür Hataları ve Çözümleri  
+#### ❓ Soru 75: Ömür hataları ve çözümleri
 
-Çoklu tip parametresi kullanan bir Rust yapısı yazın.
+Aşağıdaki adımları izleyerek ömür hatasını ve çözümünü gösteren bir Rust fonksiyonu yazın:
 
-- İki farklı türde değer tutan bir `Pair<T, U>` yapısı tanımlayın.
-- `main` fonksiyonunda bir örnek oluşturun.
+- İki string dilimi referansı alan ve daha uzun olanı döndüren bir fonksiyon yazın.
+- Önce ömür parametresi olmadan yazın ve derleyici hatasını gözlemleyin.
+- Ardından doğru ömür parametresi ekleyerek hatayı düzeltin.
 
-🔧 **Görev:** Rust'ta çoklu tip parametresi kullanımını gösterin.
+🔧 **Görev:** Fonksiyon imzasında açık ömür parametresi kullanarak yaygın bir ömür hatasını ve çözümünü gösterin.

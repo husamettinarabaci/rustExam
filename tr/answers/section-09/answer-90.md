@@ -1,21 +1,24 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: self Anahtar Kelimesi  
-#### ✅ Cevap 90: Modüllerde self anahtar kelimesini kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: İlişkili fonksiyonlu yapılar  
+#### ✅ Cevap 90: İlişkili fonksiyonlu yapılar
 
-**Açıklama:**
-`self` anahtar kelimesi, mevcut modülü ifade eder. Aynı modül içindeki başka bir fonksiyonu `self::` ile çağırabilirsiniz.
+Rust'ta ilişkili fonksiyonlar, bir `impl` bloğu içinde tanımlanır ve genellikle yapıcı olarak kullanılır. Burada, `Rectangle` adında bir yapı ve ona ait bir `new` ilişkili fonksiyonu tanımlanmıştır.
 
 ```rust
-mod mymod {
-    pub fn a() {
-        self::b();
-    }
-    pub fn b() {
-        println!("b çağrıldı");
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // İlişkili fonksiyon (yapıcı)
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
     }
 }
 
 fn main() {
-    mymod::a();
+    let rect = Rectangle::new(30, 50);
+    println!("Rectangle: {} x {}", rect.width, rect.height);
 }
 ```

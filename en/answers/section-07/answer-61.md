@@ -1,18 +1,16 @@
-## 📚 Section: Collections  
-### 🔹 Category: Vectors  
-#### ✅ Answer 61: Creating and using a vector
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Ownership Transfer  
+#### ✅ Answer 61: Demonstrating ownership transfer
 
-**Explanation:**
-Vectors are growable arrays. You can add elements with `push` and iterate with a loop.
+In Rust, assigning a non-Copy type (like `String`) to another variable transfers ownership. Using the original variable after the move causes a compile-time error.
 
 ```rust
 fn main() {
-    let mut v = Vec::new();
-    v.push(1);
-    v.push(2);
-    v.push(3);
-    for x in &v {
-        println!("{}", x);
-    }
+    let s1 = String::from("hello");
+    let s2 = s1; // ownership of the String is moved to s2
+    // println!("{}", s1); // error: value borrowed here after move
+    println!("{}", s2); // works fine
 }
 ```
+
+If you uncomment the line with `s1`, the compiler will report an error because `s1` is no longer valid after the move.

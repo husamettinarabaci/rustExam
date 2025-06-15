@@ -1,23 +1,17 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: super Anahtar Kelimesi  
-#### ✅ Cevap 85: `super` anahtar kelimesini kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Demet Yapılar ve Birim Benzeri Yapılar  
+#### ✅ Cevap 85: Demet yapılar ve birim benzeri yapılar
 
-**Açıklama:**
-`super` anahtar kelimesi, üst modüldeki öğelere erişmek için kullanılır.
+Rust'ta demet yapılar, tuple gibi davranır ama bir isimleri vardır; birim benzeri yapılar ise alan içermez. Burada her ikisi de tanımlanıp kullanılır.
 
 ```rust
-mod ust {
-    pub fn ust_fonksiyon() {
-        println!("Üstteki");
-    }
-    pub mod alt {
-        pub fn ustu_cagir() {
-            super::ust_fonksiyon();
-        }
-    }
-}
+struct Color(u8, u8, u8);
+struct Marker;
 
 fn main() {
-    ust::alt::ustu_cagir();
+    let siyah = Color(0, 0, 0);
+    let isaretci = Marker;
+    println!("Renk: {}, {}, {}", siyah.0, siyah.1, siyah.2);
+    // isaretci bir değer olarak kullanılabilir, alanı yoktur
 }
 ```

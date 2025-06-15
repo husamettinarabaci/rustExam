@@ -1,10 +1,11 @@
-## 📚 Section: Collections  
-### 🔹 Category: HashMaps  
-#### ❓ Question 62: Using a HashMap
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Move Semantics  
+#### ❓ Question 62: Move semantics with variables
 
-Write a Rust program that does the following:
+Write a Rust program that demonstrates move semantics with variables.
 
-- Create a `HashMap` that maps strings to integers.
-- Insert and retrieve values from the map.
+- Create a variable with a value (e.g., a `String`).
+- Move the value to another variable by assignment.
+- Attempt to use the original variable after the move and observe the compiler error.
 
-🔧 **Task:** Show how to use a `HashMap` in Rust.
+🔧 **Task:** Show how move semantics work in Rust when assigning ownership from one variable to another.

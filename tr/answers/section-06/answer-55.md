@@ -1,18 +1,19 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hataları Yönlendirme  
-#### ✅ Cevap 55: `?` ile hataları yönlendirmek
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Closure Parametreli Fonksiyonlar  
+#### ✅ Cevap 55: Closure parametreli fonksiyon
 
-**Açıklama:**
-`?` operatörü, hata döndüren fonksiyonlarda hatayı üst fonksiyona iletmek için kullanılır.
+Closure'lar, generics ve `Fn` trait'i ile fonksiyonlara parametre olarak geçirilebilir. Burada bir fonksiyon, closure'ı bir değere uygular.
 
 ```rust
-use std::fs::File;
-use std::io::{self, Read};
+fn ona_uygula<F>(f: F) -> i32
+where
+    F: Fn(i32) -> i32,
+{
+    f(10)
+}
 
-fn dosya_oku(yol: &str) -> Result<String, io::Error> {
-    let mut dosya = File::open(yol)?;
-    let mut icerik = String::new();
-    dosya.read_to_string(&mut icerik)?;
-    Ok(icerik)
+fn main() {
+    let sonuc = ona_uygula(|x| x * 3);
+    println!("Sonuç: {}", sonuc); // Çıktı: Sonuç: 30
 }
 ```

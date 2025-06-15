@@ -1,17 +1,29 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Yaşam Süresi Parametreleri  
-#### ✅ Cevap 80: Jeneriklerle yaşam süresi parametreleri kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Trait Nesnelerinde Ömür  
+#### ✅ Cevap 80: Trait nesnelerinde ömür
 
-**Açıklama:**
-Yaşam süresi parametreleri, referansların geçerli olduğu süreyi jeneriklerle birlikte güvenli şekilde belirtir.
+Bir yapı, trait nesnesine referans tutuyorsa, bu referans için ömür parametresi belirtilmelidir. Örnek:
 
 ```rust
-fn ilkini_al<'a, T>(dilim: &'a [T]) -> &'a T {
-    &dilim[0]
+trait Selamla {
+    fn selamla(&self) -> String;
+}
+
+struct Selamlayici<'a> {
+    selamlayici: &'a dyn Selamla,
+}
+
+struct Kisi;
+
+impl Selamla for Kisi {
+    fn selamla(&self) -> String {
+        String::from("Kişiden merhaba!")
+    }
 }
 
 fn main() {
-    let arr = [1, 2, 3];
-    println!("{}", ilkini_al(&arr));
+    let kisi = Kisi;
+    let selamlayici = Selamlayici { selamlayici: &kisi };
+    println!("{}", selamlayici.selamlayici.selamla());
 }
 ```

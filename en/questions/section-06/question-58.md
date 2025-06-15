@@ -1,10 +1,10 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Error Handling in Iterators  
-#### ❓ Question 58: Error handling in iterators
+## 📘 Section: Functions II  
+### 🔹 Category: Recursion  
+#### ❓ Question 58: Function with recursion
 
-Write a Rust program that demonstrates error handling in iterators.
+Write a Rust program that demonstrates a recursive function:
 
-- Use `iter().map()` to process a list of strings, converting each to an integer.
-- Collect the results into a `Result<Vec<i32>, _>`.
+- Define a function that calls itself to compute the factorial of a number.
+- Call this function from `main` and print the result for a sample input (e.g., 5).
 
-🔧 **Task:** Show how to handle errors when mapping over an iterator in Rust.
+🔧 **Task:** Show how to implement and use recursion in Rust functions.

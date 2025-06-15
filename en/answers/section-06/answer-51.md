@@ -1,23 +1,17 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Result Type  
-#### ✅ Answer 51: Using the Result type for error handling
+## 📘 Section: Functions II  
+### 🔹 Category: Scope and Lifetime  
+#### ✅ Answer 51: Function scope and variable lifetime
 
-**Explanation:**
-The `Result` type is used in Rust for functions that can succeed or fail. It allows you to return either a success value (`Ok`) or an error (`Err`).
+In Rust, variables are only valid within the scope they are declared. Once the scope ends, the variable is dropped and cannot be accessed.
 
 ```rust
-fn divide(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 {
-        Err("Cannot divide by zero".to_string())
-    } else {
-        Ok(a / b)
-    }
+fn print_scope() {
+    let x = 10;
+    println!("x inside function: {}", x); // x is valid here
 }
 
 fn main() {
-    match divide(10, 2) {
-        Ok(result) => println!("Quotient: {}", result),
-        Err(e) => println!("Error: {}", e),
-    }
+    print_scope();
+    // println!("x outside function: {}", x); // Error: x not found in this scope
 }
 ```

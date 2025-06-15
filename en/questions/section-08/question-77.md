@@ -1,10 +1,12 @@
-## 📚 Section: Generics  
-### 🔹 Category: Associated Types  
-#### ❓ Question 77: Using associated types in traits
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Method Receivers  
+#### ❓ Question 77: Lifetime in method receivers
 
-Write a Rust trait with an associated type.
+Write a Rust struct and implement a method that uses lifetime annotations in its receiver:
 
-- Define a trait `Summable` with an associated type `Item` and a method `sum`.
-- Implement the trait for a struct.
+- Define a struct that holds a string slice reference (`&str`) with a lifetime parameter.
+- Implement a method for the struct that returns the length of the referenced string.
+- Annotate the method receiver with the correct lifetime.
+- Demonstrate usage in `main` by creating an instance and calling the method.
 
-🔧 **Task:** Demonstrate how to use associated types in Rust traits.
+🔧 **Task:** Show how to use lifetime annotations in method receivers for structs with reference fields.

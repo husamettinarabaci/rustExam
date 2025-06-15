@@ -1,19 +1,17 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Trait Sınırları  
-#### ✅ Cevap 74: Jeneriklerde trait sınırı kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Yapılar ve Ömürler  
+#### ✅ Cevap 74: Ömür parametreli yapılar
 
-**Açıklama:**
-Trait sınırları, jenerik türlerin belirli trait'leri uygulamasını zorunlu kılar.
+Bir yapıda referans alanı varsa, bu referansın yapının ömrü boyunca geçerli olmasını sağlamak için ömür parametresi belirtilmelidir. Burada `TextHolder` yapısı bir string dilimi referansı tutar ve `'a` ömrü bu referansın geçerliliğini garanti eder.
 
 ```rust
-use std::fmt::Display;
-
-fn yazdir<T: Display>(deger: T) {
-    println!("{}", deger);
+struct TextHolder<'a> {
+    text: &'a str,
 }
 
 fn main() {
-    yazdir(123);
-    yazdir("abc");
+    let s = String::from("Merhaba, ömür!");
+    let holder = TextHolder { text: &s };
+    println!("{}", holder.text);
 }
 ```

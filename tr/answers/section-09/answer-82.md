@@ -1,18 +1,21 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Görünürlük  
-#### ✅ Cevap 82: `pub` ile görünürlük sağlamak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapı Alanları  
+#### ✅ Cevap 82: Yapı alanlarına erişim
 
-**Açıklama:**
-`pub` anahtar kelimesi, öğeleri modül dışından erişilebilir yapar.
+Rust'ta yapı alanlarına nokta gösterimi ile erişilir. Burada bir `Book` yapısı tanımlanır, bir örneği oluşturulur ve alanları `println!` ile yazdırılır.
 
 ```rust
-mod mymod {
-    pub struct MyStruct;
-    pub fn my_func() {}
+struct Book {
+    title: String,
+    pages: u32,
 }
 
 fn main() {
-    let _ = mymod::MyStruct;
-    mymod::my_func();
+    let my_book = Book {
+        title: String::from("Rust Programlama"),
+        pages: 320,
+    };
+    println!("Başlık: {}", my_book.title);
+    println!("Sayfa: {}", my_book.pages);
 }
 ```

@@ -1,19 +1,13 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Panic Macro  
-#### ✅ Answer 53: Using the `panic!` macro
+## 📘 Section: Functions II  
+### 🔹 Category: Closures  
+#### ✅ Answer 53: Introduction to closures
 
-**Explanation:**
-The `panic!` macro is used for unrecoverable errors. It stops the program and prints an error message.
+Closures in Rust are anonymous functions you can store in variables. Here, a closure adds two numbers and is called from `main`.
 
 ```rust
-fn check_positive(n: i32) {
-    if n < 0 {
-        panic!("Negative number: {}", n);
-    }
-}
-
 fn main() {
-    check_positive(5);
-    check_positive(-3);
+    let sum = |a: i32, b: i32| a + b; // Define closure
+    let result = sum(5, 7);
+    println!("Sum: {}", result); // Output: Sum: 12
 }
 ```

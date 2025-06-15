@@ -1,10 +1,11 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Dilimler  
-#### ❓ Soru 64: Dilimlerle çalışmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Fonksiyondan Sahiplik Döndürme  
+#### ❓ Soru 64: Fonksiyondan sahiplik döndürme
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Bir değerin sahipliğini döndüren bir Rust fonksiyonu yazın.
 
-- Bir dizi oluşturun ve bir dilimini alın.
-- Dilimdeki elemanları yazdırın.
+- Bir `String` oluşturan ve onu döndüren bir fonksiyon tanımlayın.
+- `main` fonksiyonunda dönen değeri alın ve kullanın.
+- Sahipliğin fonksiyondan çağırana nasıl aktarıldığını açıklayın.
 
-🔧 **Görev:** Rust'ta dilimlerin nasıl kullanılacağını gösterin.
+🔧 **Görev:** Bir fonksiyonun Rust'ta bir değerin sahipliğini nasıl döndürebileceğini gösterin.

@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Yapılar  
-#### ❓ Soru 72: Jenerik yapı tanımlamak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Çoklu Referanslarla Ömür  
+#### ❓ Soru 72: Çoklu referanslarla ömür
 
-Her türü tutabilen bir Rust yapısı yazın.
+Aşağıdaki adımları izleyerek farklı ömürlere sahip iki string slice alan ve daha uzun olanı döndüren bir fonksiyon yazın:
 
-- `T` tipinde değer tutan bir `Container<T>` yapısı tanımlayın.
-- `main` fonksiyonunda farklı türlerle `Container` örnekleri oluşturun.
+- İki adet farklı ömürlere sahip `&str` parametresi alan bir fonksiyon tanımlayın.
+- Fonksiyon imzasında birden fazla ömür belirtimi kullanarak giriş ve çıkış referanslarının ilişkisini belirtin.
+- Daha uzun olan string slice'ı döndürün.
+- `main` fonksiyonunda örnek kullanım gösterin.
 
-🔧 **Görev:** Rust'ta jenerik yapı tanımlamayı ve kullanmayı gösterin.
+🔧 **Görev:** Bir fonksiyon imzasında birden fazla ömür belirtimini kullanarak güvenli şekilde referans döndürmeyi gösterin.

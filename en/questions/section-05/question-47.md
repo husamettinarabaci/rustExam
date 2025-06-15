@@ -1,10 +1,11 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Reference Counting  
-#### ❓ Question 47: Difference between `Arc` and `Rc`
+### 🔹 Category: Function Calls  
+#### ❓ Question 47: Function that calls another function
 
-Explain the difference between `Arc` and `Rc` in Rust.
+Write a Rust program that demonstrates calling one function from another.
 
-- Describe when to use `Rc` and when to use `Arc`.
-- Provide a brief example of each.
+- Define a function named `greet` that prints `Hello from greet!` to the terminal.
+- Define another function named `call_greet` that calls the `greet` function.
+- In the `main` function, call `call_greet`.
 
-🔧 **Task:** Clarify the use cases for `Rc` and `Arc` in Rust programs.
+🔧 **Task:** Show how to call a function from within another function in Rust.

@@ -1,10 +1,11 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Eşzamanlılık Primitifleri  
-#### ❓ Soru 48: `Mutex` ve `RwLock` arasındaki fark
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Parametreleri  
+#### ❓ Soru 48: Varsayılan argümanlı fonksiyon (simüle)
 
-Rust'ta `Mutex` ve `RwLock` arasındaki farkı açıklayın.
+Varsayılan argümanları simüle eden bir Rust fonksiyonu yazın.
 
-- Hangi durumlarda `Mutex`, hangi durumlarda `RwLock` kullanılmalı?
-- Her biri için kısa bir örnek verin.
+- `print_number` adında, parametre olarak `Option<i32>` alan bir fonksiyon tanımlayın.
+- Eğer değer verilirse sayıyı yazdırın, verilmezse `Default is 42` yazdırın.
+- `main` fonksiyonunda hem `Some(7)` hem de `None` ile çağırın.
 
-🔧 **Görev:** Rust'ta eşzamanlı programlarda `Mutex` ve `RwLock` kullanım alanlarını açıklayın.
+🔧 **Görev:** Rust'ta varsayılan argümanları `Option` ve desen eşleme ile nasıl simüle edebileceğinizi gösterin.

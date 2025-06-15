@@ -1,10 +1,11 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashSet  
-#### ❓ Soru 66: HashSet kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Referanslarla Ödünç Alma  
+#### ❓ Soru 66: Referanslarla ödünç alma
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Bir değeri referans ile ödünç alan bir Rust fonksiyonu yazın.
 
-- Bir tamsayı `HashSet`i oluşturun.
-- Eleman ekleyin ve üyelik kontrolü yapın.
+- Parametre olarak bir `String`'e referans alan bir fonksiyon tanımlayın.
+- Sahipliği aktarmadan bir `String` değişkeniyle fonksiyonu çağırın.
+- Fonksiyon çağrısından sonra orijinal değişkenin hâlâ kullanılabildiğini gösterin.
 
-🔧 **Görev:** Rust'ta `HashSet` kullanımını gösterin.
+🔧 **Görev:** Rust'ta referanslarla ödünç almanın nasıl çalıştığını gösterin.

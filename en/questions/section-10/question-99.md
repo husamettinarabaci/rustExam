@@ -1,10 +1,11 @@
-## 📚 Section: Traits  
-### 🔹 Category: Blanket Implementations  
-#### ❓ Question 99: Blanket implementations
+## 📘 Section: Structs II  
+### 🔹 Category: Methods and Lifetimes  
+#### ❓ Question 99: Method with lifetimes
 
-Write a Rust program that demonstrates blanket implementations.
+Write a Rust method that uses explicit lifetime annotations.
 
-- Implement a trait for all types that satisfy a trait bound.
-- Show usage in `main`.
+- Define a struct that holds a reference.
+- Implement a method for the struct that returns a reference, using explicit lifetime annotations in the method signature.
+- Demonstrate how to use this method in a simple example.
 
-🔧 **Task:** Show how to use blanket implementations in Rust.
+🔧 **Task:** Use explicit lifetime annotations in a method implementation and explain why they are needed.

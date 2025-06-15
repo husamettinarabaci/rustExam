@@ -1,10 +1,11 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Re-exporting  
-#### ❓ Question 88: Re-exporting with `pub use`
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with Lifetimes  
+#### ❓ Question 88: Structs with lifetimes
 
-Write a Rust program that demonstrates re-exporting items from a module.
+Write a Rust program that demonstrates how to define and use a struct with lifetime parameters.
 
-- Use `pub use` to re-export a function from a submodule.
-- Access the function from outside the module.
+- Define a struct named `Message` with a field `content` (&str) that requires a lifetime parameter.
+- Create an instance of `Message` using a string slice.
+- Print the value of the `content` field to the terminal.
 
-🔧 **Task:** Show how to re-export items with `pub use` in Rust.
+🔧 **Task:** Show how to define and use a struct with lifetime parameters in Rust.

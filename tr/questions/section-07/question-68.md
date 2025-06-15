@@ -1,10 +1,12 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: BinaryHeap  
-#### ❓ Soru 68: BinaryHeap kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Birden Fazla Değiştirilemez Referans  
+#### ❓ Soru 68: Birden fazla değiştirilemez referans
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Aşağıdaki adımları izleyerek Rust'ta birden fazla değiştirilemez referans kuralını gösteren bir program yazın:
 
-- Bir `BinaryHeap` oluşturun ve birkaç tamsayı ekleyin.
-- Heap'ten elemanları çıkarıp yazdırın.
+- Bir değişken oluşturun ve ona birden fazla değiştirilemez referans alın.
+- Aynı anda birden fazla değiştirilemez referans alınabileceğini gösterin.
+- Değiştirilemez referanslar aktifken değiştirilebilir referans almaya çalışın ve derleyici hatasını gözlemleyin.
+- İsteğe bağlı olarak, scope (kapsam) kullanarak referans kurallarının nasıl değiştiğini gösterin.
 
-🔧 **Görev:** Rust'ta `BinaryHeap` kullanımını gösterin.
+🔧 **Görev:** Rust'ın değiştirilemez ve değiştirilebilir referanslar için ödünç alma kurallarını, kısıtlamaları ve scope kullanarak referans yönetimini gösterin.

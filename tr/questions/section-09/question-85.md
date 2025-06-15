@@ -1,10 +1,13 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: super Anahtar Kelimesi  
-#### ❓ Soru 85: `super` anahtar kelimesini kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Demet Yapılar ve Birim Benzeri Yapılar  
+#### ❓ Soru 85: Demet yapılar ve birim benzeri yapılar
 
-`super` anahtar kelimesinin kullanımını gösteren bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Bir modül ve içinde alt modül tanımlayın.
-- Alt modülden üst modüldeki bir fonksiyona `super` ile erişin.
+- Üç `u8` alana sahip `Color` adında bir demet yapı tanımlayın.
+- Alanı olmayan `Marker` adında bir birim benzeri yapı tanımlayın.
+- `Color` yapısından bir örnek oluşturun ve değer atayın.
+- `Marker` yapısından bir örnek oluşturun.
+- `Color` örneğinin değerlerini terminale yazdırın.
 
-🔧 **Görev:** Rust'ta `super` anahtar kelimesinin modüllerde kullanımını gösterin.
+🔧 **Görev:** Rust'ta demet yapılar ve birim benzeri yapılar nasıl tanımlanır ve kullanılır gösterin.

@@ -1,18 +1,21 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Visibility  
-#### ✅ Answer 82: Using `pub` for visibility
+## 📘 Section: Structs I  
+### 🔹 Category: Struct Fields  
+#### ✅ Answer 82: Accessing struct fields
 
-**Explanation:**
-The `pub` keyword makes items public so they can be accessed from outside the module.
+To access struct fields in Rust, use dot notation. Here, we define a `Book` struct, create an instance, and print its fields using `println!`.
 
 ```rust
-mod mymod {
-    pub struct MyStruct;
-    pub fn my_func() {}
+struct Book {
+    title: String,
+    pages: u32,
 }
 
 fn main() {
-    let _ = mymod::MyStruct;
-    mymod::my_func();
+    let my_book = Book {
+        title: String::from("Rust Programming"),
+        pages: 320,
+    };
+    println!("Title: {}", my_book.title);
+    println!("Pages: {}", my_book.pages);
 }
 ```

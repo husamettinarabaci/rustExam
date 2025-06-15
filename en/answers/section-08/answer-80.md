@@ -1,17 +1,29 @@
-## 📚 Section: Generics  
-### 🔹 Category: Lifetime Parameters  
-#### ✅ Answer 80: Using lifetime parameters with generics
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Trait Objects  
+#### ✅ Answer 80: Lifetime in trait objects
 
-**Explanation:**
-Lifetime parameters ensure references are valid for the required scope, even with generics.
+When a struct holds a reference to a trait object, you must specify a lifetime for the reference. Here is an example:
 
 ```rust
-fn get_first<'a, T>(slice: &'a [T]) -> &'a T {
-    &slice[0]
+trait Greet {
+    fn greet(&self) -> String;
+}
+
+struct Greeter<'a> {
+    greeter: &'a dyn Greet,
+}
+
+struct Person;
+
+impl Greet for Person {
+    fn greet(&self) -> String {
+        String::from("Hello from Person!")
+    }
 }
 
 fn main() {
-    let arr = [1, 2, 3];
-    println!("{}", get_first(&arr));
+    let person = Person;
+    let greeter = Greeter { greeter: &person };
+    println!("{}", greeter.greeter.greet());
 }
 ```

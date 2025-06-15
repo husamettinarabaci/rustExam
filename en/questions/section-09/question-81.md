@@ -1,10 +1,11 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Modules  
-#### ❓ Question 81: Creating and using modules
+## 📘 Section: Structs I  
+### 🔹 Category: Struct Definition and Instantiation  
+#### ❓ Question 81: Defining a struct and creating an instance
 
-Write a Rust program that defines and uses a module.
+Write a Rust program that does the following:
 
-- Define a module named `math` with a function `add`.
-- Call the function from `main`.
+- Define a struct named `Person` with fields `name` (String) and `age` (u32).
+- Create an instance of `Person` in `main` and assign values to its fields.
+- Print the person's name and age to the terminal.
 
-🔧 **Task:** Demonstrate how to define and use modules in Rust.
+🔧 **Task:** Demonstrate how to define a struct and create an instance with field values.

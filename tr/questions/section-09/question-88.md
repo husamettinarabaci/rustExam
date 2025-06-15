@@ -1,11 +1,11 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Yeniden Dışa Aktarma  
-#### ❓ Soru 88: `pub use` ile yeniden dışa aktarma
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Ömürlü Yapılar  
+#### ❓ Soru 88: Ömürlü yapılar
 
-`pub use` ile bir modülden fonksiyonun yeniden dışa aktarılmasını gösteren bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Alt modülde bir fonksiyon tanımlayın.
-- `pub use` ile fonksiyonu üst modülde dışa aktarın.
-- Dışarıdan bu fonksiyona erişin.
+- `content` (&str) alanına sahip ve ömür parametresi gerektiren bir `Message` yapısı tanımlayın.
+- Bir string slice kullanarak `Message` örneği oluşturun.
+- `content` alanının değerini terminale yazdırın.
 
-🔧 **Görev:** Rust'ta `pub use` ile yeniden dışa aktarmayı gösterin.
+🔧 **Görev:** Ömür parametresi içeren bir yapının nasıl tanımlanıp kullanılacağını gösterin.

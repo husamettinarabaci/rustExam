@@ -1,22 +1,20 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Özel Result Takma Adı  
-#### ✅ Cevap 59: Özel Result takma adı oluşturmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Fonksiyonda Erken Dönüş  
+#### ✅ Cevap 59: Erken dönüşlü fonksiyon
 
-**Açıklama:**
-Tip takma adı ile hata yönetimi kodunuzu daha okunur hale getirebilir.
+Bu fonksiyon, `return` anahtar kelimesiyle erken çıkışın nasıl yapılacağını gösterir. Girdi negatifse fonksiyon hemen döner, aksi halde değeri yazdırır.
 
 ```rust
-enum MyError {
-    Oops,
+fn pozitifse_yazdir(n: i32) {
+    if n < 0 {
+        println!("Negatif değer, erken dönülüyor.");
+        return;
+    }
+    println!("Değer: {}", n);
 }
 
-type MyResult<T> = Result<T, MyError>;
-
-fn is_yap(x: i32) -> MyResult<i32> {
-    if x > 0 {
-        Ok(x)
-    } else {
-        Err(MyError::Oops)
-    }
+fn main() {
+    pozitifse_yazdir(5);   // çıktı: Değer: 5
+    pozitifse_yazdir(-3);  // çıktı: Negatif değer, erken dönülüyor.
 }
 ```

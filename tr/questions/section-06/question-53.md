@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Panic Makrosu  
-#### ❓ Soru 53: `panic!` makrosunu kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Closure'lar  
+#### ❓ Soru 53: Closure'lara giriş
 
-`panic!` makrosunun kullanımını gösteren bir Rust programı yazın.
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Negatif bir sayı verilirse panikleyen bir fonksiyon oluşturun.
-- Bu fonksiyonu `main` fonksiyonunda hem pozitif hem negatif bir değerle çağırın.
+- İki tamsayı alan ve toplamını döndüren bir closure tanımlayın.
+- Closure'ı `main` fonksiyonunda çağırıp sonucu ekrana yazdırın.
 
-🔧 **Görev:** Rust'ta onarılamaz hatalar için `panic!` makrosunun nasıl kullanılacağını gösterin.
+🔧 **Görev:** Rust'ta closure tanımlamayı ve kullanmayı gösterin.

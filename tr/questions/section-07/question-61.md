@@ -1,10 +1,11 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Vektörler  
-#### ❓ Soru 61: Bir vektör oluşturmak ve kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Sahiplik Aktarımı  
+#### ❓ Soru 61: Sahiplik aktarımını gösterme
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Değişkenler arasında sahiplik aktarımını gösteren bir Rust programı yazın.
 
-- Bir tamsayı vektörü oluşturun.
-- Vektöre eleman ekleyin ve tüm elemanları yazdırın.
+- Bir değişken tanımlayın ve ona bir değer atayın (ör. `String`).
+- Bu değişkeni başka bir değişkene atayarak sahipliği aktarın.
+- Aktarımdan sonra orijinal değişkeni kullanmaya çalışın ve derleyici hatasını gözlemleyin.
 
-🔧 **Görev:** Rust'ta vektör oluşturmayı ve kullanmayı gösterin.
+🔧 **Görev:** Rust'ta sahipliğin bir değişkenden diğerine nasıl aktarıldığını gösterin.

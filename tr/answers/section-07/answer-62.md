@@ -1,17 +1,16 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashMap'ler  
-#### ✅ Cevap 62: HashMap kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Move Semantiği  
+#### ✅ Cevap 62: Değişkenlerle taşıma (move) semantiği
 
-**Açıklama:**
-`HashMap` anahtar-değer çiftleri tutar. Değer ekleyip alabilirsiniz.
+Rust'ta, kopyalanamayan bir türü (ör. `String`) başka bir değişkene atadığınızda değer taşınır ve orijinal değişken geçersiz olur. Buna move semantiği denir.
 
 ```rust
-use std::collections::HashMap;
-
 fn main() {
-    let mut map = HashMap::new();
-    map.insert("a", 1);
-    map.insert("b", 2);
-    println!("a: {:?}", map.get("a"));
+    let a = String::from("Rust");
+    let b = a; // burada taşıma (move) gerçekleşir
+    // println!("{}", a); // hata: move sonrası a artık geçersiz
+    println!("{}", b); // çalışır
 }
 ```
+
+`println!("{}", a);` satırının yorumunu kaldırırsanız, derleyici a'nın artık geçersiz olduğunu belirten bir hata verecektir.

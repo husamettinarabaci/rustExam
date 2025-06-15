@@ -1,23 +1,20 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Option Tipi  
-#### ✅ Cevap 52: Opsiyonel değerler için Option tipini kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: İç İçe Çağrılar  
+#### ✅ Cevap 52: İç içe fonksiyon çağrıları
 
-**Açıklama:**
-`Option` tipi, bir değerin var olup olmadığını belirtmek için kullanılır. `Some` değer içerir, `None` ise içermez.
+Rust'ta bir fonksiyonun dönüş değerini başka bir fonksiyona argüman olarak vererek iç içe fonksiyon çağrısı yapılabilir.
 
 ```rust
-fn find_even(n: i32) -> Option<i32> {
-    if n % 2 == 0 {
-        Some(n)
-    } else {
-        None
-    }
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn double(x: i32) -> i32 {
+    x * 2
 }
 
 fn main() {
-    match find_even(4) {
-        Some(sayi) => println!("Çift: {}", sayi),
-        None => println!("Tek sayı"),
-    }
+    let sonuc = double(add_one(5));
+    println!("Sonuç: {}", sonuc); // Çıktı: 12
 }
 ```

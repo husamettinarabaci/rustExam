@@ -1,28 +1,29 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Nesneleri  
-#### ✅ Cevap 95: Trait nesneleri kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Zincirleme metotlar  
+#### ✅ Cevap 95: Zincirleme metotlar
 
-**Açıklama:**
-Trait nesneleri dinamik dispatch sağlar. Farklı türler bir vektörde saklanıp trait metodu çağrılabilir.
+Rust'ta zincirleme metotlar, metotların `&mut self` döndürmesiyle sağlanır. Burada, `Builder` adında bir yapı ve `set_x`, `set_y` metotları ile zincirleme örneği gösterilmiştir.
 
 ```rust
-trait Hayvan {
-    fn ses(&self);
+struct Builder {
+    x: i32,
+    y: i32,
 }
 
-struct Kopek;
-impl Hayvan for Kopek {
-    fn ses(&self) { println!("Hav hav!"); }
-}
-struct Kedi;
-impl Hayvan for Kedi {
-    fn ses(&self) { println!("Miyav!"); }
+impl Builder {
+    fn set_x(&mut self, x: i32) -> &mut Self {
+        self.x = x;
+        self
+    }
+    fn set_y(&mut self, y: i32) -> &mut Self {
+        self.y = y;
+        self
+    }
 }
 
 fn main() {
-    let hayvanlar: Vec<Box<dyn Hayvan>> = vec![Box::new(Kopek), Box::new(Kedi)];
-    for h in hayvanlar {
-        h.ses();
-    }
+    let mut b = Builder { x: 0, y: 0 };
+    b.set_x(10).set_y(20);
+    println!("x: {}, y: {}", b.x, b.y);
 }
 ```

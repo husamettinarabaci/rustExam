@@ -1,29 +1,32 @@
-## 📚 Section: Traits  
-### 🔹 Category: Associated Types in Traits  
-#### ✅ Answer 97: Using associated types in traits
+## 📘 Section: Structs II  
+### 🔹 Category: Method with default implementation  
+#### ✅ Answer 97: Method with default implementation
 
-**Explanation:**
-Associated types allow traits to define placeholder types to be specified by implementors.
+The `Default` trait in Rust allows you to provide default values for a struct. Here, we define a `Config` struct, implement `Default` for it, and add a `describe` method that prints its values.
 
 ```rust
-trait Iterator {
-    type Item;
-    fn next(&mut self) -> Option<Self::Item>;
+struct Config {
+    debug: bool,
+    max_connections: u32,
 }
 
-struct Counter {
-    count: i32,
-}
-
-impl Iterator for Counter {
-    type Item = i32;
-    fn next(&mut self) -> Option<i32> {
-        self.count += 1;
-        if self.count < 5 {
-            Some(self.count)
-        } else {
-            None
+impl Default for Config {
+    fn default() -> Self {
+        Self {
+            debug: false,
+            max_connections: 100,
         }
     }
+}
+
+impl Config {
+    fn describe(&self) {
+        println!("Debug: {}, Max connections: {}", self.debug, self.max_connections);
+    }
+}
+
+fn main() {
+    let cfg = Config::default();
+    cfg.describe();
 }
 ```

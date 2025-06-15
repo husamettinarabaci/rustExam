@@ -1,19 +1,20 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Modüller  
-#### ✅ Cevap 81: Modül oluşturmak ve kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapı Tanımı ve Örnek Oluşturma  
+#### ✅ Cevap 81: Bir yapı tanımlama ve örnek oluşturma
 
-**Açıklama:**
-Modüller kodu isim alanlarına ayırır. Fonksiyonlar modül içinde tanımlanıp modül yolu ile çağrılır.
+Rust'ta yapı (struct), ilişkili verileri bir arada tutan özel bir veri tipidir. Burada `Person` yapısı tanımlanıp, örneği oluşturulmuştur.
 
 ```rust
-mod math {
-    pub fn add(a: i32, b: i32) -> i32 {
-        a + b
-    }
+struct Person {
+    name: String,
+    age: u32,
 }
 
 fn main() {
-    let toplam = math::add(2, 3);
-    println!("{}", toplam);
+    let person = Person {
+        name: String::from("Ali"),
+        age: 25,
+    };
+    println!("Ad: {}, Yaş: {}", person.name, person.age);
 }
 ```

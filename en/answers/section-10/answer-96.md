@@ -1,21 +1,23 @@
-## 📚 Section: Traits  
-### 🔹 Category: Deriving Traits  
-#### ✅ Answer 96: Deriving standard traits
+## 📘 Section: Structs II  
+### 🔹 Category: Method returning self  
+#### ✅ Answer 96: Method returning self
 
-**Explanation:**
-You can derive standard traits like `Debug`, `Clone`, and `PartialEq` for your structs.
+A method can return `Self` to create a new instance of the struct. Here, we define a `Multiplier` struct and a `double` method that returns a new `Multiplier` with its value doubled.
 
 ```rust
-#[derive(Debug, Clone, PartialEq)]
-struct Point {
-    x: i32,
-    y: i32,
+struct Multiplier {
+    value: i32,
+}
+
+impl Multiplier {
+    fn double(&self) -> Self {
+        Self { value: self.value * 2 }
+    }
 }
 
 fn main() {
-    let p1 = Point { x: 1, y: 2 };
-    let p2 = p1.clone();
-    println!("{:?}", p2);
-    println!("Equal? {}", p1 == p2);
+    let m = Multiplier { value: 5 };
+    let doubled = m.double();
+    println!("Original: {}, Doubled: {}", m.value, doubled.value);
 }
 ```

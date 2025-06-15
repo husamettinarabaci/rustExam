@@ -1,23 +1,24 @@
-## 📚 Section: Traits  
-### 🔹 Category: Trait Inheritance  
-#### ✅ Answer 98: Trait inheritance
+## 📘 Section: Structs II  
+### 🔹 Category: Methods and Trait Bounds  
+#### ✅ Answer 98: Method with trait bounds
 
-**Explanation:**
-Traits can inherit from other traits, requiring implementors to implement all required methods.
+This example demonstrates how to use a trait bound in a method implementation. The method `print_value` is only available for types that implement the `Display` trait, ensuring that only printable types can be used.
 
 ```rust
-trait Base {
-    fn base(&self);
-}
-trait Sub: Base {
-    fn sub(&self);
+use std::fmt::Display;
+
+struct Wrapper<T> {
+    value: T,
 }
 
-struct MyType;
-impl Base for MyType {
-    fn base(&self) { println!("Base"); }
+impl<T: Display> Wrapper<T> {
+    fn print_value(&self) {
+        println!("Value: {}", self.value);
+    }
 }
-impl Sub for MyType {
-    fn sub(&self) { println!("Sub"); }
+
+fn main() {
+    let w = Wrapper { value: 42 };
+    w.print_value(); // Works because i32 implements Display
 }
 ```

@@ -1,24 +1,22 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Tanımlama  
-#### ✅ Cevap 91: Trait tanımlamak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: `impl` ile metot tanımlama  
+#### ✅ Cevap 91: `impl` ile metot tanımlama
 
-**Açıklama:**
-Trait'ler ortak davranışları tanımlar. Bir yapı için trait'i implemente edip metodunu çağırabilirsiniz.
+Rust'ta metotlar, bir yapı için `impl` bloğu içinde tanımlanır. Burada, `Circle` adında bir yapı ve ona ait bir `area` metodu tanımlanmıştır. Bu metot, dairenin alanını hesaplar.
 
 ```rust
-trait Speak {
-    fn speak(&self);
+struct Circle {
+    radius: f64,
 }
 
-struct Dog;
-impl Speak for Dog {
-    fn speak(&self) {
-        println!("Hav hav!");
+impl Circle {
+    fn area(&self) -> f64 {
+        std::f64::consts::PI * self.radius * self.radius
     }
 }
 
 fn main() {
-    let d = Dog;
-    d.speak();
+    let c = Circle { radius: 3.0 };
+    println!("Alan: {}", c.area());
 }
 ```

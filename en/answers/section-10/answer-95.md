@@ -1,28 +1,29 @@
-## 📚 Section: Traits  
-### 🔹 Category: Trait Objects  
-#### ✅ Answer 95: Using trait objects
+## 📘 Section: Structs II  
+### 🔹 Category: Method chaining  
+#### ✅ Answer 95: Method chaining
 
-**Explanation:**
-Trait objects enable dynamic dispatch. Store different types in a vector and call trait methods.
+Method chaining in Rust is achieved by returning `&mut self` from methods. Here, we define a `Builder` struct with `set_x` and `set_y` methods that allow chaining.
 
 ```rust
-trait Animal {
-    fn speak(&self);
+struct Builder {
+    x: i32,
+    y: i32,
 }
 
-struct Dog;
-impl Animal for Dog {
-    fn speak(&self) { println!("Woof!"); }
-}
-struct Cat;
-impl Animal for Cat {
-    fn speak(&self) { println!("Meow!"); }
+impl Builder {
+    fn set_x(&mut self, x: i32) -> &mut Self {
+        self.x = x;
+        self
+    }
+    fn set_y(&mut self, y: i32) -> &mut Self {
+        self.y = y;
+        self
+    }
 }
 
 fn main() {
-    let animals: Vec<Box<dyn Animal>> = vec![Box::new(Dog), Box::new(Cat)];
-    for a in animals {
-        a.speak();
-    }
+    let mut b = Builder { x: 0, y: 0 };
+    b.set_x(10).set_y(20);
+    println!("x: {}, y: {}", b.x, b.y);
 }
 ```

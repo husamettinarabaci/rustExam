@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Option Tipi  
-#### ❓ Soru 52: Opsiyonel değerler için Option tipini kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: İç İçe Çağrılar  
+#### ❓ Soru 52: İç içe fonksiyon çağrıları
 
-Bir `Option` tipi döndüren bir Rust fonksiyonu yazın.
+İç içe fonksiyon çağrılarını gösteren bir Rust programı yazın.
 
-- Bir `i32` alan ve sayı çiftse `Some(sayı)`, tekse `None` döndüren bir `find_even` fonksiyonu tanımlayın.
-- Bu fonksiyonu `main` fonksiyonundan çağırın ve sonucu yazdırın.
+- `add_one` (i32 alır, i32 döndürür) ve `double` (i32 alır, i32 döndürür) adında iki fonksiyon tanımlayın.
+- `main` fonksiyonunda `double(add_one(5))` ifadesini çağırıp sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta opsiyonel değerler için `Option` tipinin nasıl kullanılacağını gösterin.
+🔧 **Görev:** Rust'ta fonksiyon çağrılarını iç içe kullanmayı gösterin.

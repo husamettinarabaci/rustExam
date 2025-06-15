@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Enumlar  
-#### ❓ Soru 73: Jenerik enum oluşturmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Ömür Çıkarım Kuralları  
+#### ❓ Soru 73: Ömür çıkarım kuralları
 
-Farklı türde değerler tutabilen bir Rust enum'u yazın.
+Aşağıdaki adımları izleyerek ömür çıkarım kurallarını gösteren bir fonksiyon yazın:
 
-- `Some(T)` ve `None` varyantları olan bir `MyOption<T>` enum'u tanımlayın.
-- `main` fonksiyonunda kullanımını gösterin.
+- Bir string slice (`&str`) parametresi alan ve uzunluğunu döndüren bir fonksiyon tanımlayın.
+- Fonksiyon imzasında ömür belirtimi kullanmayın.
+- Bunun neden mümkün olduğunu açıklayın (yorum satırı veya cevapta).
+- `main` fonksiyonunda örnek kullanım gösterin.
 
-🔧 **Görev:** Rust'ta jenerik enum tanımlamayı ve kullanmayı gösterin.
+🔧 **Görev:** Rust'ın ömür çıkarım kuralları sayesinde basit durumlarda ömür belirtimi yazmadan fonksiyon tanımlamayı gösterin.

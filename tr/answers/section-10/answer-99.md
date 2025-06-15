@@ -1,23 +1,23 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Blanket Implementations  
-#### ✅ Cevap 99: Blanket implementation kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Metotlar ve Ömürler  
+#### ✅ Cevap 99: Ömürlü metot
 
-**Açıklama:**
-Blanket implementation ile bir trait, belirli bir trait'i sağlayan tüm türler için implemente edilebilir.
+Bu örnekte, açık ömür belirtimiyle bir metot nasıl yazılır gösterilmektedir. `MetinTutucu` yapısı bir string dilimi referansı tutar ve `metni_al` metodu aynı ömre sahip bir referans döndürür. Ömür belirtimi, döndürülen referansın yapının ömrü kadar geçerli olmasını garanti eder.
 
 ```rust
-trait BenimTrait {
-    fn selam(&self);
+struct MetinTutucu<'a> {
+    metin: &'a str,
 }
 
-impl<T: ToString> BenimTrait for T {
-    fn selam(&self) {
-        println!("{}", self.to_string());
+impl<'a> MetinTutucu<'a> {
+    fn metni_al(&self) -> &'a str {
+        self.metin
     }
 }
 
 fn main() {
-    42.selam();
-    "merhaba".selam();
+    let s = String::from("merhaba");
+    let tutucu = MetinTutucu { metin: &s };
+    println!("{}", tutucu.metni_al());
 }
 ```

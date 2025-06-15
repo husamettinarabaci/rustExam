@@ -1,10 +1,11 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Concurrency Primitives  
-#### ❓ Question 48: Difference between `Mutex` and `RwLock`
+### 🔹 Category: Function Parameters  
+#### ❓ Question 48: Function with default arguments (simulate)
 
-Explain the difference between `Mutex` and `RwLock` in Rust.
+Write a Rust function that simulates default arguments using optional parameters.
 
-- Describe when to use a `Mutex` and when to use an `RwLock`.
-- Provide a brief example of each.
+- Define a function named `print_number` that takes an `Option<i32>` as a parameter.
+- If a value is provided, print the number; otherwise, print `Default is 42`.
+- Call the function with both `Some(7)` and `None` from `main`.
 
-🔧 **Task:** Clarify the use cases for `Mutex` and `RwLock` in concurrent Rust programs.
+🔧 **Task:** Show how to simulate default arguments in Rust using `Option` and pattern matching.

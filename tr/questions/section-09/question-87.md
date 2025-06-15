@@ -1,10 +1,11 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Modül Dosyaları  
-#### ❓ Soru 87: Modülleri dosyalara ayırmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Referans İçeren Yapılar  
+#### ❓ Soru 87: Referans içeren yapılar
 
-Modüllerin ayrı dosyalara ayrılmasını gösteren bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- `main.rs`'de bir modül ekleyin ve ilgili dosyada fonksiyon tanımlayın.
-- `main` fonksiyonunda bu fonksiyonu çağırın.
+- `brand` (&str) ve `year` (u16) alanlarına sahip bir `Car` yapısı tanımlayın.
+- Referans kullanarak bir `Car` örneği oluşturun.
+- Alanların değerlerini terminale yazdırın.
 
-🔧 **Görev:** Rust'ta modüllerin dosyalara nasıl ayrılacağını gösterin.
+🔧 **Görev:** Referans alanı içeren bir yapının nasıl tanımlanıp kullanılacağını gösterin.

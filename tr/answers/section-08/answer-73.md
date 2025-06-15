@@ -1,18 +1,22 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Enumlar  
-#### ✅ Cevap 73: Jenerik enum oluşturmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Ömür Çıkarım Kuralları  
+#### ✅ Cevap 73: Ömür çıkarım kuralları
 
 **Açıklama:**
-Jenerik enumlar, farklı türde değerleri temsil edebilir. `Option<T>` buna örnektir.
+Rust'ın ömür çıkarım kuralları, derleyicinin ömürleri otomatik olarak tahmin etmesini sağlar. Bir fonksiyon tek bir referans parametresi alıp, referansa bağlı olmayan bir değer döndürüyorsa, ömür belirtimi gerekmez.
 
 ```rust
-enum MyOption<T> {
-    Some(T),
-    None,
+fn uzunluk(s: &str) -> usize {
+    s.len()
 }
 
 fn main() {
-    let x = MyOption::Some(10);
-    let y: MyOption<i32> = MyOption::None;
+    let metin = "merhaba dünya";
+    let len = uzunluk(metin);
+    println!("Uzunluk: {}", len);
 }
 ```
+
+// Açıklama:
+// Fonksiyonun döndürdüğü değer referansa bağlı olmadığı için ömür belirtimi gerekmez.
+// Rust'ın ömür çıkarım kuralları bu durumu otomatik olarak yönetir.

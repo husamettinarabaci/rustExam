@@ -1,19 +1,17 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Yeniden Dışa Aktarma  
-#### ✅ Cevap 88: `pub use` ile yeniden dışa aktarma
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Ömürlü Yapılar  
+#### ✅ Cevap 88: Ömürlü yapılar
 
-**Açıklama:**
-`pub use` ile alt modüldeki öğeler üst modülde dışa aktarılabilir.
+Bir yapıda referans alanı varsa, ömür parametresi belirtilmelidir. Burada `Message` yapısında `&str` alanı için ömür parametresi eklenmiştir.
 
 ```rust
-mod ic {
-    pub fn selam() {
-        println!("Selam");
-    }
+struct Message<'a> {
+    content: &'a str,
 }
-pub use ic::selam;
 
 fn main() {
-    selam();
+    let text = "Merhaba, Rust!";
+    let msg = Message { content: text };
+    println!("Mesaj: {}", msg.content);
 }
 ```

@@ -1,23 +1,20 @@
-## 📚 Section: Generics  
-### 🔹 Category: Generic Methods  
-#### ✅ Answer 76: Implementing generic methods
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Function Return Values  
+#### ✅ Answer 76: Lifetime in function return values
 
-**Explanation:**
-You can implement methods on generic structs, and those methods can also be generic.
+When a function returns a reference to data from its input, you must specify a lifetime parameter to ensure the returned reference is valid. Here, the function returns the first word of a string slice.
 
 ```rust
-struct Wrapper<T> {
-    value: T,
-}
-
-impl<T> Wrapper<T> {
-    fn get_value(&self) -> &T {
-        &self.value
+fn first_word<'a>(s: &'a str) -> &'a str {
+    match s.find(' ') {
+        Some(idx) => &s[..idx],
+        None => s,
     }
 }
 
 fn main() {
-    let w = Wrapper { value: 42 };
-    println!("{}", w.get_value());
+    let text = String::from("hello world");
+    let word = first_word(&text);
+    println!("First word: {}", word);
 }
 ```

@@ -1,13 +1,20 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Demetler  
-#### ✅ Cevap 65: Demetleri kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Kopyalanan Türler ve Taşınan Türler  
+#### ✅ Cevap 65: Kopyalanan türler ve taşınan türler
 
-**Açıklama:**
-Demetler farklı tipte değerleri bir arada tutar. Elemanlara indeksle erişilir.
+Rust'ta, `i32` gibi türler `Copy` trait'ini uygular ve atama ile değer kopyalanır. `String` gibi türler ise taşınır (move edilir), yani sahiplik aktarılır.
 
 ```rust
 fn main() {
-    let demet = (42, 3.14, "merhaba");
-    println!("{} {} {}", demet.0, demet.1, demet.2);
+    let x = 10; // i32 Copy'dir
+    let y = x;
+    println!("x: {}, y: {}", x, y); // ikisi de çalışır
+
+    let s1 = String::from("merhaba"); // String Move'dur
+    let s2 = s1;
+    // println!("{}", s1); // hata: move sonrası s1 artık geçersiz
+    println!("{}", s2); // çalışır
 }
 ```
+
+`x` değişkeni atamadan sonra da kullanılabilir, ancak `s1` kullanılamaz çünkü sahipliği `s2`'ye taşınmıştır.

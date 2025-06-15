@@ -1,19 +1,24 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: BTreeMap  
-#### ✅ Cevap 69: BTreeMap kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Referans Kapsamı ve Ömürler  
+#### ✅ Cevap 69: Referans kapsamı ve ömürler
 
-**Açıklama:**
-`BTreeMap` anahtar-değer çiftlerini sıralı tutar. Sıralı olarak gezilebilir.
+Rust'ta referanslar yalnızca oluşturuldukları kapsamda geçerlidir. Bir referansı kapsamı dışında kullanmaya çalışırsanız, derleyici hata verir ve geçersiz (dangling) referansları engeller. Bu, Rust'ın ömür sistemiyle sağlanır.
 
 ```rust
-use std::collections::BTreeMap;
-
 fn main() {
-    let mut map = BTreeMap::new();
-    map.insert("a", 1);
-    map.insert("b", 2);
-    for (k, v) in &map {
-        println!("{}: {}", k, v);
-    }
+    let x = 100;
+    let r;
+    {
+        r = &x;
+        println!("Scope içindeki referans: {}", r);
+    } // r burada hala geçerli çünkü x yeterince uzun yaşıyor
+    println!("İç scope sonrası referans: {}", r);
+    // Aşağıdaki kod derleme hatası verir:
+    // let r;
+    // {
+    //     let y = 200;
+    //     r = &y;
+    // } // y burada drop edilir
+    // println!("Geçersiz referans: {}", r); // Hata!
 }
 ```

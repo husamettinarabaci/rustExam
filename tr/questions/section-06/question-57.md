@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Çoklu Hata Tipleri  
-#### ❓ Soru 57: Çoklu hata tiplerini yönetmek
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Trait Sınırı Parametreli Fonksiyonlar  
+#### ❓ Soru 57: Trait sınırı parametreli fonksiyon
 
-Çoklu hata tiplerini yöneten bir Rust fonksiyonu yazın.
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Hem I/O hatası hem de ayrıştırma hatası döndürebilen bir fonksiyon tanımlayın.
-- Hata için `Box<dyn std::error::Error>` tipini kullanın.
+- Bir trait (ör. `Display`) ile sınırlandırılmış parametre alan bir fonksiyon tanımlayın.
+- Bu fonksiyonu `main` fonksiyonunda trait'i uygulayan en az iki farklı türle çağırın.
 
-🔧 **Görev:** Rust'ta tek bir fonksiyonda çoklu hata tiplerinin nasıl yönetileceğini gösterin.
+🔧 **Görev:** Rust'ta fonksiyon parametrelerinde trait sınırlarının nasıl kullanılacağını gösterin.

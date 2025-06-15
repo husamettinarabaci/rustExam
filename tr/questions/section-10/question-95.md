@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Nesneleri  
-#### ❓ Soru 95: Trait nesneleri kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Zincirleme metotlar  
+#### ❓ Soru 95: Zincirleme metotlar
 
-Dinamik dispatch için trait nesneleri kullanan bir Rust programı yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- Bir trait ve iki yapı tanımlayın, ikisi de trait'i uygulasın.
-- Trait nesnelerini bir vektörde saklayıp metotlarını çağırın.
+- Bir yapı tanımlayın (ör: `Builder`).
+- Bu yapı için zincirleme yapılabilen metotlar tanımlayın (ör: `set_x`, `set_y`), her biri `&mut self` döndürsün.
+- `main` fonksiyonunda bir örnek oluşturup metotları zincirleyerek çağırın ve sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta trait nesnelerinin kullanımını gösterin.
+🔧 **Görev:** Rust'ta bir yapı için zincirleme metotlar nasıl tanımlanır ve kullanılır, gösterin.

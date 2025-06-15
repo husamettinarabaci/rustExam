@@ -1,19 +1,13 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Panic Makrosu  
-#### ✅ Cevap 53: `panic!` makrosunu kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Closure'lar  
+#### ✅ Cevap 53: Closure'lara giriş
 
-**Açıklama:**
-`panic!` makrosu, onarılamaz bir hata oluştuğunda programı durdurmak için kullanılır.
+Rust'ta closure'lar, değişkenlere atanabilen anonim fonksiyonlardır. Burada iki sayıyı toplayan bir closure tanımlanıp `main` fonksiyonunda çağrılıyor.
 
 ```rust
-fn pozitif_mi(n: i32) {
-    if n < 0 {
-        panic!("Negatif sayı: {}", n);
-    }
-}
-
 fn main() {
-    pozitif_mi(5);
-    pozitif_mi(-3);
+    let toplam = |a: i32, b: i32| a + b; // Closure tanımı
+    let sonuc = toplam(5, 7);
+    println!("Toplam: {}", sonuc); // Çıktı: Toplam: 12
 }
 ```

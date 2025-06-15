@@ -1,17 +1,19 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: HashSet  
-#### ✅ Cevap 66: HashSet kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Referanslarla Ödünç Alma  
+#### ✅ Cevap 66: Referanslarla ödünç alma
 
-**Açıklama:**
-`HashSet` benzersiz değerler tutar. Eleman ekleyip üyelik kontrolü yapabilirsiniz.
+Rust'ta, bir değeri fonksiyona referans ile geçirerek ödünç alabilirsiniz. Sahiplik aktarılmaz, bu nedenle orijinal değişken fonksiyon çağrısından sonra da kullanılabilir.
 
 ```rust
-use std::collections::HashSet;
+fn uzunluk_yazdir(s: &String) {
+    println!("Uzunluk: {}", s.len());
+}
 
 fn main() {
-    let mut set = HashSet::new();
-    set.insert(1);
-    set.insert(2);
-    println!("1 var mı? {}", set.contains(&1));
+    let metin = String::from("merhaba");
+    uzunluk_yazdir(&metin); // referans ile ödünç alma
+    println!("Orijinal: {}", metin); // hâlâ geçerli
 }
 ```
+
+Burada `uzunluk_yazdir` fonksiyonu `String`'i referans ile ödünç alır, bu yüzden `metin` fonksiyon çağrısından sonra da geçerlidir.

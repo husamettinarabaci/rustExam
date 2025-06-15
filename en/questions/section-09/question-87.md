@@ -1,9 +1,11 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Module Files  
-#### ❓ Question 87: Splitting modules into files
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with References  
+#### ❓ Question 87: Structs with references
 
-Write a Rust program that demonstrates splitting modules into separate files.
+Write a Rust program that demonstrates how to define and use a struct with reference fields.
 
-- Explain how to create a module in a separate file and use it in `main.rs`.
+- Define a struct named `Car` with fields `brand` (&str) and `year` (u16).
+- Create an instance of `Car` using references.
+- Print the values of the fields to the terminal.
 
-🔧 **Task:** Show how to split modules into files in Rust.
+🔧 **Task:** Show how to define and use a struct that contains reference fields in Rust.

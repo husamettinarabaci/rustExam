@@ -1,29 +1,32 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait'te İlişkili Tipler  
-#### ✅ Cevap 97: Trait'te ilişkili tipler kullanmak
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Varsayılan implementasyonlu metot  
+#### ✅ Cevap 97: Varsayılan implementasyonlu metot
 
-**Açıklama:**
-İlişkili tipler, trait'lerin uygulayıcılar tarafından belirlenen tipler tanımlamasını sağlar.
+Rust'ta `Default` trait'i, bir yapı için varsayılan değerler sağlamanızı sağlar. Burada, `Config` adında bir yapı, `Default` implementasyonu ve `describe` metodu ile örnek gösterilmiştir.
 
 ```rust
-trait Iterator {
-    type Item;
-    fn next(&mut self) -> Option<Self::Item>;
+struct Config {
+    debug: bool,
+    max_connections: u32,
 }
 
-struct Sayac {
-    sayi: i32,
-}
-
-impl Iterator for Sayac {
-    type Item = i32;
-    fn next(&mut self) -> Option<i32> {
-        self.sayi += 1;
-        if self.sayi < 5 {
-            Some(self.sayi)
-        } else {
-            None
+impl Default for Config {
+    fn default() -> Self {
+        Self {
+            debug: false,
+            max_connections: 100,
         }
     }
+}
+
+impl Config {
+    fn describe(&self) {
+        println!("Debug: {}, Maksimum bağlantı: {}", self.debug, self.max_connections);
+    }
+}
+
+fn main() {
+    let cfg = Config::default();
+    cfg.describe();
 }
 ```

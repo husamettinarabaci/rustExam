@@ -1,22 +1,23 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: İlişkili Tipler  
-#### ✅ Cevap 77: Trait'lerde ilişkili tipler kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Metot Alıcılarında Ömür  
+#### ✅ Cevap 77: Metot alıcılarında ömür
 
-**Açıklama:**
-İlişkili tipler, trait'lerin uygulayıcılar tarafından belirlenen tipler tanımlamasını sağlar.
+Bir yapıda referans alanı varsa, bu referansı kullanan metotlarda da ömür parametresi belirtilmelidir. Burada `len` metodu, `self`'i doğru ömür ile ödünç alır.
 
 ```rust
-trait Summable {
-    type Item;
-    fn sum(&self) -> Self::Item;
+struct YaziTutucu<'a> {
+    yazi: &'a str,
 }
 
-struct MyVec(Vec<i32>);
-
-impl Summable for MyVec {
-    type Item = i32;
-    fn sum(&self) -> i32 {
-        self.0.iter().sum()
+impl<'a> YaziTutucu<'a> {
+    fn uzunluk(&self) -> usize {
+        self.yazi.len()
     }
+}
+
+fn main() {
+    let s = String::from("ömürlü metot");
+    let tutucu = YaziTutucu { yazi: &s };
+    println!("Uzunluk: {}", tutucu.uzunluk());
 }
 ```

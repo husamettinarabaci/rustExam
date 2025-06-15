@@ -1,29 +1,26 @@
-## 📚 Section: Traits  
-### 🔹 Category: Default Methods  
-#### ✅ Answer 92: Default methods in traits
+## 📘 Section: Structs II  
+### 🔹 Category: Associated functions (constructors)  
+#### ✅ Answer 92: Associated functions (constructors)
 
-**Explanation:**
-Traits can provide default method implementations, which can be overridden.
+Associated functions in Rust are defined in an `impl` block and are often used as constructors. Here, we define a `Person` struct and implement a `new` associated function to create instances.
 
 ```rust
-trait Greet {
-    fn hello(&self) {
-        println!("Hello!");
-    }
+struct Person {
+    name: String,
+    age: u8,
 }
 
-struct Person;
-impl Greet for Person {
-    fn hello(&self) {
-        println!("Hi!");
+impl Person {
+    fn new(name: &str, age: u8) -> Self {
+        Self {
+            name: name.to_string(),
+            age,
+        }
     }
 }
-
-struct Robot;
-impl Greet for Robot {}
 
 fn main() {
-    Person.hello();
-    Robot.hello();
+    let p = Person::new("Alice", 30);
+    println!("Name: {}, Age: {}", p.name, p.age);
 }
 ```

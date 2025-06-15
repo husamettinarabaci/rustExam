@@ -1,10 +1,11 @@
-## 📚 Section: Collections  
-### 🔹 Category: Slices  
-#### ❓ Question 64: Working with slices
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Returning Ownership  
+#### ❓ Question 64: Returning ownership from a function
 
-Write a Rust program that does the following:
+Write a Rust function that returns ownership of a value.
 
-- Create an array and obtain a slice of it.
-- Print the elements of the slice.
+- Define a function that creates a `String` and returns it.
+- In `main`, receive the returned value and use it.
+- Explain how ownership is transferred from the function to the caller.
 
-🔧 **Task:** Show how to use slices in Rust.
+🔧 **Task:** Show how a function can return ownership of a value in Rust.

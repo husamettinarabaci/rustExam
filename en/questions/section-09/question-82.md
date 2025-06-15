@@ -1,10 +1,11 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Visibility  
-#### ❓ Question 82: Using `pub` for visibility
+## 📘 Section: Structs I  
+### 🔹 Category: Struct Fields  
+#### ❓ Question 82: Accessing struct fields
 
-Write a Rust program that demonstrates the use of the `pub` keyword.
+Write a Rust program that demonstrates how to access fields of a struct.
 
-- Define a struct and a function as public in a module.
-- Access them from outside the module.
+- Define a struct named `Book` with fields `title` (String) and `pages` (u32).
+- Create an instance of `Book` and assign values to its fields.
+- Print the values of the fields to the terminal.
 
-🔧 **Task:** Show how to use the `pub` keyword for visibility in Rust.
+🔧 **Task:** Show how to access and print struct fields in Rust.

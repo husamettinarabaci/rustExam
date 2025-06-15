@@ -1,10 +1,11 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Ömürler (Lifetimes)  
-#### ❓ Soru 49: `static` ömrü
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Dönüş Tipleri  
+#### ❓ Soru 49: Demet döndüren fonksiyon
 
-Rust'ta `static` ömrünün ne anlama geldiğini açıklayın.
+İki değerli bir demet (tuple) döndüren bir Rust fonksiyonu yazın.
 
-- `static` ömrü ne zaman ve neden kullanılır?
-- Statik bir değişken veya string literal örneği verin.
+- `get_point` adında, `(i32, i32)` tipinde bir demet döndüren bir fonksiyon tanımlayın.
+- Fonksiyon `(3, 4)` değerini döndürsün.
+- `main` fonksiyonunda `get_point` fonksiyonunu çağırıp sonucu yazdırın.
 
-🔧 **Görev:** Rust'ta `static` ömrünün kullanımını ve anlamını gösterin.
+🔧 **Görev:** Rust'ta bir fonksiyondan demet döndürmeyi ve kullanmayı gösterin.

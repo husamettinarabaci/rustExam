@@ -1,12 +1,16 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Lifetimes  
-#### ✅ Answer 49: The `static` lifetime
+### 🔹 Category: Function Return Types  
+#### ✅ Answer 49: Function that returns a tuple
 
-**Explanation:**
-The `static` lifetime means a value lives for the entire duration of the program. It is used for constants and string literals.
+A function in Rust can return a tuple by specifying the tuple type in the return type. This allows returning multiple values from a function.
 
-**Example:**
 ```rust
-static HELLO: &str = "Hello, world!";
+fn get_point() -> (i32, i32) {
+    (3, 4)
+}
+
+fn main() {
+    let point = get_point();
+    println!("Point: ({}, {})", point.0, point.1);
+}
 ```
-Here, `HELLO` remains in memory for the whole program.

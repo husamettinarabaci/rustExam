@@ -1,10 +1,11 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Kısıtlamalar  
-#### ❓ Soru 79: Jenerik kısıtlamalar eklemek
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Jenerik Yapılarda Ömür  
+#### ❓ Soru 79: Jenerik yapılarda ömür
 
-Birden fazla trait sınırı olan bir Rust fonksiyonu yazın.
+Aşağıdaki adımları izleyerek hem ömür hem de jenerik tip parametresi kullanan bir Rust yapısı yazın:
 
-- `Debug` ve `Clone` trait'leriyle sınırlandırılmış jenerik parametre alan bir fonksiyon tanımlayın.
-- `main` fonksiyonunda kullanımını gösterin.
+- Jenerik tip parametresi ve ömür parametresi içeren, referans alanı olan bir yapı tanımlayın.
+- Bu yapı için, referanslanan değeri döndüren bir metot yazın.
+- `main` fonksiyonunda somut bir tip (ör. `i32`) ile kullanımı gösterin.
 
-🔧 **Görev:** Rust'ta jeneriklere birden fazla trait sınırı eklemeyi gösterin.
+🔧 **Görev:** Bir yapı tanımında ömür ve jenerik tip parametrelerinin birlikte nasıl kullanılacağını ve metot yazımını gösterin.

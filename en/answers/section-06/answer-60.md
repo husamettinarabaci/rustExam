@@ -1,16 +1,15 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Error Chaining  
-#### ✅ Answer 60: Error chaining with `thiserror` or `anyhow`
+## 📘 Section: Functions II  
+### 🔹 Category: Side Effects in Functions  
+#### ✅ Answer 60: Function with side effects
 
-**Explanation:**
-Crates like `thiserror` and `anyhow` make error handling and chaining easier in Rust.
+This function demonstrates a side effect by printing to the console. Side effects are actions that affect the outside world or program state, such as I/O or modifying static variables.
 
 ```rust
-use anyhow::{Result, Context};
-use std::fs::File;
+fn print_message() {
+    println!("This function has a side effect: it prints to the console.");
+}
 
-fn main() -> Result<()> {
-    File::open("foo.txt").context("Failed to open file")?;
-    Ok(())
+fn main() {
+    print_message();
 }
 ```

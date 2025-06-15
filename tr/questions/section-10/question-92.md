@@ -1,10 +1,11 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Varsayılan Metotlar  
-#### ❓ Soru 92: Trait'te varsayılan metotlar
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: İlişkili fonksiyonlar (yapıcılar)  
+#### ❓ Soru 92: İlişkili fonksiyonlar (yapıcılar)
 
-Varsayılan gövdeli bir metot içeren bir trait yazın.
+Aşağıdakileri gösteren bir Rust programı yazın:
 
-- Trait'te varsayılan gövdeli bir metot tanımlayın.
-- Bir implementasyonda bu metodu override edin.
+- Bir yapı tanımlayın (ör: `Person`).
+- Bu yapı için `impl` bloğunda ilişkili bir fonksiyon (ör: `new`) tanımlayın.
+- `main` fonksiyonunda bu ilişkili fonksiyonu kullanarak yapıdan bir örnek oluşturun.
 
-🔧 **Görev:** Rust'ta trait'te varsayılan metot kullanımını gösterin.
+🔧 **Görev:** Rust'ta bir yapı için yapıcı (ilişkili fonksiyon) nasıl tanımlanır ve kullanılır, gösterin.

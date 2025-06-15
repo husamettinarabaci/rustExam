@@ -1,23 +1,17 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Super Keyword  
-#### ✅ Answer 85: Using the `super` keyword
+## 📘 Section: Structs I  
+### 🔹 Category: Tuple Structs and Unit-like Structs  
+#### ✅ Answer 85: Tuple structs and unit-like structs
 
-**Explanation:**
-The `super` keyword allows access to items in the parent module.
+Tuple structs in Rust are like tuples but have a name, and unit-like structs have no fields. Here, we define and use both types.
 
 ```rust
-mod parent {
-    pub fn parent_fn() {
-        println!("Parent");
-    }
-    pub mod child {
-        pub fn call_parent() {
-            super::parent_fn();
-        }
-    }
-}
+struct Color(u8, u8, u8);
+struct Marker;
 
 fn main() {
-    parent::child::call_parent();
+    let black = Color(0, 0, 0);
+    let marker = Marker;
+    println!("Color: {}, {}, {}", black.0, black.1, black.2);
+    // marker can be used as a value, but has no fields
 }
 ```

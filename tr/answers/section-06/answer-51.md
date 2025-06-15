@@ -1,23 +1,17 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi  
-#### ✅ Cevap 51: Hata yönetimi için Result tipini kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Kapsam ve Ömür  
+#### ✅ Cevap 51: Fonksiyon kapsamı ve değişken ömrü
 
-**Açıklama:**
-Rust'ta `Result` tipi, bir işlemin başarılı olup olmadığını belirtmek için kullanılır. Başarı durumunda `Ok`, hata durumunda `Err` döndürülür.
+Rust'ta değişkenler yalnızca tanımlandıkları kapsamda geçerlidir. Kapsam sona erdiğinde değişken bellekten silinir ve erişilemez.
 
 ```rust
-fn divide(a: i32, b: i32) -> Result<i32, String> {
-    if b == 0 {
-        Err("Sıfıra bölünemez".to_string())
-    } else {
-        Ok(a / b)
-    }
+fn kapsam_yazdir() {
+    let x = 10;
+    println!("Fonksiyon içinde x: {}", x); // x burada geçerli
 }
 
 fn main() {
-    match divide(10, 2) {
-        Ok(sonuc) => println!("Bölüm: {}", sonuc),
-        Err(e) => println!("Hata: {}", e),
-    }
+    kapsam_yazdir();
+    // println!("Fonksiyon dışında x: {}", x); // Hata: x bu kapsamda tanımlı değil
 }
 ```

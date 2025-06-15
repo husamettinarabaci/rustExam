@@ -1,20 +1,21 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Modül Dosyaları  
-#### ✅ Cevap 87: Modülleri dosyalara ayırmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Referans İçeren Yapılar  
+#### ✅ Cevap 87: Referans içeren yapılar
 
-**Açıklama:**
-Modüller ayrı dosyalara bölünebilir. `main.rs` içinde `mod mymod;` ile `mymod.rs` veya `mymod/mod.rs` eklenir.
+Bir yapıda referans alanı kullanmak için ömür belirtmek gerekir (veya 'static kullanılır). Burada `Car` yapısında `&str` alanı için ömür parametresi eklenmiştir.
 
 ```rust
-// main.rs
-mod mymod;
-
-fn main() {
-    mymod::selam();
+struct Car<'a> {
+    brand: &'a str,
+    year: u16,
 }
 
-// mymod.rs
-yaygin fn selam() {
-    println!("Dosyadan selam");
+fn main() {
+    let car = Car {
+        brand: "Toyota",
+        year: 2020,
+    };
+    println!("Marka: {}", car.brand);
+    println!("Yıl: {}", car.year);
 }
 ```

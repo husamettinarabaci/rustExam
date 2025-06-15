@@ -1,19 +1,17 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Re-exporting  
-#### ✅ Answer 88: Re-exporting with `pub use`
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with Lifetimes  
+#### ✅ Answer 88: Structs with lifetimes
 
-**Explanation:**
-`pub use` re-exports items, making them accessible from outside the module.
+When a struct contains reference fields, you must specify lifetime parameters. Here, `Message` has a `&str` field, so we add a lifetime parameter to the struct.
 
 ```rust
-mod inner {
-    pub fn greet() {
-        println!("Hello");
-    }
+struct Message<'a> {
+    content: &'a str,
 }
-pub use inner::greet;
 
 fn main() {
-    greet();
+    let text = "Hello, Rust!";
+    let msg = Message { content: text };
+    println!("Message: {}", msg.content);
 }
 ```

@@ -1,19 +1,20 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Modules  
-#### ✅ Answer 81: Creating and using modules
+## 📘 Section: Structs I  
+### 🔹 Category: Struct Definition and Instantiation  
+#### ✅ Answer 81: Defining a struct and creating an instance
 
-**Explanation:**
-Modules organize code into namespaces. You can define functions inside modules and call them using the module path.
+A struct in Rust is a custom data type that lets you group related values. Here, we define a `Person` struct and create an instance with specific values.
 
 ```rust
-mod math {
-    pub fn add(a: i32, b: i32) -> i32 {
-        a + b
-    }
+struct Person {
+    name: String,
+    age: u32,
 }
 
 fn main() {
-    let sum = math::add(2, 3);
-    println!("{}", sum);
+    let person = Person {
+        name: String::from("Alice"),
+        age: 30,
+    };
+    println!("Name: {}, Age: {}", person.name, person.age);
 }
 ```

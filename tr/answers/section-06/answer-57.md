@@ -1,19 +1,18 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Çoklu Hata Tipleri  
-#### ✅ Cevap 57: Çoklu hata tiplerini yönetmek
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Trait Sınırı Parametreli Fonksiyonlar  
+#### ✅ Cevap 57: Trait sınırı parametreli fonksiyon
 
-**Açıklama:**
-`Box<dyn std::error::Error>` ile bir fonksiyondan farklı hata tipleri döndürebilirsiniz.
+Trait sınırları, fonksiyonların yalnızca belirli bir trait'i uygulayan türleri kabul etmesini sağlar. Burada fonksiyon, `Display` trait'ini uygulayan herhangi bir değeri ekrana yazdırır.
 
 ```rust
-use std::fs::File;
-use std::io::{self, Read};
+use std::fmt::Display;
 
-fn oku_ve_parse_et(yol: &str) -> Result<i32, Box<dyn std::error::Error>> {
-    let mut dosya = File::open(yol)?;
-    let mut icerik = String::new();
-    dosya.read_to_string(&mut icerik)?;
-    let sayi: i32 = icerik.trim().parse()?;
-    Ok(sayi)
+fn goster<T: Display>(deger: T) {
+    println!("Değer: {}", deger);
+}
+
+fn main() {
+    goster(123);           // tamsayı
+    goster("Rustacean"); // string dilimi
 }
 ```

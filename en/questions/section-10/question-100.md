@@ -1,10 +1,10 @@
-## 📚 Section: Traits  
-### 🔹 Category: Operator Overloading  
-#### ❓ Question 100: Operator overloading with traits
+## 📘 Section: Structs II  
+### 🔹 Category: Methods and Static Variables  
+#### ❓ Question 100: Method with static variables
 
-Write a Rust struct and overload an operator for it using traits.
+Write a Rust method that uses a static variable.
 
-- Implement the `Add` trait for a struct.
-- Demonstrate usage in `main`.
+- Define a struct and implement a method that accesses or modifies a static variable.
+- Demonstrate how to use the method and explain any safety considerations.
 
-🔧 **Task:** Show how to overload operators using traits in Rust.
+🔧 **Task:** Use a `static` variable in a method implementation and show how to access or modify it safely.

@@ -1,10 +1,11 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Unsafe Code  
-#### ❓ Question 50: The purpose of the `unsafe` keyword
+### 🔹 Category: Function Parameters  
+#### ❓ Question 50: Function that takes a tuple as argument
 
-Explain the purpose of the `unsafe` keyword in Rust.
+Write a Rust function that takes a tuple as a parameter.
 
-- Describe situations where `unsafe` is necessary.
-- Provide a brief example of an unsafe operation.
+- Define a function named `print_point` that takes a parameter of type `(i32, i32)`.
+- The function should print the values in the tuple as `Point: (x, y)`.
+- In the `main` function, call `print_point` with the tuple `(5, 8)`.
 
-🔧 **Task:** Clarify when and why to use `unsafe` in Rust programs.
+🔧 **Task:** Show how to pass a tuple as an argument to a function in Rust.

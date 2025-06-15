@@ -1,19 +1,17 @@
-## 📚 Section: Generics  
-### 🔹 Category: Trait Bounds  
-#### ✅ Answer 74: Using trait bounds with generics
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Structs and Lifetimes  
+#### ✅ Answer 74: Structs with lifetime parameters
 
-**Explanation:**
-Trait bounds restrict generic types to those that implement certain traits.
+When a struct contains a reference, you must specify a lifetime parameter to ensure the reference is valid as long as the struct exists. Here, the struct `TextHolder` holds a string slice reference, and the lifetime `'a` ensures the reference is valid.
 
 ```rust
-use std::fmt::Display;
-
-fn print_value<T: Display>(value: T) {
-    println!("{}", value);
+struct TextHolder<'a> {
+    text: &'a str,
 }
 
 fn main() {
-    print_value(123);
-    print_value("abc");
+    let s = String::from("Hello, lifetime!");
+    let holder = TextHolder { text: &s };
+    println!("{}", holder.text);
 }
 ```

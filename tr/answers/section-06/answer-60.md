@@ -1,16 +1,15 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Hata Zincirleme  
-#### ✅ Cevap 60: `thiserror` veya `anyhow` ile hata zincirleme
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Yan Etkili Fonksiyon  
+#### ✅ Cevap 60: Yan etkili fonksiyon
 
-**Açıklama:**
-`thiserror` ve `anyhow` gibi crate'ler Rust'ta hata yönetimini ve zincirlemeyi kolaylaştırır.
+Bu fonksiyon, konsola yazdırarak bir yan etkinin nasıl oluştuğunu gösterir. Yan etkiler, dış dünyayı veya program durumunu etkileyen işlemlerdir (ör. I/O, statik değişken güncelleme).
 
 ```rust
-use anyhow::{Result, Context};
-use std::fs::File;
+fn mesaj_yazdir() {
+    println!("Bu fonksiyonun bir yan etkisi var: konsola yazı yazıyor.");
+}
 
-fn main() -> Result<()> {
-    File::open("foo.txt").context("Dosya açılamadı")?;
-    Ok(())
+fn main() {
+    mesaj_yazdir();
 }
 ```

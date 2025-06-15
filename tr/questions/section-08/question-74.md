@@ -1,10 +1,11 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Trait Sınırları  
-#### ❓ Soru 74: Jeneriklerde trait sınırı kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Yapılar ve Ömürler  
+#### ❓ Soru 74: Ömür parametreli yapılar
 
-Trait sınırı kullanan bir Rust fonksiyonu yazın.
+Aşağıdaki adımları izleyerek ömür parametresi kullanan bir Rust yapısı yazın:
 
-- `Display` trait'i ile sınırlandırılmış jenerik parametre alan bir fonksiyon tanımlayın.
-- Fonksiyon içinde değeri yazdırın.
+- Alanı olarak bir string dilimi referansı (`&str`) tutan bir yapı tanımlayın.
+- Yapıyı uygun ömür parametresiyle tanımlayın.
+- `main` fonksiyonunda bu yapının bir örneğini oluşturun ve referanslanan stringi yazdırın.
 
-🔧 **Görev:** Rust'ta jeneriklerde trait sınırı kullanımını gösterin.
+🔧 **Görev:** Referans alanı için ömür parametresi kullanan bir yapının nasıl tanımlanıp kullanılacağını gösterin.

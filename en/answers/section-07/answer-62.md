@@ -1,17 +1,16 @@
-## 📚 Section: Collections  
-### 🔹 Category: HashMaps  
-#### ✅ Answer 62: Using a HashMap
+## 📘 Section: Ownership and Borrowing I  
+### 🔹 Category: Move Semantics  
+#### ✅ Answer 62: Move semantics with variables
 
-**Explanation:**
-A `HashMap` stores key-value pairs. You can insert, retrieve, and iterate over entries.
+In Rust, assigning a non-Copy type (like `String`) to another variable moves the value, making the original variable invalid. This is called move semantics.
 
 ```rust
-use std::collections::HashMap;
-
 fn main() {
-    let mut map = HashMap::new();
-    map.insert("a", 1);
-    map.insert("b", 2);
-    println!("a: {:?}", map.get("a"));
+    let a = String::from("Rust");
+    let b = a; // move occurs here
+    // println!("{}", a); // error: value borrowed here after move
+    println!("{}", b); // works fine
 }
 ```
+
+If you uncomment the line with `a`, the compiler will report an error because `a` is no longer valid after the move.

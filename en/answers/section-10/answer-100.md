@@ -1,29 +1,27 @@
-## 📚 Section: Traits  
-### 🔹 Category: Operator Overloading  
-#### ✅ Answer 100: Operator overloading with traits
+## 📘 Section: Structs II  
+### 🔹 Category: Methods and Static Variables  
+#### ✅ Answer 100: Method with static variables
 
-**Explanation:**
-You can overload operators by implementing traits like `Add` for your types.
+This example demonstrates how to use a static variable in a method. The static variable `COUNTER` is modified inside a method using `unsafe` and `static mut`. Note that modifying static mutable variables is unsafe and should be avoided in concurrent code.
 
 ```rust
-use std::ops::Add;
+static mut COUNTER: u32 = 0;
 
-struct Point {
-    x: i32,
-    y: i32,
-}
+struct MyStruct;
 
-impl Add for Point {
-    type Output = Point;
-    fn add(self, other: Point) -> Point {
-        Point { x: self.x + other.x, y: self.y + other.y }
+impl MyStruct {
+    fn increment_counter() {
+        unsafe {
+            COUNTER += 1;
+            println!("COUNTER: {}", COUNTER);
+        }
     }
 }
 
 fn main() {
-    let p1 = Point { x: 1, y: 2 };
-    let p2 = Point { x: 3, y: 4 };
-    let p3 = p1 + p2;
-    println!("{} {}", p3.x, p3.y);
+    MyStruct::increment_counter();
+    MyStruct::increment_counter();
 }
 ```
+
+**Note:** Accessing or modifying `static mut` variables is unsafe and not thread-safe. For safe concurrency, use atomic types or synchronization primitives.

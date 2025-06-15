@@ -1,10 +1,12 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: VecDeque  
-#### ❓ Soru 67: VecDeque kullanmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Değiştirilebilir Referanslar ve Ödünç Alma Kuralları  
+#### ❓ Soru 67: Değiştirilebilir referanslar ve ödünç alma kuralları
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Aşağıdaki adımları izleyerek Rust'ta değiştirilebilir referans kurallarını gösteren bir program yazın:
 
-- Bir `VecDeque` oluşturun ve her iki uçtan ekleme/çıkarma işlemleri yapın.
-- Her işlem sonrası içeriği yazdırın.
+- Bir değişken oluşturun ve ona değiştirilebilir bir referans alın.
+- Aynı anda birden fazla değiştirilebilir referans alınamayacağını gösterin.
+- İkinci bir değiştirilebilir referans oluşturmaya çalışın ve derleyici hatasını gözlemleyin.
+- İsteğe bağlı olarak, farklı zamanlarda birden fazla değiştirilebilir referansa izin vermek için scope (kapsam) kullanmayı gösterin.
 
-🔧 **Görev:** Rust'ta `VecDeque` kullanımını gösterin.
+🔧 **Görev:** Rust'ın değiştirilebilir referanslar için ödünç alma kurallarını, kısıtlamaları ve scope kullanarak nasıl aşılabileceğini gösterin.

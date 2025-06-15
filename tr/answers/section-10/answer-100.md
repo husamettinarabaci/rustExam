@@ -1,29 +1,27 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Operatör Aşırı Yükleme  
-#### ✅ Cevap 100: Trait ile operatör aşırı yükleme
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Metotlar ve Statik Değişkenler  
+#### ✅ Cevap 100: Statik değişkenli metot
 
-**Açıklama:**
-Operatörler, ilgili trait'ler implemente edilerek aşırı yüklenebilir.
+Bu örnekte, bir metotta statik değişken nasıl kullanılır gösterilmektedir. Statik `COUNTER` değişkeni, metot içinde `unsafe` ve `static mut` ile değiştirilir. Statik değişkenlerin değiştirilmesi güvenli değildir ve eşzamanlı kodda sorunlara yol açabilir.
 
 ```rust
-use std::ops::Add;
+static mut COUNTER: u32 = 0;
 
-struct Nokta {
-    x: i32,
-    y: i32,
-}
+struct Ornek;
 
-impl Add for Nokta {
-    type Output = Nokta;
-    fn add(self, diger: Nokta) -> Nokta {
-        Nokta { x: self.x + diger.x, y: self.y + diger.y }
+impl Ornek {
+    fn sayaci_arttir() {
+        unsafe {
+            COUNTER += 1;
+            println!("COUNTER: {}", COUNTER);
+        }
     }
 }
 
 fn main() {
-    let n1 = Nokta { x: 1, y: 2 };
-    let n2 = Nokta { x: 3, y: 4 };
-    let n3 = n1 + n2;
-    println!("{} {}", n3.x, n3.y);
+    Ornek::sayaci_arttir();
+    Ornek::sayaci_arttir();
 }
 ```
+
+**Not:** `static mut` değişkenlere erişmek veya onları değiştirmek güvenli değildir ve thread-safe değildir. Güvenli eşzamanlılık için atomik türler veya senkronizasyon araçları kullanılmalıdır.

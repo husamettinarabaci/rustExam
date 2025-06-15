@@ -1,10 +1,11 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Özel Result Takma Adı  
-#### ❓ Soru 59: Özel Result takma adı oluşturmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Fonksiyonda Erken Dönüş  
+#### ❓ Soru 59: Erken dönüşlü fonksiyon
 
-Özel bir `Result` tip takma adı tanımlayan bir Rust programı yazın.
+`return` anahtar kelimesini kullanarak erken dönüş yapan bir Rust fonksiyonu yazın.
 
-- `Result<T, MyError>` için bir tip takma adı oluşturun.
-- Bunu özel hata döndüren bir fonksiyonda kullanın.
+- Bir tamsayı parametresi alan bir fonksiyon tanımlayın.
+- Parametre negatifse fonksiyondan erken dönün (isteğe bağlı olarak bir mesaj yazdırın).
+- Aksi halde değeri yazdırın.
 
-🔧 **Görev:** Rust'ta özel Result takma adının nasıl oluşturulup kullanılacağını gösterin.
+🔧 **Görev:** Bir koşula göre `return` ile fonksiyondan erken çıkış yapan bir fonksiyon yazın.

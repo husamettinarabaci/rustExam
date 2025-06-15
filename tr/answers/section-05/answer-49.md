@@ -1,12 +1,16 @@
-# 📗 Bölüm: Fonksiyonlar I  
-## 🔹 Kategori: Ömürler (Lifetimes)  
-### ✅ Cevap 49: `static` ömrü
+# 📘 Bölüm: Fonksiyonlar I  
+## 🔹 Kategori: Fonksiyon Dönüş Tipleri  
+### ✅ Cevap 49: Demet döndüren fonksiyon
 
-**Açıklama:**
-`static` ömrü, bir değerin programın tüm ömrü boyunca bellekte kalacağını belirtir. Genellikle sabitler ve string literal'ler için kullanılır.
+Rust'ta bir fonksiyon, dönüş tipi olarak demet (tuple) belirterek birden fazla değer döndürebilir.
 
-**Örnek:**
 ```rust
-static HELLO: &str = "Merhaba, dünya!";
+fn get_point() -> (i32, i32) {
+    (3, 4)
+}
+
+fn main() {
+    let point = get_point();
+    println!("Nokta: ({}, {})", point.0, point.1);
+}
 ```
-Burada `HELLO` değişkeni program bitene kadar bellekte kalır.

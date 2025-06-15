@@ -1,10 +1,11 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Result Type  
-#### ❓ Question 51: Using the Result type for error handling
+## 📘 Section: Functions II  
+### 🔹 Category: Scope and Lifetime  
+#### ❓ Question 51: Function scope and variable lifetime
 
-Write a Rust function that returns a `Result` type.
+Write a Rust program that demonstrates variable scope and lifetime within functions.
 
-- Define a function `divide` that takes two `i32` values and returns `Ok(quotient)` if the division is valid, or `Err(String)` if the divisor is zero.
-- Call this function from `main` and print the result.
+- Declare a variable inside a function and print its value.
+- Show that the variable is not accessible outside its scope.
+- Optionally, use comments to indicate where the variable is valid.
 
-🔧 **Task:** Demonstrate how to use the `Result` type for error handling in Rust.
+🔧 **Task:** Illustrate how variable scope and lifetime work within Rust functions.

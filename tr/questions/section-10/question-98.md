@@ -1,10 +1,10 @@
-## 📚 Bölüm: Trait'ler  
-### 🔹 Kategori: Trait Kalıtımı  
-#### ❓ Soru 98: Trait kalıtımı
+## 📘 Bölüm: Yapılar II  
+### 🔹 Kategori: Metotlar ve Trait Sınırları  
+#### ❓ Soru 98: Trait sınırı olan metot
 
-Bir trait'in başka bir trait'ten kalıtım aldığı bir Rust trait'i yazın.
+Trait sınırı kullanan bir Rust metodu yazın.
 
-- Bir temel trait ve bir alt trait tanımlayın.
-- Bir yapı için ikisini de implemente edin ve kullanımı gösterin.
+- Bir yapı tanımlayın ve yalnızca jenerik tür parametresi belirli bir trait'i (ör. `Display`) uyguluyorsa çalışan bir metot ekleyin.
+- Bu metodu, trait'i sağlayan bir tür ile çağırarak gösterin.
 
-🔧 **Görev:** Rust'ta trait kalıtımını gösterin.
+🔧 **Görev:** Bir metot implementasyonunda trait sınırı (ör. `T: Display`) kullanın ve bunun yalnızca ilgili trait'i uygulayan türlerle çalıştığını gösterin.

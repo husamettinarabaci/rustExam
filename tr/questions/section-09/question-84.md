@@ -1,10 +1,12 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: use Anahtar Kelimesi  
-#### ❓ Soru 84: `use` anahtar kelimesini kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapı Güncelleme Sözdizimi  
+#### ❓ Soru 84: Yapı güncelleme sözdizimi
 
-`use` anahtar kelimesinin kullanımını gösteren bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Bir modül ve içinde bir fonksiyon tanımlayın.
-- `main` fonksiyonunda `use` ile fonksiyonu scope'a alın ve çağırın.
+- `username` (String), `email` (String) ve `active` (bool) alanlarına sahip bir `User` yapısı tanımlayın.
+- `User` yapısından bir örnek oluşturun ve alanlarına değer atayın.
+- Sadece `email` alanını değiştirerek yapı güncelleme sözdizimi ile ikinci bir `User` örneği oluşturun.
+- Her iki kullanıcının bilgilerini terminale yazdırın.
 
-🔧 **Görev:** Rust'ta `use` anahtar kelimesinin kullanımını gösterin.
+🔧 **Görev:** Rust'ta yapı güncelleme sözdizimini kullanarak bir yapının başka bir örneğinden yeni bir örnek oluşturmayı gösterin.

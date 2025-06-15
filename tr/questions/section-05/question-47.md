@@ -1,10 +1,11 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Referans Sayımı  
-#### ❓ Soru 47: `Arc` ve `Rc` arasındaki fark
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Çağrıları  
+#### ❓ Soru 47: Başka bir fonksiyon çağıran fonksiyon
 
-Rust'ta `Arc` ve `Rc` arasındaki farkı açıklayın.
+Bir fonksiyonun başka bir fonksiyonu çağırmasını gösteren bir Rust programı yazın.
 
-- `Rc` ve `Arc`'nin hangi durumlarda kullanılması gerektiğini belirtin.
-- Her biri için kısa bir örnek verin.
+- `greet` adında, terminale `Hello from greet!` yazdıran bir fonksiyon tanımlayın.
+- `call_greet` adında, `greet` fonksiyonunu çağıran başka bir fonksiyon tanımlayın.
+- `main` fonksiyonunda `call_greet` fonksiyonunu çağırın.
 
-🔧 **Görev:** Rust programlarında `Rc` ve `Arc` kullanım alanlarını açıklayın.
+🔧 **Görev:** Rust'ta bir fonksiyonun başka bir fonksiyonu nasıl çağıracağını gösterin.

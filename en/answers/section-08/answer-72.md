@@ -1,17 +1,24 @@
-## 📚 Section: Generics  
-### 🔹 Category: Generic Structs  
-#### ✅ Answer 72: Defining a generic struct
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime with Multiple References  
+#### ✅ Answer 72: Lifetime with multiple references
 
-**Explanation:**
-Generic structs can hold values of any type, specified at instantiation.
+When a function takes references with potentially different lifetimes, you can use multiple lifetime parameters to describe their relationships. The returned reference must be tied to the shorter lifetime.
 
 ```rust
-struct Container<T> {
-    value: T,
+fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
 
 fn main() {
-    let int_container = Container { value: 5 };
-    let str_container = Container { value: "hello" };
+    let s1 = String::from("hello");
+    let s2 = String::from("world!");
+    let result = longest(&s1, &s2);
+    println!("The longest string is: {}", result);
 }
 ```
+
+> Note: In practice, you often need to specify the output lifetime as the shorter of the two input lifetimes, or use a single lifetime if both must match. The above example demonstrates the syntax for multiple lifetimes.

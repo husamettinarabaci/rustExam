@@ -1,18 +1,23 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Jenerik Kısıtlamalar  
-#### ✅ Cevap 79: Jenerik kısıtlamalar eklemek
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Jenerik Yapılarda Ömür  
+#### ✅ Cevap 79: Jenerik yapılarda ömür
 
-**Açıklama:**
-Birden fazla trait sınırı `+` ile eklenebilir.
+Bir yapı hem jenerik tip hem de ömür parametresi alabilir. Bu, yapının herhangi bir türdeki referansı tutmasını sağlar. Örnek:
 
 ```rust
-use std::fmt::Debug;
+struct Tutucu<'a, T> {
+    deger: &'a T,
+}
 
-fn yazdir_ve_klonla<T: Debug + Clone>(item: T) {
-    println!("{:?}", item.clone());
+impl<'a, T> Tutucu<'a, T> {
+    fn al(&self) -> &T {
+        self.deger
+    }
 }
 
 fn main() {
-    yazdir_ve_klonla(5);
+    let sayi = 42;
+    let tutucu = Tutucu { deger: &sayi };
+    println!("Tutulan değer: {}", tutucu.al());
 }
 ```

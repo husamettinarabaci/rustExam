@@ -1,10 +1,11 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Result Tipi  
-#### ❓ Soru 51: Hata yönetimi için Result tipini kullanmak
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Kapsam ve Ömür  
+#### ❓ Soru 51: Fonksiyon kapsamı ve değişken ömrü
 
-Bir `Result` tipi döndüren bir Rust fonksiyonu yazın.
+Bir fonksiyon içinde değişken kapsamı ve ömrünü gösteren bir Rust programı yazın.
 
-- İki `i32` değer alan ve bölen sıfırsa `Err(String)`, aksi halde `Ok(bölüm)` döndüren bir `divide` fonksiyonu tanımlayın.
-- Bu fonksiyonu `main` fonksiyonundan çağırın ve sonucu yazdırın.
+- Bir fonksiyon içinde bir değişken tanımlayın ve değerini yazdırın.
+- Değişkenin kapsamı dışında erişilemeyeceğini gösterin.
+- İsteğe bağlı olarak, değişkenin geçerli olduğu yerleri yorum satırıyla belirtin.
 
-🔧 **Görev:** Rust'ta hata yönetimi için `Result` tipinin nasıl kullanılacağını gösterin.
+🔧 **Görev:** Rust'ta fonksiyon içindeki değişken kapsamı ve ömrünün nasıl çalıştığını gösterin.

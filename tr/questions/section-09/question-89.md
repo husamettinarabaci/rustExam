@@ -1,10 +1,12 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Özel Öğeler  
-#### ❓ Soru 89: Modüllerde özel öğeler
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Metotlu Yapılar  
+#### ❓ Soru 89: Metotlu yapılar
 
-Bir modülde özel (private) öğelerin kullanımını gösteren bir Rust programı yazın.
+Aşağıdaki adımları izleyen bir Rust programı yazın:
 
-- Bir modülde özel bir fonksiyon tanımlayın.
-- Bu fonksiyona modül dışından erişilemediğini gösterin.
+- `width` (u32) ve `height` (u32) alanlarına sahip bir `Rectangle` yapısı tanımlayın.
+- `Rectangle` için alanı döndüren bir `area` metodu tanımlayın.
+- Bir `Rectangle` örneği oluşturun ve `area` metodunu çağırın.
+- Alanı terminale yazdırın.
 
-🔧 **Görev:** Rust'ta modüllerde özel öğelerin nasıl çalıştığını gösterin.
+🔧 **Görev:** Bir yapı için nasıl metot tanımlanıp kullanılacağını gösterin.

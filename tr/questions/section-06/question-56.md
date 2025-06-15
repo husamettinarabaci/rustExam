@@ -1,10 +1,10 @@
-## 📚 Bölüm: Hata Yönetimi  
-### 🔹 Kategori: Unwrap ve Expect  
-#### ❓ Soru 56: `unwrap` ve `expect` kullanımı
+## 📘 Bölüm: Fonksiyonlar II  
+### 🔹 Kategori: Jenerik Parametreli Fonksiyonlar  
+#### ❓ Soru 56: Jenerik parametreli fonksiyon
 
-`unwrap` ve `expect` kullanımını gösteren bir Rust programı yazın.
+Aşağıdaki adımları uygulayan bir Rust programı yazın:
 
-- Bir `Option<i32>` ve bir `Result<i32, &str>` oluşturun.
-- `unwrap` ve `expect` ile değerleri nasıl elde edeceğinizi ve başarısız olursa ne olacağını gösterin.
+- Herhangi bir türde parametre alan ve onu `Debug` trait'i ile ekrana yazdıran bir fonksiyon tanımlayın.
+- Bu fonksiyonu `main` fonksiyonunda en az iki farklı türle (ör. tamsayı ve string) çağırın.
 
-🔧 **Görev:** Rust'ta `unwrap` ve `expect` farkını gösterin.
+🔧 **Görev:** Rust'ta birden fazla türle çalışan jenerik fonksiyon yazımını gösterin.

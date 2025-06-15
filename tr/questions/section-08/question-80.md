@@ -1,10 +1,12 @@
-## 📚 Bölüm: Jenerikler  
-### 🔹 Kategori: Yaşam Süresi Parametreleri  
-#### ❓ Soru 80: Jeneriklerle yaşam süresi parametreleri kullanmak
+## 📘 Bölüm: Ömürler I  
+### 🔹 Kategori: Trait Nesnelerinde Ömür  
+#### ❓ Soru 80: Trait nesnelerinde ömür
 
-Jenerik ve yaşam süresi parametresi kullanan bir Rust fonksiyonu yazın.
+Aşağıdaki adımları izleyerek trait nesnesi referansı içeren ve ömür parametresi gerektiren bir Rust örneği yazın:
 
-- Yaşam süresi parametresiyle referans alıp döndüren bir fonksiyon tanımlayın.
-- `main` fonksiyonunda kullanımını gösterin.
+- Bir trait ve bu trait nesnesine referans tutan, ömür parametreli bir yapı tanımlayın.
+- Trait'i somut bir tip için implemente edin.
+- Trait nesnesi referansı ile yapının bir örneğini oluşturun.
+- `main` fonksiyonunda kullanımı gösterin.
 
-🔧 **Görev:** Rust'ta jeneriklerle yaşam süresi parametresi kullanımını gösterin.
+🔧 **Görev:** Yapı alanında trait nesnesi referansı için ömür belirtiminin nasıl yapıldığını ve kullanımını gösterin.

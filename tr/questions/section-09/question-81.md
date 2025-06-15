@@ -1,10 +1,11 @@
-## 📚 Bölüm: Modüller ve Görünürlük  
-### 🔹 Kategori: Modüller  
-#### ❓ Soru 81: Modül oluşturmak ve kullanmak
+## 📘 Bölüm: Yapılar I  
+### 🔹 Kategori: Yapı Tanımı ve Örnek Oluşturma  
+#### ❓ Soru 81: Bir yapı tanımlama ve örnek oluşturma
 
-Bir modül tanımlayan ve kullanan bir Rust programı yazın.
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- `math` adında bir modül ve içinde `add` fonksiyonu tanımlayın.
-- Bu fonksiyonu `main` fonksiyonunda çağırın.
+- `Person` adında, `name` (String) ve `age` (u32) alanlarına sahip bir yapı tanımlayın.
+- `main` fonksiyonunda bu yapının bir örneğini oluşturun ve alanlarına değer atayın.
+- Kişinin adını ve yaşını terminale yazdırın.
 
-🔧 **Görev:** Rust'ta modül tanımlamayı ve kullanmayı gösterin.
+🔧 **Görev:** Bir yapının nasıl tanımlanıp, alanlarına değer verilerek örneğinin oluşturulacağını gösterin.

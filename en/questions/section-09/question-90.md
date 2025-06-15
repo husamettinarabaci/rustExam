@@ -1,10 +1,11 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Self Keyword  
-#### ❓ Question 90: Using the `self` keyword in modules
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with associated functions  
+#### ❓ Question 90: Structs with associated functions
 
-Write a Rust program that demonstrates the `self` keyword in modules.
+Write a Rust program that demonstrates the use of associated functions with structs.
 
-- Define a module with multiple functions.
-- Use `self::` to call another function within the same module.
+- Define a struct of your choice (e.g., `Rectangle`).
+- Implement an associated function (e.g., `new`) for the struct using `impl`.
+- Use the associated function to create an instance of the struct in `main`.
 
-🔧 **Task:** Show how to use the `self` keyword in Rust modules.
+🔧 **Task:** Show how to define and use an associated function (constructor) for a struct in Rust.

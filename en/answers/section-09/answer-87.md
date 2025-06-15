@@ -1,20 +1,21 @@
-## 📚 Section: Modules and Visibility  
-### 🔹 Category: Module Files  
-#### ✅ Answer 87: Splitting modules into files
+## 📘 Section: Structs I  
+### 🔹 Category: Structs with References  
+#### ✅ Answer 87: Structs with references
 
-**Explanation:**
-Modules can be split into separate files. In `main.rs`, use `mod mymod;` to include `mymod.rs` or `mymod/mod.rs`.
+To use references in struct fields, you must specify lifetimes (unless using 'static). Here, `Car` has a `&str` field, so we add a lifetime parameter.
 
 ```rust
-// main.rs
-mod mymod;
-
-fn main() {
-    mymod::hello();
+struct Car<'a> {
+    brand: &'a str,
+    year: u16,
 }
 
-// mymod.rs
-pub fn hello() {
-    println!("Hello from file");
+fn main() {
+    let car = Car {
+        brand: "Toyota",
+        year: 2020,
+    };
+    println!("Brand: {}", car.brand);
+    println!("Year: {}", car.year);
 }
 ```

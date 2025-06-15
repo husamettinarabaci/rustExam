@@ -1,10 +1,11 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Error Chaining  
-#### ❓ Question 60: Error chaining with `thiserror` or `anyhow`
+## 📘 Section: Functions II  
+### 🔹 Category: Side Effects in Functions  
+#### ❓ Question 60: Function with side effects
 
-Write a Rust program that demonstrates error chaining using the `thiserror` or `anyhow` crate.
+Write a Rust function that demonstrates a side effect (such as modifying a global/static variable or printing to the console).
 
-- Define a custom error type using `thiserror` or use `anyhow` for error handling.
-- Show how to chain errors from different sources.
+- Define a function that performs an action with a visible side effect.
+- For example, print a message to the console or update a static variable.
+- Call the function from `main` to show the side effect.
 
-🔧 **Task:** Show how to implement error chaining in Rust using a popular error handling crate.
+🔧 **Task:** Implement a function that produces a side effect when called.

@@ -1,10 +1,12 @@
-## 📚 Section: Generics  
-### 🔹 Category: Lifetime Parameters  
-#### ❓ Question 80: Using lifetime parameters with generics
+## 📘 Section: Lifetimes I  
+### 🔹 Category: Lifetime in Trait Objects  
+#### ❓ Question 80: Lifetime in trait objects
 
-Write a Rust function that uses both generics and lifetime parameters.
+Write a Rust example that demonstrates how to use lifetimes with trait objects:
 
-- Define a function that takes a reference with a lifetime and returns it.
+- Define a trait and a struct that holds a reference to a trait object, requiring a lifetime annotation.
+- Implement the trait for a concrete type.
+- Show how to create an instance of the struct with a trait object reference.
 - Demonstrate usage in `main`.
 
-🔧 **Task:** Show how to use lifetime parameters with generics in Rust.
+🔧 **Task:** Show how to specify lifetimes for references to trait objects in struct fields and usage.

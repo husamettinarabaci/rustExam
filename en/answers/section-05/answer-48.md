@@ -1,16 +1,21 @@
 # Answer 48
 
 ## 📘 Section: Functions I  
-### 🔹 Category: Concurrency Primitives  
-#### ✅ Answer 48: Difference between `Mutex` and `RwLock`
+### 🔹 Category: Function Parameters  
+#### ✅ Answer 48: Function with default arguments (simulate)
 
-**Explanation:**
-A `Mutex` allows only one thread to access the data at a time. An `RwLock` allows multiple readers or one writer at a time.
+Rust does not support default arguments directly, but you can simulate them using `Option` parameters and pattern matching.
 
-**Example:**
 ```rust
-use std::sync::{Mutex, RwLock};
-let m = Mutex::new(5);
-let r = RwLock::new(5);
+fn print_number(num: Option<i32>) {
+    match num {
+        Some(n) => println!("Number: {}", n),
+        None => println!("Default is 42"),
+    }
+}
+
+fn main() {
+    print_number(Some(7));
+    print_number(None);
+}
 ```
-Use `RwLock` when reads are frequent and writes are rare; use `Mutex` for exclusive access.

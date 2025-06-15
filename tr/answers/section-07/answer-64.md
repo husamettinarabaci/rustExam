@@ -1,16 +1,19 @@
-## 📚 Bölüm: Koleksiyonlar  
-### 🔹 Kategori: Dilimler  
-#### ✅ Cevap 64: Dilimlerle çalışmak
+## 📘 Bölüm: Sahiplik ve Ödünç Alma I  
+### 🔹 Kategori: Fonksiyondan Sahiplik Döndürme  
+#### ✅ Cevap 64: Fonksiyondan sahiplik döndürme
 
-**Açıklama:**
-Dilimler, bir dizinin bir bölümüne referans verir ve kopyalama yapmaz.
+Bir fonksiyon, bir değeri döndürerek onun sahipliğini çağırana aktarabilir. Çağıran, dönen değerin sahibi olur ve onu kullanabilir.
 
 ```rust
+fn sahiplik_ver() -> String {
+    let s = String::from("merhaba");
+    s // sahiplik çağırana geçer
+}
+
 fn main() {
-    let dizi = [1, 2, 3, 4, 5];
-    let dilim = &dizi[1..4];
-    for x in dilim {
-        println!("{}", x);
-    }
+    let s1 = sahiplik_ver();
+    println!("{}", s1); // çalışır
 }
 ```
+
+Burada `sahiplik_ver` fonksiyonu bir `String` döndürerek sahipliği çağırana aktarır ve çağıran bu değeri kullanabilir.

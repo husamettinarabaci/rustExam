@@ -1,15 +1,15 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Unsafe Code  
-#### ✅ Answer 50: The purpose of the `unsafe` keyword
+### 🔹 Category: Function Parameters  
+#### ✅ Answer 50: Function that takes a tuple as argument
 
-**Explanation:**
-The `unsafe` keyword is used to mark code blocks where Rust's safety guarantees are relaxed and the programmer takes responsibility for upholding safety.
+A function in Rust can take a tuple as a parameter by specifying the tuple type in the function signature.
 
-**Example:**
 ```rust
-let ptr = 42 as *const i32;
-unsafe {
-    println!("Value: {}", *ptr);
+fn print_point(point: (i32, i32)) {
+    println!("Point: ({}, {})", point.0, point.1);
+}
+
+fn main() {
+    print_point((5, 8));
 }
 ```
-Here, dereferencing a raw pointer requires `unsafe` because Rust cannot guarantee safety.

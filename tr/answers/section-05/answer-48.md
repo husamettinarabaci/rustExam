@@ -1,14 +1,19 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Eşzamanlılık Primitifleri  
-#### ✅ Cevap 48: `Mutex` ve `RwLock` arasındaki fark
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Parametreleri  
+#### ✅ Cevap 48: Varsayılan argümanlı fonksiyon (simüle)
 
-**Açıklama:**
-`Mutex` aynı anda yalnızca bir thread'in verilere erişmesine izin verir. `RwLock` ise birden fazla thread'in aynı anda okuma, yalnızca bir thread'in yazma yapmasına izin verir.
+Rust'ta doğrudan varsayılan argüman desteği yoktur, ancak `Option` parametreleri ve desen eşleme ile bu davranış simüle edilebilir.
 
-**Örnek:**
 ```rust
-use std::sync::{Mutex, RwLock};
-let m = Mutex::new(5);
-let r = RwLock::new(5);
+fn print_number(num: Option<i32>) {
+    match num {
+        Some(n) => println!("Number: {}", n),
+        None => println!("Default is 42"),
+    }
+}
+
+fn main() {
+    print_number(Some(7));
+    print_number(None);
+}
 ```
-Sık okuma, az yazma varsa `RwLock`, tam tersi durumda `Mutex` tercih edilir.

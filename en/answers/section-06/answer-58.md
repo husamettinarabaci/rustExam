@@ -1,17 +1,17 @@
-## 📚 Section: Error Handling  
-### 🔹 Category: Error Handling in Iterators  
-#### ✅ Answer 58: Error handling in iterators
+## 📘 Section: Functions II  
+### 🔹 Category: Recursion  
+#### ✅ Answer 58: Function with recursion
 
 **Explanation:**
-You can use iterator methods like `map` and `collect` to handle errors when processing collections.
+Recursive functions call themselves to solve problems. Here, a recursive function computes the factorial of a number.
 
 ```rust
+fn factorial(n: u32) -> u32 {
+    if n == 0 { 1 } else { n * factorial(n - 1) }
+}
+
 fn main() {
-    let strings = vec!["1", "2", "a"];
-    let results: Result<Vec<i32>, _> = strings.iter().map(|s| s.parse()).collect();
-    match results {
-        Ok(nums) => println!("Numbers: {:?}", nums),
-        Err(e) => println!("Error: {}", e),
-    }
+    let result = factorial(5);
+    println!("Factorial: {}", result); // Output: Factorial: 120
 }
 ```
