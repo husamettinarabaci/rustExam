@@ -1,18 +1,29 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: Statik Değişkenler  
-#### ✅ Cevap 193: Statik ve mutable statik değişken kullanımı
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: Fonksiyonlardan Result Döndürme  
+#### ✅ Cevap 193: Fonksiyonlardan `Result` döndürme
 
-`static` değişkenler global ve varsayılan olarak değiştirilemezdir. `static mut` değişkenler ise global ve değiştirilebilirdir, ancak veri yarışına yol açabileceği için unsafe blokta erişilmelidir.
+Rust'ta fonksiyonlardan `Result` döndürmek, başarı ve hata durumlarını belirtmenin idiomatik yoludur. `Ok` başarıyı, `Err` ise genellikle açıklayıcı bir mesajla hatayı temsil eder.
 
 ```rust
-static SELAM: &str = "Merhaba, dünya!";
-static mut SAYAC: i32 = 0;
+fn pozitif_mi(n: i32) -> Result<i32, String> {
+    if n > 0 {
+        Ok(n)
+    } else {
+        Err(format!("{} pozitif değil", n))
+    }
+}
 
 fn main() {
-    println!("{}", SELAM);
-    unsafe {
-        SAYAC += 1;
-        println!("SAYAC: {}", SAYAC);
+    match pozitif_mi(5) {
+        Ok(deger) => println!("Başarılı: {}", deger),
+        Err(e) => println!("Hata: {}", e),
+    }
+
+    match pozitif_mi(-3) {
+        Ok(deger) => println!("Başarılı: {}", deger),
+        Err(e) => println!("Hata: {}", e),
     }
 }
 ```
+
+Bu yaklaşım, hataları zarifçe yönetmenizi sağlar ve kodunuzu daha sağlam hale getirir.

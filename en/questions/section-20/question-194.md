@@ -1,11 +1,11 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: Unsafe Traits  
-#### ❓ Question 194: Defining and implementing unsafe traits
+## 📘 Section: Error Handling  
+### 🔹 Category: Dynamic Errors with Box<dyn Error>  
+#### ❓ Question 194: Using `Box<dyn Error>` for dynamic errors
 
-Write a Rust trait that is marked as `unsafe` and implement it for a type. Explain when and why a trait should be unsafe.
+Write a Rust function that returns `Result<T, Box<dyn std::error::Error>>` to allow for dynamic error handling.
 
-- Define an `unsafe trait`.
-- Implement the trait for a type.
-- Briefly explain the use case for unsafe traits.
+- Define a function that can return different error types using `Box<dyn Error>`.
+- Use standard library errors (e.g., parsing or IO errors) in your function.
+- Show how to call this function and handle errors in `main`.
 
-🔧 **Task:** Demonstrate the definition and implementation of unsafe traits in Rust.
+🔧 **Task:** Demonstrate how to use `Box<dyn Error>` as a flexible error type in Rust functions.

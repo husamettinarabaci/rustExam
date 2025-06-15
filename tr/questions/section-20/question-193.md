@@ -1,11 +1,11 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: Statik Değişkenler  
-#### ❓ Soru 193: Statik ve mutable statik değişken kullanımı
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: Fonksiyonlardan Result Döndürme  
+#### ❓ Soru 193: Fonksiyonlardan `Result` döndürme
 
-Bir Rust programında `static` ve `static mut` değişken tanımlayın ve kullanın. Mutable statiklerin güvenlik risklerini açıklayın.
+Başarı veya hata durumunu belirtmek için `Result` türü döndüren bir Rust fonksiyonu yazın.
 
-- Bir `static` ve bir `static mut` değişken tanımlayın.
-- Mutable statik değişkene unsafe blokta erişin.
-- Mutable statiklerin neden unsafe olduğunu kısaca açıklayın.
+- Bir tamsayı parametre alan ve `Result<i32, String>` döndüren bir fonksiyon tanımlayın.
+- Girdi pozitifse `Ok`, değilse hata mesajı ile `Err` döndürün.
+- Bu fonksiyonu çağırıp hem başarı hem hata durumlarını `main` fonksiyonunda nasıl ele alacağınızı gösterin.
 
-🔧 **Görev:** Rust'ta statik ve mutable statik değişkenlerin kullanımını ve risklerini gösterin.
+🔧 **Görev:** Rust'ta fonksiyonlardan `Result` döndürmeyi ve nasıl kullanılacağını gösterin.

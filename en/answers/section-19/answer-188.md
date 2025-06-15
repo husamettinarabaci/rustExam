@@ -1,31 +1,24 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Thread Safety  
-#### ✅ Answer 188: Ensuring thread safety in custom types
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Option Combinators  
+#### ✅ Answer 188: Using `map` and `and_then` on Option
 
-To make a custom struct thread-safe, wrap it in `Arc<Mutex<T>>` so it can be safely shared and mutated across threads.
+The `map` method allows you to transform the value inside an `Option` if it exists, while `and_then` (also known as `flat_map`) lets you chain operations that themselves return an `Option`. This is useful for composing computations that may fail or be absent at any step.
 
 ```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
-
-struct Data {
-    value: i32,
-}
-
 fn main() {
-    let data = Arc::new(Mutex::new(Data { value: 0 }));
-    let mut handles = vec![];
-    for _ in 0..5 {
-        let data = Arc::clone(&data);
-        let handle = thread::spawn(move || {
-            let mut d = data.lock().unwrap();
-            d.value += 1;
-        });
-        handles.push(handle);
-    }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Final value: {}", data.lock().unwrap().value);
+    let value = Some(5);
+    let result = value
+        .map(|x| x * 2) // Doubles the value: Some(10)
+        .and_then(|x| if x % 2 == 0 { Some(x) } else { None }); // Keeps only even numbers
+    println!("Result: {:?}", result); // Output: Result: Some(10)
+
+    let value = Some(3);
+    let result = value
+        .map(|x| x * 2) // Doubles the value: Some(6)
+        .and_then(|x| if x % 4 == 0 { Some(x) } else { None }); // Only keeps multiples of 4
+    println!("Result: {:?}", result); // Output: Result: None
 }
 ```
+
+- `map` is used to transform the value inside the `Option`.
+- `and_then` is used to chain another operation that returns an `Option`.

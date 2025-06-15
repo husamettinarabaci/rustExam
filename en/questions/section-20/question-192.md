@@ -1,11 +1,11 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: FFI (Foreign Function Interface)  
-#### ❓ Question 192: Calling C functions from Rust using FFI
+## 📘 Section: Error Handling  
+### 🔹 Category: Custom Error Types  
+#### ❓ Question 192: Creating custom error types
 
-Write a Rust program that declares and calls an external C function using FFI. Explain the use of `extern` blocks and `unsafe`.
+Write a Rust program that demonstrates how to create and use custom error types.
 
-- Declare an external C function using `extern "C"`.
-- Call the function from Rust using an unsafe block.
-- Briefly explain FFI and its risks.
+- Define a custom error type using an `enum` and implement the `std::fmt::Display` and `std::error::Error` traits for it.
+- Write a function that returns a `Result<T, YourErrorType>`.
+- Show how to handle your custom error in `main` using pattern matching.
 
-🔧 **Task:** Demonstrate FFI by calling a C function from Rust.
+🔧 **Task:** Show how to define, return, and handle custom error types in Rust.

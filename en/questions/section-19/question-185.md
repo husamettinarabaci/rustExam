@@ -1,10 +1,11 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Thread Pools  
-#### ❓ Question 185: Using thread pools for concurrent tasks
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Multiple Error Types  
+#### ❓ Question 185: Handling multiple error types
 
-Describe how to use a thread pool in Rust to execute multiple tasks concurrently. Provide an example using the `threadpool` crate or similar.
+Write a Rust function that reads a number from a file and returns a `Result<i32, Box<dyn std::error::Error>>`. The function should handle both I/O errors and parse errors. Demonstrate how to call this function and handle the different error types.
 
-- Explain the concept of a thread pool.
-- Show how to create a thread pool and submit tasks.
+- Define a function that opens a file, reads a line, and parses it as an integer.
+- Use `Box<dyn std::error::Error>` to allow multiple error types.
+- Show how to call the function and print different error messages depending on the error.
 
-🔧 **Task:** Demonstrate concurrent task execution using a thread pool in Rust.
+🔧 **Task:** Demonstrate handling multiple error types in Rust using `Result` and trait objects for error types.

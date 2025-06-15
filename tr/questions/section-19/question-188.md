@@ -1,10 +1,11 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Thread Güvenliği  
-#### ❓ Soru 188: Özel tiplerde thread güvenliği sağlama
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Option Kombinatörleri  
+#### ❓ Soru 188: Option'da `map` ve `and_then` kullanımı
 
-Rust'ta özel bir struct'ı thread güvenli yapmak için neler yapılır? `Arc` ve `Mutex` ile örnek verin.
+Aşağıdaki adımları izleyerek `Option` türü üzerinde `map` ve `and_then` metodlarının nasıl kullanılacağını gösteren bir Rust programı yazın:
 
-- Özel bir struct tanımlayın.
-- `Arc<Mutex<T>>` ile thread'ler arasında güvenli paylaşımı gösterin.
+- Bir `Option<i32>` değişkeni oluşturun.
+- Eğer değer varsa, `map` ile değeri dönüştürün (örneğin ikiyle çarpın).
+- `and_then` ile başka bir işlemi zincirleyin ve bu işlem de bir `Option` döndürsün (örneğin sadece çift sonuçları koruyun).
 
-🔧 **Görev:** Rust'ın eşzamanlılık primitifleriyle özel tiplerde thread güvenliğini gösterin.
+🔧 **Görev:** `map` ve `and_then` metodlarının Option değerleri üzerinde nasıl işlem ve zincirleme için kullanılabileceğini gösterin.

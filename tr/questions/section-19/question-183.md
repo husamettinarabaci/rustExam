@@ -1,11 +1,11 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Paylaşılan Durum  
-#### ❓ Soru 183: Paylaşılan durum için Mutex kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Result Türü ve Hata Yönetimi  
+#### ❓ Soru 183: Hata yönetimi için Result kullanımı
 
-Birden fazla thread'in paylaşılan bir sayacı güvenli şekilde artırdığı bir Rust programı yazın.
+Bir string'den sayı okuyan ve `Result<i32, std::num::ParseIntError>` döndüren bir Rust fonksiyonu yazın. Bu fonksiyonu çağırırken hem başarılı hem de hatalı durumları nasıl yöneteceğinizi gösterin.
 
-- `std::sync::Arc` ve `std::sync::Mutex` kullanın.
-- Birden fazla thread başlatıp sayacı artırın.
-- Tüm thread'ler bitince sonucu yazdırın.
+- String parametre alan ve `Result` döndüren bir fonksiyon tanımlayın.
+- `Ok` ve `Err` durumlarını eşlemek için pattern matching kullanın.
+- Hem başarılı hem de başarısız parse işlemleri için mesaj yazdırın.
 
-🔧 **Görev:** `Mutex` ve `Arc` ile güvenli paylaşılan durum değişikliğini gösterin.
+🔧 **Görev:** Rust'ta hata yönetimi için `Result` kullanımını ve sonucun nasıl eşleneceğini gösterin.

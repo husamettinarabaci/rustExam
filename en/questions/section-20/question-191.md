@@ -1,11 +1,11 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: Unsafe Blocks  
-#### ❓ Question 191: Using unsafe blocks in Rust
+## 📘 Section: Error Handling  
+### 🔹 Category: Using expect and unwrap  
+#### ❓ Question 191: Using `expect` and `unwrap` safely
 
-Write a Rust function that uses an unsafe block to dereference a raw pointer. Explain why and when unsafe blocks are needed.
+Write a Rust program that demonstrates how to use `expect` and `unwrap` safely on `Option` and `Result` types.
 
-- Create a function that takes a raw pointer and returns its value.
-- Use an unsafe block to dereference the pointer.
-- Briefly explain the risks of unsafe code.
+- Create examples where `unwrap` and `expect` are used on `Option` and `Result` values.
+- Show how to avoid panics by ensuring the value is `Some`/`Ok` before calling them.
+- Explain when it is appropriate to use `unwrap` or `expect`.
 
-🔧 **Task:** Demonstrate the use of unsafe blocks and raw pointers in Rust.
+🔧 **Task:** Demonstrate safe usage of `unwrap` and `expect` and explain best practices for their use.

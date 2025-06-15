@@ -1,25 +1,29 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Deadlocks  
-#### ✅ Answer 184: Understanding and preventing deadlocks
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Result Type and Error Propagation  
+#### ✅ Answer 184: Propagating errors with `?`
 
-A deadlock occurs when two or more threads are waiting for each other to release resources, causing all to block forever. In Rust, this can happen with multiple mutexes.
+This example shows how to use the `?` operator to propagate errors in Rust. The function reads a number from a file and returns a `Result<i32, Box<dyn std::error::Error>>`. Any error encountered is automatically returned to the caller.
 
 ```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
+use std::fs::File;
+use std::io::{self, BufRead, BufReader};
+
+fn read_number_from_file(path: &str) -> Result<i32, Box<dyn std::error::Error>> {
+    let file = File::open(path)?;
+    let mut reader = BufReader::new(file);
+    let mut line = String::new();
+    reader.read_line(&mut line)?;
+    let num = line.trim().parse::<i32>()?;
+    Ok(num)
+}
 
 fn main() {
-    let a = Arc::new(Mutex::new(1));
-    let b = Arc::new(Mutex::new(2));
-    let a1 = Arc::clone(&a);
-    let b1 = Arc::clone(&b);
-    let handle = thread::spawn(move || {
-        let _lock_a = a1.lock().unwrap();
-        let _lock_b = b1.lock().unwrap();
-    });
-    let _lock_b = b.lock().unwrap();
-    let _lock_a = a.lock().unwrap();
-    handle.join().unwrap();
+    match read_number_from_file("number.txt") {
+        Ok(n) => println!("Number: {}", n),
+        Err(e) => println!("Error: {}", e),
+    }
 }
 ```
-To prevent deadlocks, always acquire locks in the same order in all threads.
+
+- The `?` operator returns early if an error occurs.
+- The function can propagate any error type that implements `std::error::Error`.

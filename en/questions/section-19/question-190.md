@@ -1,11 +1,11 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Async Programming  
-#### ❓ Question 190: Writing an async function in Rust
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Option and Result in Functions  
+#### ❓ Question 190: Option and Result in functions
 
-Write an async function that fetches data from a URL using the `reqwest` crate. Show how to call it using an async runtime.
+Write two Rust functions to demonstrate returning `Option` and `Result` types from functions.
 
-- Add the `reqwest` and `tokio` crates to your dependencies.
-- Write an async function to fetch and print the response body.
-- Show how to call it from `main` using `tokio::main`.
+- Create a function that returns `Option<i32>` (e.g., returns `Some` if input is positive, `None` otherwise).
+- Create a function that returns `Result<i32, String>` (e.g., returns `Ok` if input is even, `Err` with a message if odd).
+- Show how to call and handle the results of both functions in `main`.
 
-🔧 **Task:** Demonstrate async programming and HTTP requests in Rust.
+🔧 **Task:** Demonstrate how to return and handle `Option` and `Result` types from functions.

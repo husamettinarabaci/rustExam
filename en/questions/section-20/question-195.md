@@ -1,11 +1,11 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: Unions  
-#### ❓ Question 195: Defining and using unions in Rust
+## 📘 Section: Error Handling  
+### 🔹 Category: Propagating Errors  
+#### ❓ Question 195: Propagating errors
 
-Write a Rust program that defines a union and demonstrates how to safely access its fields. Explain the risks of using unions.
+Write a Rust function that propagates errors from a called function using the `?` operator.
 
-- Define a union with two fields of different types.
-- Show how to read a field using an unsafe block.
-- Briefly explain when unions are useful and their risks.
+- Define a function that calls another function which returns a `Result`.
+- Use the `?` operator to propagate any errors to the caller.
+- Demonstrate how the error is handled in `main` using `match`.
 
-🔧 **Task:** Demonstrate the definition and safe usage of unions in Rust.
+🔧 **Task:** Show how to propagate errors up the call stack using the `?` operator and handle them at the top level.

@@ -1,20 +1,36 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Asenkron Programlama  
-#### ✅ Cevap 190: Rust'ta asenkron fonksiyon yazma
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Fonksiyonlarda Option ve Result  
+#### ✅ Cevap 190: Fonksiyonlarda Option ve Result
 
-Bu örnek, `reqwest` ve `tokio` ile asenkron fonksiyon yazmayı ve çağırmayı gösterir.
+Fonksiyonlardan `Option` ve `Result` döndürmek, Rust'ta değer yokluğu ve hata yönetimi için yaygın bir yaklaşımdır. `Option`, bir değerin var olup olmadığını, `Result` ise hata durumlarını ifade eder.
 
 ```rust
-use reqwest;
-
-#[tokio::main]
-async fn main() {
-    let govde = fetch_url("https://www.rust-lang.org").await.unwrap();
-    println!("{}", govde);
+fn belki_pozitif(n: i32) -> Option<i32> {
+    if n > 0 { Some(n) } else { None }
 }
 
-async fn fetch_url(url: &str) -> Result<String, reqwest::Error> {
-    let yanit = reqwest::get(url).await?;
-    yanit.text().await
+fn cift_veya_hata(n: i32) -> Result<i32, String> {
+    if n % 2 == 0 {
+        Ok(n)
+    } else {
+        Err(format!("{} çift değil", n))
+    }
+}
+
+fn main() {
+    match belki_pozitif(5) {
+        Some(deger) => println!("Pozitif: {}", deger),
+        None => println!("Pozitif değil"),
+    }
+
+    match cift_veya_hata(4) {
+        Ok(deger) => println!("Çift: {}", deger),
+        Err(e) => println!("Hata: {}", e),
+    }
+
+    match cift_veya_hata(3) {
+        Ok(deger) => println!("Çift: {}", deger),
+        Err(e) => println!("Hata: {}", e),
+    }
 }
 ```

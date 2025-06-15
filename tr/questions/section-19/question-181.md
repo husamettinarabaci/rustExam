@@ -1,11 +1,10 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Thread Oluşturma  
-#### ❓ Soru 181: Rust'ta thread oluşturma ve join etme
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Nullable Değerler için Option  
+#### ❓ Soru 181: Nullable değerler için `Option` kullanımı
 
-Bir mesajı yazdırmak için yeni bir thread başlatan ve bitmesini bekleyen bir Rust programı yazın.
+Mevcut olup olmadığı belli olmayan değerler için `Option` türünün nasıl kullanılacağını gösteren bir Rust fonksiyonu yazın.
 
-- `std::thread::spawn` ile bir thread oluşturun.
-- Thread içinde bir mesaj yazdırın.
-- `join` ile thread'in bitmesini bekleyin.
+- Bir tamsayı dilimi alan ve bir çift sayı bulursa `Some(i32)`, bulamazsa `None` döndüren `cift_bul` adında bir fonksiyon tanımlayın.
+- `Option` sonucunu yönetmek için desen eşleme kullanın.
 
-🔧 **Görev:** Rust'ta temel thread oluşturma ve join işlemini gösterin.
+🔧 **Görev:** Bir değerin varlığını veya yokluğunu temsil etmek için `Option` türünü kullanın.

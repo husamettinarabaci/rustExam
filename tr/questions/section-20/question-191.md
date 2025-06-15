@@ -1,11 +1,11 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: Unsafe Blokları  
-#### ❓ Soru 191: Rust'ta unsafe blok kullanımı
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: expect ve unwrap kullanımı  
+#### ❓ Soru 191: `expect` ve `unwrap`'ı güvenli kullanma
 
-Bir raw pointer'ı dereference eden ve unsafe blok kullanan bir Rust fonksiyonu yazın. Unsafe blokların neden ve ne zaman gerektiğini açıklayın.
+`Option` ve `Result` türlerinde `expect` ve `unwrap`'ın nasıl güvenli şekilde kullanılacağını gösteren bir Rust programı yazın.
 
-- Raw pointer alan ve değerini döndüren bir fonksiyon yazın.
-- Unsafe blokta pointer'ı dereference edin.
-- Unsafe kodun risklerini kısaca açıklayın.
+- `Option` ve `Result` değerlerinde `unwrap` ve `expect` kullanımına örnekler verin.
+- Panik oluşmaması için değerin `Some`/`Ok` olduğundan nasıl emin olunacağını gösterin.
+- `unwrap` veya `expect` kullanımının uygun olduğu durumları açıklayın.
 
-🔧 **Görev:** Rust'ta unsafe blok ve raw pointer kullanımını gösterin.
+🔧 **Görev:** `unwrap` ve `expect`'in güvenli kullanımını gösterin ve en iyi uygulamaları açıklayın.

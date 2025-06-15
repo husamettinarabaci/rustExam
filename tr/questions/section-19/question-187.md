@@ -1,11 +1,12 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Atomik Tipler  
-#### ❓ Soru 187: Kilitsiz eşzamanlılık için atomik tipler kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Varsayılan Değerle Açma  
+#### ❓ Soru 187: `unwrap_or` ve `unwrap_or_else` kullanımı
 
-Birden fazla thread'in `AtomicUsize` kullanarak bir sayacı kilit olmadan artırdığı bir Rust programı yazın.
+Bir `Option<&str>` alan ve `i32` döndüren bir Rust fonksiyonu yazın. Eğer option `None` ise veya parse işlemi başarısız olursa, `unwrap_or` ve `unwrap_or_else` ile varsayılan değerler sağlayın. Farklı girdilerle fonksiyonun nasıl çağrılacağını gösterin.
 
-- `std::sync::Arc` ve `std::sync::atomic::AtomicUsize` kullanın.
-- Birden fazla thread başlatıp sayacı artırın.
-- Tüm thread'ler bitince sonucu yazdırın.
+- Girdi olarak `Option<&str>` alın.
+- `unwrap_or` ile `Option` için varsayılan değer verin.
+- `unwrap_or_else` ile `Result` için varsayılan değer verin.
+- Fonksiyonu hem `Some` hem de `None` ve geçerli/geçersiz stringlerle çağırmayı gösterin.
 
-🔧 **Görev:** Atomik tiplerle kilitsiz eşzamanlılık gösterin.
+🔧 **Görev:** Rust'ta varsayılan değerlerle `unwrap_or` ve `unwrap_or_else` kullanımını gösterin.

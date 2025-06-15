@@ -1,27 +1,24 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Shared State  
-#### ✅ Answer 183: Using Mutex for shared state
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Result Type and Error Handling  
+#### ✅ Answer 183: Using Result for error handling
 
-This example shows how to use `Mutex` and `Arc` to safely share and mutate state across threads.
+This example demonstrates how to use the `Result` type for error handling in Rust. The function tries to parse a string as an integer and returns a `Result<i32, std::num::ParseIntError>`. The caller matches on the result to handle both success and error cases.
 
 ```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
+fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
+    s.parse::<i32>()
+}
 
 fn main() {
-    let counter = Arc::new(Mutex::new(0));
-    let mut handles = vec![];
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
-            *num += 1;
-        });
-        handles.push(handle);
+    let inputs = ["42", "abc"];
+    for input in &inputs {
+        match parse_number(input) {
+            Ok(n) => println!("Parsed number: {}", n),
+            Err(e) => println!("Failed to parse '{}': {}", input, e),
+        }
     }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Result: {}", *counter.lock().unwrap());
 }
 ```
+
+- If the string can be parsed, it prints the number.
+- If parsing fails, it prints an error message.

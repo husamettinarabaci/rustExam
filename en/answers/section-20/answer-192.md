@@ -1,17 +1,46 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: FFI (Foreign Function Interface)  
-#### ✅ Answer 192: Calling C functions from Rust using FFI
+## 📘 Section: Error Handling  
+### 🔹 Category: Custom Error Types  
+#### ✅ Answer 192: Creating custom error types
 
-FFI (Foreign Function Interface) allows Rust to call functions written in other languages, such as C. This requires `extern` blocks and unsafe code.
+You can define custom error types in Rust using an `enum` and implement the `Display` and `Error` traits for better error messages and compatibility with error handling APIs.
 
 ```rust
-extern "C" {
-    fn abs(input: i32) -> i32;
+use std::fmt;
+use std::error::Error;
+
+#[derive(Debug)]
+enum MyError {
+    NotFound,
+    InvalidInput(String),
+}
+
+impl fmt::Display for MyError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            MyError::NotFound => write!(f, "Item not found"),
+            MyError::InvalidInput(msg) => write!(f, "Invalid input: {}", msg),
+        }
+    }
+}
+
+impl Error for MyError {}
+
+fn do_something(input: i32) -> Result<i32, MyError> {
+    if input < 0 {
+        Err(MyError::InvalidInput("Negative value".to_string()))
+    } else if input == 0 {
+        Err(MyError::NotFound)
+    } else {
+        Ok(input * 2)
+    }
 }
 
 fn main() {
-    let x = -5;
-    let abs_x = unsafe { abs(x) };
-    println!("abs({}) = {}", x, abs_x);
+    match do_something(-1) {
+        Ok(val) => println!("Success: {}", val),
+        Err(e) => println!("Error: {}", e),
+    }
 }
 ```
+
+This approach allows you to create meaningful and type-safe error handling in your Rust programs.

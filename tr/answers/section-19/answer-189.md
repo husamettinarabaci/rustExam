@@ -1,15 +1,19 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Paralel İteratörler  
-#### ✅ Cevap 189: Rayon ile paralel iteratör kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Result Kombinatörleri  
+#### ✅ Cevap 189: Result'ta `map_err` kullanımı
 
-`rayon` crate'i ile koleksiyonlar üzerinde paralel hesaplama yapmak kolaydır.
+`map_err` metodu, bir `Result`'ın hata değerini dönüştürmenizi sağlar ve başarılı değeri etkilemez. Bu, hata türlerini dönüştürmek veya hatalara açıklama eklemek için kullanışlıdır.
 
 ```rust
-use rayon::prelude::*;
+fn sayi_parse_et(s: &str) -> Result<i32, &str> {
+    s.parse::<i32>().map_err(|_| "Geçerli bir sayı değil!")
+}
 
 fn main() {
-    let v: Vec<i32> = (1..1_000_001).collect();
-    let toplam: i32 = v.par_iter().sum();
-    println!("Toplam: {}", toplam);
+    let sonuc = sayi_parse_et("42").map_err(|e| format!("Hata: {}", e));
+    println!("Sonuç: {:?}", sonuc); // Çıktı: Sonuç: Ok(42)
+
+    let sonuc = sayi_parse_et("abc").map_err(|e| format!("Hata: {}", e));
+    println!("Sonuç: {:?}", sonuc); // Çıktı: Sonuç: Err("Hata: Geçerli bir sayı değil!")
 }
 ```

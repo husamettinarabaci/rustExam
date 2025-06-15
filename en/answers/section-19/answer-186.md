@@ -1,11 +1,26 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Send and Sync Traits  
-#### ✅ Answer 186: Understanding the Send and Sync traits
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Method Chaining  
+#### ✅ Answer 186: Chaining Option and Result methods
 
-`Send` allows a type to be transferred between threads. `Sync` allows a type to be referenced from multiple threads safely.
+This example demonstrates how to chain `Option` and `Result` methods in Rust. The function takes an `Option<&str>`, converts it to a `Result`, and then parses it as an integer using method chaining.
 
-- `i32`, `String`, and `Vec<T>` are both `Send` and `Sync`.
-- `Rc<T>` is neither `Send` nor `Sync`.
-- `Arc<T>` is both `Send` and `Sync` if `T` is `Send` and `Sync`.
+```rust
+fn parse_optional_number(input: Option<&str>) -> Result<i32, String> {
+    input
+        .ok_or("No value provided".to_string())
+        .and_then(|s| s.parse::<i32>().map_err(|e| e.to_string()))
+}
 
-These traits are auto-implemented by the compiler for types that are safe to share or move between threads.
+fn main() {
+    let inputs = [Some("42"), Some("abc"), None];
+    for input in &inputs {
+        match parse_optional_number(*input) {
+            Ok(n) => println!("Parsed: {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+}
+```
+
+- `ok_or` converts `Option` to `Result`.
+- `and_then` and `map_err` are used to chain further processing and error handling.

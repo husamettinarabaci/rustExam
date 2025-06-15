@@ -1,11 +1,10 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Thread Spawning  
-#### ❓ Question 181: Creating and joining threads in Rust
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Option for Nullable Values  
+#### ❓ Question 181: Using `Option` for nullable values
 
-Write a Rust program that spawns a new thread to print a message and waits for it to finish.
+Write a Rust function that demonstrates how to use the `Option` type for values that may or may not be present.
 
-- Use `std::thread::spawn` to create a thread.
-- Print a message from the spawned thread.
-- Use `join` to wait for the thread to finish.
+- Define a function named `find_even` that takes a slice of integers and returns `Some(i32)` if it finds an even number, or `None` if not.
+- Show how to use pattern matching to handle the `Option` result.
 
-🔧 **Task:** Demonstrate basic thread creation and joining in Rust.
+🔧 **Task:** Use the `Option` type to represent the presence or absence of a value.

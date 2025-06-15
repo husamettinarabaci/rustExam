@@ -1,10 +1,12 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Send ve Sync Trait'leri  
-#### ❓ Soru 186: Send ve Sync trait'lerinin amacı nedir?
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Metot Zincirleme  
+#### ❓ Soru 186: Option ve Result metodlarını zincirleme
 
-Rust'ta `Send` ve `Sync` trait'lerinin amacını açıklayın. Bu trait'leri uygulayan ve uygulamayan tiplere örnek verin.
+Bir `Option<&str>` alan, değeri tam sayıya çevirmeye çalışan ve `Result<i32, String>` döndüren bir Rust fonksiyonu yazın. `map`, `ok_or` ve `and_then` ile metot zincirleme kullanın. Farklı girdilerle fonksiyonun nasıl çağrılacağını gösterin.
 
-- `Send` ve `Sync`'i kendi cümlelerinizle tanımlayın.
-- Bu trait'leri uygulayan ve uygulamayan tiplere örnek verin.
+- Girdi olarak `Option<&str>` alın.
+- `ok_or` ile `Option`'ı `Result`'a çevirin.
+- `and_then` ve `map` ile değeri işleyin ve parse edin.
+- Fonksiyonu hem `Some` hem de `None` ile çağırmayı gösterin.
 
-🔧 **Görev:** Rust'ın eşzamanlılık modelinde `Send` ve `Sync` trait'lerinin rolünü açıklayın.
+🔧 **Görev:** Rust'ta hata yönetimi ve değer dönüşümü için `Option` ve `Result` metodlarını zincirleme kullanımını gösterin.

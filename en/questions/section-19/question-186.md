@@ -1,10 +1,12 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Send and Sync Traits  
-#### ❓ Question 186: Understanding the Send and Sync traits
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Method Chaining  
+#### ❓ Question 186: Chaining Option and Result methods
 
-Explain the purpose of the `Send` and `Sync` traits in Rust. Provide examples of types that are and are not `Send` or `Sync`.
+Write a Rust function that takes an `Option<&str>`, tries to parse it as an integer, and returns a `Result<i32, String>`. Use method chaining with `map`, `ok_or`, and `and_then` to process the value. Demonstrate how to call this function with different inputs.
 
-- Define `Send` and `Sync` in your own words.
-- Give examples of types that implement or do not implement these traits.
+- Accept an `Option<&str>` as input.
+- Use `ok_or` to convert `Option` to `Result`.
+- Use `and_then` and `map` to process and parse the value.
+- Show how to call the function with both `Some` and `None` values.
 
-🔧 **Task:** Describe the roles of `Send` and `Sync` in Rust's concurrency model.
+🔧 **Task:** Demonstrate chaining of `Option` and `Result` methods in Rust for error handling and value transformation.

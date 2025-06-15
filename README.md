@@ -38,7 +38,7 @@ Design scalable and elegant Rust software: implement plugin systems, build embed
 
 ## About This Repository
 
-This repository contains a comprehensive set of 250 Rust programming questions and answers, organized into 25 sections. Each section covers a specific topic and contains 10 questions, with both Turkish and English support.
+This repository contains a comprehensive set of 1500 Rust programming questions and answers, organized into 25 sections. Each section covers a specific topic and contains 10 questions, with both Turkish and English support.
 
 ## Sections and Coverage (`rustBasics`)
 

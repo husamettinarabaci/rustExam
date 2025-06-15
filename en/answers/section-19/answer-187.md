@@ -1,27 +1,25 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Atomic Types  
-#### ✅ Answer 187: Using atomic types for lock-free concurrency
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Unwrapping and Default Values  
+#### ✅ Answer 187: Using `unwrap_or` and `unwrap_or_else`
 
-This example shows how to use `AtomicUsize` for lock-free concurrency.
+This example demonstrates how to use `unwrap_or` and `unwrap_or_else` with `Option` and `Result` in Rust. The function takes an `Option<&str>`, tries to parse it as an integer, and provides default values if needed.
 
 ```rust
-use std::sync::Arc;
-use std::sync::atomic::{AtomicUsize, Ordering};
-use std::thread;
+fn parse_or_default(input: Option<&str>) -> i32 {
+    input
+        .unwrap_or("0")
+        .parse::<i32>()
+        .unwrap_or_else(|_| -1)
+}
 
 fn main() {
-    let counter = Arc::new(AtomicUsize::new(0));
-    let mut handles = vec![];
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            counter.fetch_add(1, Ordering::SeqCst);
-        });
-        handles.push(handle);
+    let inputs = [Some("42"), Some("abc"), None];
+    for input in &inputs {
+        let result = parse_or_default(*input);
+        println!("Input: {:?} => Result: {}", input, result);
     }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Result: {}", counter.load(Ordering::SeqCst));
 }
 ```
+
+- `unwrap_or` provides a default string if the option is `None`.
+- `unwrap_or_else` provides a default integer if parsing fails.

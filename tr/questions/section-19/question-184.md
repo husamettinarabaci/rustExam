@@ -1,11 +1,11 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Deadlock'lar  
-#### ❓ Soru 184: Deadlock nedir ve nasıl önlenir?
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Result Türü ve Hata İletimi  
+#### ❓ Soru 184: `?` ile hata iletimi
 
-Rust'ın eşzamanlılık primitifleri bağlamında deadlock kavramını açıklayın. Deadlock'a sebep olabilecek bir örnek verin ve nasıl önleneceğini anlatın.
+Bir dosyadan sayı okuyan ve `Result<i32, Box<dyn std::error::Error>>` döndüren bir Rust fonksiyonu yazın. Hataları iletmek için `?` operatörünü kullanın. Bu fonksiyonu çağırıp sonucu nasıl yöneteceğinizi gösterin.
 
-- Deadlock'u kendi cümlelerinizle tanımlayın.
-- Deadlock'a sebep olabilecek bir kod örneği gösterin.
-- Deadlock'tan kaçınma stratejileri önerin.
+- Dosya açan, satır okuyan ve tam sayıya çeviren bir fonksiyon tanımlayın.
+- Hataları iletmek için `?` operatörünü kullanın.
+- Fonksiyonu çağırıp hem başarılı hem de hatalı durumları yönetin.
 
-🔧 **Görev:** Rust'ta deadlock kavramını ve önlemenin yollarını açıklayın.
+🔧 **Görev:** `Result` döndüren bir fonksiyonda Rust'ta `?` operatörüyle hata iletimini gösterin.

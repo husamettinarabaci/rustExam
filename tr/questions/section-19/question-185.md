@@ -1,10 +1,11 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Thread Havuzları  
-#### ❓ Soru 185: Thread havuzu ile eşzamanlı görev yürütme
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Birden Fazla Hata Türü  
+#### ❓ Soru 185: Birden fazla hata türüyle başa çıkma
 
-Rust'ta bir thread havuzu kullanarak birden fazla görevi eşzamanlı olarak nasıl çalıştırırsınız? `threadpool` crate'i veya benzeri bir örnekle açıklayın.
+Bir dosyadan sayı okuyan ve `Result<i32, Box<dyn std::error::Error>>` döndüren bir Rust fonksiyonu yazın. Fonksiyon hem I/O hatalarını hem de parse hatalarını yönetmeli. Fonksiyonu çağırıp farklı hata türlerini nasıl yöneteceğinizi gösterin.
 
-- Thread havuzu kavramını açıklayın.
-- Thread havuzu oluşturup görev gönderme örneği verin.
+- Dosya açan, satır okuyan ve tam sayıya çeviren bir fonksiyon tanımlayın.
+- Birden fazla hata türü için `Box<dyn std::error::Error>` kullanın.
+- Fonksiyonu çağırıp hata türüne göre farklı mesajlar yazdırın.
 
-🔧 **Görev:** Rust'ta thread havuzu ile eşzamanlı görev yürütmeyi gösterin.
+🔧 **Görev:** Rust'ta `Result` ve trait object ile birden fazla hata türünü yönetmeyi gösterin.

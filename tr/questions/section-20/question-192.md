@@ -1,11 +1,11 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: FFI (Foreign Function Interface)  
-#### ❓ Soru 192: Rust'ta FFI ile C fonksiyonu çağırma
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: Özel Hata Türleri Oluşturma  
+#### ❓ Soru 192: Özel hata türleri oluşturma
 
-FFI kullanarak harici bir C fonksiyonunu Rust'ta tanımlayan ve çağıran bir program yazın. `extern` blokları ve `unsafe` kullanımını açıklayın.
+Özel hata türlerinin nasıl oluşturulup kullanılacağını gösteren bir Rust programı yazın.
 
-- `extern "C"` ile harici bir C fonksiyonu tanımlayın.
-- Unsafe blokta fonksiyonu çağırın.
-- FFI ve risklerini kısaca açıklayın.
+- Bir `enum` ile özel bir hata türü tanımlayın ve buna `std::fmt::Display` ile `std::error::Error` traitlerini uygulayın.
+- `Result<T, HataTipiniz>` döndüren bir fonksiyon yazın.
+- `main` fonksiyonunda özel hatanızı desen eşleme ile nasıl ele alacağınızı gösterin.
 
-🔧 **Görev:** Rust'ta FFI ile C fonksiyonu çağrısını gösterin.
+🔧 **Görev:** Rust'ta özel hata türlerinin nasıl tanımlanıp, döndürülüp ve yönetileceğini gösterin.

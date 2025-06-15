@@ -1,27 +1,24 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Paylaşılan Durum  
-#### ✅ Cevap 183: Paylaşılan durum için Mutex kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Result Türü ve Hata Yönetimi  
+#### ✅ Cevap 183: Hata yönetimi için Result kullanımı
 
-Bu örnek, birden fazla thread'in `Mutex` ve `Arc` ile paylaşılan bir değeri güvenli şekilde değiştirmesini gösterir.
+Bu örnek, Rust'ta hata yönetimi için `Result` türünün nasıl kullanılacağını gösterir. Fonksiyon, bir string'i tam sayıya çevirmeye çalışır ve `Result<i32, std::num::ParseIntError>` döndürür. Çağıran kod, hem başarılı hem de hatalı durumları yönetmek için sonucu eşler.
 
 ```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
+fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
+    s.parse::<i32>()
+}
 
 fn main() {
-    let counter = Arc::new(Mutex::new(0));
-    let mut handles = vec![];
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
-            *num += 1;
-        });
-        handles.push(handle);
+    let inputs = ["42", "abc"];
+    for input in &inputs {
+        match parse_number(input) {
+            Ok(n) => println!("Çözümlenen sayı: {}", n),
+            Err(e) => println!("'{}' çözümlenemedi: {}", input, e),
+        }
     }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Sonuç: {}", *counter.lock().unwrap());
 }
 ```
+
+- String çözümlenirse, sayı ekrana yazdırılır.
+- Hata olursa, hata mesajı ekrana yazdırılır.

@@ -1,25 +1,29 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Deadlock'lar  
-#### ✅ Cevap 184: Deadlock nedir ve nasıl önlenir?
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Result Türü ve Hata İletimi  
+#### ✅ Cevap 184: `?` ile hata iletimi
 
-Deadlock, iki veya daha fazla thread'in birbirinden kaynak beklemesi nedeniyle sonsuza kadar beklemesi durumudur. Rust'ta bu, birden fazla mutex ile yaşanabilir.
+Bu örnek, Rust'ta `?` operatörüyle hataların nasıl iletileceğini gösterir. Fonksiyon, bir dosyadan sayı okur ve `Result<i32, Box<dyn std::error::Error>>` döndürür. Oluşan herhangi bir hata otomatik olarak çağırana iletilir.
 
 ```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
+use std::fs::File;
+use std::io::{self, BufRead, BufReader};
+
+fn dosyadan_sayi_oku(path: &str) -> Result<i32, Box<dyn std::error::Error>> {
+    let file = File::open(path)?;
+    let mut reader = BufReader::new(file);
+    let mut line = String::new();
+    reader.read_line(&mut line)?;
+    let num = line.trim().parse::<i32>()?;
+    Ok(num)
+}
 
 fn main() {
-    let a = Arc::new(Mutex::new(1));
-    let b = Arc::new(Mutex::new(2));
-    let a1 = Arc::clone(&a);
-    let b1 = Arc::clone(&b);
-    let handle = thread::spawn(move || {
-        let _lock_a = a1.lock().unwrap();
-        let _lock_b = b1.lock().unwrap();
-    });
-    let _lock_b = b.lock().unwrap();
-    let _lock_a = a.lock().unwrap();
-    handle.join().unwrap();
+    match dosyadan_sayi_oku("sayi.txt") {
+        Ok(n) => println!("Sayı: {}", n),
+        Err(e) => println!("Hata: {}", e),
+    }
 }
 ```
-Deadlock'tan kaçınmak için tüm thread'lerde kilitleri aynı sırayla almaya özen gösterin.
+
+- `?` operatörü hata oluşursa fonksiyondan erken döner.
+- Fonksiyon, `std::error::Error` implement eden tüm hata türlerini iletebilir.

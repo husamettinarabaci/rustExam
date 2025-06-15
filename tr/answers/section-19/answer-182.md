@@ -1,19 +1,23 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Threadler Arası İletişim  
-#### ✅ Cevap 182: Threadler arası veri iletimi için channel kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Option'ı Açma ve Eşleme  
+#### ✅ Cevap 182: `Option`'ı açma ve eşleme
 
-Bu örnek, threadler arası veri iletimi için channel kullanımını gösterir.
+Rust'ta `Option` değerleri desen eşleme veya `unwrap_or` gibi metodlarla yönetilebilir. Burada, `ilk_al` fonksiyonu ilk elemanı `Option<i32>` olarak döndürür ve her iki yöntem de gösterilmiştir.
 
 ```rust
-use std::sync::mpsc;
-use std::thread;
+fn ilk_al(sayilar: &[i32]) -> Option<i32> {
+    sayilar.get(0).copied()
+}
 
 fn main() {
-    let (tx, rx) = mpsc::channel();
-    thread::spawn(move || {
-        tx.send(42).unwrap();
-    });
-    let value = rx.recv().unwrap();
-    println!("Alındı: {}", value);
+    let dizi = [10, 20, 30];
+    // Match ile kullanım
+    match ilk_al(&dizi) {
+        Some(deger) => println!("İlk: {}", deger),
+        None => println!("Eleman yok"),
+    }
+    // unwrap_or ile kullanım
+    let ilk = ilk_al(&dizi).unwrap_or(-1);
+    println!("İlk (varsayılanla): {}", ilk);
 }
 ```

@@ -1,11 +1,11 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: Unsafe Trait'ler  
-#### ❓ Soru 194: Unsafe trait tanımlama ve implementasyonu
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: Box<dyn Error> ile Dinamik Hatalar  
+#### ❓ Soru 194: Dinamik hatalar için `Box<dyn Error>` kullanımı
 
-`unsafe` olarak işaretlenmiş bir trait tanımlayın ve bir tipe implement edin. Hangi durumlarda unsafe trait gerektiğini açıklayın.
+Dinamik hata yönetimi için `Result<T, Box<dyn std::error::Error>>` döndüren bir Rust fonksiyonu yazın.
 
-- Bir `unsafe trait` tanımlayın.
-- Trait'i bir tipe implement edin.
-- Unsafe trait kullanımının gerekçesini kısaca açıklayın.
+- Farklı hata türlerini `Box<dyn Error>` ile döndürebilen bir fonksiyon tanımlayın.
+- Fonksiyonda standart kütüphane hatalarını (ör. parse veya IO hataları) kullanın.
+- Bu fonksiyonu çağırıp hataları `main` fonksiyonunda nasıl ele alacağınızı gösterin.
 
-🔧 **Görev:** Rust'ta unsafe trait tanımı ve implementasyonunu gösterin.
+🔧 **Görev:** Rust fonksiyonlarında esnek hata türü olarak `Box<dyn Error>` kullanımını gösterin.

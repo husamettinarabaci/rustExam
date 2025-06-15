@@ -1,19 +1,23 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Thread Communication  
-#### ✅ Answer 182: Sending data between threads with channels
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Unwrapping and Matching on Option  
+#### ✅ Answer 182: Unwrapping and matching on `Option`
 
-This example demonstrates how to use channels to send data between threads.
+You can handle `Option` values in Rust using pattern matching or methods like `unwrap_or`. Here, `get_first` returns the first element as an `Option<i32>`, and both approaches are demonstrated.
 
 ```rust
-use std::sync::mpsc;
-use std::thread;
+fn get_first(nums: &[i32]) -> Option<i32> {
+    nums.get(0).copied()
+}
 
 fn main() {
-    let (tx, rx) = mpsc::channel();
-    thread::spawn(move || {
-        tx.send(42).unwrap();
-    });
-    let value = rx.recv().unwrap();
-    println!("Received: {}", value);
+    let numbers = [10, 20, 30];
+    // Using match
+    match get_first(&numbers) {
+        Some(val) => println!("First: {}", val),
+        None => println!("No elements"),
+    }
+    // Using unwrap_or
+    let first = get_first(&numbers).unwrap_or(-1);
+    println!("First (with default): {}", first);
 }
 ```

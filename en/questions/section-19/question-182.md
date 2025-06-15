@@ -1,11 +1,10 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Thread Communication  
-#### ❓ Question 182: Sending data between threads with channels
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Unwrapping and Matching on Option  
+#### ❓ Question 182: Unwrapping and matching on `Option`
 
-Write a Rust program that creates a channel and sends a value from one thread to another.
+Write a Rust function that demonstrates how to unwrap and match on an `Option` value.
 
-- Use `std::sync::mpsc::channel` to create a channel.
-- Spawn a thread to send a value.
-- Receive the value in the main thread and print it.
+- Define a function named `get_first` that takes a slice of integers and returns the first element as `Option<i32>`.
+- Show how to use both `match` and the `unwrap_or` method to handle the `Option` result.
 
-🔧 **Task:** Demonstrate inter-thread communication using channels.
+🔧 **Task:** Demonstrate unwrapping and matching on an `Option` value.

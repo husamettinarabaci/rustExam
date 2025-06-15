@@ -1,11 +1,11 @@
-## 📘 Section: Unsafe Rust and Advanced Features  
-### 🔹 Category: Static Variables  
-#### ❓ Question 193: Using static and mutable static variables
+## 📘 Section: Error Handling  
+### 🔹 Category: Returning Result from Functions  
+#### ❓ Question 193: Returning `Result` from functions
 
-Write a Rust program that defines and uses a `static` and a `static mut` variable. Explain the safety concerns with mutable statics.
+Write a Rust function that returns a `Result` type to indicate success or failure.
 
-- Define a `static` and a `static mut` variable.
-- Access the mutable static variable inside an unsafe block.
-- Briefly explain why mutable statics are unsafe.
+- Define a function that takes an integer and returns `Result<i32, String>`.
+- Return `Ok` if the input is positive, otherwise return `Err` with an error message.
+- Show how to call this function and handle both success and error cases in `main`.
 
-🔧 **Task:** Demonstrate the use and risks of static and mutable static variables in Rust.
+🔧 **Task:** Demonstrate how to return and handle `Result` from functions in Rust.

@@ -1,10 +1,11 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Parallel Iterators  
-#### ❓ Question 189: Using parallel iterators with Rayon
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Result Combinators  
+#### ❓ Question 189: Using `map_err` on Result
 
-Write a Rust program that uses the `rayon` crate to sum a large vector in parallel.
+Write a Rust program that demonstrates how to use the `map_err` method on a `Result` value.
 
-- Add the `rayon` crate to your dependencies.
-- Use `par_iter` to sum the elements of a vector in parallel.
+- Create a function that returns a `Result<i32, &str>`.
+- Use `map_err` to convert the error type to a custom error message or another type.
+- Show how `map_err` can be used to handle or transform errors in a chain.
 
-🔧 **Task:** Demonstrate parallel iteration and computation using Rayon.
+🔧 **Task:** Show how to use `map_err` to transform the error value of a `Result`.

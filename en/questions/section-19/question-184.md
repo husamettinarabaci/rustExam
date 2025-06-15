@@ -1,11 +1,11 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Deadlocks  
-#### ❓ Question 184: Understanding and preventing deadlocks
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Result Type and Error Propagation  
+#### ❓ Question 184: Propagating errors with `?`
 
-Explain what a deadlock is in the context of Rust's concurrency primitives. Provide an example of a deadlock and describe how to prevent it.
+Write a Rust function that reads a number from a file and returns a `Result<i32, Box<dyn std::error::Error>>`. Use the `?` operator to propagate errors. Demonstrate how to call this function and handle the result.
 
-- Define deadlock in your own words.
-- Show a code example that can cause a deadlock.
-- Suggest strategies to avoid deadlocks.
+- Define a function that opens a file, reads a line, and parses it as an integer.
+- Use the `?` operator to propagate errors.
+- Show how to call the function and handle both success and error cases.
 
-🔧 **Task:** Explain and demonstrate deadlocks and their prevention in Rust.
+🔧 **Task:** Demonstrate error propagation in Rust using the `?` operator in a function that returns `Result`.

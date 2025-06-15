@@ -1,11 +1,10 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Threadler Arası İletişim  
-#### ❓ Soru 182: Threadler arası veri iletimi için channel kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Option'ı Açma ve Eşleme  
+#### ❓ Soru 182: `Option`'ı açma ve eşleme
 
-Bir thread'den diğerine veri göndermek için bir channel oluşturan bir Rust programı yazın.
+Bir `Option` değeriyle nasıl eşleme ve açma işlemi yapılacağını gösteren bir Rust fonksiyonu yazın.
 
-- `std::sync::mpsc::channel` ile bir channel oluşturun.
-- Bir thread başlatıp değer gönderin.
-- Ana thread'de değeri alıp yazdırın.
+- Bir tamsayı dilimi alan ve ilk elemanı `Option<i32>` olarak döndüren `ilk_al` adında bir fonksiyon tanımlayın.
+- `Option` sonucunu hem `match` ile hem de `unwrap_or` metodu ile yönetin.
 
-🔧 **Görev:** Channel ile threadler arası iletişimi gösterin.
+🔧 **Görev:** Bir `Option` değerini açmayı ve eşlemeyi gösterin.

@@ -1,11 +1,11 @@
-## 📘 Bölüm: Güvensiz Rust ve İleri Özellikler  
-### 🔹 Kategori: Union'lar  
-#### ❓ Soru 195: Rust'ta union tanımlama ve kullanımı
+## 📘 Bölüm: Hata Yönetimi  
+### 🔹 Kategori: Hataları İletme  
+#### ❓ Soru 195: Hataları iletme
 
-Bir union tanımlayın ve alanlarına güvenli şekilde erişimi gösterin. Union kullanımının risklerini açıklayın.
+Bir fonksiyondan dönen hataları `?` operatörü ile başka bir fonksiyona ileten bir Rust fonksiyonu yazın.
 
-- Farklı tipte iki alanı olan bir union tanımlayın.
-- Unsafe blokta bir alana erişin.
-- Union'ların ne zaman ve neden riskli olduğunu kısaca açıklayın.
+- `Result` döndüren başka bir fonksiyonu çağıran bir fonksiyon tanımlayın.
+- Hataları çağırana iletmek için `?` operatörünü kullanın.
+- Hatanın `main` fonksiyonunda `match` ile nasıl ele alındığını gösterin.
 
-🔧 **Görev:** Rust'ta union tanımı ve güvenli kullanımı gösterin.
+🔧 **Görev:** `?` operatörü ile hataları üst seviyeye iletmeyi ve en üstte yakalamayı gösterin.

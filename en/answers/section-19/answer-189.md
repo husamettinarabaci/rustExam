@@ -1,15 +1,19 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Parallel Iterators  
-#### ✅ Answer 189: Using parallel iterators with Rayon
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Result Combinators  
+#### ✅ Answer 189: Using `map_err` on Result
 
-The `rayon` crate makes it easy to perform parallel computations on collections.
+The `map_err` method allows you to transform the error value of a `Result` without affecting the success value. This is useful for converting error types or adding context to errors.
 
 ```rust
-use rayon::prelude::*;
+fn parse_number(s: &str) -> Result<i32, &str> {
+    s.parse::<i32>().map_err(|_| "Not a valid number!")
+}
 
 fn main() {
-    let v: Vec<i32> = (1..1_000_001).collect();
-    let sum: i32 = v.par_iter().sum();
-    println!("Sum: {}", sum);
+    let result = parse_number("42").map_err(|e| format!("Error: {}", e));
+    println!("Result: {:?}", result); // Output: Result: Ok(42)
+
+    let result = parse_number("abc").map_err(|e| format!("Error: {}", e));
+    println!("Result: {:?}", result); // Output: Result: Err("Error: Not a valid number!")
 }
 ```

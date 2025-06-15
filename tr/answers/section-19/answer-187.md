@@ -1,27 +1,25 @@
-## 📘 Bölüm: Eşzamanlılık ve Çoklu İş Parçacığı  
-### 🔹 Kategori: Atomik Tipler  
-#### ✅ Cevap 187: Kilitsiz eşzamanlılık için atomik tipler kullanımı
+## 📘 Bölüm: Option ve Result Türleri  
+### 🔹 Kategori: Varsayılan Değerle Açma  
+#### ✅ Cevap 187: `unwrap_or` ve `unwrap_or_else` kullanımı
 
-Bu örnek, `AtomicUsize` ile kilitsiz eşzamanlılık sağlar.
+Bu örnek, Rust'ta `Option` ve `Result` ile `unwrap_or` ve `unwrap_or_else` kullanımını gösterir. Fonksiyon, bir `Option<&str>` alır, tam sayıya çevirmeye çalışır ve gerekirse varsayılan değer döndürür.
 
 ```rust
-use std::sync::Arc;
-use std::sync::atomic::{AtomicUsize, Ordering};
-use std::thread;
+fn parse_veya_varsayilan(input: Option<&str>) -> i32 {
+    input
+        .unwrap_or("0")
+        .parse::<i32>()
+        .unwrap_or_else(|_| -1)
+}
 
 fn main() {
-    let counter = Arc::new(AtomicUsize::new(0));
-    let mut handles = vec![];
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            counter.fetch_add(1, Ordering::SeqCst);
-        });
-        handles.push(handle);
+    let girdiler = [Some("42"), Some("abc"), None];
+    for input in &girdiler {
+        let sonuc = parse_veya_varsayilan(*input);
+        println!("Girdi: {:?} => Sonuç: {}", input, sonuc);
     }
-    for handle in handles {
-        handle.join().unwrap();
-    }
-    println!("Sonuç: {}", counter.load(Ordering::SeqCst));
 }
 ```
+
+- `unwrap_or`, option `None` ise varsayılan string döndürür.
+- `unwrap_or_else`, parse işlemi başarısız olursa varsayılan sayı döndürür.

@@ -1,11 +1,12 @@
-## 📘 Section: Concurrency and Multithreading  
-### 🔹 Category: Atomic Types  
-#### ❓ Question 187: Using atomic types for lock-free concurrency
+## 📘 Section: Option and Result Types  
+### 🔹 Category: Unwrapping and Default Values  
+#### ❓ Question 187: Using `unwrap_or` and `unwrap_or_else`
 
-Write a Rust program that uses `AtomicUsize` to increment a counter from multiple threads without locks.
+Write a Rust function that takes an `Option<&str>` and returns an `i32`. Use `unwrap_or` and `unwrap_or_else` to provide default values if the option is `None` or parsing fails. Demonstrate how to call this function with different inputs.
 
-- Use `std::sync::Arc` and `std::sync::atomic::AtomicUsize`.
-- Spawn multiple threads that increment the counter.
-- Print the final value after all threads finish.
+- Accept an `Option<&str>` as input.
+- Use `unwrap_or` to provide a default value for `Option`.
+- Use `unwrap_or_else` to provide a default value for a `Result`.
+- Show how to call the function with both `Some` and `None` values, and with valid/invalid strings.
 
-🔧 **Task:** Demonstrate lock-free concurrency using atomic types.
+🔧 **Task:** Demonstrate the use of `unwrap_or` and `unwrap_or_else` for handling default values in Rust.
