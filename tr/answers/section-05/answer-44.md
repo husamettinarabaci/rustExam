@@ -1,35 +1,15 @@
-# 📗 Bölüm: Fonksiyonlar I  
-## 🔹 Kategori: Trait Nesneleri ve Dinamik Dağıtım  
-### ✅ Cevap 44: Çok biçimlilik için trait nesneleri kullanımı
+# 📘 Bölüm: Fonksiyonlar I  
+## 🔹 Kategori: Fonksiyon Dönüş Tipleri  
+### ✅ Cevap 44: Hiçbir şey döndürmeyen fonksiyon (`()`)
 
-**Açıklama:**
-Trait nesneleri, aynı trait'i uygulayan farklı türlerle dinamik olarak çalışmayı sağlar ve çok biçimlilik sunar.
+Rust'ta değer döndürmeyen fonksiyonların dönüş tipi birim türü `()` olur. Eğer dönüş tipi belirtilmezse varsayılan olarak `()` kabul edilir. Bu tür fonksiyonlar genellikle terminale yazdırma gibi yan etkiler için kullanılır.
 
-**Örnek:**
 ```rust
-trait Animal {
-    fn speak(&self);
-}
-
-struct Dog;
-impl Animal for Dog {
-    fn speak(&self) { println!("Hav hav!"); }
-}
-
-struct Cat;
-impl Animal for Cat {
-    fn speak(&self) { println!("Miyav!"); }
-}
-
-fn make_speak(animal: &dyn Animal) {
-    animal.speak();
+fn print_message() {
+    println!("No return value!");
 }
 
 fn main() {
-    let dog = Dog;
-    let cat = Cat;
-    make_speak(&dog);
-    make_speak(&cat);
+    print_message();
 }
 ```
-Burada hem `Dog` hem de `Cat` `Animal` trait'ini uygular ve `make_speak` fonksiyonu trait nesnesi ile çalışır.

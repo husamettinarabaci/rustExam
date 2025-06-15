@@ -13,7 +13,7 @@ fn main() {
     let mut input = String::new();
     println!("Enter numbers separated by spaces:");
     io::stdin().read_line(&mut input).expect("Failed to read line");
-    let numbers: Vec<i32> = input.trim().split_whitespace()
+    let numbers: Vec<i32> = input.split_whitespace()
         .map(|s| s.parse().expect("Invalid number"))
         .collect();
     println!("Vector: {:?}", numbers);

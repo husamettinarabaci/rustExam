@@ -1,12 +1,11 @@
-## 📗 Bölüm: Fonksiyonlar I  
-### 🔹 Kategori: Trait Nesneleri ve Dinamik Dağıtım  
-#### ❓ Soru 44: Çok biçimlilik için trait nesneleri kullanımı
+## 📘 Bölüm: Fonksiyonlar I  
+### 🔹 Kategori: Fonksiyon Dönüş Tipleri  
+#### ❓ Soru 44: Hiçbir şey döndürmeyen fonksiyon (`()`)
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Hiçbir değer döndürmeyen bir Rust fonksiyonu yazın.
 
-- `Animal` adında bir trait tanımlayın ve `speak(&self)` metodunu ekleyin.
-- En az iki farklı struct için bu trait'i uygulayın (ör. `Dog`, `Cat`).
-- Trait nesnesi (`&dyn Animal`) alan ve `speak` metodunu çağıran bir fonksiyon yazın.
-- Bu fonksiyonu farklı türlerle çağırmayı gösterin.
+- Parametre almayan ve değer döndürmeyen `print_message` adında bir fonksiyon tanımlayın.
+- Fonksiyonun içinde terminale `No return value!` yazdırın.
+- Bu fonksiyonu `main` fonksiyonundan çağırın.
 
-🔧 **Görev:** Rust'ta çok biçimlilik sağlamak için trait nesnelerinin nasıl kullanılacağını gösterin.
+🔧 **Görev:** Rust'ta bir fonksiyonun birim türü `()` döndürerek nasıl tanımlanıp kullanılacağını gösterin.

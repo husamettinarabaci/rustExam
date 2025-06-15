@@ -1,12 +1,11 @@
 ## 📘 Section: Functions I  
-### 🔹 Category: Trait Objects and Dynamic Dispatch  
-#### ❓ Question 44: Using trait objects for polymorphism
+### 🔹 Category: Function Return Types  
+#### ❓ Question 44: Function returning nothing (`()`)
 
-Write a Rust program that does the following:
+Write a Rust function that does not return any value.
 
-- Define a trait named `Animal` with a method `speak(&self)`.
-- Implement the trait for at least two different structs (e.g., `Dog`, `Cat`).
-- Write a function that takes a trait object (`&dyn Animal`) and calls `speak`.
-- Demonstrate calling this function with different types.
+- Define a function named `print_message` that takes no parameters and returns nothing.
+- Inside the function, print `No return value!` to the terminal.
+- Call this function from the `main` function.
 
-🔧 **Task:** Show how to use trait objects to enable polymorphism in Rust.
+🔧 **Task:** Demonstrate how to declare and use a function that returns the unit type `()` in Rust.

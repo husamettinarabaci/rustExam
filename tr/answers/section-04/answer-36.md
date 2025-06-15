@@ -7,15 +7,24 @@
 Bir döngü ve `io::stdin().read_line()` ile EOF'ya kadar okuma yapılabilir.
 
 ```rust
-use std::io::{self, BufRead};
+use std::io::{self, Write};
 
 fn main() {
+    let mut satir = String::new();
     let stdin = io::stdin();
-    for satir in stdin.lock().lines() {
-        match satir {
-            Ok(s) => println!("Satır: {}", s),
-            Err(_) => break,
+
+    loop {
+        satir.clear();
+        let okunan = stdin.read_line(&mut satir).unwrap();
+
+        if okunan == 0 {
+            // EOF (Ctrl+D veya Ctrl+Z) alındı
+            break;
         }
+
+        print!("Satır: {}", satir);
+        io::stdout().flush().unwrap(); // Anında çıktı için
     }
 }
+
 ```
