@@ -23,6 +23,7 @@ Below are all levels and their section titles. For full details and questions, s
 Build the essential foundation in Rust. Learn type system, ownership and borrowing, match statements, and how the compiler helps you write safe code.
 
 **Sections:**
+
 1. Getting Started
 2. Variables, Constants, and Types
 3. Control Flow
@@ -56,6 +57,7 @@ Build the essential foundation in Rust. Learn type system, ownership and borrowi
 Learn to design reusable types, organize your code in modules and crates, manage errors idiomatically, and use Rust’s standard collections effectively.
 
 **Sections:**
+
 26. Ownership in Complex Structures
 27. Lifetimes and Borrowing Semantics
 28. Smart Pointers and Interior Mutability
@@ -89,6 +91,7 @@ Learn to design reusable types, organize your code in modules and crates, manage
 Use Rust in real-world applications: write REST APIs with Axum, build interactive CLIs with Clap, develop games using Bevy, program embedded devices, and compile Rust to WebAssembly.
 
 **Sections:**
+
 51. Async Rust in Depth
 52. Embedded Rust Foundations
 53. Game Development with Bevy
@@ -122,6 +125,7 @@ Use Rust in real-world applications: write REST APIs with Axum, build interactiv
 Dive into low-level capabilities: use unsafe blocks, interface with C code, build macros (`macro_rules!` and procedural), understand trait objects, and learn about MIR and monomorphization.
 
 **Sections:**
+
 76. Advanced Concurrency and Synchronization
 77. Embedded Systems Advanced Topics
 78. Advanced Game Development
@@ -155,6 +159,7 @@ Dive into low-level capabilities: use unsafe blocks, interface with C code, buil
 Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, coordinate with channels, implement actor-based systems, and use thread-safe containers and lock-free structures.
 
 **Sections:**
+
 101. Async Runtime and Task Management
 102. Channels and Message Passing
 103. Shared State and Synchronization
@@ -188,6 +193,7 @@ Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, 
 Design scalable and elegant Rust software: implement plugin systems, build embedded DSLs, perform compile-time checks, create fullstack WASM-backed applications, and microservice-based systems.
 
 **Sections:**
+
 126. Plugin Architectures
 127. Embedded Domain-Specific Languages (DSLs)
 128. Compile-Time Engines and Metaprogramming
