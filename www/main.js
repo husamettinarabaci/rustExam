@@ -225,7 +225,7 @@ function renderSections(sections, searchTerm = '') {
     secDiv.className = 'section' + (idx === openSectionIdx ? ' open' : '');
     const secTitle = document.createElement('div');
     secTitle.className = 'section-title';
-    secTitle.textContent = section.title;
+    secTitle.textContent = `Section ${section.number}: ${section.title}`;
     secTitle.tabIndex = 0;
     secTitle.onclick = () => {
       if (openSectionIdx === idx) return;
