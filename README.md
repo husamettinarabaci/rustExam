@@ -10,67 +10,209 @@
 
 # 🦀 Rust Full Mastery Path
 
-## 1. `rustBasics`
-**Foundations: Variables, Functions, Control Flow, Ownership**  
-Build the essential foundation in Rust. Learn type system, ownership and borrowing, match statements, and how the compiler helps you write safe code.
+This repository contains a comprehensive set of 1500 Rust programming questions and answers, organized into 6 levels. Each level contains 25 sections, and each section contains 10 questions, with both Turkish and English support.
 
-## 2. `rustPractitioner`
-**Intermediate Rust: Structs, Enums, Error Handling, Modules, Crates**  
-Learn to design reusable types, organize your code in modules and crates, manage errors idiomatically, and use Rust’s standard collections effectively.
+## Levels and Sections Overview
 
-## 3. `rustApplied`
-**Applied Rust: Web, CLI, Game Development, Embedded, and WASM**  
-Use Rust in real-world applications: write REST APIs with Axum, build interactive CLIs with Clap, develop games using Bevy, program embedded devices, and compile Rust to WebAssembly.
-
-## 4. `rustSystems`
-**Systems-Level Rust: Unsafe Code, FFI, Macros, Trait Objects, and Compiler Control**  
-Dive into low-level capabilities: use unsafe blocks, interface with C code, build macros (`macro_rules!` and procedural), understand trait objects, and learn about MIR and monomorphization.
-
-## 5. `rustConcurrency`
-**Advanced Concurrency: Async Programming, Tokio, Channels, Actor Models**  
-Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, coordinate with channels, implement actor-based systems, and use thread-safe containers and lock-free structures.
-
-## 6. `rustArchitecture`
-**Architectural Rust: Plugins, DSLs, Compile-Time Engines, Fullstack WASM**  
-Design scalable and elegant Rust software: implement plugin systems, build embedded DSLs, perform compile-time checks, create fullstack WASM-backed applications, and microservice-based systems.
+Below are all levels and their section titles. For full details and questions, see the `en/QUESTIONS.md` file.
 
 ---
 
-## About This Repository
+## 1. rustBasics
+**Foundations: Variables, Functions, Control Flow, Ownership**  
+Build the essential foundation in Rust. Learn type system, ownership and borrowing, match statements, and how the compiler helps you write safe code.
 
-This repository contains a comprehensive set of 1500 Rust programming questions and answers, organized into 25 sections. Each section covers a specific topic and contains 10 questions, with both Turkish and English support.
+**Sections:**
+1. Getting Started
+2. Variables, Constants, and Types
+3. Control Flow
+4. I/O Basics
+5. Functions I
+6. Functions II
+7. Ownership and Borrowing I
+8. Lifetimes I
+9. Structs I
+10. Structs II
+11. Enums I
+12. Enums II
+13. Modules I
+14. Modules II
+15. Crates and External Packages
+16. Collections: Vectors
+17. Advanced Patterns
+18. Collections: HashMap
+19. Option and Result Types
+20. Error Handling
+21. Traits I
+22. Generics I
+23. Generics II
+24. Closures and Iterator Basics
+25. Closures and Ownership
 
-## Sections and Coverage (`rustBasics`)
+---
 
-The questions are grouped into the following sections, each focusing on a key Rust programming topic:
+## 2. rustPractitioner
+**Intermediate Rust: Structs, Enums, Error Handling, Modules, Crates**  
+Learn to design reusable types, organize your code in modules and crates, manage errors idiomatically, and use Rust’s standard collections effectively.
 
-1. **Getting Started** – Basic syntax, printing, comments, and running your first program
-2. **Variables, Constants, and Types** – Tuples, arrays, mutability, type inference, and numeric types
-3. **Control Flow** – if/else, match, loops, and pattern matching
-4. **I/O Basics** – Reading input, parsing, error handling, and file I/O
-5. **Functions I** – Function definitions, parameters, return values, and tuples
-6. **Functions II** – Closures, recursion, generics, and advanced function features
-7. **Ownership and Borrowing I** – Ownership, borrowing, references, and lifetimes
-8. **Lifetimes I** – Lifetime annotations, elision, and lifetime errors
-9. **Structs I** – Struct definitions, fields, methods, and associated functions
-10. **Structs II** – Method implementations, chaining, trait bounds, and static variables
-11. **Enums I** – Enum basics, variants, pattern matching, and Option
-12. **Enums II** – Advanced matching, nested enums, and guards
-13. **Modules I** – Module organization, visibility, imports, and documentation
-14. **Modules II** – Public/private items, nested modules, and macros
-15. **Crates and External Packages** – Cargo, dependencies, publishing, and features
-16. **Collections: Vectors** – Vector operations, iteration, and manipulation
-17. **Advanced Patterns** – Destructuring, pattern guards, ranges, ignoring values, and more
-18. **Collections: HashMap** – HashMap creation, access, ownership, and lifetimes
-19. **Option and Result Types** – Nullable values, error handling, and combinators
-20. **Error Handling** – Custom errors, propagation, and error management
-21. **Traits I** – Trait definitions, implementations, trait objects, and bounds
-22. **Generics I** – Generic functions, structs, enums, and constraints
-23. **Generics II** – Multiple generics, lifetimes, trait objects, and type aliases
-24. **Closures and Iterator Basics** – Closures, iterator methods, and functional patterns
-25. **Closures and Ownership** – Closure captures, async, trait bounds, and recursion
+**Sections:**
+26. Ownership in Complex Structures
+27. Lifetimes and Borrowing Semantics
+28. Smart Pointers and Interior Mutability
+29. Pattern Matching and Control Flow
+30. Modules and Crate Structure
+31. Enums, Variants, and Algebraic Data Types
+32. Traits and Trait Bounds
+33. Error Handling with Result and Option
+34. Collections and Iterators
+35. Testing and Debugging
+36. Closures and Functional Techniques
+37. Modules and Visibility
+38. Ownership Across Function Boundaries
+39. Advanced Pattern Matching
+40. Working with Strings and Text
+41. File I/O and the Filesystem
+42. Collections: Vec, HashMap, HashSet
+43. Enums and Data Modeling
+44. Smart Pointers and Resource Management
+45. Lifetimes and Borrowing in Practice
+46. Testing and Debugging
+47. Workspace and Package Organization
+48. CLI Applications with Clap
+49. Web Development with Axum
+50. Project Design and Refactoring
 
-Each section contains 10 questions, for a total of 250, and all are available in both Turkish and English.
+---
+
+## 3. rustApplied
+**Applied Rust: Web, CLI, Game Development, Embedded, and WASM**  
+Use Rust in real-world applications: write REST APIs with Axum, build interactive CLIs with Clap, develop games using Bevy, program embedded devices, and compile Rust to WebAssembly.
+
+**Sections:**
+51. Async Rust in Depth
+52. Embedded Rust Foundations
+53. Game Development with Bevy
+54. WebAssembly and Frontend with Leptos/Yew
+55. Systems-Level Design with Rust
+56. Advanced Async Patterns
+57. Low-Level Embedded Systems
+58. Game Engine Architecture
+59. Frontend Framework Deep Dive
+60. Systems Programming Mastery
+61. FFI and Foreign Interfacing
+62. Procedural Macros and Code Generation
+63. Advanced Trait Design and Usage
+64. Async Patterns and Runtime Internals
+65. Performance Optimization and Profiling
+66. Unsafe Code Patterns and Safety
+67. Domain-Driven Design in Rust
+68. Advanced Error Handling and Recovery
+69. Macro Rules and Declarative Macros
+70. Full-Stack Rust Integration
+71. Advanced Ownership: Graphs, Cycles, and Interior Mutability
+72. Lifetime System and HRTB Mastery
+73. Advanced Trait System and Coherence
+74. Trait Objects and VTable Mechanics
+75. Pinning and Self-Referential Types
+
+---
+
+## 4. rustSystems
+**Systems-Level Rust: Unsafe Code, FFI, Macros, Trait Objects, and Compiler Control**  
+Dive into low-level capabilities: use unsafe blocks, interface with C code, build macros (`macro_rules!` and procedural), understand trait objects, and learn about MIR and monomorphization.
+
+**Sections:**
+76. Advanced Concurrency and Synchronization
+77. Embedded Systems Advanced Topics
+78. Advanced Game Development
+79. WebAssembly Advanced Topics
+80. Systems Programming Advanced Topics
+81. Unsafe Abstractions and APIs
+82. Advanced Macro Design
+83. Compiler Plugins and Custom Lints
+84. Cross-Crate API Design and Versioning
+85. Advanced Testing and Fuzzing
+86. Memory Safety and Static Analysis
+87. Async Runtime Implementations
+88. Advanced Networking with Rust
+89. Embedded Concurrency and Real-Time Systems
+90. Domain-Specific Languages (DSLs) in Rust
+91. Advanced Parallelism and SIMD
+92. Systems Security and Hardening
+93. Embedded OS and RTOS Development
+94. Rust in Cloud and Distributed Systems
+95. Metaprogramming and Reflection
+96. Advanced Testing and Formal Verification
+97. Compiler Internals and Language Design
+98. Profiling and Performance Tuning
+99. Language Interoperability
+100. Future Rust and Experimental Features
+
+---
+
+## 5. rustConcurrency
+**Advanced Concurrency: Async Programming, Tokio, Channels, Actor Models**  
+Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, coordinate with channels, implement actor-based systems, and use thread-safe containers and lock-free structures.
+
+**Sections:**
+101. Async Runtime and Task Management
+102. Channels and Message Passing
+103. Shared State and Synchronization
+104. Actor Model and Message Systems
+105. Futures and Async Primitives
+106. Async Error Handling
+107. Concurrency Patterns and Idioms
+108. Tokio Ecosystem Deep Dive
+109. Parallelism and Data-Parallel APIs
+110. Async Networking and IO
+111. Channel Patterns and Advanced Messaging
+112. Async Resource Management
+113. Actor Frameworks in Rust
+114. Synchronization Primitives Deep Dive
+115. Testing and Debugging Concurrent Code
+116. Async Patterns in Practice
+117. Thread Management and Scheduling
+118. Lock-Free Data Structures
+119. Actor Model Advanced Topics
+120. Concurrency Design Patterns
+121. Advanced Async I/O and Networking
+122. Distributed Systems Fundamentals
+123. High-Performance Serialization and Deserialization
+124. Microservice Architecture with Rust
+125. Rust for High-Assurance Systems
+
+---
+
+## 6. rustArchitecture
+**Architectural Rust: Plugins, DSLs, Compile-Time Engines, Fullstack WASM**  
+Design scalable and elegant Rust software: implement plugin systems, build embedded DSLs, perform compile-time checks, create fullstack WASM-backed applications, and microservice-based systems.
+
+**Sections:**
+126. Plugin Architectures
+127. Embedded Domain-Specific Languages (DSLs)
+128. Compile-Time Engines and Metaprogramming
+129. Fullstack WASM Applications
+130. Microservices and Service Meshes
+131. Plugin Systems Advanced Topics
+132. Embedded DSLs: Parsing and Compilation
+133. Compile-Time Programming Patterns
+134. Fullstack WASM UI Frameworks
+135. Microservices Architecture Patterns
+136. Plugin Security and Isolation
+137. DSL Optimization and Code Generation
+138. WASM Performance and Debugging
+139. Microservices Observability
+140. Architectural Refactoring and Evolution
+141. Plugin System Testing and Maintenance
+142. DSL User Experience and Tooling
+143. Compile-Time Performance Optimization
+144. WASM Tooling and Ecosystem
+145. Microservices Security and Compliance
+146. Advanced Plugin Architectures
+147. DSLs for Complex Domains
+148. Compile-Time Reflection and Introspection
+149. Fullstack WASM Application Scaling
+150. Future-Proofing Rust Architectures
 
 ---
 
@@ -78,7 +220,7 @@ For details on file formats and contribution guidelines, see the `en/FORMAT.md` 
 
 # rustExam
 
-Learn Rust by solving  progressively harder questions, from beginner syntax to advanced concurrency.
+Learn Rust by solving progressively harder questions, from beginner syntax to advanced concurrency.
 
 ## 🚀 What is this?
 
@@ -88,43 +230,6 @@ Each question includes:
 - Topic-based sections
 - Real code snippets
 - Markdown-exportable Q&A blocks
-
----
-## 📚 Sections and Coverage (`rustBasics`)
-
-| Section No | Section Title                  | Description                                                        | Questions |
-|------------|-------------------------------|---------------------------------------------------------------------|-----------|
-| 1          | Getting Started                | Basic syntax, printing, comments, entry point                      | 10        |
-| 2          | Variables, Constants, and Types| Variable binding, mutability, constants, tuples, arrays            | 10        |
-| 3          | Control Flow                   | Conditionals, loops, pattern matching, control keywords            | 10        |
-| 4          | I/O Basics                     | Terminal input, parsing, error handling, file input                | 10        |
-| 5          | Functions I                    | Function declaration, parameters, return values, tuples            | 10        |
-| 6          | Functions II                   | Scope, nested calls, closures, recursion, generics                 | 10        |
-| 7          | Ownership and Borrowing I      | Ownership, move semantics, references, borrowing                   | 10        |
-| 8          | Lifetimes I                    | Lifetime annotations, elision, structs, closures                   | 10        |
-| 9          | Structs I                      | Struct definition, fields, methods, lifetimes                      | 10        |
-| 10         | Structs II                     | Methods, associated functions, chaining, trait bounds              | 10        |
-| 11         | Enums I                        | Enum definition, pattern matching, methods, variants               | 10        |
-| 12         | Enums II                       | Pattern guards, nested enums, advanced matching                    | 10        |
-| 13         | Modules I                      | Modules, imports, visibility, documentation                        | 10        |
-| 14         | Modules II                     | Public/private, paths, re-exports, macros                          | 10        |
-| 15         | Crates and External Packages   | Crate creation, dependencies, publishing, features                 | 10        |
-| 16         | Collections: Vectors           | Vectors, push/pop, indexing, slicing, sorting                      | 10        |
-| 17         | Collections: Strings           | String, &str, formatting, parsing, conversion                      | 10        |
-| 18         | Collections: HashMap           | HashMap, insert, access, ownership, lifetimes                      | 10        |
-| 19         | Option and Result Types        | Option, Result, unwrapping, chaining, error propagation            | 10        |
-| 20         | Error Handling                 | expect, custom errors, Box<dyn Error>, error handling patterns     | 10        |
-| 21         | Traits I                       | Trait declaration, implementation, trait objects, bounds           | 10        |
-| 22         | Generics I                     | Generic functions, structs, enums, trait implementations           | 10        |
-| 23         | Generics II                    |ultiple generics, trait bounds, lifetimes, constraints              | 10        |
-| 24         | Closures and Iterator Basics   | Closures, iterators, map/filter, collect, chaining                 | 10        |
-| 25         | Closures and Ownership         | Closure capture, move, trait bounds, async, recursion              | 10        |
-
----
-
-✅ **Total Questions: 250**  
-📌 **Per section: 10 questions**  
-🧩 **Flexible: Sections may be rebalanced as project evolves**
 
 ---
 
