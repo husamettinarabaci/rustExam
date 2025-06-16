@@ -131,6 +131,16 @@ main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
   pointer-events: none;
   transition: opacity 0.35s cubic-bezier(.77,0,.18,1);
 }
+.question-card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(0.5);
+}
+.question-card.disabled .question-check,
+.question-card.disabled .hint-btn {
+  pointer-events: none;
+  opacity: 0.3;
+}
 .question-check {
   position: absolute;
   top: 10px;

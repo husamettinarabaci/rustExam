@@ -24,7 +24,7 @@ async function fetchText(path) {
   return await resp.text();
 }
 function parseQuestionsMD(md) {
-  // Yeni format: başlıklar ## ile, sorular başında ✅ veya ❌ ile başlıyor
+  // New format: section headers start with ##, questions start with ✅ or ❌
   const lines = md.split(/\r?\n/);
   const sections = [];
   let current = null;
@@ -41,12 +41,13 @@ function parseQuestionsMD(md) {
       };
       continue;
     }
-    // Soru satırı: başında ✅ veya ❌ olabilir, ardından numara ve metin
-    const questionMatch = line.match(/^[✅❌]\s*(\d+)\.\s+(.+)$/);
+    // Question line: starts with ✅ or ❌, then number and text
+    const questionMatch = line.match(/^([✅❌])\s*(\d+)\.\s+(.+)$/);
     if (questionMatch && current) {
       current.questions.push({
-        num: questionMatch[1],
-        title: questionMatch[2]
+        enabled: questionMatch[1] === '✅',
+        num: questionMatch[2],
+        title: questionMatch[3]
       });
     }
   }
@@ -202,6 +203,7 @@ function showResetConfirm() {
 let openSectionIdx = 0;
 let lastSections = [];
 let lastSearch = '';
+// Patch renderSections to disable/enable questions based on enabled property
 function renderSections(sections, searchTerm = '') {
   main.innerHTML = '';
   window._sectionsForProgress = sections;
@@ -240,33 +242,54 @@ function renderSections(sections, searchTerm = '') {
         card.className = 'question-card';
         card.tabIndex = 0;
         card.innerHTML = `<b>#${q.num}</b><div style='font-size:0.98em;margin-top:0.3em;'>${q.title}</div>`;
+        if (!q.enabled) {
+          card.classList.add('disabled');
+          card.setAttribute('aria-disabled', 'true');
+        }
+        // Add check button
         const checkBtn = document.createElement('button');
         checkBtn.className = 'question-check';
-        checkBtn.title = lang==='tr'?'Çözüldü olarak işaretle':'Mark as solved';
+        checkBtn.title = lang==='tr'? 'Çözüldü olarak işaretle' : 'Mark as solved';
         checkBtn.innerHTML = `<svg viewBox="0 0 20 20"><polyline points="5,11 9,15 15,7" fill="none" stroke="#b08900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-        checkBtn.onclick = (e) => {
-          e.stopPropagation();
-          checkBtn.classList.add('checked');
-          setTimeout(()=>{
-            card.classList.add('solved');
+        if (!q.enabled) {
+          checkBtn.disabled = true;
+          checkBtn.style.opacity = 0.3;
+        } else {
+          checkBtn.onclick = (e) => {
+            e.stopPropagation();
+            checkBtn.classList.add('checked');
             setTimeout(()=>{
-              markSolved(secNum, q.num);
-              renderSections(window._sectionsForProgress||[], lastSearch);
-            }, 350);
-          }, 120);
-        };
+              card.classList.add('solved');
+              setTimeout(()=>{
+                markSolved(secNum, q.num);
+                renderSections(window._sectionsForProgress||[], lastSearch);
+              }, 350);
+            }, 120);
+          };
+        }
         card.appendChild(checkBtn);
+        // Add hint button (question mark)
         const hintBtn = document.createElement('button');
         hintBtn.className = 'hint-btn';
-        hintBtn.title = lang==='tr'?'Cevabı Gör':'Show Answer';
+        hintBtn.title = lang==='tr' ? 'Cevabı Gör' : 'Show Answer';
         hintBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 20 20" style="display:block;"><circle cx="10" cy="10" r="9" fill="#ffe082" stroke="#b08900" stroke-width="1.5"/><text x="10" y="15" text-anchor="middle" font-size="13" font-family="Arial" fill="#b08900">?</text></svg>`;
-        hintBtn.onclick = (e) => {
-          e.stopPropagation();
-          openAnswerModal(secNum, q.num);
-        };
+        if (!q.enabled) {
+          hintBtn.disabled = true;
+          hintBtn.style.opacity = 0.3;
+        } else {
+          hintBtn.onclick = (e) => {
+            e.stopPropagation();
+            openAnswerModal(secNum, q.num);
+          };
+        }
         card.appendChild(hintBtn);
-        card.onclick = () => openQuestionModal(secNum, q.num, section.title, q.title);
-        card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') card.click(); };
+        if (q.enabled) {
+          card.onclick = () => openQuestionModal(secNum, q.num, section.title, q.title);
+          card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') card.click(); };
+        } else {
+          card.onclick = null;
+          card.onkeydown = null;
+        }
         grid.appendChild(card);
       });
       secDiv.appendChild(grid);
