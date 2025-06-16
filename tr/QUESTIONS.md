@@ -1,4 +1,4 @@
-# rustTemelleri
+# Yeni Rust’çı Çırağı
 
 Temeller: Değişkenler, Fonksiyonlar, Kontrol Akışı, Sahiplik
 
@@ -306,7 +306,7 @@ Rust'ta sağlam bir temel oluşturun. Tip sistemi, sahiplik ve ödünç alma, ma
 
 ---
 
-# rustUygulayıcı
+# Onaylı Rust Ustası
 
 Ara Düzey Rust: Yapılar, Enumlar, Hata Yönetimi, Modüller, Crate'ler
 
@@ -614,7 +614,7 @@ Yeniden kullanılabilir tipler tasarlamayı, kodunuzu modüller ve crate'ler ile
 
 ---
 
-# rustUygulamalı
+# Rust Diyarı Kurucusu
 
 Uygulamalı Rust: Web, CLI, Oyun Geliştirme, Gömülü ve WASM
 
@@ -922,7 +922,7 @@ Rust'ı gerçek dünyada kullanın: Axum ile REST API'leri yazın, Clap ile etki
 
 ---
 
-# rustSistemleri
+# Rust Çekirdek Ustası
 
 Sistem Seviyesi Rust: Unsafe Kod, FFI, Makrolar, Trait Nesneleri ve Derleyici Kontrolü
 
@@ -1230,7 +1230,7 @@ Düşük seviyeli yeteneklere dalın: unsafe blokları kullanın, C kodu ile ara
 
 ---
 
-# rustEşzamanlılık
+# Eşzamanlılık Komutanı
 
 İleri Eşzamanlılık: Async Programlama, Tokio, Kanallar, Aktör Modelleri
 
@@ -1538,7 +1538,7 @@ Rust'ın eşzamanlılık araçlarında ustalaşın: async/await ile çalışın,
 
 ---
 
-# rustMimari
+# Rust Evreninin Mimarı
 
 Mimari Rust: Eklentiler, DSL'ler, Derleme Zamanı Motorları, Fullstack WASM
 

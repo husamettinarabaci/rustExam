@@ -1,4 +1,4 @@
-# rustBasics
+# Rustling Initiate
 
 Foundations: Variables, Functions, Control Flow, Ownership
 
@@ -306,7 +306,7 @@ Build the essential foundation in Rust. Learn type system, ownership and borrowi
 
 ---
 
-# rustPractitioner
+# Certified Rustacean
 
 Intermediate Rust: Structs, Enums, Error Handling, Modules, Crates
 
@@ -614,7 +614,7 @@ Learn to design reusable types, organize your code in modules and crates, manage
 
 ---
 
-# rustApplied
+# Builder of Rust Realms
 
 Applied Rust: Web, CLI, Game Development, Embedded, and WASM
 
@@ -922,7 +922,7 @@ Use Rust in real-world applications: write REST APIs with Axum, build interactiv
 
 ---
 
-# rustSystems
+# Master of Rust Internals
 
 Systems-Level Rust: Unsafe Code, FFI, Macros, Trait Objects, and Compiler Control
 
@@ -1230,7 +1230,7 @@ Dive into low-level capabilities: use unsafe blocks, interface with C code, buil
 
 ---
 
-# rustConcurrency
+# Async Commander
 
 Advanced Concurrency: Async Programming, Tokio, Channels, Actor Models
 
@@ -1538,7 +1538,7 @@ Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, 
 
 ---
 
-# rustArchitecture
+# Architect of Rustverse
 
 Architectural Rust: Plugins, DSLs, Compile-Time Engines, Fullstack WASM
 
