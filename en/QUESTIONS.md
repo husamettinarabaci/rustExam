@@ -1,8 +1,4 @@
-# Rustling Initiate
-
-Foundations: Variables, Functions, Control Flow, Ownership
-
-Build the essential foundation in Rust. Learn type system, ownership and borrowing, match statements, and how the compiler helps you write safe code.
+# Questions
 
 ## 1. Getting Started
 ✅ 1. Outputting to the terminal with a basic Rust program
@@ -304,14 +300,6 @@ Build the essential foundation in Rust. Learn type system, ownership and borrowi
 ✅ 249. Closures and error handling
 ✅ 250. Closures and recursion
 
----
-
-# Certified Rustacean
-
-Intermediate Rust: Structs, Enums, Error Handling, Modules, Crates
-
-Learn to design reusable types, organize your code in modules and crates, manage errors idiomatically, and use Rust’s standard collections effectively.
-
 ## 26. Ownership in Complex Structures
 ❌ 251. Building nested structs with owned and borrowed fields
 ❌ 252. Combining `Box`, `Rc`, and `RefCell` in a single data model
@@ -611,14 +599,6 @@ Learn to design reusable types, organize your code in modules and crates, manage
 ❌ 498. Documenting public APIs and module boundaries
 ❌ 499. Refactoring legacy code with safety and confidence
 ❌ 500. Planning for extension with clean architecture principles
-
----
-
-# Builder of Rust Realms
-
-Applied Rust: Web, CLI, Game Development, Embedded, and WASM
-
-Use Rust in real-world applications: write REST APIs with Axum, build interactive CLIs with Clap, develop games using Bevy, program embedded devices, and compile Rust to WebAssembly.
 
 ## 51. Async Rust in Depth
 ❌ 501. Creating an async function and awaiting a future
@@ -920,14 +900,6 @@ Use Rust in real-world applications: write REST APIs with Axum, build interactiv
 ❌ 749. Comparing `Pin`-based APIs to regular borrowed references
 ❌ 750. Explaining why `Pin` is critical in async generators and tasks
 
----
-
-# Master of Rust Internals
-
-Systems-Level Rust: Unsafe Code, FFI, Macros, Trait Objects, and Compiler Control
-
-Dive into low-level capabilities: use unsafe blocks, interface with C code, build macros (`macro_rules!` and procedural), understand trait objects, and learn about MIR and monomorphization.
-
 ## 76. Advanced Concurrency and Synchronization
 ❌ 751. Implementing lock-free data structures
 ❌ 752. Using atomic types with `std::sync::atomic`
@@ -1227,14 +1199,6 @@ Dive into low-level capabilities: use unsafe blocks, interface with C code, buil
 ❌ 998. Contributing to Rust RFCs and discussions
 ❌ 999. Understanding the Rust edition system
 ❌ 1000. Preparing codebases for future Rust versions
-
----
-
-# Async Commander
-
-Advanced Concurrency: Async Programming, Tokio, Channels, Actor Models
-
-Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, coordinate with channels, implement actor-based systems, and use thread-safe containers and lock-free structures.
 
 ## 101. Async Runtime and Task Management
 ❌ 1001. Spawning tasks with `tokio::spawn`
@@ -1536,14 +1500,6 @@ Master Rust's concurrency tools: work with async/await, spawn tasks with Tokio, 
 ❌ 1249. Testing and verifying high-assurance systems
 ❌ 1250. Compliance with industry standards (e.g., MISRA, DO-178C)
 
----
-
-# Architect of Rustverse
-
-Architectural Rust: Plugins, DSLs, Compile-Time Engines, Fullstack WASM
-
-Design scalable and elegant Rust software: implement plugin systems, build embedded DSLs, perform compile-time checks, create fullstack WASM-backed applications, and microservice-based systems.
-
 ## 126. Plugin Architectures
 ❌ 1251. Designing plugin systems with dynamic loading
 ❌ 1252. Using `libloading` for runtime plugins
@@ -1843,5 +1799,3 @@ Design scalable and elegant Rust software: implement plugin systems, build embed
 ❌ 1498. Documentation and community engagement strategies
 ❌ 1499. Adopting emerging Rust language improvements
 ❌ 1500. Planning for long-term maintainability and scalability
-
----

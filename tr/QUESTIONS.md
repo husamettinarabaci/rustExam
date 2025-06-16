@@ -1,8 +1,4 @@
-# Yeni Rust’çı Çırağı
-
-Temeller: Değişkenler, Fonksiyonlar, Kontrol Akışı, Sahiplik
-
-Rust'ta sağlam bir temel oluşturun. Tip sistemi, sahiplik ve ödünç alma, match ifadeleri ve derleyicinin güvenli kod yazmanıza nasıl yardımcı olduğunu öğrenin.
+# Sorular
 
 ## 1. Başlarken
 ✅ 1. Temel bir Rust programı ile terminale çıktı verme  
@@ -304,14 +300,6 @@ Rust'ta sağlam bir temel oluşturun. Tip sistemi, sahiplik ve ödünç alma, ma
 ✅ 249. Closure ve hata yönetimi
 ✅ 250. Closure ve özyineleme
 
----
-
-# Onaylı Rust Ustası
-
-Ara Düzey Rust: Yapılar, Enumlar, Hata Yönetimi, Modüller, Crate'ler
-
-Yeniden kullanılabilir tipler tasarlamayı, kodunuzu modüller ve crate'ler ile organize etmeyi, hataları idiomatik olarak yönetmeyi ve Rust'ın standart koleksiyonlarını etkin şekilde kullanmayı öğrenin.
-
 ## 26. Karmaşık Yapılarda Sahiplik
 ❌ 251. Sahiplikli ve ödünç alan alanlara sahip iç içe yapılar oluşturma
 ❌ 252. Bir veri modelinde `Box`, `Rc` ve `RefCell`'i birleştirme
@@ -611,14 +599,6 @@ Yeniden kullanılabilir tipler tasarlamayı, kodunuzu modüller ve crate'ler ile
 ❌ 498. Herkese açık API'ler ve modül sınırlarını dokümante etme
 ❌ 499. Eski kodu güvenle refaktörize etme
 ❌ 500. Temiz mimari ilkeleriyle genişlemeye hazırlık
-
----
-
-# Rust Diyarı Kurucusu
-
-Uygulamalı Rust: Web, CLI, Oyun Geliştirme, Gömülü ve WASM
-
-Rust'ı gerçek dünyada kullanın: Axum ile REST API'leri yazın, Clap ile etkileşimli CLI'lar oluşturun, Bevy ile oyun geliştirin, gömülü cihazları programlayın ve Rust'ı WebAssembly'ye derleyin.
 
 ## 51. Derinlemesine Async Rust
 ❌ 501. Async fonksiyon oluşturma ve bir future'ı await etme
@@ -920,14 +900,6 @@ Rust'ı gerçek dünyada kullanın: Axum ile REST API'leri yazın, Clap ile etki
 ❌ 749. Pin tabanlı API'leri normal ödünç referanslarla karşılaştırma
 ❌ 750. `Pin`'in async jeneratörler ve görevlerde neden kritik olduğunu açıklama
 
----
-
-# Rust Çekirdek Ustası
-
-Sistem Seviyesi Rust: Unsafe Kod, FFI, Makrolar, Trait Nesneleri ve Derleyici Kontrolü
-
-Düşük seviyeli yeteneklere dalın: unsafe blokları kullanın, C kodu ile arayüz oluşturun, makrolar (hem macro_rules! hem prosedürel) yazın, trait nesnelerini anlayın ve MIR ile monomorfizasyona hakim olun.
-
 ## 76. İleri Eşzamanlılık ve Senkronizasyon
 ❌ 751. Kilitsiz veri yapıları implementasyonu
 ❌ 752. `std::sync::atomic` ile atomik tipler kullanımı
@@ -1227,14 +1199,6 @@ Düşük seviyeli yeteneklere dalın: unsafe blokları kullanın, C kodu ile ara
 ❌ 998. Rust RFC'lerine ve tartışmalarına katkı sağlama
 ❌ 999. Rust edition sistemini anlama
 ❌ 1000. Gelecekteki Rust sürümlerine kod tabanlarını hazırlama
-
----
-
-# Eşzamanlılık Komutanı
-
-İleri Eşzamanlılık: Async Programlama, Tokio, Kanallar, Aktör Modelleri
-
-Rust'ın eşzamanlılık araçlarında ustalaşın: async/await ile çalışın, Tokio ile görevler başlatın, kanallarla koordinasyon sağlayın, aktör tabanlı sistemler kurun ve thread-safe konteynerler ile kilitsiz yapılar kullanın.
 
 ## 101. Async Runtime ve Görev Yönetimi
 ❌ 1001. `tokio::spawn` ile görev başlatma
@@ -1536,14 +1500,6 @@ Rust'ın eşzamanlılık araçlarında ustalaşın: async/await ile çalışın,
 ❌ 1249. Yüksek güvenlikli sistemleri test ve doğrulama
 ❌ 1250. Endüstri standartlarına uyum (MISRA, DO-178C)
 
----
-
-# Rust Evreninin Mimarı
-
-Mimari Rust: Eklentiler, DSL'ler, Derleme Zamanı Motorları, Fullstack WASM
-
-Ölçeklenebilir ve zarif Rust yazılımları tasarlayın: eklenti sistemleri uygulayın, gömülü DSL'ler oluşturun, derleme zamanı kontrolleri yapın, fullstack WASM tabanlı uygulamalar ve mikroservis tabanlı sistemler geliştirin.
-
 ## 126. Eklenti Mimarileri
 ❌ 1251. Dinamik yüklemeyle eklenti sistemleri tasarlama
 ❌ 1252. Çalışma zamanında eklentiler için `libloading` kullanımı
@@ -1843,5 +1799,3 @@ Mimari Rust: Eklentiler, DSL'ler, Derleme Zamanı Motorları, Fullstack WASM
 ❌ 1498. Dokümantasyon ve topluluk etkileşimi stratejileri
 ❌ 1499. Yeni Rust dil iyileştirmelerini benimseme
 ❌ 1500. Uzun vadeli sürdürülebilirlik ve ölçeklenebilirlik için planlama
-
----

@@ -203,15 +203,59 @@ function showResetConfirm() {
 let openSectionIdx = 0;
 let lastSections = [];
 let lastSearch = '';
-// Patch renderSections to disable/enable questions based on enabled property
-function renderSections(sections, searchTerm = '') {
+let LEVELS_CACHE = {};
+async function fetchLevels(lang) {
+  if (LEVELS_CACHE[lang]) return LEVELS_CACHE[lang];
+  const path = `${lang}/LEVEL.md`;
+  const md = await fetchText(path);
+  // Parse LEVEL.md: each level starts with '## <num>. <name>'
+  const lines = md.split(/\r?\n/);
+  const levels = [];
+  let current = null;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const m = line.match(/^##\s+(\d+)\.\s+(.+)$/);
+    if (m) {
+      if (current) levels.push(current);
+      current = { name: m[2], desc: '', detail: '' };
+      // Next line is desc (bold), next is detail
+      if (lines[i+1] && lines[i+1].startsWith('**')) {
+        current.desc = lines[i+1].replace(/\*\*/g, '').trim();
+        i++;
+      }
+      if (lines[i+1]) {
+        current.detail = lines[i+1].replace(/\s+$/, '');
+        i++;
+      }
+    }
+  }
+  if (current) levels.push(current);
+  LEVELS_CACHE[lang] = levels;
+  return levels;
+}
+async function renderSections(sections, searchTerm = '') {
   main.innerHTML = '';
   window._sectionsForProgress = sections;
   updateProgressBar();
   lastSections = sections;
   lastSearch = searchTerm;
   const search = searchTerm.trim().toLowerCase();
+  const levels = await fetchLevels(lang);
   sections.forEach((section, idx) => {
+    // Insert level info panel before every 25th section (i.e., idx % 25 === 0)
+    if (idx % 25 === 0) {
+      const levelIdx = Math.floor(idx / 25);
+      if (levels[levelIdx]) {
+        const levelPanel = document.createElement('div');
+        levelPanel.className = 'level-info-panel';
+        levelPanel.innerHTML = `
+          <div style="font-size:1.18em;font-weight:700;color:#b08900;margin-bottom:0.3em;">Level ${levelIdx+1}: ${levels[levelIdx].name}</div>
+          <div style="font-size:1.04em;font-weight:500;color:#444;margin-bottom:0.2em;">${levels[levelIdx].desc}</div>
+          <div style="font-size:0.98em;color:#555;">${levels[levelIdx].detail}</div>
+        `;
+        main.appendChild(levelPanel);
+      }
+    }
     const secNum = (idx+1).toString().padStart(2, '0');
     let filteredQuestions = section.questions.filter(q => {
       if (!isSolved(secNum, q.num)) {
