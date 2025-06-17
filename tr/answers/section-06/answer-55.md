@@ -2,18 +2,15 @@
 ### 🔹 Kategori: Closure Parametreli Fonksiyonlar  
 #### ✅ Cevap 55: Closure parametreli fonksiyon
 
-Closure'lar, generics ve `Fn` trait'i ile fonksiyonlara parametre olarak geçirilebilir. Burada bir fonksiyon, closure'ı bir değere uygular.
+Closure'lar, fonksiyonlara parametre olarak doğrudan aktarılabilir. Aşağıda, bir closure'ı parametre olarak alan ve bir tamsayıya uygulayan basit bir fonksiyon örneği verilmiştir.
 
 ```rust
-fn ona_uygula<F>(f: F) -> i32
-where
-    F: Fn(i32) -> i32,
-{
+fn uygula(f: &dyn Fn(i32) -> i32) -> i32 {
     f(10)
 }
 
 fn main() {
-    let sonuc = ona_uygula(|x| x * 3);
-    println!("Sonuç: {}", sonuc); // Çıktı: Sonuç: 30
+    let sonuc = uygula(&|x| x * 2);
+    println!("Sonuç: {}", sonuc); // Çıktı: Sonuç: 20
 }
 ```

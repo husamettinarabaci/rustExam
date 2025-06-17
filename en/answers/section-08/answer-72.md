@@ -5,7 +5,11 @@
 When a function takes references with potentially different lifetimes, you can use multiple lifetime parameters to describe their relationships. The returned reference must be tied to the shorter lifetime.
 
 ```rust
-fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
+fn longest<'a, 'b, 'out>(x: &'a str, y: &'b str) -> &'out str 
+where
+    'a: 'out,
+    'b: 'out,
+{
     if x.len() > y.len() {
         x
     } else {

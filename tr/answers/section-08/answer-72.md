@@ -5,7 +5,11 @@
 Bir fonksiyon farklı ömürlere sahip referanslar alıyorsa, birden fazla ömür parametresiyle bu ilişkileri belirtmek gerekir. Döndürülen referans, iki ömürden daha kısa olanına bağlı olur.
 
 ```rust
-fn en_uzun<'a, 'b>(x: &'a str, y: &'b str) -> &str {
+fn en_uzun<'a, 'b, 'out>(x: &'a str, y: &'b str) -> &'out str 
+where
+    'a: 'out,
+    'b: 'out,
+{
     if x.len() > y.len() {
         x
     } else {

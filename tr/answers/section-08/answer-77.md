@@ -9,7 +9,7 @@ struct YaziTutucu<'a> {
     yazi: &'a str,
 }
 
-impl<'a> YaziTutucu<'a> {
+impl YaziTutucu<'_> {
     fn uzunluk(&self) -> usize {
         self.yazi.len()
     }

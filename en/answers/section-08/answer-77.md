@@ -9,7 +9,7 @@ struct TextHolder<'a> {
     text: &'a str,
 }
 
-impl<'a> TextHolder<'a> {
+impl TextHolder<'_> {
     fn len(&self) -> usize {
         self.text.len()
     }
