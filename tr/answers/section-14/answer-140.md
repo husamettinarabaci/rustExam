@@ -2,7 +2,7 @@
 ### 🔹 Kategori: Makro İçe Aktarma  
 #### ✅ Cevap 140: Makro içe aktarma
 
-Başka bir modülden makro kullanmak için makroyu `#[macro_export]` ile tanımlamanız ve içe aktarmanız gerekir. Örnek:
+Başka bir modülde `#[macro_export]` ile tanımlanan bir makro, crate köküne dışa aktarılır ve doğrudan çağrılabilir. Tekrar `use crate::makro_adi;` ile içe aktarmak derleme hatasına yol açar. Doğru kullanım aşağıdaki gibidir:
 
 ```rust
 mod makrolar {
@@ -14,14 +14,12 @@ mod makrolar {
     }
 }
 
-use crate::selamla;
-
 fn main() {
     selamla!();
 }
 ```
 
-- Makro `makrolar` modülünde `#[macro_export]` ile tanımlanmıştır.
-- `#[macro_export]` makroyu crate kökünde erişilebilir yapar.
-- Makrolar fonksiyonlardan farklı olarak `use crate::makro_adi;` ile içe aktarılır.
-- Daha sonra makro `main` fonksiyonunda kullanılabilir.
+- Makro `makrolar` modülünde `#[macro_export]` ile tanımlanır ve crate köküne dışa aktarılır.
+- `use crate::selamla;` satırı eklenirse derleyici "the name `selamla` is defined multiple times" hatası verir.
+- Doğru kullanımda makro doğrudan çağrılır: `selamla!();`.
+- Makrolar fonksiyonlardan farklı olarak dışa aktarıldığında crate kökünden otomatik olarak erişilebilir.
