@@ -1,10 +1,12 @@
-## 📘 Section: Error Handling and Result Types  
-### 🔹 Category: Chaining Results  
-#### ❓ Question 177: Chaining multiple Result-returning operations
+## 📘 Section: Collections: HashMap  
+### 🔹 Category: HashMap and ownership  
+#### ❓ Question 177: HashMap and ownership
 
-Write a function that performs two operations that each return a `Result`, and chains them using the `?` operator.
+Write a Rust program that does the following:
 
-- Define a function named `double_parse` that parses two strings to integers and returns their sum.
-- Use the `?` operator to propagate errors.
+- Create a `HashMap<String, String>` and insert some key-value pairs.
+- Remove a value for a key using `remove` and demonstrate ownership transfer.
+- Use the removed value in some operation (e.g., print it).
+- Explain how ownership rules work with HashMap.
 
-🔧 **Task:** Chain multiple `Result` operations using the `?` operator.
+🔧 **Task:** Create an example that takes ownership of a value from a HashMap and uses it.

@@ -1,10 +1,12 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Result Zincirleme  
-#### ❓ Soru 177: Birden fazla Result döndüren işlemi zincirleme
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve sahiplik  
+#### ❓ Soru 177: HashMap ve sahiplik
 
-İki farklı işlemi yapan ve her biri `Result` döndüren iki işlemi `?` operatörü ile zincirleyen bir fonksiyon yazın.
+Aşağıdaki adımları izleyerek bir Rust programı yazın:
 
-- `double_parse` adında, iki string'i tam sayıya çevirip toplamını döndüren bir fonksiyon tanımlayın.
-- Hata yayılımı için `?` operatörünü kullanın.
+- Bir `HashMap<String, String>` oluşturun ve içine bazı anahtar-değer çiftleri ekleyin.
+- Bir anahtarın değerini `remove` ile çıkarın ve sahipliğin nasıl aktarıldığını gösterin.
+- Çıkarılan değeri kullanarak bir işlem yapın (örneğin, ekrana yazdırın).
+- Sahiplik kurallarının HashMap ile nasıl çalıştığını açıklayın.
 
-🔧 **Görev:** Birden fazla `Result` işlemini `?` operatörü ile zincirleyin.
+🔧 **Görev:** HashMap'ten bir değerin sahipliğini almak ve kullanmak için bir örnek oluşturun.

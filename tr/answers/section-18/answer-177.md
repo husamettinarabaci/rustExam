@@ -1,13 +1,24 @@
-## 📘 Bölüm: Hata Yönetimi ve Result Tipleri  
-### 🔹 Kategori: Result Zincirleme  
-#### ✅ Cevap 177: Birden fazla Result döndüren işlemi zincirleme
+## 📘 Bölüm: Koleksiyonlar: HashMap  
+### 🔹 Kategori: HashMap ve sahiplik  
+#### ✅ Cevap 177: HashMap ve sahiplik
 
-Bu fonksiyon, birden fazla `Result` döndüren işlemi `?` operatörü ile zincirlemeyi gösterir.
+Bu örnekte, bir `HashMap<String, String>` oluşturulmuş ve bir anahtarın değeri `remove` ile çıkarılmıştır. `remove` metodu, değerin sahipliğini döndürür ve HashMap'ten siler. Böylece çıkarılan değerin sahipliği artık sizdedir ve HashMap ile ilişkisi kalmaz.
 
 ```rust
-fn double_parse(a: &str, b: &str) -> Result<i32, std::num::ParseIntError> {
-    let x = a.parse::<i32>()?;
-    let y = b.parse::<i32>()?;
-    Ok(x + y)
+use std::collections::HashMap;
+
+fn main() {
+    let mut map = HashMap::new();
+    map.insert("ad".to_string(), "Rustacean".to_string());
+    map.insert("dil".to_string(), "Rust".to_string());
+
+    if let Some(value) = map.remove("ad") {
+        println!("Çıkarılan değer: {}", value);
+    } else {
+        println!("Anahtar bulunamadı.");
+    }
+    // Artık "ad" anahtarı HashMap'te yoktur.
 }
 ```
+
+`remove` metodu, değerin sahipliğini size verir. Bu nedenle, çıkarılan değeri HashMap dışında özgürce kullanabilirsiniz.
