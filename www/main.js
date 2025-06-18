@@ -81,7 +81,7 @@ function closeModal() {
 }
 async function openQuestionModal(secNum, globalQNum, sectionTitle, qTitle) {
   try {
-    const qnumStr = String(globalQNum).padStart(2, '0');
+    const qnumStr = String(globalQNum);
     const qpath = `${lang}/questions/section-${secNum}/question-${qnumStr}.md`;
     const qmd = await fetchText(qpath).catch(e => null);
     let html = '';
@@ -97,7 +97,7 @@ async function openQuestionModal(secNum, globalQNum, sectionTitle, qTitle) {
 }
 async function openAnswerModal(secNum, globalQNum) {
   try {
-    const qnumStr = String(globalQNum).padStart(2, '0');
+    const qnumStr = String(globalQNum);
     const apath = `${lang}/answers/section-${secNum}/answer-${qnumStr}.md`;
     const amd = await fetchText(apath).catch(e => null);
     let html = '';
@@ -256,7 +256,7 @@ async function renderSections(sections, searchTerm = '') {
         main.appendChild(levelPanel);
       }
     }
-    const secNum = (idx+1).toString().padStart(2, '0');
+    const secNum = (idx+1).toString();
     let filteredQuestions = section.questions.filter(q => {
       if (!isSolved(secNum, q.num)) {
         if (!search) return true;

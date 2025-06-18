@@ -26,3 +26,9 @@ async fn main() {
 ```
 
 This example defines an async function `run_with_closure` that takes a closure returning a future. The closure is called and awaited inside the function. The `tokio` runtime is used to run the async code.
+
+> Note: Before running this code, add the `tokio` crate to your Cargo.toml by running:
+>
+> ```bash
+> cargo add tokio --features full
+> ```

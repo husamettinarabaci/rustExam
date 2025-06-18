@@ -26,3 +26,9 @@ async fn main() {
 ```
 
 Bu örnekte, `closure_ile_calistir` adında bir async fonksiyon, parametre olarak bir closure alır ve bu closure'ı await ile çalıştırır. Async kodu çalıştırmak için `tokio` çalışma zamanı kullanılmıştır.
+
+> Not: Bu kodu çalıştırmadan önce terminalde aşağıdaki komutu kullanarak `tokio` kütüphanesini Cargo.toml dosyanıza ekleyin:
+>
+> ```bash
+> cargo add tokio --features full
+> ```
