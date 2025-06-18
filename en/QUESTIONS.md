@@ -301,16 +301,16 @@
 ✅ 250. Closures and recursion
 
 ## 26. Ownership in Complex Structures
-❌ 251. Building nested structs with owned and borrowed fields
-❌ 252. Combining `Box`, `Rc`, and `RefCell` in a single data model
-❌ 253. Moving ownership across multiple layers of abstraction
-❌ 254. Modeling ownership transfer in domain logic
-❌ 255. Creating helper functions that preserve ownership semantics
-❌ 256. Borrowing parts of a composite struct safely
-❌ 257. Using pattern matching to destructure and move out fields
-❌ 258. Working with lifetime annotations in deeply nested functions
-❌ 259. Using `Cow` (Copy on Write) to handle flexible ownership
-❌ 260. Debugging common ownership-related compile errors
+✅ 251. Building nested structs with owned and borrowed fields
+✅ 252. Combining `Box`, `Rc`, and `RefCell` in a single data model
+✅ 253. Moving ownership across multiple layers of abstraction
+✅ 254. Modeling ownership transfer in domain logic
+✅ 255. Creating helper functions that preserve ownership semantics
+✅ 256. Borrowing parts of a composite struct safely
+✅ 257. Using pattern matching to destructure and move out fields
+✅ 258. Working with lifetime annotations in deeply nested functions
+✅ 259. Using `Cow` (Copy on Write) to handle flexible ownership
+✅ 260. Debugging common ownership-related compile errors
 
 ## 27. Lifetimes and Borrowing Semantics
 ❌ 261. Writing functions with multiple lifetimes

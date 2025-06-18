@@ -301,16 +301,16 @@
 ✅ 250. Closure ve özyineleme
 
 ## 26. Karmaşık Yapılarda Sahiplik
-❌ 251. Sahiplikli ve ödünç alan alanlara sahip iç içe yapılar oluşturma
-❌ 252. Bir veri modelinde `Box`, `Rc` ve `RefCell`'i birleştirme
-❌ 253. Sahipliği birden fazla soyutlama katmanında aktarma
-❌ 254. Alan mantığında sahiplik aktarımını modelleme
-❌ 255. Sahiplik semantiğini koruyan yardımcı fonksiyonlar oluşturma
-❌ 256. Bileşik bir yapının parçalarını güvenli şekilde ödünç alma
-❌ 257. Alanları çıkarmak ve taşımak için desen eşleme kullanma
-❌ 258. Derin iç içe fonksiyonlarda ömür anotasyonları kullanma
-❌ 259. Esnek sahiplik için `Cow` (Copy on Write) kullanma
-❌ 260. Sık karşılaşılan sahiplik kaynaklı derleme hatalarını ayıklama
+✅ 251. Sahiplikli ve ödünç alan alanlara sahip iç içe yapılar oluşturma
+✅ 252. Bir veri modelinde `Box`, `Rc` ve `RefCell`'i birleştirme
+✅ 253. Sahipliği birden fazla soyutlama katmanında aktarma
+✅ 254. Alan mantığında sahiplik aktarımını modelleme
+✅ 255. Sahiplik semantiğini koruyan yardımcı fonksiyonlar oluşturma
+✅ 256. Bileşik bir yapının parçalarını güvenli şekilde ödünç alma
+✅ 257. Alanları çıkarmak ve taşımak için desen eşleme kullanma
+✅ 258. Derin iç içe fonksiyonlarda ömür anotasyonları kullanma
+✅ 259. Esnek sahiplik için `Cow` (Copy on Write) kullanma
+✅ 260. Sık karşılaşılan sahiplik kaynaklı derleme hatalarını ayıklama
 
 ## 27. Ömürler ve Ödünç Alma Semantiği
 ❌ 261. Birden fazla ömürlü fonksiyonlar yazma
