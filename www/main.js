@@ -233,6 +233,11 @@ async function fetchLevels(lang) {
   LEVELS_CACHE[lang] = levels;
   return levels;
 }
+function isLocalhost() {
+  return (
+    window.location.hostname === '127.0.0.1'
+  );
+}
 async function renderSections(sections, searchTerm = '') {
   main.innerHTML = '';
   window._sectionsForProgress = sections;
@@ -286,7 +291,9 @@ async function renderSections(sections, searchTerm = '') {
         card.className = 'question-card';
         card.tabIndex = 0;
         card.innerHTML = `<b>#${q.num}</b><div style='font-size:0.98em;margin-top:0.3em;'>${q.title}</div>`;
-        if (!q.enabled) {
+        // Enable if q.enabled or localhost
+        const enabled = q.enabled || isLocalhost();
+        if (!enabled) {
           card.classList.add('disabled');
           card.setAttribute('aria-disabled', 'true');
         }
@@ -295,7 +302,7 @@ async function renderSections(sections, searchTerm = '') {
         checkBtn.className = 'question-check';
         checkBtn.title = lang==='tr'? 'Çözüldü olarak işaretle' : 'Mark as solved';
         checkBtn.innerHTML = `<svg viewBox="0 0 20 20"><polyline points="5,11 9,15 15,7" fill="none" stroke="#b08900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-        if (!q.enabled) {
+        if (!enabled) {
           checkBtn.disabled = true;
           checkBtn.style.opacity = 0.3;
         } else {
@@ -317,7 +324,7 @@ async function renderSections(sections, searchTerm = '') {
         hintBtn.className = 'hint-btn';
         hintBtn.title = lang==='tr' ? 'Cevabı Gör' : 'Show Answer';
         hintBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 20 20" style="display:block;"><circle cx="10" cy="10" r="9" fill="#ffe082" stroke="#b08900" stroke-width="1.5"/><text x="10" y="15" text-anchor="middle" font-size="13" font-family="Arial" fill="#b08900">?</text></svg>`;
-        if (!q.enabled) {
+        if (!enabled) {
           hintBtn.disabled = true;
           hintBtn.style.opacity = 0.3;
         } else {
@@ -327,7 +334,7 @@ async function renderSections(sections, searchTerm = '') {
           };
         }
         card.appendChild(hintBtn);
-        if (q.enabled) {
+        if (enabled) {
           card.onclick = () => openQuestionModal(secNum, q.num, section.title, q.title);
           card.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') card.click(); };
         } else {
