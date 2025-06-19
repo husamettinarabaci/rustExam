@@ -233,8 +233,16 @@ async function fetchLevels(lang) {
   LEVELS_CACHE[lang] = levels;
   return levels;
 }
+function isUnstableEnabled() {
+  // Accept both ?unstable and &unstable in the URL
+  return (
+    window.location.search.includes('unstable') ||
+    window.location.hash.includes('unstable')
+  );
+}
 function isLocalhost() {
   return (
+    window.location.hostname === 'localhost' ||
     window.location.hostname === '127.0.0.1'
   );
 }
@@ -246,6 +254,8 @@ async function renderSections(sections, searchTerm = '') {
   lastSearch = searchTerm;
   const search = searchTerm.trim().toLowerCase();
   const levels = await fetchLevels(lang);
+  // Determine if unstable questions should be enabled
+  const showUnstable = isUnstableEnabled() || isLocalhost();
   sections.forEach((section, idx) => {
     // Insert level info panel before every 25th section (i.e., idx % 25 === 0)
     if (idx % 25 === 0) {
@@ -291,8 +301,8 @@ async function renderSections(sections, searchTerm = '') {
         card.className = 'question-card';
         card.tabIndex = 0;
         card.innerHTML = `<b>#${q.num}</b><div style='font-size:0.98em;margin-top:0.3em;'>${q.title}</div>`;
-        // Enable if q.enabled or localhost
-        const enabled = q.enabled || isLocalhost();
+        // Enable if q.enabled or showUnstable
+        const enabled = q.enabled || showUnstable;
         if (!enabled) {
           card.classList.add('disabled');
           card.setAttribute('aria-disabled', 'true');
