@@ -1,49 +1,36 @@
-## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Derive Makroları  
+## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi
+### 🔹 Kategori: Temel bir derive makrosu yazma
 #### ✅ Cevap 611: Temel bir derive makrosu yazma
 
-Bu örnekte, `Hello` adında bir trait ve bunu otomatik olarak uygulayan bir derive makrosu tanımlanır. Makro, `syn` ve `quote` crate'leriyle yazılır.
+Temel bir derive makrosu, `proc_macro` crate ile derleme zamanında kod üretir. Burada, `HelloMacro` trait'i ve bunu struct'lar için uygulayan bir derive makrosu tanımlanır.
 
 ```rust
-// hello_derive/src/lib.rs
+// hello_macro_derive/src/lib.rs
 use proc_macro::TokenStream;
-use quote::quote;
-use syn;
 
-#[proc_macro_derive(Hello)]
-pub fn hello_derive(input: TokenStream) -> TokenStream {
-    let ast = syn::parse(input).unwrap();
-    impl_hello(&ast)
-}
-
-fn impl_hello(ast: &syn::DeriveInput) -> TokenStream {
-    let name = &ast.ident;
-    let gen = quote! {
-        impl Hello for #name {
-            fn hello(&self) {
-                println!("Hello, I am a {}!", stringify!(#name));
+#[proc_macro_derive(HelloMacro)]
+pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
+    let name = syn::parse_macro_input!(input as syn::DeriveInput).ident;
+    let expanded = quote::quote! {
+        impl HelloMacro for #name {
+            fn hello_macro() {
+                println!("Hello, Macro!");
             }
         }
     };
-    gen.into()
+    expanded.into()
 }
-```
 
-Kullanım:
+// hello_macro/src/lib.rs
+pub trait HelloMacro {
+    fn hello_macro();
+}
 
-```rust
 // main.rs
-use hello_derive::Hello;
-
-trait Hello {
-    fn hello(&self);
-}
-
-#[derive(Hello)]
-struct MyStruct;
+#[derive(HelloMacro)]
+struct Pancakes;
 
 fn main() {
-    MyStruct.hello();
+    Pancakes::hello_macro();
 }
 ```
-Makro, struct'a otomatik olarak `Hello` trait'ini uygular ve `hello` fonksiyonunu ekler.

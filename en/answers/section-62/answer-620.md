@@ -1,34 +1,44 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Embedding a typed mini-language using traits and generics  
-#### ✅ Answer 620: Embedding a typed mini-language using traits and generics
+### 🔹 Category: Macro Crate Organization  
+#### ✅ Answer 620: Organizing macro crates and exposing macros across packages
 
-This example defines a trait for DSL expressions and implements it for different types, ensuring type safety.
+Procedural macros must be defined in their own crate with `proc-macro = true` in `Cargo.toml`. To expose macros for use in other packages:
 
+- Create a separate crate (e.g., `my_macros`) with `proc-macro = true`.
+- Define your macros in this crate.
+- In your main crate, add `my_macros` as a dependency and use the macros with `use my_macros::my_macro;`.
+
+**Example:**
+
+`my_macros/Cargo.toml`:
+```toml
+[lib]
+proc-macro = true
+```
+
+`my_macros/src/lib.rs`:
 ```rust
-trait Eval {
-    type Output;
-    fn eval(&self) -> Self::Output;
-}
-
-struct Add<T: Eval, U: Eval> {
-    left: T,
-    right: U,
-}
-
-impl<T: Eval, U: Eval> Eval for Add<T, U> {
-    type Output = i32;
-    fn eval(&self) -> i32 {
-        self.left.eval() + self.right.eval()
-    }
-}
-
-impl Eval for i32 {
-    type Output = i32;
-    fn eval(&self) -> i32 { *self }
-}
-
-fn main() {
-    let expr = Add { left: 2, right: 3 };
-    println!("{}", expr.eval()); // 5
+use proc_macro::TokenStream;
+#[proc_macro]
+pub fn my_macro(_item: TokenStream) -> TokenStream {
+    // ...
+    _item
 }
 ```
+
+`main_crate/Cargo.toml`:
+```toml
+[dependencies]
+my_macros = { path = "../my_macros" }
+```
+
+`main_crate/src/main.rs`:
+```rust
+use my_macros::my_macro;
+
+my_macro! {
+    // ...
+}
+```
+
+This structure allows macros to be shared and reused across multiple packages.

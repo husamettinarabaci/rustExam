@@ -1,26 +1,28 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Writing a REPL loop for interacting with a mini DSL  
-#### ✅ Answer 617: Writing a REPL loop for interacting with a mini DSL
+### 🔹 Category: Debugging Macros  
+#### ✅ Answer 617: Debugging procedural macros with expanded output
 
-This example shows a simple REPL loop that reads DSL expressions from the user and prints the result. For a real DSL, parser and evaluator functions would be implemented.
+To debug procedural macros, you can print the generated code to the console or use tools like `cargo expand` to inspect macro expansion. Here is an example macro that prints the generated code:
 
 ```rust
-use std::io::{self, Write};
+use proc_macro::TokenStream;
+use quote::quote;
+use syn::{parse_macro_input, DeriveInput};
 
-fn main() {
-    loop {
-        print!("> ");
-        io::stdout().flush().unwrap();
-        let mut input = String::new();
-        if io::stdin().read_line(&mut input).is_err() {
-            break;
+#[proc_macro_derive(DebugExpand)]
+pub fn debug_expand(input: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(input as DeriveInput);
+    let name = &input.ident;
+    let expanded = quote! {
+        impl #name {
+            pub fn debug_macro() {
+                println!("Debug macro for {}", stringify!(#name));
+            }
         }
-        let trimmed = input.trim();
-        if trimmed == "exit" {
-            break;
-        }
-        // Here, parser and evaluator functions would be called (for this example, just print input)
-        println!("Input: {}", trimmed);
-    }
+    };
+    eprintln!("Generated code: {}", expanded);
+    expanded.into()
 }
 ```
+
+You can also use `cargo expand` to see the expanded code for any macro in your project.

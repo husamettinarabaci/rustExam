@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Embedding a typed mini-language using traits and generics  
-#### ❓ Question 620: Embedding a typed mini-language using traits and generics
+### 🔹 Category: Macro Crate Organization  
+#### ❓ Question 620: Organizing macro crates and exposing macros across packages
 
-Create a typed mini DSL using traits and generics as follows:
+Describe and demonstrate how to organize procedural macro crates and expose macros for use in other packages:
 
-- Define a trait for DSL expressions.
-- Implement the trait for different types.
-- Write sample code that ensures type safety in your DSL.
+- Explain the recommended structure for a procedural macro crate in Rust.
+- Show how to export macros so they can be used in other crates.
+- Provide an example of using a macro from a separate crate in a Rust project.
 
-🔧 **Task:** Write a type-safe mini DSL example using traits and generics.
+🔧 **Task:** Explain and demonstrate best practices for organizing macro crates and sharing macros across packages.

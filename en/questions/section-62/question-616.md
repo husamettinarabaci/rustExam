@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Generating AST structures with procedural macros  
-#### ❓ Question 616: Generating AST structures with procedural macros
+### 🔹 Category: Macro Hygiene and Naming  
+#### ❓ Question 616: Handling hygiene and avoiding naming conflicts
 
-Write a procedural macro in Rust that generates an AST from a DSL expression as follows:
+Write a Rust procedural macro that demonstrates macro hygiene and how to avoid naming conflicts:
 
-- Create a procedural macro crate in Rust.
-- Write a procedural macro that parses a DSL expression and produces an enum-based AST.
-- Demonstrate macro usage in a sample code.
+- Create a procedural macro that generates a local variable inside a function.
+- Show how to avoid conflicts with variables in the user's code.
+- Explain the concept of macro hygiene in Rust.
 
-🔧 **Task:** Write and use a procedural macro that generates an AST from a DSL expression.
+🔧 **Task:** Implement a procedural macro that safely introduces new identifiers without causing naming conflicts.

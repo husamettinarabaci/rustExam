@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Trait ve jeneriklerle tipli mini dil gömme  
-#### ❓ Soru 620: Trait ve jeneriklerle tipli mini dil gömme
+### 🔹 Kategori: Makro Crate Organizasyonu  
+#### ❓ Soru 620: Makro crate'lerini organize etme ve paketler arası makro paylaşımı
 
-Aşağıdakileri yaparak trait ve jeneriklerle tipli bir mini DSL oluşturun:
+Prosedürel makro crate'lerini organize etme ve makroları diğer paketlerde kullanıma açma yöntemini açıklayın ve gösterin:
 
-- DSL ifadeleri için bir trait tanımlayın.
-- Farklı tipler için trait implementasyonları yazın.
-- DSL'inizle tip güvenliğini sağlayan örnek bir kod yazın.
+- Rust'ta prosedürel makro crate'i için önerilen yapıyı açıklayın.
+- Makroların başka crate'lerde kullanılabilmesi için nasıl dışa aktarılacağını gösterin.
+- Ayrı bir crate'ten makro kullanımına örnek verin.
 
-🔧 **Görev:** Trait ve jeneriklerle tip güvenli mini DSL örneği yazın.
+🔧 **Görev:** Makro crate'lerini düzenleme ve makroları paketler arası paylaşma için en iyi uygulamaları açıklayın ve gösterin.

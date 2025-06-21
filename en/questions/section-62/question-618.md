@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Adding variables, scopes, and environments to a DSL  
-#### ❓ Question 618: Adding variables, scopes, and environments to a DSL
+### 🔹 Category: Combining Macro Types  
+#### ❓ Question 618: Combining procedural and declarative macros
 
-Extend your DSL with support for variables, scopes, and environments as follows:
+Write an example that combines procedural macros and declarative (`macro_rules!`) macros in Rust:
 
-- Add variable definition and usage to your DSL AST.
-- Create a data structure to represent the environment.
-- Write sample code for variable assignment and usage.
+- Define both a procedural macro and a declarative macro.
+- Show usage where a declarative macro calls a procedural macro, or vice versa.
+- Briefly explain how the two macro types can work together.
 
-🔧 **Task:** Write an example that provides variable and environment support in a DSL.
+🔧 **Task:** Demonstrate with code how procedural and declarative macros can be used together in Rust.

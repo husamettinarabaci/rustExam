@@ -1,49 +1,36 @@
-## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Derive Macros  
+## 📘 Section: Procedural Macros and Code Generation
+### 🔹 Category: Writing a basic derive macro
 #### ✅ Answer 611: Writing a basic derive macro
 
-This example shows how to create a `Hello` trait and a derive macro that automatically implements it for a struct. The macro is written using the `syn` and `quote` crates.
+A basic derive macro uses the `proc_macro` crate to generate code at compile time. Here, we define a `HelloMacro` trait and a custom derive macro that implements it for any struct.
 
 ```rust
-// hello_derive/src/lib.rs
+// hello_macro_derive/src/lib.rs
 use proc_macro::TokenStream;
-use quote::quote;
-use syn;
 
-#[proc_macro_derive(Hello)]
-pub fn hello_derive(input: TokenStream) -> TokenStream {
-    let ast = syn::parse(input).unwrap();
-    impl_hello(&ast)
-}
-
-fn impl_hello(ast: &syn::DeriveInput) -> TokenStream {
-    let name = &ast.ident;
-    let gen = quote! {
-        impl Hello for #name {
-            fn hello(&self) {
-                println!("Hello, I am a {}!", stringify!(#name));
+#[proc_macro_derive(HelloMacro)]
+pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
+    let name = syn::parse_macro_input!(input as syn::DeriveInput).ident;
+    let expanded = quote::quote! {
+        impl HelloMacro for #name {
+            fn hello_macro() {
+                println!("Hello, Macro!");
             }
         }
     };
-    gen.into()
+    expanded.into()
 }
-```
 
-Usage:
+// hello_macro/src/lib.rs
+pub trait HelloMacro {
+    fn hello_macro();
+}
 
-```rust
 // main.rs
-use hello_derive::Hello;
-
-trait Hello {
-    fn hello(&self);
-}
-
-#[derive(Hello)]
-struct MyStruct;
+#[derive(HelloMacro)]
+struct Pancakes;
 
 fn main() {
-    MyStruct.hello();
+    Pancakes::hello_macro();
 }
 ```
-The macro automatically implements the `Hello` trait for the struct and adds the `hello` method.

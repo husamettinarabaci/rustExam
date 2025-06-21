@@ -1,17 +1,30 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Parsing DSL syntax using syn and quote  
-#### ✅ Answer 612: Parsing DSL syntax using syn and quote
+### 🔹 Category: Parsing Rust Syntax  
+#### ✅ Answer 612: Parsing Rust syntax with `syn` crate
 
-In this solution, we use `syn` to parse the DSL expression and `quote` to generate Rust code. We use `syn::parse_str` to parse the input, and `quote!` to generate code. For a real DSL, a custom parser would be needed, but this demonstrates the basic idea.
+The `syn` crate is commonly used in procedural macros to parse Rust code into a syntax tree. Here, we create a derive macro that parses a struct and prints its name and fields at compile time.
 
 ```rust
-use syn::{parse_str, Expr};
+use proc_macro::TokenStream;
 use quote::quote;
+use syn::{parse_macro_input, DeriveInput};
 
-fn main() {
-    let dsl = "add(1, mul(2, 3))";
-    let expr: Expr = parse_str(dsl).unwrap();
-    let generated = quote! { #expr };
-    println!("{}", generated);
+#[proc_macro_derive(PrintStructInfo)]
+pub fn print_struct_info(input: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(input as DeriveInput);
+    let name = &input.ident;
+    if let syn::Data::Struct(data_struct) = &input.data {
+        for field in &data_struct.fields {
+            if let Some(ident) = &field.ident {
+                println!("Field: {}", ident);
+            }
+        }
+    }
+    let expanded = quote! {
+        // ...
+    };
+    expanded.into()
 }
 ```
+
+This macro uses `syn` to parse the struct and prints field names. In real macros, use `compile_error!` or generated code instead of `println!` for user feedback.

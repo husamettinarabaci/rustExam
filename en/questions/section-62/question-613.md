@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Building ASTs for embedded DSLs  
-#### ❓ Question 613: Building ASTs for embedded DSLs
+### 🔹 Category: Code Generation with quote  
+#### ❓ Question 613: Generating code with `quote` crate
 
-Do the following to build an abstract syntax tree (AST) for a simple DSL:
+Write a Rust procedural macro that uses the `quote` crate to generate code:
 
-- Define an enum-based AST data structure for your DSL.
-- Write a parser function that converts DSL expressions into this AST.
-- Convert and print a sample DSL expression as an AST.
+- Create a procedural macro that takes a struct as input.
+- Use the `quote` crate to generate an implementation of a trait for the struct.
+- Show how the generated code can be used in practice.
 
-🔧 **Task:** Create and use a basic DSL AST using enums and functions.
+🔧 **Task:** Use the `quote` crate in a procedural macro to generate Rust code programmatically.

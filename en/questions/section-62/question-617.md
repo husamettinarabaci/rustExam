@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Writing a REPL loop for interacting with a mini DSL  
-#### ❓ Question 617: Writing a REPL loop for interacting with a mini DSL
+### 🔹 Category: Debugging Macros  
+#### ❓ Question 617: Debugging procedural macros with expanded output
 
-Write a REPL (Read-Eval-Print Loop) for a simple mini DSL as follows:
+Write a Rust procedural macro that helps with debugging by showing the expanded output:
 
-- Create a loop that reads DSL expressions from the user.
-- Parse and evaluate each expression.
-- Print the result to the screen.
+- Create a procedural macro that prints or logs the generated code during macro expansion.
+- Explain how to inspect macro expansion output in Rust projects.
+- Show an example of using the macro and viewing its expanded code.
 
-🔧 **Task:** Write a basic REPL loop for a mini DSL.
+🔧 **Task:** Implement a procedural macro that aids debugging by exposing the generated code to the developer.

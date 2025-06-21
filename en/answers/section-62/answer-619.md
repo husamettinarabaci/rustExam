@@ -1,34 +1,27 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Embedding a typed mini-language using traits and generics  
-#### ✅ Answer 619: Embedding a typed mini-language using traits and generics
+### 🔹 Category: Macro-Driven Serialization/Deserialization  
+#### ✅ Answer 619: Macro-driven code for serialization/deserialization
 
-This example defines a trait for DSL expressions and implements it for different types, ensuring type safety.
+Procedural macros can generate code for serialization and deserialization automatically. Here is a simplified example of a derive macro for a custom `Serialize` trait:
 
 ```rust
-trait Eval {
-    type Output;
-    fn eval(&self) -> Self::Output;
-}
+use proc_macro::TokenStream;
+use quote::quote;
+use syn::{parse_macro_input, DeriveInput};
 
-struct Add<T: Eval, U: Eval> {
-    left: T,
-    right: U,
-}
-
-impl<T: Eval, U: Eval> Eval for Add<T, U> {
-    type Output = i32;
-    fn eval(&self) -> i32 {
-        self.left.eval() + self.right.eval()
-    }
-}
-
-impl Eval for i32 {
-    type Output = i32;
-    fn eval(&self) -> i32 { *self }
-}
-
-fn main() {
-    let expr = Add { left: 2, right: 3 };
-    println!("{}", expr.eval()); // 5
+#[proc_macro_derive(Serialize)]
+pub fn serialize_derive(input: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(input as DeriveInput);
+    let name = &input.ident;
+    let expanded = quote! {
+        impl #name {
+            pub fn serialize(&self) -> String {
+                format!("{}", stringify!(#name))
+            }
+        }
+    };
+    expanded.into()
 }
 ```
+
+This macro generates a simple `serialize` method. In real projects, use crates like `serde` for robust implementations.

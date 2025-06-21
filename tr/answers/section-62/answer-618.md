@@ -1,38 +1,34 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: DSL'e değişken, kapsam ve ortam ekleme  
-#### ✅ Cevap 618: DSL'e değişken, kapsam ve ortam ekleme
+### 🔹 Kategori: Makro Türlerini Birleştirme  
+#### ✅ Cevap 618: Prosedürel ve deklaratif makroları birleştirme
 
-Bu örnekte, DSL AST'ye değişken tanımı ve kullanımı eklenir. Ortam için bir HashMap kullanılır. Değişken atama ve kullanımı gösterilir.
+Rust'ta prosedürel ve deklaratif makrolar birlikte kullanılabilir. Deklaratif makrolar (`macro_rules!`) kodunuzu tekrar eden kalıplar için kullanılırken, prosedürel makrolar daha karmaşık kod üretimi için uygundur. Aşağıda, bir deklaratif makrodan prosedürel makro çağrısı yapılan ve her iki türün birlikte kullanıldığı bir örnek gösterilmiştir.
+
+Öncelikle, bir prosedürel makro crate'i oluşturmanız gerekir. Ana crate'inizde ise hem prosedürel hem de deklaratif makroyu kullanabilirsiniz.
 
 ```rust
-use std::collections::HashMap;
+// proc_macros/src/lib.rs
+use proc_macro::TokenStream;
 
-#[derive(Debug)]
-enum Expr {
-    Number(i32),
-    Var(String),
-    Assign(String, Box<Expr>),
-    Add(Box<Expr>, Box<Expr>),
+#[proc_macro]
+pub fn make_hello(_item: TokenStream) -> TokenStream {
+    "println!(\"Hello from procedural macro!\");".parse().unwrap()
 }
+```
 
-fn eval(expr: &Expr, env: &mut HashMap<String, i32>) -> i32 {
-    match expr {
-        Expr::Number(n) => *n,
-        Expr::Var(name) => *env.get(name).unwrap_or(&0),
-        Expr::Assign(name, val) => {
-            let v = eval(val, env);
-            env.insert(name.clone(), v);
-            v
-        },
-        Expr::Add(a, b) => eval(a, env) + eval(b, env),
-    }
+```rust
+// main.rs veya ana crate
+use proc_macros::make_hello;
+
+macro_rules! call_proc_macro {
+    () => {
+        make_hello!();
+    };
 }
 
 fn main() {
-    let mut env = HashMap::new();
-    let assign = Expr::Assign("x".to_string(), Box::new(Expr::Number(5)));
-    let add = Expr::Add(Box::new(Expr::Var("x".to_string())), Box::new(Expr::Number(2)));
-    eval(&assign, &mut env);
-    println!("{}", eval(&add, &mut env)); // 7
+    call_proc_macro!();
 }
 ```
+
+Bu örnekte, `call_proc_macro!` deklaratif makrosu, prosedürel makro olan `make_hello!`'yu çağırır. Böylece iki makro türü birlikte kullanılabilir.

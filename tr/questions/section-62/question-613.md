@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Gömülü DSL'ler için AST oluşturma  
-#### ❓ Soru 613: Gömülü DSL'ler için AST oluşturma
+### 🔹 Kategori: quote ile Kod Üretimi  
+#### ❓ Soru 613: `quote` crate ile kod üretimi
 
-Aşağıdakileri yaparak basit bir DSL için soyut sözdizim ağacı (AST) oluşturun:
+Aşağıdakileri yapan bir Rust prosedürel makrosu yazın:
 
-- DSL'iniz için enum tabanlı bir AST veri yapısı tanımlayın.
-- DSL ifadelerini bu AST'ye dönüştüren bir ayrıştırıcı fonksiyon yazın.
-- Örnek bir DSL ifadesini AST'ye dönüştürüp yazdırın.
+- Bir struct'ı girdi olarak alan bir prosedürel makro oluşturun.
+- `quote` crate kullanarak bu struct için bir trait implementasyonu üreten kod oluşturun.
+- Üretilen kodun pratikte nasıl kullanılacağını gösterin.
 
-🔧 **Görev:** Enum ve fonksiyonlarla temel bir DSL AST'si oluşturun ve kullanın.
+🔧 **Görev:** Bir prosedürel makroda Rust kodunu programatik olarak üretmek için `quote` crate kullanın.

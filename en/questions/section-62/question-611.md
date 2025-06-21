@@ -1,11 +1,10 @@
-## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Derive Macros  
+## 📘 Section: Procedural Macros and Code Generation
+### 🔹 Category: Writing a basic derive macro
 #### ❓ Question 611: Writing a basic derive macro
 
-Write a Rust derive macro that does the following:
+Write a Rust procedural macro that does the following:
 
-- Automatically implements a trait for a struct.
-- Show how to define and use the derive macro.
-- Provide an example trait and struct using the macro.
+- Create a custom derive macro named `HelloMacro`.
+- When derived for a struct, it should implement a trait that prints `Hello, Macro!` when called.
 
-🔧 **Task:** Write a simple derive macro that automatically implements a trait for a struct.
+🔧 **Task:** Use the `proc_macro` crate to build a simple derive macro that generates a trait implementation for a struct.

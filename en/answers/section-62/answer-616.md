@@ -28,3 +28,34 @@ fn main() {
     // ast: Expr::Add(Box::new(Expr::Number(1)), Box::new(Expr::Number(2)))
 }
 ```
+
+## 📘 Section: Procedural Macros and Code Generation  
+### 🔹 Category: Macro Hygiene and Naming  
+#### ✅ Answer 616: Handling hygiene and avoiding naming conflicts
+
+Macro hygiene ensures that identifiers introduced by macros do not conflict with those in the user's code. In procedural macros, you can use the `quote::format_ident!` macro to generate unique identifiers:
+
+```rust
+use proc_macro::TokenStream;
+use quote::{quote, format_ident};
+use syn::{parse_macro_input, ItemFn};
+
+#[proc_macro_attribute]
+pub fn add_temp_var(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(item as ItemFn);
+    let name = &input.sig.ident;
+    let block = &input.block;
+    let vis = &input.vis;
+    let sig = &input.sig;
+    let temp_var = format_ident!("__my_macro_temp_var");
+    let gen = quote! {
+        #vis #sig {
+            let #temp_var = 42;
+            #block
+        }
+    };
+    gen.into()
+}
+```
+
+This macro introduces a uniquely named variable to avoid conflicts. Macro hygiene helps keep generated code safe and predictable.

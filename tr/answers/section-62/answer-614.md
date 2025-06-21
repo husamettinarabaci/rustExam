@@ -1,33 +1,29 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Desen eşleme ile ifadeleri değerlendirme  
-#### ✅ Cevap 614: Desen eşleme ile ifadeleri değerlendirme
+### 🔹 Kategori: Özel Anotasyonlar için Attribute Makroları  
+#### ✅ Cevap 614: Özel anotasyonlar için attribute makroları
 
-Bu çözümde, enum tabanlı AST üzerinde pattern matching ile gezilerek ifade değerlendirilir. Her varyant için uygun işlem yapılır.
+Attribute makroları, fonksiyonlara, struct'lara veya modüllere özel davranışlar eklemenizi sağlar. Aşağıda, bir fonksiyon çalışmadan önce mesaj yazdıran bir attribute makro örneği verilmiştir:
 
 ```rust
-#[derive(Debug)]
-enum Expr {
-    Number(i32),
-    Add(Box<Expr>, Box<Expr>),
-    Mul(Box<Expr>, Box<Expr>),
-}
+use proc_macro::TokenStream;
+use quote::quote;
+use syn::{parse_macro_input, ItemFn};
 
-fn eval(expr: &Expr) -> i32 {
-    match expr {
-        Expr::Number(n) => *n,
-        Expr::Add(a, b) => eval(a) + eval(b),
-        Expr::Mul(a, b) => eval(a) * eval(b),
-    }
-}
-
-fn main() {
-    let ast = Expr::Add(
-        Box::new(Expr::Number(1)),
-        Box::new(Expr::Mul(
-            Box::new(Expr::Number(2)),
-            Box::new(Expr::Number(3)),
-        )),
-    );
-    println!("{}", eval(&ast));
+#[proc_macro_attribute]
+pub fn log_start(_attr: TokenStream, item: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(item as ItemFn);
+    let name = &input.sig.ident;
+    let block = &input.block;
+    let vis = &input.vis;
+    let sig = &input.sig;
+    let gen = quote! {
+        #vis #sig {
+            println!("Fonksiyon {} başlıyor...", stringify!(#name));
+            #block
+        }
+    };
+    gen.into()
 }
 ```
+
+Bu makro, bir fonksiyonun başında mesaj yazdırmak için `#[log_start]` olarak kullanılabilir.

@@ -1,11 +1,11 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Implementing macros to define embedded DSL syntax  
-#### ❓ Question 615: Implementing macros to define embedded DSL syntax
+### 🔹 Category: Domain-Specific Language Macros  
+#### ❓ Question 615: Procedural macros for domain-specific languages
 
-Write a macro in Rust for an embedded DSL as follows:
+Write a Rust procedural macro for a simple domain-specific language (DSL):
 
-- Define a `macro_rules!` macro that converts DSL expressions into Rust code.
-- Use the macro to translate a sample DSL expression into a Rust function call.
-- Demonstrate macro usage in a sample code.
+- Create a procedural macro that parses a custom mini-language or syntax.
+- The macro should generate Rust code based on the parsed input.
+- Show an example of using the macro to define a small DSL expression.
 
-🔧 **Task:** Write a macro using `macro_rules!` to provide embedded DSL syntax.
+🔧 **Task:** Implement a procedural macro that enables a custom DSL in Rust code.

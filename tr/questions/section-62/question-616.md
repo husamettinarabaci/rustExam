@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Prosedürel makrolarla AST yapıları üretme  
-#### ❓ Soru 616: Prosedürel makrolarla AST yapıları üretme
+### 🔹 Kategori: Makro Hijyeni ve İsim Çakışmaları  
+#### ❓ Soru 616: Hijyen yönetimi ve isim çakışmalarından kaçınma
 
-Aşağıdakileri yaparak prosedürel makro ile bir DSL ifadesinden AST üreten bir makro yazın:
+Aşağıdakileri gösteren bir Rust prosedürel makrosu yazın:
 
-- Rust'ta bir procedural macro crate oluşturun.
-- DSL ifadesini parse edip enum tabanlı bir AST'ye dönüştüren bir procedural macro yazın.
-- Makro kullanımını örnek bir kodda gösterin.
+- Bir fonksiyon içinde yerel bir değişken üreten bir prosedürel makro oluşturun.
+- Kullanıcı kodundaki değişkenlerle çakışmayı nasıl önleyeceğinizi gösterin.
+- Rust'ta makro hijyeni kavramını açıklayın.
 
-🔧 **Görev:** Prosedürel makro ile DSL ifadesinden AST oluşturan bir makro yazın ve kullanın.
+🔧 **Görev:** İsim çakışmalarına neden olmadan güvenli şekilde yeni tanımlayıcılar üreten bir prosedürel makro uygulayın.

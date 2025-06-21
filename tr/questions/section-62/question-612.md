@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: syn ve quote ile DSL sözdizimi ayrıştırma  
-#### ❓ Soru 612: syn ve quote ile DSL sözdizimi ayrıştırma
+### 🔹 Kategori: Rust Sözdizimini Ayrıştırma  
+#### ❓ Soru 612: `syn` crate ile Rust sözdizimini ayrıştırma
 
-Rust'ta özel bir DSL (alan özel dili) için sözdizimi ayrıştırıcı yazmak üzere aşağıdakileri yapın:
+Aşağıdakileri yapan bir Rust prosedürel makrosu yazın:
 
-- `syn` crate'ini kullanarak bir DSL ifadesini ayrıştıran temel bir fonksiyon yazın.
-- `quote` crate'i ile ayrıştırılan ifadeden Rust kodu üretin.
-- DSL ifadesi olarak örnek bir matematiksel ifade (ör: `add(1, mul(2, 3))`) kullanın.
+- `syn` crate kullanarak bir struct tanımını ayrıştıran bir prosedürel makro oluşturun.
+- Makro genişlemesi sırasında struct'ın adını ve alanlarını yazdırın veya loglayın.
+- Makroyu örnek bir struct üzerinde nasıl kullanacağınızı gösterin.
 
-🔧 **Görev:** `syn` ve `quote` ile basit bir DSL ayrıştırıcı ve kod üretici fonksiyon yazın.
+🔧 **Görev:** Bir prosedürel makroda `syn` crate ile Rust sözdizimini ayrıştırın ve bir struct tanımından bilgi çıkarın.

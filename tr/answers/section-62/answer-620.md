@@ -1,34 +1,44 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Trait ve jeneriklerle tipli mini dil gömme  
-#### ✅ Cevap 620: Trait ve jeneriklerle tipli mini dil gömme
+### 🔹 Kategori: Makro Crate Organizasyonu  
+#### ✅ Cevap 620: Makro crate'lerini organize etme ve paketler arası makro paylaşımı
 
-Bu örnekte, DSL ifadeleri için bir trait tanımlanır ve farklı tipler için implementasyonlar yazılır. Böylece tip güvenliği sağlanır.
+Prosedürel makrolar, `Cargo.toml`'da `proc-macro = true` olarak tanımlanmış ayrı bir crate'te bulunmalıdır. Makroları diğer paketlerde kullanmak için:
 
+- Ayrı bir crate (ör. `my_macros`) oluşturun ve `proc-macro = true` olarak ayarlayın.
+- Makrolarınızı bu crate'te tanımlayın.
+- Ana crate'inize `my_macros` bağımlılığını ekleyin ve makroları `use my_macros::my_macro;` ile kullanın.
+
+**Örnek:**
+
+`my_macros/Cargo.toml`:
+```toml
+[lib]
+proc-macro = true
+```
+
+`my_macros/src/lib.rs`:
 ```rust
-trait Eval {
-    type Output;
-    fn eval(&self) -> Self::Output;
-}
-
-struct Add<T: Eval, U: Eval> {
-    left: T,
-    right: U,
-}
-
-impl<T: Eval, U: Eval> Eval for Add<T, U> {
-    type Output = i32;
-    fn eval(&self) -> i32 {
-        self.left.eval() + self.right.eval()
-    }
-}
-
-impl Eval for i32 {
-    type Output = i32;
-    fn eval(&self) -> i32 { *self }
-}
-
-fn main() {
-    let expr = Add { left: 2, right: 3 };
-    println!("{}", expr.eval()); // 5
+use proc_macro::TokenStream;
+#[proc_macro]
+pub fn my_macro(_item: TokenStream) -> TokenStream {
+    // ...
+    _item
 }
 ```
+
+`main_crate/Cargo.toml`:
+```toml
+[dependencies]
+my_macros = { path = "../my_macros" }
+```
+
+`main_crate/src/main.rs`:
+```rust
+use my_macros::my_macro;
+
+my_macro! {
+    // ...
+}
+```
+
+Bu yapı, makroların birden fazla pakette paylaşılmasını ve yeniden kullanılmasını sağlar.

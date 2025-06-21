@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: DSL'e değişken, kapsam ve ortam ekleme  
-#### ❓ Soru 618: DSL'e değişken, kapsam ve ortam ekleme
+### 🔹 Kategori: Makro Türlerini Birleştirme  
+#### ❓ Soru 618: Prosedürel ve deklaratif makroları birleştirme
 
-Aşağıdakileri yaparak DSL'inize değişken, kapsam ve ortam desteği ekleyin:
+Prosedürel makrolar ile deklaratif (`macro_rules!`) makroları bir arada kullanan bir örnek yazın:
 
-- DSL AST'nize değişken tanımı ve kullanımı ekleyin.
-- Ortamı (environment) temsil eden bir veri yapısı oluşturun.
-- Değişken atama ve kullanımı için örnek bir kod yazın.
+- Hem prosedürel hem de deklaratif makro tanımlayın.
+- Bir deklaratif makrodan prosedürel makro çağrısı veya tersi bir kullanım gösterin.
+- Kısa açıklamalarla iki makro türünün birlikte nasıl çalıştığını belirtin.
 
-🔧 **Görev:** DSL'de değişken ve ortam desteği sağlayan bir örnek uygulama yazın.
+🔧 **Görev:** Prosedürel ve deklaratif makroların birlikte nasıl kullanılabileceğini örnek kod ile gösterin.

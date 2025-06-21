@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Gömülü DSL sözdizimi için makro kullanımı  
-#### ❓ Soru 615: Gömülü DSL sözdizimi için makro kullanımı
+### 🔹 Kategori: Alan-Özel Dil (DSL) Makroları  
+#### ❓ Soru 615: Alan-özel diller için prosedürel makrolar
 
-Aşağıdakileri yaparak Rust'ta gömülü bir DSL için makro yazın:
+Aşağıdakileri yapan bir Rust prosedürel makrosu yazın:
 
-- DSL ifadelerini Rust koduna dönüştüren bir `macro_rules!` makrosu tanımlayın.
-- Makro ile örnek bir DSL ifadesini Rust fonksiyon çağrısına çevirin.
-- Makro kullanımını örnek bir kodda gösterin.
+- Özel bir mini dil veya sözdizimini ayrıştıran bir prosedürel makro oluşturun.
+- Makro, ayrıştırılan girdiye göre Rust kodu üretsin.
+- Makronun küçük bir DSL ifadesiyle nasıl kullanılacağını gösterin.
 
-🔧 **Görev:** `macro_rules!` ile gömülü DSL sözdizimi sağlayan bir makro yazın.
+🔧 **Görev:** Rust kodunda özel bir DSL'i etkinleştiren bir prosedürel makro uygulayın.

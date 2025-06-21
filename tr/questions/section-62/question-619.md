@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Trait ve jeneriklerle tipli mini dil gömme  
-#### ❓ Soru 619: Trait ve jeneriklerle tipli mini dil gömme
+### 🔹 Kategori: Makro Tabanlı Serileştirme/Deserileştirme  
+#### ❓ Soru 619: Serileştirme/deserileştirme için makro tabanlı kod
 
-Aşağıdakileri yaparak trait ve jeneriklerle tipli bir mini DSL oluşturun:
+Aşağıdakileri yapan bir Rust prosedürel makrosu yazın:
 
-- DSL ifadeleri için bir trait tanımlayın.
-- Farklı tipler için trait implementasyonları yazın.
-- DSL'inizle tip güvenliğini sağlayan örnek bir kod yazın.
+- Bir struct için `Serialize` ve `Deserialize` traitlerini uygulayan bir derive makrosu oluşturun.
+- Makro, struct'ı string veya başka bir formata dönüştürmek için kod üretsin.
+- Makronun örnek bir struct üzerinde nasıl kullanılacağını gösterin.
 
-🔧 **Görev:** Trait ve jeneriklerle tip güvenli mini DSL örneği yazın.
+🔧 **Görev:** Kullanıcı tanımlı tipler için serileştirme ve deserileştirmeyi otomatikleştiren bir prosedürel makro uygulayın.

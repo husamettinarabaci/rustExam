@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Prosedürel Makrolar ve Kod Üretimi  
-### 🔹 Kategori: Mini DSL için REPL döngüsü yazma  
-#### ❓ Soru 617: Mini DSL için REPL döngüsü yazma
+### 🔹 Kategori: Makro Hata Ayıklama  
+#### ❓ Soru 617: Genişletilmiş çıktıyla prosedürel makroları hata ayıklama
 
-Aşağıdakileri yaparak basit bir mini DSL için REPL (Read-Eval-Print Loop) döngüsü yazın:
+Aşağıdakileri yapan bir Rust prosedürel makrosu yazın:
 
-- Kullanıcıdan DSL ifadesi alan bir döngü oluşturun.
-- Her ifadeyi parse edip değerlendirin.
-- Sonucu ekrana yazdırın.
+- Makro genişlemesi sırasında üretilen kodu yazdıran veya loglayan bir prosedürel makro oluşturun.
+- Rust projelerinde makro genişlemesini nasıl inceleyeceğinizi açıklayın.
+- Makronun nasıl kullanılacağını ve genişletilmiş kodun nasıl görüntüleneceğini gösterin.
 
-🔧 **Görev:** Mini bir DSL için temel bir REPL döngüsü yazın.
+🔧 **Görev:** Geliştiriciye üretilen kodu göstererek hata ayıklamayı kolaylaştıran bir prosedürel makro uygulayın.

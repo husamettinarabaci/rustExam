@@ -1,38 +1,34 @@
 ## 📘 Section: Procedural Macros and Code Generation  
-### 🔹 Category: Adding variables, scopes, and environments to a DSL  
-#### ✅ Answer 618: Adding variables, scopes, and environments to a DSL
+### 🔹 Category: Combining Macro Types  
+#### ✅ Answer 618: Combining procedural and declarative macros
 
-This example adds variable definition and usage to the DSL AST. A HashMap is used for the environment. Variable assignment and usage are demonstrated.
+In Rust, procedural and declarative macros can be used together. Declarative macros (`macro_rules!`) are great for simple code patterns, while procedural macros are used for more complex code generation. Below is an example where a declarative macro calls a procedural macro, demonstrating how both macro types can be combined.
+
+First, you need to create a procedural macro crate. In your main crate, you can use both macro types together.
 
 ```rust
-use std::collections::HashMap;
+// proc_macros/src/lib.rs
+use proc_macro::TokenStream;
 
-#[derive(Debug)]
-enum Expr {
-    Number(i32),
-    Var(String),
-    Assign(String, Box<Expr>),
-    Add(Box<Expr>, Box<Expr>),
+#[proc_macro]
+pub fn make_hello(_item: TokenStream) -> TokenStream {
+    "println!(\"Hello from procedural macro!\");".parse().unwrap()
 }
+```
 
-fn eval(expr: &Expr, env: &mut HashMap<String, i32>) -> i32 {
-    match expr {
-        Expr::Number(n) => *n,
-        Expr::Var(name) => *env.get(name).unwrap_or(&0),
-        Expr::Assign(name, val) => {
-            let v = eval(val, env);
-            env.insert(name.clone(), v);
-            v
-        },
-        Expr::Add(a, b) => eval(a, env) + eval(b, env),
-    }
+```rust
+// main.rs or main crate
+use proc_macros::make_hello;
+
+macro_rules! call_proc_macro {
+    () => {
+        make_hello!();
+    };
 }
 
 fn main() {
-    let mut env = HashMap::new();
-    let assign = Expr::Assign("x".to_string(), Box::new(Expr::Number(5)));
-    let add = Expr::Add(Box::new(Expr::Var("x".to_string())), Box::new(Expr::Number(2)));
-    eval(&assign, &mut env);
-    println!("{}", eval(&add, &mut env)); // 7
+    call_proc_macro!();
 }
 ```
+
+In this example, the declarative macro `call_proc_macro!` calls the procedural macro `make_hello!`. This shows how both macro types can be used together in Rust.
