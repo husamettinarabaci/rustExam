@@ -1,11 +1,11 @@
 ## 📘 Section: Closures and Functional Techniques  
-### 🔹 Category: Closure Basics  
-#### ❓ Question 353: Introduction to closures
+### 🔹 Category: Closure Trait Bounds  
+#### ❓ Question 353: Using `Fn`, `FnMut`, and `FnOnce` trait bounds
 
-Write a Rust program that does the following:
+Write an example demonstrating how to use `Fn`, `FnMut`, and `FnOnce` trait bounds when passing a closure as a function parameter:
 
-- Define and call a simple closure.
-- The closure should take one parameter, multiply it by two, and return the result.
-- Call the closure and print the result to the screen.
+- Define separate functions that accept closures with each of the three trait bounds.
+- Create appropriate closure examples to call each function.
+- Briefly explain when each trait is used.
 
-🔧 **Task:** Write a short example demonstrating how to define, call, and pass parameters to a closure.
+🔧 **Task:** Show the difference between `Fn`, `FnMut`, and `FnOnce` trait bounds in functions that take closures as parameters, with examples.

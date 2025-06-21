@@ -10,22 +10,22 @@ use std::sync::Arc;
 use std::time::Instant;
 
 fn main() {
-    let data: Vec<i32> = (0..100_000).collect();
+    let data: Vec<i64> = (0..100_000).collect();
 
     let boxed = Box::new(data.clone());
     let rc = Rc::new(data.clone());
     let arc = Arc::new(data.clone());
 
     let now = Instant::now();
-    let sum: i32 = boxed.iter().sum();
+    let sum: i64 = boxed.iter().sum();
     println!("Box sum: {}, elapsed: {:?}", sum, now.elapsed());
 
     let now = Instant::now();
-    let sum: i32 = rc.iter().sum();
+    let sum: i64 = rc.iter().sum();
     println!("Rc sum: {}, elapsed: {:?}", sum, now.elapsed());
 
     let now = Instant::now();
-    let sum: i32 = arc.iter().sum();
+    let sum: i64 = arc.iter().sum();
     println!("Arc sum: {}, elapsed: {:?}", sum, now.elapsed());
 }
 ```

@@ -1,11 +1,11 @@
 ## 📘 Bölüm: Closure ve Fonksiyonel Teknikler  
-### 🔹 Kategori: Closure Temelleri  
-#### ❓ Soru 353: Closure'lara giriş
+### 🔹 Kategori: Closure Trait Bound'ları  
+#### ❓ Soru 353: `Fn`, `FnMut` ve `FnOnce` trait bound'ları kullanımı
 
-Aşağıdakileri yapan bir Rust programı yazın:
+Bir fonksiyona closure parametresi geçirirken `Fn`, `FnMut` ve `FnOnce` trait bound'larını nasıl kullanacağınızı gösteren bir örnek yazın:
 
-- Basit bir closure tanımlayın ve çağırın.
-- Closure'ın bir parametre alıp, bu parametreyi ikiyle çarpıp sonucu döndürmesini sağlayın.
-- Closure'ı çağırarak sonucu ekrana yazdırın.
+- Her üç trait için de ayrı ayrı closure kabul eden fonksiyonlar tanımlayın.
+- Her fonksiyonu çağırmak için uygun closure örnekleri oluşturun.
+- Kısa açıklamalarla hangi trait'in ne zaman kullanıldığını belirtin.
 
-🔧 **Görev:** Closure tanımlama, parametre alma ve çağırma işlemlerini gösteren kısa bir örnek yazın.
+🔧 **Görev:** Closure parametreli fonksiyonlarda `Fn`, `FnMut` ve `FnOnce` trait bound'larının farkını örneklerle gösterin.
