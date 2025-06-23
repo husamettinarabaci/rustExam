@@ -1,5 +1,5 @@
 # Copilot Instructions
-
+- Rust "1.76.0" **MANDATORY** 
 - All file contents and contributions under the `en` folder must be written in English only. No other language is permitted in any file or commit message in this folder.
 - Files under the `tr` folder may be written in Turkish.
 - Before making any changes or processing any question, always read and reference the following files:
